@@ -1,0 +1,15 @@
+docs:
+  introduction:
+    overview: index.html
+  quick_start:
+    ark-plugin-demo: ark-plugin-demo.html
+    ark-demo: ark-demo.html
+  user_guide:
+    terminology: terminology.html
+    ark_jar: ark-jar.html
+    ark_plugin: ark-plugin.html
+    ark_biz: ark-biz.html
+  develop_guide:
+    startup: startup.html
+    plugin:  plugin.html
+    classloader: classloader.html
