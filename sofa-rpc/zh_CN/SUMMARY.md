@@ -18,8 +18,8 @@
 
 ## 交流
 * [参与贡献](./Contributing)
-* [提交Issue](../issues/new)
-* [提交PR](../compare)
+* [提交Issue](https://github.com/sofastack/sofastack-doc/issues/new)
+* [提交PR](https://github.com/sofastack/sofastack-doc/compare)
 
 ## 其它
 * [版权说明](./NOTICE)
