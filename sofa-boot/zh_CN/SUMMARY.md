@@ -3,7 +3,7 @@
 - [依赖管理](./DependencyManagement)
 - [健康检查扩展](./HealthCheck)
 - [版本查看](./ViewVersions)
-- [类隔离](./Classloader-Isolation)
+- [类隔离](./ClassLoader-Isolation)
 	- 产品介绍
 		- [产品概述](./sofa-ark/index)
 	- 快速开始:
