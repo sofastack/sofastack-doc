@@ -3,7 +3,14 @@
 - [依赖管理](./DependencyManagement)
 - [健康检查扩展](./HealthCheck)
 - [版本查看](./ViewVersions)
-- [类隔离](./ClassLoader-Isolation)
+- 模块化开发
+  * [模块化开发介绍](./Modular-Development)
+  * [快速开始](./Modular-Development-Quickstart)
+  * [SOFABoot 模块](./SOFABoot-Module)
+  * [JVM服务发布与引用](./Module-Service)
+  * [模块并行化启动](./parallel-start)
+  * [SOFABoot Profile](./SOFABoot-Profile)
+- [类隔离](./Classloader-Isolation)
 	- 产品介绍
 		- [产品概述](./sofa-ark/index)
 	- 快速开始:

@@ -1,25 +1,42 @@
-## 信息
-* [发布历史](./ReleaseNotes)
-* [发展路线 & 任务认领](./RoadMap) ♨️ 
-* [常见问题](./FAQ)
-
-## 指南
-* [快速开始](./GettingStarted)
-    * [API](./Getting-Started-with-API)
-    * [SOFA Boot](./Getting-Started-with-SOFA-Boot)
-* [用户手册](./UserGuide)
+* 快速开始
+    * [SOFARPC 方式](./Getting-Started-With-RPC)
+    * [SOFABoot 方式](./Getting-Started-With-SOFA-Boot)
+* 用户手册
     * [编程界面](./Programming)
+        * [使用 SOFARPC](./Programing-RPC)
+        * [使用 SOFABoot](./Programing-SOFA-BOOT)
     * [基本特性](./Features)
+        * [服务发布/服务引用](./Publish-And-Reference)
+        * [直连调用](./Peer-To-Peer)
+        * [调用方式](./Invoke-Type)
+        * [泛化调用](./Generic-Invoke)
+        * [负载均衡](./Load-Balance)
+        * [自定义过滤器](./Custom-Filter)
+        * [自定义路由寻址](./Custom-Router)
     * [高级特性](./AdvancedFeatures)
+        * [自定义线程池](./Custom-ThreadPool)
+        * [链路数据透传](./Invoke-Chain-Pass-Data)
+        * [预热权重](./Provider-Warmup-Weight)
+        * [自动故障剔除](./Fault-Tolerance)
     * [配置参考手册](./Configuration)
-* [开发者手册](./DeveloperGuide)
-
-## 交流
-* [参与贡献](./Contributing)
-* [提交Issue](../issues/new)
-* [提交PR](../compare)
-
-## 其它
+        * [发布订阅配置](./Configuration-Common)
+        * [预热转发配置](./Configuration-Warmup)
+        * [自动故障剔除配置](./Configuration-Fault-Tolerance)
+* 开发者手册
+    * [如何编译](./How-To-Build)
+    * [架构介绍](./Structure-Intro)
+    * [调用流程](./Client-Invoke-Flow)
+    * [基础模型](./Common-Model)
+    * [扩展点设计](./Extension-Loader)
+    * [版本发布](./Version-Release)
+    * [测试](./Test)
+* [发布历史](./ReleaseNotes)
+* [常见问题](./FAQ)
+* [发展路线 & 任务认领](./RoadMap) ♨️ 
+* 交流
+    * [参与贡献](./Contributing)
+    * [提交Issue](https://github.com/alipay/sofa-rpc/issues/new)
+    * [提交PR](https://github.com/alipay/sofa-rpc/compare)
 * [版权说明](./NOTICE)
 
 ![加好友回复"SOFA"进群](./resources/wx_1.png)
