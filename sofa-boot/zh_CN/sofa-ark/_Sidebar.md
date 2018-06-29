@@ -3,6 +3,7 @@
 - [依赖管理](./DependencyManagement)
 - [健康检查扩展](./HealthCheck)
 - [版本查看](./ViewVersions)
+- [FAQ](./FAQ)
 - 模块化开发
   * [模块化开发介绍](./Modular-Development)
   * [快速开始](./Modular-Development-Quickstart)

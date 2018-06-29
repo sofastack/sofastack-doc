@@ -1,7 +1,8 @@
 # 客户端快速开始
+
 ## 普通 Java 项目
 
-- 在应用中加入 client 的 Maven 依赖
+在应用中加入 client 的 Maven 依赖
 
 ```xml
 <dependency>    
@@ -13,7 +14,7 @@
 
 lookout-client 默认依赖了 lookout-reg-server 模块（支持向 lookout server 上报 metrics 数据），如果希望使用其他类型注册表(比如 lookout-reg-prometheus)，那么再加上对应依赖即可。
 
-- 构建一个全局的客户端实例（ com.alipay.lookout.client.DefaultLookoutClient ）
+开始使用 SOFALookout 的 Client 之前，首先需要构建一个全局的客户端实例（ `com.alipay.lookout.client.DefaultLookoutClient` ）
 
 ```java
 LookoutConfig lookoutConfig = new LookoutConfig();
@@ -26,7 +27,7 @@ client.addRegistry(lookoutRegistry);
 //(可选)对已加入或后续加入的客户端的 registry 实例，统一注册扩展模块的 metrics
 client.registerExtendedMetrics();
 ```
-- 通过客户端拿取 Registry 实例，进行使用
+然后通过客户端拿取 Registry 实例，进行使用：
 
 ```java
 //该注册表是个“组合”型的注册表
@@ -37,6 +38,6 @@ Counter counter = registry.counter(id);
 counter.inc();
 ```
 
-详细参考样例工程：lookout-client-samples-java 中 DefaultLookoutClientDemo 。
+客户端的使用，可以详细参考[样例工程](https://github.com/alipay/sofa-lookout/tree/master/client/samples/lookout-client-samples-java)。
 
 

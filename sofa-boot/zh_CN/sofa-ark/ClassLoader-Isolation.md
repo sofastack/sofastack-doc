@@ -149,12 +149,12 @@ starting in sample ark plugin activator
 │       └── testCompile
 │           └── default-testCompile
 │               └── inputFiles.lst
-├── sofaboot-sample-with-isolation-2.3.2-ark-biz.jar
-├── sofaboot-sample-with-isolation-2.3.2-executable-ark.jar
-└── sofaboot-sample-with-isolation-2.3.2.jar
+├── sofaboot-sample-with-isolation-2.4.0-ark-biz.jar
+├── sofaboot-sample-with-isolation-2.4.0-executable-ark.jar
+└── sofaboot-sample-with-isolation-2.4.0.jar
 ```
 
-其中 `sofaboot-sample-with-isolation-2.3.2-executable-ark` 就是一个具备类隔离能力的 Fat Jar，我们可以直接通过 `java -jar` 的方式将其启动。在服务器或者控制台上执行 `java -jar sofaboot-sample-with-isolation-2.3.2-executable-ark` 可以看到类似如下的启动成功日志：
+其中 `sofaboot-sample-with-isolation-2.4.0-executable-ark` 就是一个具备类隔离能力的 Fat Jar，我们可以直接通过 `java -jar` 的方式将其启动。在服务器或者控制台上执行 `java -jar sofaboot-sample-with-isolation-2.4.0-executable-ark` 可以看到类似如下的启动成功日志：
 
 ```
 2018-04-07 10:57:48.033  INFO 8488 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)

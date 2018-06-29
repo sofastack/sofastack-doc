@@ -21,12 +21,6 @@
     <artifactId>slf4j-log4j12</artifactId>
     <version>1.7.5</version>
 </dependency>
-<!-- 注意: 在主pom、ace pom及test pom均要增加 toolkit-common-logging 依赖 -->
-<dependency>
-  <groupId>com.alibaba.toolkit.common</groupId>
-  <artifactId>toolkit-common-logging</artifactId>
-  <version>1.11</version>
-</dependency>
 <!-- 日志实现1: log4j1.x END-->
 
 <!-- 日志实现2: log4j2.x START-->

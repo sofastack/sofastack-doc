@@ -21,3 +21,5 @@ FaultToleranceConfig faultToleranceConfig = new FaultToleranceConfig();
 FaultToleranceConfigManager.putAppConfig("appName", faultToleranceConfig);
 ```
 如上，该应用会在打开了单机故障剔除开关，每20s的时间窗口进行一次异常情况的计算，如果某个服务+ip的调用维度被判定为故障节点，则会进行将该服务+ip的权重降级为0.5倍。
+
+更加详细的参数请参考[单机故障剔除拆除](./Configuration-Fault-Tolerance.md)

@@ -4,10 +4,10 @@ SLF4J 提供了 MDC （Mapped Diagnostic Contexts）功能，可以支持用户�
 
 为了在应用中的日志正确打印 `TraceId` 和 `SpanId` 参数，我们的日志编程接口需要面向 [`SLF4J`]((https://www.slf4j.org/manual.html)) 进行编程，即打印日志的编程接口不要依赖具体的日志实现。
 
-```java
+```xml
 <dependency>
-  <groupId>org.slf4j</groupId>
-  <artifactId>slf4j-api</artifactId>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
 </dependency>
 ```
 
@@ -17,7 +17,7 @@ SLF4J 提供了 MDC （Mapped Diagnostic Contexts）功能，可以支持用户�
 
 * Logback 实现引入：
 
-```java
+```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-logging</artifactId>
@@ -26,12 +26,12 @@ SLF4J 提供了 MDC （Mapped Diagnostic Contexts）功能，可以支持用户�
 
 * Log4j2 实现引入：
 
-```java
+```xml
 <dependency>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-starter-log4j2</artifactId>
-   <--SOFABoot 没有管控 log4j2 版本 -->
-  <version>1.4.2.RELEASE</version>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-log4j2</artifactId>
+    <--SOFABoot 没有管控 log4j2 版本 -->
+    <version>1.4.2.RELEASE</version>
 </dependency>
 ```
 
@@ -40,20 +40,19 @@ SLF4J 提供了 MDC （Mapped Diagnostic Contexts）功能，可以支持用户�
 我们基于 [SLF4J MDC](https://www.slf4j.org/manual.html) 的原理打印对应的 TraceId 和 SpanId，首先我们的应用中的日志编程接口应该面向 `SLF4J`，如通过如下的方式：
 
 ```java
-	//引入接口
-	import org.slf4j.Logger;
-    import org.slf4j.LoggerFactory;
+//引入接口
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 	
-	//构造日志打印实例
-    private static final Logger logger = LoggerFactory.
-    getLogger(XXX.class);
+//构造日志打印实例
+private static final Logger logger = LoggerFactory.getLogger(XXX.class);
 ```
 
 其次，我们为了正确打印 `TraceId` 和 `SpanId` 参数，我们还需要在日志的配置文件中配置 `PatternLayout` 的额外参数，这两个参数是 `%X{SOFA-TraceId}` 和 `%X{SOFA-SpanId}`，参数值我们均是从 MDC 中获取的值。 
 
 [以 `Logback` 为例配置的 `pattern` 参数](https://logback.qos.ch/)：
 
-```java
+```
 <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %5p  [%X{SOFA-TraceId},
 %X{SOFA-SpanId}] 
 ---- %m%n</pattern>
@@ -63,7 +62,7 @@ SLF4J 提供了 MDC （Mapped Diagnostic Contexts）功能，可以支持用户�
 
 [Log4j2 配置 PatternLayout 样例](https://logging.apache.org/log4j/2.0/manual/layouts.html)：
 
-```java
+```
 <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p 
 [%X{SOFA-TraceId},%X{SOFA-SpanId}] ---- %m%n " />
 ```
@@ -71,7 +70,7 @@ SLF4J 提供了 MDC （Mapped Diagnostic Contexts）功能，可以支持用户�
 
 [Log4j 配置 PatternLayout 样例](https://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/PatternLayout.html)：
 
-```java
+```
  <layout class="org.apache.log4j.PatternLayout">
      <param name="ConversionPattern" value="%d %-5p %-32t 
      [%X{SOFA-TraceId},%X{SOFA-SpanId}] - %m%n"/>

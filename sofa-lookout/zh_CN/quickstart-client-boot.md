@@ -1,30 +1,66 @@
-# 客户端快速开始
-##  SpringBoot (SofaBoot)项目
+# 快速开始
 
-- 在应用中加入 client 的 starter
+该项目演示了如何在 SOFABoot 中使用 SOFALookout 并且对接到 Spring Boot 的 Actuator 中。如果想要对接到 Prometheus 上或者其他的 Registry 中，请参考 Registry 一节。
+
+## 新建 SOFABoot 项目
+
+SOFABoot 完全兼容 Spring Boot 应用，所以只需要新建一个 Spring Boot 的应用，并且按照 [SOFABoot 文档--依赖管理](https://github.com/alipay/sofa-boot/wiki/DependencyManagement#sofaboot-依赖管理)中的方式引入 SOFABoot 即可。
+
+## 引入 SOFALookout 依赖
+
+为了在 SOFABoot 中使用 SOFALookout，需要引入 SOFALookout 对应的 Starter，只需要在 `pom.xml` 中引入以下依赖即可：
 
 ```xml
 <dependency>
     <groupId>com.alipay.sofa.lookout</groupId>
     <artifactId>lookout-sofa-boot-starter</artifactId>
-    <version>${lookout.client.version}</version>
 </dependency>
 ```
-该 starter 依赖的 lookout-client 默认依赖了 lookout-reg-server 模块（支持向 lookout server 上报 metrics 数据），如果希望使用其他类型注册表(比如 lookout-reg-prometheus)，那么再加上对应依赖即可。
 
-- 如何使用
+## 新建一个 Metrics 指标
 
-在 SpringBoot 加入 lookout-sofa-boot-starter 后,即可以在使用的地方自动注入 com.alipay.lookout.api.Registry 实例即可：
+在完成依赖的引入之后，然后可以在 Spring Boot 中的启动类中，加入如下的方法：
+
 ```java
 @Autowired
 private Registry registry;
 
-//实际方法体...
-Counter counter = registry.counter(registry.createId("http_requests_total").withTag("instant", NetworkUtil.getLocalAddress().getHostName()));
-counter.inc();
+@PostConstruct
+public void init() {
+    Counter counter = registry.counter(registry.createId("http_requests_total").withTag("instant", NetworkUtil.getLocalAddress().getHostName()));
+    counter.inc();
+}
 ```
-更多细节参考样例工程: lookout-client-samples-boot
 
-- 配置项要求
+上面的代码中直接通过 `@Autowired` 注入了一个 Registry 的字段，通过这个 Registry 的字段，我们就可以创建对应的 Counter，然后通过修改这个 Counter 的数据来生成 SOFALookout 的 Metrics 的指标
 
-在 SpringBoot 项目中，配置文件中必须指定应用名：`spring.application.name=xx`。更多 Lookout Client 配置项，请参考配置说明部分。
+## 添加配置项
+
+在 SOFABoot 项目中，需要增加一个应用名的配置项：`spring.application.name=xxx`。
+
+## 与 Spring Boot Actuator 对接
+
+新增了一个指标之后，我们可以选择对接到 Spring Boot Actuator 上，要对接到 Spring Boot Actuator 上面，需要添加如下的依赖：
+
+```xml
+<dependency>
+    <groupId>com.alipay.sofa.lookout</groupId>
+    <artifactId>lookout-reg-dropwizard</artifactId>
+</dependency>
+<dependency>
+    <groupId>io.dropwizard.metrics</groupId>
+    <artifactId>metrics-core</artifactId>
+</dependency>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+```
+
+添加如上的依赖之后，我们在本地启动应用，访问 `http://localhost:8080/metrics`，就可以看到前面添加的指标，如下：
+
+```
+"http_requests_total.instant-MacBook-Pro-4.local": 1,
+```
+
+以上的 QuickStart 的代码在: [lookout-client-samples-boot](https://github.com/alipay/sofa-lookout/tree/master/client/samples/lookout-client-samples-boot)，大家可以下载作为参考。

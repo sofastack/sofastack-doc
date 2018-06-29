@@ -29,7 +29,7 @@ SOFABoot 是直接构建在 Spring Boot 之上，因此可以使用 [Spring Boo
 <parent>
     <groupId>com.alipay.sofa</groupId>
     <artifactId>sofaboot-dependencies</artifactId>
-    <version>2.3.2</version>
+    <version>2.4.0</version>
 </parent>
 ```
 
@@ -39,8 +39,7 @@ SOFABoot 是直接构建在 Spring Boot 之上，因此可以使用 [Spring Boo
 <dependency>
     <groupId>com.alipay.sofa</groupId>
     <artifactId>tracer-sofa-boot-starter</artifactId>
-    <!-- SOFA Boot 版本统一管控 -->
-    <version>2.1.0</version>
+    <!-- SOFABoot 版本统一管控 -->
 </dependency>
 ```
 
@@ -51,6 +50,34 @@ SOFABoot 是直接构建在 Spring Boot 之上，因此可以使用 [Spring Boo
 spring.application.name=SOFATracerSpringMVC
 # logging path
 logging.path=./logs
+```
+
+## 添加一个最简单的 Controller
+
+在工程代码中，添加一个最简单的 Controller，例如：
+
+```java
+@RestController
+public class SampleRestController {
+
+    private static final String TEMPLATE = "Hello, %s!";
+
+    private final AtomicLong    counter  = new AtomicLong();
+
+    /**
+     * http://localhost:8080/springmvc
+     * @param name name
+     * @return map
+     */
+    @RequestMapping("/springmvc")
+    public Map<String, Object> springmvc(@RequestParam(value = "name", defaultValue = "SOFATracer SpringMVC DEMO") String name) {
+        Map<String, Object> resultMap = new HashMap<String, Object>();
+        resultMap.put("success", true);
+        resultMap.put("id", counter.incrementAndGet());
+        resultMap.put("content", String.format(TEMPLATE, name));
+        return resultMap;
+    }
+}
 ```
 
 ## 运行

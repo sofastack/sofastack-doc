@@ -2,7 +2,7 @@
 
 目前默认生效的的扩展模块是: lookout-ext-jvm 。 lookout-ext-os 暂时并未生效，可以按照 SPI 机制生效之。 
 
-## Jvm 线程
+## JVM 线程
 | metric name |  metric tags |  specification |
 | --- |  --- |  --- |
 | jvm.threads.totalStarted |   |  --- |
@@ -10,14 +10,14 @@
 | jvm.threads.peak |  |  --- |
 | jvm.threads.daemon |   |  --- |
 
-## Jvm 类加载
+## JVM 类加载
 | metric name |   metric tags |  specification |
 | --- |  --- |  --- |
 | jvm.classes.unloaded |   |  --- |
 | jvm.classes.loaded |  |  --- |
 | jvm.classes.total |  |  --- |
 
-## Jvm 内存
+## JVM 内存
 | metric name |   metric tags |  specification |
 | --- |  --- |  --- |
 | jvm.memory.heap.init |  |  --- |
@@ -25,7 +25,7 @@
 | jvm.memory.heap.max |  |  --- |
 | jvm.memory.heap.committed | |  --- |
 
-## Jvm 垃圾回收
+## JVM 垃圾回收
 | metric name |   metric tags |  specification |
 | --- |  --- |  --- |
 | jvm.gc.young.time |  |  --- |

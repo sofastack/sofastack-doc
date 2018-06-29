@@ -24,7 +24,7 @@
     Built-Time: "2018-04-05T20:55:22+0800",
     Commit-Time: "2018-04-05T20:54:26+0800",
     Commit-Id: "049bf890bb468aafe6a3e07b77df45c831076996",
-    Version: "2.3.2"
+    Version: "2.4.0"
   }
 ]
 ```

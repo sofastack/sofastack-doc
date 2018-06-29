@@ -26,9 +26,9 @@ SOFABoot 是在 Spring Boot 的基础上提供的功能扩展。基于 Spring Bo
 </dependency>
 ```
 
-**说明: `${sofaboot.version}` 为具体的 SOFABoot 版本，如：`2.3.2`。**
+**说明: `${sofaboot.version}` 为具体的 SOFABoot 版本，如：`2.4.0`。**
 
-**请注意，当前的 `SOFABoot` 的 `2.3.2` 的版本是基于 `Spring Boot 1.4.2.RELEASE` 来构建的。而大家通过 dependencyManagement 方式添加的 SOFABoot 依赖，只管控了 SOFABoot 相关的版本，由于并未修改 parent Spring Boot 的管控依赖方式，所以 Spring Boot 的实际版本和其相关依赖以具体依赖的 Spring Boot 版本为准。如果遇到兼容问题，请第一时间联系我们。**
+**请注意，当前的 `SOFABoot` 的 `2.4.0` 的版本是基于 `Spring Boot 1.4.2.RELEASE` 来构建的。而大家通过 dependencyManagement 方式添加的 SOFABoot 依赖，只管控了 SOFABoot 相关的版本，由于并未修改 parent Spring Boot 的管控依赖方式，所以 Spring Boot 的实际版本和其相关依赖以具体依赖的 Spring Boot 版本为准。如果遇到兼容问题，请第一时间联系我们。**
 
 
 ## 引入 SOFA 中间件
@@ -48,7 +48,7 @@ SOFABoot 使用一系列后缀为 `-sofa-boot-starter` 来标示一个中间件�
 
 使用 SOFA 中间件时，需要在 `XML` 中根据中间件的具体使用方式添加相应的配置，这个时候需要引入 SOFABoot 的命名空间 `xmlns:sofa="http://sofastack.io/schema/sofaboot"` 以能够正确解析相应的配置标签，示例：
 
-```java
+```xml
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:sofa="http://sofastack.io/schema/sofaboot"

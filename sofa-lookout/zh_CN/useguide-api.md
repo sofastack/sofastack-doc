@@ -1,7 +1,8 @@
 # 用户手册
+
 ## 客户端 API 使用说明
 
-Lookout 客户端设计上保持了 API 与 实现解耦。如果我们只需要基于 Lookout API 进行埋点，那么只需要依赖 API 包即可。在没有依赖具体实现模块依赖时（比如 client 依赖 或 sofa boot（spring boot）Start 依赖），API 包会自动使用 NoopRegistry,使得所有埋点的地方都已空实现替代。
+SOFALookout 客户端设计上保持了 API 与实现解耦。如果我们只需要基于 SOFALookout API 进行埋点，那么只需要依赖 API 包即可。在没有依赖具体实现模块依赖时（比如 client 依赖 或 SOFABoot（Spring Boot）Start 依赖），API 包会自动使用 NoopRegistry，使得所有埋点的地方都已空实现替代。
 
 ### 1.API 依赖引入
 
@@ -17,7 +18,7 @@ Lookout 客户端设计上保持了 API 与 实现解耦。如果我们只需要
 
 Lookout metrics 相比传统的 metrics 库单一维度的信息描述，提供了支持多维度描述的 tags 能力。 Lookout metrics 的唯一标识 Id 类，由 name 和 tags 构成。
 
-```Java
+```java
 Id id = registry.createId("rpc.provider.service.stats");
 basicId = id.withTag("service", "com.alipay.demo.demoService")
             .withTag("method", "sayHi")
@@ -25,13 +26,13 @@ basicId = id.withTag("service", "com.alipay.demo.demoService")
             .withTag("alias", "group1");
 ```
 
-上面是 Id 的简单示例了，如何创建 Id，如何打 tag ，（每打一次 tag，都会生成并返回一个新的 Id 对象引用）切记！使用返回新的 Id 对象了哦。
+上面是 Id 的简单示例了，如何创建 Id，如何打 tag，（每打一次 tag，都会生成并返回一个新的 Id 对象引用）切记！使用返回新的 Id 对象了哦。
 
 #### 2.1 Priority tag (不是必须)
 
 PRIORITY 枚举级别: HIGH, NORMAL, LOW;
 
-```Java
+```java
 id.withTag(LookoutConstants.LOW_PRIORITY_TAG);
 ```
 如果不打该 Tag (建议)，默认是 NORMAL 级别。级别代表了采集间隔周期（HIGH：2s, NORMAL: 30s, LOW: 1min）
@@ -39,15 +40,17 @@ id.withTag(LookoutConstants.LOW_PRIORITY_TAG);
 #### 2.2 关于 tags
 
 - 通用的 tags，比如：本机 ip，机房等详细会统一附上，不需要单独指定。
-- 普通 Java 项目直接 lookout-client 时，tags 需要自己制定，特别记住：`appName 别忘啦！tag:app=xx`
+- 普通 Java 项目直接 lookout-client 时，tags 需要自己指定，特别记住：`appName 别忘啦！tag:app=xx`
 - key 必须小写，尽量是字母，数字，下划线；
 （尤其是运行期的 Counter, Timer, DistributeSummary 这些 metrics）某个类型的 tag 的 values 尽量是稳定不变有限集合，而且 tags 尽量少，防止 metrics 数量超过最大限制！ 比如：rpc 场合 service, method 两个 tag 对应的值是有限较小的；
 反例是每次 rpc 调用都有是个独立的 tag-value。 因此，总体原则自定义打 tags 时要尽量少，对应 values 的集合数量尽量小；
 专门用途的 TAG 名称: "priority": 表示优先级。
+- 系统保留的 tag key 统配格式`_*_`,以下划线开始，以下划线结束（比如: "_type_" ）。 `请不要使用这种格式的 key，可能会被系统覆盖或丢弃`
 
 ### 3.可接入的统计( Metric )类型API
 
 #### Counter 「计数器」
+
 - 场景：方法调用次数；
 - 主动汇报的数据包括： count, rate (也就是 qps)；
 - 使用方式
@@ -56,9 +59,10 @@ id.withTag(LookoutConstants.LOW_PRIORITY_TAG);
 Counter counter=registry.counter(id);
 counter.inc();
 ```
+
 #### Timer 「耗时统计器」
 - 场景:统计任务，方法耗时；
-- 主动汇报的数据包括： elapPerExec (单次执行耗时), total 耗时，Max 耗时,（上报单位：秒）；
+- 主动汇报的数据包括：elapPerExec (单次执行耗时), total 耗时，Max 耗时,（上报单位：秒）；
 - 使用方式
 
 ```java
@@ -66,6 +70,7 @@ Timer timer=registry.timer(id);
 timer.record(2, TimeUnit.SECONDS);
 ```
 #### DistributionSummary 「值分布情况统计器」
+
 - 场景：比如 io 流量；
 - 主动汇报的数据包括: count, total(size), max(size)；
 - 使用方式:
@@ -80,7 +85,7 @@ distributionSummary.record(1024);
 - 主动汇报的数据包括: value；
 往注册表中登记新 gauge 时，ID 值相等，注册表继续使用已有的(忽略新的)；
 
->注意，推荐 gauge 观察的对象尽量是单例的（复用），并且建议在运行时一直活着（而不是作为一个临时的统计）！，如果不是单例或者只存活一段时间，那么一定要从 Registry 中 remove 掉，否则影响 GC（主要是它持有的外部对象引用无法释放，浪费空间）!!
+*注意，推荐 gauge 观察的对象尽量是单例的（复用），并且建议在运行时一直活着（而不是作为一个临时的统计）！，如果不是单例或者只存活一段时间，那么一定要从 Registry 中 remove 掉，否则影响 GC（主要是它持有的外部对象引用无法释放，浪费空间）!!*
 
 - 使用方式:
 

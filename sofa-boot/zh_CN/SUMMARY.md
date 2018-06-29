@@ -1,5 +1,6 @@
 - [SOFABoot 介绍](./Home)
 - [快速开始](./QuickStart)
+- [FAQ](./FAQ)
 - [依赖管理](./DependencyManagement)
 - [健康检查扩展](./HealthCheck)
 - [版本查看](./ViewVersions)

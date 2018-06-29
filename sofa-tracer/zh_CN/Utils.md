@@ -16,7 +16,7 @@ SofaTracerSpan sofaTracerSpan = sofaTraceContext.getCurrentSpan();
 
 在使用相应的组件如 Spring MVC 时，该组件集成了 SOFATracer 的能力后可以在获取到 Span 后获取到 Span 中的所有信息，具体获取方式示例（前提 Span 不为空即相应组件已经集成 SOFATracer）：
 
-1. 获取 TraceId 和 SpanId ：
+### 获取 TraceId 和 SpanId ：
 
 ```java
 SofaTracerSpanContext sofaTracerSpanContext = currentSpan.getSofaTracerSpanContext();
@@ -24,7 +24,7 @@ String traceId = sofaTracerSpanContext.getTraceId();
 String spanId = sofaTracerSpanContext.getSpanId();
 ```
 
-2. 获取 OpenTracing 规范中的 `Baggage`
+### 获取 OpenTracing 规范中的 `Baggage`
 
 通过标准接口即可获取相应的 `Baggage` 数据：
 
@@ -33,7 +33,7 @@ String baggageKey = "key";
 String baggageValue = sofaTracerSpan.getBaggageItem(baggageKey);
 ```
 
-3. 获取 OpenTracing 规范中的 `Tags` 和 `Logs`
+### 获取 OpenTracing 规范中的 `Tags` 和 `Logs`
 
 获取 `Tags`:
 
@@ -45,7 +45,7 @@ Map<String, Number> tagsNumber = sofaTracerSpan.getTagsWithNumber();
 
 获取 `Logs`:
 
-```
+```java
 List<LogData> logDataList = sofaTracerSpan.getLogs();
 ```
 
