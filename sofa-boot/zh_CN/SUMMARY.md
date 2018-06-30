@@ -26,3 +26,14 @@
 		- [Ark 容器启动流程](./sofa-ark/startup)
 		- [Ark 容器插件机制](./sofa-ark/plugin)
 		- [Ark 容器类加载机制](./sofa-ark/classloader)
+* [合并部署](./jarslink-readme)
+    * [快速开始]
+        * [如何创建 SOFABoot 应用](./jarslink-app-demo)
+        * [如何使用 Jarslink 多应用动态部署](jarslink-deploy-demo.md)
+        * [如何跨应用通信](./jarslink-invocation-demo)
+        * [如何集成 SOFABoot 健康检查](./jarslink-health-demo)
+    * [用户文档]
+        * [应用打包](./jarslink-repcakge)
+        * [合并部署](./jarslink-deploy)
+        * [交互指令](./jarslink-instruction)
+        * [生命周期](./jarslink-lifecycle)
