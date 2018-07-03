@@ -15,7 +15,7 @@
 * 导入资源：其他插件如果导入了该资源，优先从本插件加载；
 
 
-> [详细请参考插件规范](sofastack.github.io/docs/ark-plugin.html#插件规范)
+> [详细请参考插件规范](./ark-plugin)
 
 
 ## 工具
@@ -29,7 +29,7 @@
 </plugin>
 ```
 
-> [详细请参考插件配置文档](sofastack.github.io/docs/ark-plugin.html#完整配置模板)
+> [详细请参考插件配置文档](./ark-plugin)
 
 ## 入门
 基于该用例工程，我们一步步描述如何构建一个 `Ark Plugin` 
