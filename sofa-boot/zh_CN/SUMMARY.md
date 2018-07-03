@@ -1,16 +1,16 @@
 - [SOFABoot 介绍](./Home)
 - [快速开始](./QuickStart)
-- [FAQ](./FAQ)
 - [依赖管理](./DependencyManagement)
 - [健康检查扩展](./HealthCheck)
-- [版本查看](./ViewVersions)
 - [类隔离](ClassLoader-Isolation)
+- [版本查看](./ViewVersions)
 - 模块化开发
   * [模块化开发介绍](./Modular-Development)
   * [SOFABoot 模块](./SOFABoot-Module)
   * [JVM服务发布与引用](./Module-Service)
   * [模块并行化启动](./parallel-start)
   * [SOFABoot Profile](./SOFABoot-Profile)
+- [FAQ](./FAQ)
 - SOFAArk
 	- [产品概述](./sofa-ark/readme)
 	- 快速开始:

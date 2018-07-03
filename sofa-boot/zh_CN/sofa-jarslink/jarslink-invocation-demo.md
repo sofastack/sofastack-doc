@@ -65,7 +65,7 @@ Biz 之间使用内部 JVM 服务进行通信需要依赖 SOFARuntime 包及其�
     <artifactId>runtime-sofa-boot-starter</artifactId>
 </dependency>
 ```
-关于 JVM 服务的发布和引用推荐阅读[SOFABoot 文档](https://github.com/alipay/sofa-boot/wiki/Module-Service), 在 Jarslink2.0 中推荐使用注解的方式。
+关于 JVM 服务的发布和引用推荐阅读[SOFABoot 文档](../Module-Service), 在 Jarslink2.0 中推荐使用注解的方式。
 
 ## 演示
 + cd biz-jvm-invocation-sample/facade && mvn clean install 

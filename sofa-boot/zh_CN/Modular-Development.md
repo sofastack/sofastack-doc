@@ -8,7 +8,7 @@ SOFABoot 模块化开发属于第二种模块化形式 —— 基于 Spring 上�
 
 ## 功能简介
 
-![Modulardevelopment.png](./Modulardevelopment.png) 
+![Modulardevelopment.png](resources/Modulardevelopment.png) 
 
 ### SOFABoot 模块
 
