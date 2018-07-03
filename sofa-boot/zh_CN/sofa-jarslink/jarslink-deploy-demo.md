@@ -1,7 +1,7 @@
-### 简介
+## 简介
 本小节意在演示如何使用 Jarslink2.0 动态控制 Biz 包的生命周期，完成 Biz 包的安装、卸载、查询操作。
 
-### 演示
+## 演示
 参考[如何改造普通 Spring Boot 应用](./jarslink-app-demo.md)，改造后的 spring-boot-transform-sample 工程已经集成了 Jarslink2.0 组件，执行该应用打包生成的 Ark 包，即可运行时动态安装卸载应用。
 
 + java -jar 启动 spring-boot-transform-sample 应用 Ark 包
@@ -43,3 +43,5 @@
   > bizName='spring-boot-transform-sample', bizVersion='1.0.0',   bizState='activated'
   > 
   > sofa-ark>
+  
+  更多命令使用请查看[交互指令](./jarslink-instruction)。

@@ -1,9 +1,9 @@
 > [工程地址](https://github.com/QilongZhang/jarslink-demo/tree/master/spring-boot-transform-sample)
 
-### 简介
+## 简介
 Spring Boot 和 SOFABoot 都可以使用 Jarslink2.0，只需要添加指定依赖即可。为了使用便利，推荐以 SOFABoot 工程形式使用 Jarslink2.0。本样例工程意在演示如何快速的将 Spring Boot 工程改造成 SOFABoot 工程。
 
-### 改造
+## 改造
 在 [Spring Boot 官网](https://start.spring.io/)创建好一个 Spring Boot 的工程之后，接下来只需要引入 SOFABoot 的依赖，首先修改 maven 项目的配置文件 pom.xml，将
 ```xml
 <parent>
@@ -29,7 +29,7 @@ Spring Boot 和 SOFABoot 都可以使用 Jarslink2.0，只需要添加指定依�
         <groupId>com.alipay.sofa</groupId>
         <artifactId>sofa-jarslink-ark-starter</artifactId>
         <classifier>ark-plugin</classifier>
-        <version>0.1.0</version>
+        <version>2.0.0-SNAPSHOT</version>
     </dependency>
 
     <!-- Web -->
@@ -39,7 +39,7 @@ Spring Boot 和 SOFABoot 都可以使用 Jarslink2.0，只需要添加指定依�
     </dependency>
 </dependencies>
 ```
-为了将应用打包成 Ark 包或者 Biz 包，需要在主 pom.xml 文件中，配置 sofa-ark-maven-plugin 打包插件:
+为了将应用打包成 Ark 包或者 Biz 包，需要在主 pom.xml 文件中，配置 sofa-ark-maven-plugin 打包插件，注意请删除 Spring Boot 原生的打包插件配置:
 ```xml
 <build>
     <plugins>
@@ -82,4 +82,4 @@ logging.path=./logs
 + spring-boot-transform-sample-${version}-executable-ark.jar 这是 Ark 包
 + spring-boot-transform-sample-${version}-ark-biz.jar 这是 Biz 包
 
-使用 java -jar 即可启动该 Ark 包。
+使用 java -jar 即可启动该 Ark 包。更多关于打包信息请查看[应用打包](./jarslink-repackage)。

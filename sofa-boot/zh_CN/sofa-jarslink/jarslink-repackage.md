@@ -1,10 +1,11 @@
+# 简介
 理解 Jarslink2.0 的使用方式，你需要对 [SOFAArk 框架](https://github.com/alipay/sofa-ark)以及 [Ark 包](https://alipay.github.io/sofastack.github.io/docs/ark-jar.html)和 [Ark Biz](https://alipay.github.io/sofastack.github.io/docs/ark-biz.html) 的打包方式有一定的了解。
 
 为了保证阅读的连贯性，在这里会粗略的描述应用使用 Jarslink2.0 的打包逻辑，官方推荐先跳转到上述链接进行必要的背景知识学习。
 
 Jarslink2.0 要求应用是 [Spring Boot](https://spring.io/projects/spring-boot) 或者 [SOFABoot](https://github.com/alipay/sofa-boot) 应用类型，在介绍新的应用打包方式之前，先来看下为什么 Spring Boot/ SOFABoot 应用在使用 Jarslink2.0 之后，需要引入新的打包方式。
 
-### 背景
+## 背景
 Jarslink2.0 运行时是作为 SOFAArk 框架的 [Ark Plugin](https://alipay.github.io/sofastack.github.io/docs/ark-plugin.html) 工作, 因此使用 Jarslink2.0 必须要引入 SOFAArk 框架，只有在 SOFAArk 容器启动之后，才会加载并启动 Jarslink2.0 插件。我们知道，官方 Spring Boot 工程使用插件：
 ```xml
 <plugin>
@@ -23,7 +24,7 @@ Jarslink2.0 运行时是作为 SOFAArk 框架的 [Ark Plugin](https://alipay.git
 ```
 负责将 Spring Boot/SOFABoot 应用打包成一个可执行的 FatJar，称之为 [Ark 包](https://alipay.github.io/sofastack.github.io/docs/ark-jar.html)。
 
-### 打包类型
+## 打包类型
 在上一小结，我们描述了为什么使用 Jarslink2.0 需要引入区别于 Spring Boot 官方的打包方式，并引出了应用的第一种打包类型，Ark 包。下面我们总结下 Ark 包具有的特性：
 
 + Ark 包是 SOFAArk 框架自定义的一种可执行的 FatJar 包格式，具体可[参考文档](https://alipay.github.io/sofastack.github.io/docs/ark-jar.html)。

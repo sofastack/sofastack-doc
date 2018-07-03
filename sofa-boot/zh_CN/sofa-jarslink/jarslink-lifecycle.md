@@ -1,6 +1,6 @@
 在[交互指令](./jarslink-instruction.md)一节中，描述了 Jarslink2.0 支持的指令集合，而在这一节中，则主要介绍在这些指令的背后，一个 Biz 包从静态文件到运行时被装载直至被卸载所有可能的状态迁移图。
 
-![undefined](./resources/jarslink-lifecycle.png) 
+![undefined](../resources/jarslink-lifecycle.png) 
 
 上述图基本展示了一个 Biz 包的完整生命周期，下面我们逐一解释图中状态转移的方向：
 

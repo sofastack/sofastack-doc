@@ -10,7 +10,7 @@ Jarslink 2.0 是 [SOFABoot](https://github.com/alipay/sofa-boot) 官方基于 [S
 + 支持应用健康检查。
 
 
-# 背景
+## 背景
 在蚂蚁金服内部，在同一个 JVM 之上部署多个应用，是一件常见的事情。这样带来的主要优势如下：
 
 + 无关应用合并部署：有些应用在独立部署时，相互之间没有服务依赖，而且这些应用承担业务体量都偏小，单独启动 Java 虚拟机比较浪费资源， 将这些应用合并部署，能够节省资源。
@@ -29,12 +29,12 @@ Jarslink 2.0 是 [SOFABoot](https://github.com/alipay/sofa-boot) 官方基于 [S
 
 Jarslink2.0  正是为了解决诸如此类的问题，它是基于 SOFAArk 开发的 Ark Plugin，用于管理多应用合并部署。在了解 Jarslink2.0 之前，你需要提前了解 SOFAArk 框架。关于 SOFAArk 可以访问[链接](https://alipay.github.io/sofastack.github.io/)获取更多详细信息。
 
-# 原理
+## 原理
 Jarslink2.0 是一款基于 SOFAArk 开发的 [Ark Plugin](https://alipay.github.io/sofastack.github.io/docs/ark-plugin.html) 。假设你已经对 SOFAArk 有一定的了解，很容易知道，应用被打包成 [Ark Biz](https://alipay.github.io/sofastack.github.io/docs/ark-biz.html) 的形式运行在 SOFAArk 容器之上。SOFABoot 或者 Spring Boot 应用，甚至普通的模块都可以借助 SOFAArk 插件打包成一个标准的 Ark Biz 包。
 
 Jarslink2.0 支持多个 Ark Biz 运行在 SOFAArk 容器之上，从而做到多应用的合并部署。应用可以通过注解的形式快速发布服务或者引用其他应用发布的服务，达到相互通信的目的。下图是运行时多应用合并部署结构图：
 
-![undefined](./resources/jarslink-runtime.png) 
+![undefined](../resources/jarslink-runtime.png) 
 
 从图中可以看到，使用 Jarslink2.0 通常需要引入两个 Ark Plugin, 下面介绍这两个 Ark Plugin 的作用。
 

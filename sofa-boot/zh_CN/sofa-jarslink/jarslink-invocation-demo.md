@@ -1,7 +1,7 @@
 > [工程地址](https://github.com/QilongZhang/jarslink-demo/tree/master/biz-jvm-invocation-sample)
 
-### 简介
-在合并部署时，Biz 之间除了使用 RPC 框架通信之外，还可以通过发布和引用 JVM 服务进行通信。本样例工程意在演示两个 Biz 如何使用 JVM 服务进行通信。
+## 简介
+在合并部署时，Biz 之间除了可以使用 RPC 框架通信之外，还可以通过发布和引用 JVM 服务进行通信。本样例工程意在演示两个 Biz 如何使用 JVM 服务进行通信。
 
 在 biz-jvm-invocation-sample 内部，有三个子工程，其作用如下：
 + facade: 一个普通的 Java 模块，定义了接口 SampleJvmService:
@@ -52,7 +52,7 @@ public class AppTwoSampleService implements SampleJvmService{
 }
 ```
 
-### 依赖
+## 依赖
 Biz 之间使用内部 JVM 服务进行通信需要依赖 SOFARuntime 包及其对应的 Ark Plugin，需要添加如下依赖：
 ```xml
 <dependency>
@@ -67,7 +67,7 @@ Biz 之间使用内部 JVM 服务进行通信需要依赖 SOFARuntime 包及其�
 ```
 关于 JVM 服务的发布和引用推荐阅读[SOFABoot 文档](https://github.com/alipay/sofa-boot/wiki/Module-Service), 在 Jarslink2.0 中推荐使用注解的方式。
 
-### 演示
+## 演示
 + cd biz-jvm-invocation-sample/facade && mvn clean install 
 在 facade 应用根目录中执行 mvn clean install 命令，把 facade 包安装到本地 maven 仓库，以便在 app-one 和 app-two 中添加 facade 依赖：
 ```xml

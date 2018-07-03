@@ -1,12 +1,12 @@
 > [工程地址](https://github.com/QilongZhang/jarslink-demo/tree/master/biz-health-check-sample)
 
-### 简介
+## 简介
 SOFABoot 扩展了 Spring Boot 的健康检查，详情请移步[SOFABoot 文档](https://github.com/alipay/sofa-boot/wiki/HealthCheck) 。本样例工程意在演示在合并部署时，如何集成 SOFABoot 健康检查组件。合并部署时的健康检查和单个 SOFABoot 应用的健康检查存在如下区别：
 + 静态合并部署时，Ark 包正常启动的前提必须是所有 Biz 都健康检查通过。
 + 使用 Jarslink2.0 运行时动态部署 Biz 时，只有健康检查通过才会部署成功。
 + 合并部署时，访问 Spring Boot 默认的 /health 会新增名为 multiApplicationHealthChecker 的检查项，用于检查所有的 Biz 健康状态，只有所有的 Biz 健康检查成功才认为健康检查通过。
 
-### 依赖
+## 依赖
 合并部署时，为了集成 SOFABoot 健康检查能力，需要添加如下依赖：
 ```xml
 <!--health check-->
@@ -35,7 +35,7 @@ SOFABoot 扩展了 Spring Boot 的健康检查，详情请移步[SOFABoot 文档
 
 **请注意，在引入 healthcheck-sofa-boot-starter 依赖是，排除了 spring-boot-starter-web，避免启动多个 Web 应用**
 
-### 演示
+## 演示
 + cd biz-health-check-sample/app-one && mvn clean package
 在 app-one 应用根目录中执行 mvn clean package 命令，将应用打包成 Ark 包和 Biz 包，文件将输出到 biz-health-check-sample/app-one/target 目录
 
