@@ -1,8 +1,10 @@
 # 发展路线
 
-***
-> 目前Lookout, Tracer 等部分集成功能特性还在代码整理当中，敬请期待。
-***
+
+
+![[Roadmap]()](./resources/roadmap.png)
+
+
 ## 任务列表
 
 部分内部已有的功能特性，待**内部整理完毕后**随各个迭代放出。
@@ -24,9 +26,31 @@
 ## 版本迭代计划
 
 ### v5.5.0
-- 增加 Bolt 协议下的版本协商机制和 CRC 校验。
-- 增加对 TLS 安全的支持。
-- 增加对 gRPC 通讯的支持。
-- 增加对 etcd 注册中心的支持。
-- 增加对 Consul 注册中心的支持。
-- 增加对 SOFARegistry 注册中心的支持。
+
+- BOLT 版本协商与 CRC 校验
+- JSON 序列化支持
+- H2的TLS安全支持
+- 弹性连接池
+- hystrix集成
+
+
+### v5.6.0
+
+- grpc 通讯层支持
+- etcd注册中心支持
+- Consul注册中心支持
+- SofaMesh支持
+
+
+### v5.7.0
+
+- Telnet 内置指令支持
+- SpringBoot 2.0 支持
+- Mock功能支持
+- 加密功能支持
+
+### v5.8.0
+
+- 授权支持
+- SofaRegistry 支持
+- Reative 支持
