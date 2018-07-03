@@ -32,7 +32,7 @@
         * [如何跨应用通信](./jarslink-invocation-demo)
         * [如何集成 SOFABoot 健康检查](./jarslink-health-demo)
     * 用户文档
-        * [应用打包](./jarslink-repackge)
+        * [应用打包](./jarslink-repackage)
         * [合并部署](./jarslink-deploy)
         * [交互指令](./jarslink-instruction)
         * [生命周期](./jarslink-lifecycle)
