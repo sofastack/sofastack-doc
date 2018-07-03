@@ -48,7 +48,7 @@ Jarslink2.0 运行时是作为 SOFAArk 框架的 [Ark Plugin](../sofa-ark/ark-pl
 可以打成两种类型格式包，分别是 Ark 包和 Biz 包。
 
 ## 打包配置
-关于打包插件 `sofa-ark-maven-plugin` 的详细使用可以[参考文档](../sofa-ark/ark-jar#%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%A8%A1%E6%9D%BF)。这里贴一个简单的打包配置，配置如下：
+关于打包插件 `sofa-ark-maven-plugin` 的详细使用可以[参考文档](../sofa-ark/ark-jar)。这里贴一个简单的打包配置，配置如下：
 
 ```xml
 <build>

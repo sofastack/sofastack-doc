@@ -6,7 +6,7 @@ SOFABoot 提供三种方式给开发人员发布和引用 JVM 服务
 
 ### XML 方式
 
-** 服务发布 **
+#### 服务发布
 
 首先需要定义一个 Bean：
 
@@ -24,7 +24,7 @@ SOFABoot 提供三种方式给开发人员发布和引用 JVM 服务
 
 上面的配置中的 interface 指的是需要发布成服务的接口，ref 指向的是需要发布成 JVM 服务的 Bean，至此，我们就已经完成了一个 JVM 服务的发布。
 
-** 服务引用 **
+#### 服务引用
 
 使用 SOFA 提供的 Spring 扩展标签引用服务: 
 
@@ -36,7 +36,7 @@ SOFABoot 提供三种方式给开发人员发布和引用 JVM 服务
 
 上面的配置中的 interface 是服务的接口，需要和发布服务时配置的 interface 一致。id 属性的含义同 Spring BeanId。上面的配置会生成一个 id 为 sampleServiceRef 的 Spring Bean，你可以将 sampleServiceRef 这个 Bean 注入到当前 SOFABoot 模块 Spring 上下文的任意地方。
 
-> service/reference 标签还支持 RPC 服务发布，相关文档: [RPC 服务发布与引用](https://lark.alipay.com/caojie.cj/icguet/ddx8p8)
+> service/reference 标签还支持 RPC 服务发布，相关文档: [RPC 服务发布与引用](https://github.com/alipay/sofa-rpc/wiki/Publish-And-Reference)
 
 ### Annotation 方式
 
