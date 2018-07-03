@@ -13,7 +13,7 @@
 - [FAQ](./FAQ)
 - SOFAArk
 	- [产品概述](./sofa-ark/readme)
-	- 快速开始:
+	- 快速开始
 		- [Ark-Plugin 工程演示](./sofa-ark/ark-plugin-demo)
 		- [Ark 工程演示](./sofa-ark/ark-demo)
 	- 用户文档
