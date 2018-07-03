@@ -13,14 +13,14 @@ String result = (String) testService.$invoke("sayHello", new String[] { "java.la
 
 如果参数或者返回结果在客户端也需要泛化表示。可以通过 GenericObject 来实现。
 ```java
-GenericObject param = new GenericObject("com.alipay.sofa.rpc.invoke.generic.TestObj");
+GenericObject genericObject = new GenericObject("com.alipay.sofa.rpc.invoke.generic.TestObj");
               
 genericObject.putField("str", "xxxx");
 genericObject.putField("num", 222);
 
 GenericObject result = (GenericObject) testService.$genericInvoke("echoObj",
                     new String[] { "com.alipay.sofa.rpc.invoke.generic.TestObj" },
-                    new Object[] { param });
+                    new Object[] { genericObject });
 
 String str = result.getField("str");
 String num = result.getField("num");
@@ -72,4 +72,6 @@ public class ConsumerClass {
 	  
       // 2.4 进行调用，参数类型是数组类型
       String[] result = (String[]) proxy.$genericInvoke("hello", new String[]{new String[0].getClass().getName()}, new Object[]{ new String[]{"args"} });
+   }
+}
 ```
