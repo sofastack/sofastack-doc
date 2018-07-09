@@ -4,3 +4,5 @@
 * [链路数据透传](./Invoke-Chain-Pass-Data)
 * [预热权重](./Provider-Warmup-Weight)
 * [自动故障剔除](./Fault-Tolerance)
+* [Node跨语言调用](./Node-And-Java-Communicate)
+

@@ -21,6 +21,7 @@
         * [链路数据透传](./Invoke-Chain-Pass-Data)
         * [预热权重](./Provider-Warmup-Weight)
         * [自动故障剔除](./Fault-Tolerance)
+        * [Node跨语言调用](./Node-And-Java-Communicate)
     * [配置参考手册](./Configuration)
         * [发布订阅配置](./Configuration-Common)
         * [自动故障剔除配置](./Configuration-Fault-Tolerance)
