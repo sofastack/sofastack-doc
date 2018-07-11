@@ -4,11 +4,11 @@ SOFARPC 支持进行框架层面的重试策略,前提是集群模式为 FailOve
 
 对于 SOFABoot 的应用,只需要在配置中,指定需要重试的次数.
 ```java
-  <sofa:reference jvm-first="false" id="retriesServiceReferenceBolt" interface="com.alipay.sofa.rpc.samples.retries.RetriesService">
-        <sofa:binding.bolt>
-            <sofa:global-attrs retries="2"/>
-        </sofa:binding.bolt>
-    </sofa:reference>
+<sofa:reference jvm-first="false" id="retriesServiceReferenceBolt" interface="com.alipay.sofa.rpc.samples.retries.RetriesService">
+   <sofa:binding.bolt>
+     <sofa:global-attrs retries="2"/>
+   </sofa:binding.bolt>
+</sofa:reference>
 
 ```
 
@@ -16,8 +16,8 @@ SOFARPC 支持进行框架层面的重试策略,前提是集群模式为 FailOve
 而如果是直接使用 SOFARPC, 则直接设置即可
 
 ```java
- ConsumerConfig<RetriesService> consumerConfig =new ConsumerConfig<RetriesService>();
- consumerConfig.setRetries(2);
+ConsumerConfig<RetriesService> consumerConfig =new ConsumerConfig<RetriesService>();
+consumerConfig.setRetries(2);
 ```
 
 这样,在框架调用过程中,会在
