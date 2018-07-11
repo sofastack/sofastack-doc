@@ -16,6 +16,7 @@
         * [自定义过滤器](./Custom-Filter)
         * [自定义路由寻址](./Custom-Router)
         * [优雅关闭](./Graceful-Shutdown)
+        * [调用重试](./Retry-Invoke)
     * [高级特性](./AdvancedFeatures)
         * [自定义线程池](./Custom-ThreadPool)
         * [链路数据透传](./Invoke-Chain-Pass-Data)

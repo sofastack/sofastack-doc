@@ -27,7 +27,7 @@
 | timeout       | 服务端执行超时时间        |                    |                                                                            |
 | concurrents   | 并发执行请求             |                    | 接口下每方法的最大可并行执行请求数，配置-1关闭并发过滤器，等于0表示开启过滤但是不限制 |
 | cacheRef      | 结果缓存实现类           |                    |                                                                            |
-| mocakRef      | Mock实现类              |                    |                                                                            |
+| mockRef      | Mock实现类              |                    |                                                                            |
 | mock          | 是否开启Mock            |                    |                                                                            |
 | validation    | 是否开启参数验证(jsr303) |                    |                                                                            |
 | compress      | 是否启动压缩             | false              |                                                                            |
@@ -73,7 +73,7 @@
 | invokeType | 调用类型 | sync |  |
 | onReturn | 并发执行请求数 | | 接口下每方法的最大可并行执行请求数，<br>配置-1关闭并发过滤器，等于0表示开启过滤但是不限制 |
 | cacheRef | 结果缓存实现类 | |  |
-| mocakRef | Mock实现类 | |  |
+| mockRef | Mock实现类 | |  |
 | cache | 是否启用结果缓存 | false |  |
 | mock | 是否开启Mock | |  |
 | validation | 是否开启参数验证 | | 基于JSR303 |
