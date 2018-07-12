@@ -32,9 +32,17 @@
         * [如何使用 Jarslink 多应用动态部署](./sofa-jarslink/jarslink-deploy-demo)
         * [如何跨应用通信](./sofa-jarslink/jarslink-invocation-demo)
         * [如何集成 SOFABoot 健康检查](./sofa-jarslink/jarslink-health-demo)
-    * 用户文档
+    * 用户手册
         * [应用打包](./sofa-jarslink/jarslink-repackage)
         * [合并部署](./sofa-jarslink/jarslink-deploy)
         * [交互指令](./sofa-jarslink/jarslink-instruction)
         * [生命周期](./sofa-jarslink/jarslink-lifecycle)
+    * 开发手册
+        * [如何编译](./sofa-jarslink/compile)
+        * [架构介绍](./sofa-jarslink/structure)
+        * [基础模型](./sofa-jarslink/model)
+        * [版本发布](./sofa-jarslink/version)
+    * [发布历史](./sofa-jarslink/release)
+    * [常见问题](./sofa-jarslink/faq)
     * [发展路线](./sofa-jarslink/roadmap)
+    * [参与贡献](./sofa-jarslink/contribution)
