@@ -1,8 +1,10 @@
-#### 使用 mosn 的CodecClient 作为客户端
+# 使用 MOSN 的CodecClient 作为客户端
 
-#### 步骤一: 初始化 CodecClient, 同时如果有需要，请注册对应的callback来监听连接上的事件
+### 步骤一: 初始化 CodecClient
 
-```
+同时如果有需要，请注册对应的callback来监听连接上的事件。
+
+```go
 codecClient := str.NewCodecClient(nil, protocol.Http2, connData.Connection, connData.HostInfo)
 codecClient.AddConnectionCallbacks(ac)
 codecClient.SetCodecClientCallbacks(ac)
@@ -13,15 +15,16 @@ codecClient.SetCodecConnectionCallbacks(ac)
 + codecclient callbacks: 当client上发送的stream被reset的时候会调用
 + codecclient connection callbacks: 当client上的连接优雅关闭的时候会调用
 
-####Also: 如果你希望使用双工通信，那么需要使用 NewBiDirectCodeClient 来创建 `codecClient`
-```
+如果你希望使用双工通信，那么需要使用 NewBiDirectCodeClient 来创建 `codecClient`
+
+```go
 codecClient := str.NewBiDirectCodeClient(protocol.Http2, connData.Connection, connData.HostInfo, SrvStreamCB)
 ```
 其中, 你需要自己实现 `ServerStreamConnectionEventListener`这个接口，即`SrvStreamCB`
 
-#### 步骤二. 创建 stream
+### 步骤二. 创建 stream
 
-```
+```go
 requestStreamEncoder := codecClient.NewStream(streamId, responseDecoder)
 ```
 
@@ -30,68 +33,77 @@ requestStreamEncoder := codecClient.NewStream(streamId, responseDecoder)
 入参 `responseDecoder` 是收到resp时候的callback，你可以根据自己需要的处理方式来实现对应的回调接口;
 在 stream 的 encoder/decoder 接口中, 我们将 request/response 数据分为三个部分: headers, data, trailers.
 
-#### Step 3. 发送 stream
+### 步骤三. 发送 stream
 
 + 发送 headers
-```
-requestStreamEncoder.AppendHeaders(requestHeaders, endStream)
-```
+
+    ```go
+    requestStreamEncoder.AppendHeaders(requestHeaders, endStream)
+    ```
 
 + 发送 data
-```
-requestStreamEncoder.AppendData(requestDataBuf, endStream)
-```
+
+    ```go
+    requestStreamEncoder.AppendData(requestDataBuf, endStream)
+    ```
 
 + 发送 trailers
-```
-requestStreamEncoder.AppendTrailers(requestHeaders)
-```
 
-+ 'endStream' 是一个标识符，用来标识后序没有数据需要处理. 例如, 如果这里调用 AppendHeaders(requestHeaders, true), 那么 stream 层将处理headers并发送数据,
- data and trailers 将被忽略.
+    ```go
+    requestStreamEncoder.AppendTrailers(requestHeaders)
+    ```
 
-#### Step 4. 接收 response
++ 'endStream' 是一个标识符，用来标识后序没有数据需要处理。
+
+   例如, 如果这里调用 AppendHeaders(requestHeaders, true), 那么 stream 层将处理headers并发送数据,
+   data and trailers 将被忽略。
+
+### 步骤四. 接收 response
 
 + 'responseDecoder' 需要使用 'types.StreamReceiver' 接口
 + 当 stream 收到数据并 decode 成功后, 'types.StreamReceiver''s 接口会被回调. Example:
-```
-func (r *responseDecoder) OnReceiveHeaders(headers map[string]string, endStream bool) {
-	// your logic
-}
 
-func (r *responseDecoder) OnReceiveData(data types.IoBuffer, endStream bool) {
-    // your logic
-}
+    ```go
+    func (r *responseDecoder) OnReceiveHeaders(headers map[string]string, endStream bool) {
+        // your logic
+    }
 
-func (r *responseDecoder) OnReceiveTrailers(trailers map[string]string) {
-    // your logic
-}
+    func (r *responseDecoder) OnReceiveData(data types.IoBuffer, endStream bool) {
+        // your logic
+    }
 
-func (r *responseDecoder) OnDecodeError(err error, headers map[string]string) {
-   // your logic
-}
-```
+    func (r *responseDecoder) OnReceiveTrailers(trailers map[string]string) {
+        // your logic
+    }
 
-#### 事件&异常
+    func (r *responseDecoder) OnDecodeError(err error, headers map[string]string) {
+       // your logic
+    }
+    ```
+
+## 事件&异常
 正如 'Step 1' 中提到的, 可以注册相应的 callback 来获取 connection/stream 相关的事件.
 
 + Connection event callbacks:
-```
-func (c *callback) OnEvent(event types.ConnectionEvent) {
-    // your logic
-}
-```
+
+    ```go
+    func (c *callback) OnEvent(event types.ConnectionEvent) {
+        // your logic
+    }
+    ```
 
 + Stream event callbacks:
-```
-func (c *callback) OnStreamReset(reason types.StreamResetReason) {
-	// your logic
-}
-```
+
+    ```go
+    func (c *callback) OnStreamReset(reason types.StreamResetReason) {
+        // your logic
+    }
+    ```
 
 + Stream connection callbacks:
-```
-func (c *callback) OnGoAway() {
-	// your logic
-}
-```
+
+    ```go
+    func (c *callback) OnGoAway() {
+        // your logic
+    }
+    ```

@@ -1,14 +1,13 @@
-## 配置标准HTTP协议的Mesher
+## 转发标准HTTP协议
 
 ## 简介
 
-该样例工程演示了如何配置使得Mesher作为标准Http协议的代理
- Mesher之间的协议是HTTP2
+该样例工程演示了如何配置SOFA Mesh来转发标准HTTP协议，而SOFA Mesh之间的协议是HTTP/2。
 
 ## 准备
 
-需要一个编译好的Mesher程序
-```
+需要一个编译好的SOFA Mesh程序:
+```bash
 cd ${projectpath}/pkg/mosn
 go build
 ```
@@ -16,10 +15,10 @@ go build
 将编译好的程序移动到当前目录，目录结构如下 
 
 ```
-mosn  //Mesher程序
-server.go //HTTP Server
-server.json //HTTP Server的Mesher配置
-client.json //HTTP Client的Mesher配置
+mosn        //Mesh程序
+server.go   //HTTP Server
+server.json //HTTP Server的配置
+client.json //HTTP Client的配置
 ```
 
 ## 运行说明
