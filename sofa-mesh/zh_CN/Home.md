@@ -11,7 +11,7 @@ SOFAMesh是基于Istio改进和扩展而来的Service Mesh大规模落地实践�
 
 下图展示了SOFA Mesh和Istio在架构上的不同：
 
-![](resources/sofa-mesh-arch.png)
+![](./resources/sofa-mesh-arch.png)
 
 ## 主要组件
 
@@ -19,13 +19,13 @@ SOFAMesh是基于Istio改进和扩展而来的Service Mesh大规模落地实践�
 
 SOFAMesh中，我们采用Golang语言编写了名为MOSN(Modular Observable Smart Netstub)的模块，实现了Envoy的功能，完全兼容Envoy的API，在数据平面中承担Sidecar功能以替代Envoy实现和Istio集成。
 
-![](resources/mosn-sofa-mesh-golang-sidecar.png)
+![](./resources/mosn-sofa-mesh-golang-sidecar.png)
 
 ### SOFA Pilot
 
 SOFAMesh中大幅扩展和增强Istio中的Pilot模块：
 
-![](resources/sofa-mesh-pilot.png)
+![](./resources/sofa-mesh-pilot.png)
 
 1. 增加SOFA Registry的Adapter，提供超大规模服务注册和发现的解决方案
 2. 增加数据同步模块，以实现多个服务注册中心之间的数据交换
