@@ -6,7 +6,6 @@ MOSN是一款采用 Golang 开发的Service Mesh数据平面代理，功能和�
 
 初始版本由蚂蚁金服开源贡献，期待社区一起来参与MOSN项目的后续开发。
 
-
 ## 核心能力
 
 + Istio集成
@@ -46,6 +45,7 @@ MOSN是一款采用 Golang 开发的Service Mesh数据平面代理，功能和�
     + 支持在TCP IO层，协议层面加入自定义扩展
 
 ## 快速开始
+
 * [参见](develop/quickstart.md) 
 
 ## 社区

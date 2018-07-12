@@ -3,6 +3,7 @@
 本文用于帮助初次接触MOSN项目的开发人员，快速搭建开发环境，完成构建，测试和打包。
 
 ## 准备运行环境
+
 + 如果你使用容器运行MOSN, 请先 [安装docker](https://docs.docker.com/install/)
 + 如果你使用本地机器，请使用类unix环境
 + 安装 go 的编译环境 
@@ -58,11 +59,8 @@ bundles/${version}/binary
 make rpm
 ```
 
-+ 在如下的路径中找到打包文件:
+完成后可以在 `bundles/${version}/rpm` 目录下找到打包好的文件。
 
-```bash
-bundles/${version}/rpm
-```
 
 ## 运行测试
 
