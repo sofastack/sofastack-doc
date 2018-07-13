@@ -8,7 +8,7 @@
    
 ## 了解 MOSN 的架构和模块   
 
-关于 MOSN 的架构和模块请参考 [这里](../design/Architecture.md)
+关于 MOSN 的架构和模块请参考 [这里](../design/architecture.md)
 
 ## MOSN 的能力
 
