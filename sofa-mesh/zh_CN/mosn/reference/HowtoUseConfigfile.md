@@ -1,188 +1,132 @@
 # 配置文件说明
 
-+ 配置文件示例
+## 配置文件示例
 
-```json
-{
-    "servers": [
-        {
-            "access_log": "logs/access.log", 
-            "log_level": "INFO", 
-            "network_filters": [
-                {
-                    "type": "proxy", 
-                    "config": {
-                        "downstream_protocol": "sofarpc", 
-                        "upstream_protocol": "http2", 
-                        "routes": [
-                            {
-                                "name": "example_route", 
-                                "service": ".*", 
-                                "cluster": "local_service"
-                            }
-                        ]
-                    }
-                }
-            ], 
-            "stream_filters": [
-                {
-                    "type": "fault_inject", 
-                    "config": {
-                        "delay_percent": 100, 
-                        "delay_duration_ms": 2000
-                    }
-                }, 
-                {
-                    "type": "healthcheck", 
-                    "config": {
-                        "passthrough": false, 
-                        "cache_time_ms": 360000, 
-                        "cluster_min_healthy_percentages": {
-                            "local_service": 70
-                        }
-                    }
-                }
-            ], 
-            "listeners": [
-                {
-                    "name": "default_sofa", 
-                    "address": "127.0.0.1:12200", 
-                    "bind_port": true
-                }, 
-                {
-                    "name": "extra_sofa", 
-                    "address": "127.0.0.1:12201", 
-                    "bind_port": true
-                }
-            ]
-        }
-    ], 
-    "tracing": {
-        "http": {
-            "driver": {
-                "type": "zipkin", 
-                "config": {
-                    "collector_cluster": "jaeger", 
-                    "collector_endpoint": "/api/v1/spans"
-                }
-            }
-        }
-    }, 
-    "cluster_manager": {
-        "clusters": [
-            {
-                "name": "local_service", 
-                "type": "static", 
-                "lb_type": "LB_ROUNDROBIN", 
-                "max_request_per_conn": 100000, 
-                "conn_buff_limit_bytes": 100000, 
-                "healthcheck": {
-                    "timeout": 1000, 
-                    "healthy_threshold": 3, 
-                    "unhealthy_threshold": 5, 
-                    "interval": 6000, 
-                    "interval_jitter": 1000
-                }, 
-                "hosts": [
-                    {
-                        "hostname": "local_upstream", 
-                        "address": "127.0.0.1:8088", 
-                        "weight": 1
-                    }
-                ]
-            }, 
-            {
-                "name": "local_service_2", 
-                "type": "static", 
-                "lb_type": "LB_ROUNDROBIN", 
-                "hosts": [
-                    {
-                        "hostname": "local_upstream", 
-                        "address": "127.0.0.1:8088", 
-                        "weight": 10
-                    }, 
-                    {
-                        "hostname": "local_upstream", 
-                        "address": "127.0.0.1:8089", 
-                        "weight": 90
-                    }
-                ]
-            }
-        ]
-    }
-}
-```
++ [示例](Configfile.json)
 + 配置结构体
-与上述配置文件中的结构对应，和api.v2包下的结构保持大致对应。
 
-+ `ServerConfig`
-对应一个WebServer, 包含属性见结构体定义
+MOSN 配置文件主要由如下 `MOSNConfig` 结构体中的成员组成
+```go
+type MOSNConfig struct {
+	Servers         []ServerConfig        `json:"servers,omitempty"`         //server config
+	ClusterManager  ClusterManagerConfig  `json:"cluster_manager,omitempty"` //cluster config
+	ServiceRegistry ServiceRegistryConfig `json:"service_registry"`          //service registry config, used by service discovery module
+	//tracing config
+	RawDynamicResources json.RawMessage `json:"dynamic_resources,omitempty"` //dynamic_resources raw message
+	RawStaticResources  json.RawMessage `json:"static_resources,omitempty"`  //static_resources raw message
+}
+```   
+## ServerConfig 配置块
+
+参考 [示例](Configfile.json) 中的 `servers` 块，其对应的结构体为 `ServerConfig`
+包含启动 MOSN 作为 Server 的一些配置项
 
 ```go
 type ServerConfig struct {
-	AccessLog      string         `json:"access_log"`
-	LogLevel       string         `json:"log_level"`
-	NetworkFilters []FilterConfig `json:"network_filters"`
-	StreamFilters  []FilterConfig `json:"stream_filters"`
-	Listeners      []ListenerConfig
-}
-```
+	//default logger
+	DefaultLogPath  string `json:"default_log_path,omitempty"`
+	DefaultLogLevel string `json:"default_log_level,omitempty"`
 
-+ `FilterConfig`
-对应各种Filte配置, 由于不同的filter所携带的属性各不相同, 因此约定如下:
-Filter需要声明自己的类型Type
-Filter自身所需要的属性通过Config字段来配置，结构为json object
-```go
-type FilterConfig struct {
-	Type   string
-	Config map[string]interface{}
-}
-```
+	//graceful shutdown config
+	GracefulTimeout DurationConfig `json:"graceful_timeout"`
 
-示例:
-```json
-{
-	"type": "fault_inject", 
-	"config": {
-    	"delay_percent": 100, 
-		"delay_duration_ms": 2000
-	}
-}
-```
+	//go processor number
+	Processor int
 
-+ `ListenerConfig`
-对应一个监听器对象
+	Listeners []ListenerConfig `json:"listeners,omitempty"`
+}
+``` 
++ `DefaultLog*` 等定义当前 Server 块默认的日志路径
+
++ `ListenerConfig` 对应 Server 的监听器对象，结构体为
 
 ```go
 type ListenerConfig struct {
-	Name       string
-	Address    string
-	BindToPort bool `json:"bind_port"`
+	Name          string         `json:"name,omitempty"`
+	Address       string         `json:"address,omitempty"`
+	BindToPort    bool           `json:"bind_port"`
+	FilterChains  []FilterChain  `json:"filter_chains"`
+	StreamFilters []FilterConfig `json:"stream_filters,omitempty"`
+
+	//logger
+	LogPath  string `json:"log_path,omitempty"`
+	LogLevel string `json:"log_level,omitempty"`
+
+	//HandOffRestoredDestinationConnections
+	HandOffRestoredDestinationConnections bool `json:"handoff_restoreddestination"`
+
+	//access log
+	AccessLogs []AccessLogConfig `json:"access_logs,omitempty"`
+
+	// only used in http2 case
+	DisableConnIo bool `json:"disable_conn_io"`
 }
+
 ```
 
-+ `ClusterConfig`
-对应一个Cluster
+1. `BindToPort` 需要设置为 true , 否则监听器将不工作
+2. `DisableConnIo` 在协议为HTTP2的时候设置为 true, 表示使用协议自带的 io
+3. `FilterConfig` 为定义的 stream filters, 当前支持 fault_inject 和 healthcheck
+    + 其结构为: 
+    ```go
+    type FilterConfig struct {
+        Type   string
+        Config map[string]interface{}
+    }
+    ```
+
+    + 示例:
+    ```json
+    {
+        "type": "fault_inject", 
+        "config": {
+            "delay_percent": 100, 
+            "delay_duration_ms": 2000
+        }
+    }
+    ```
+4. `FilterChain` 用于配置 Proxy 等，在 FilterConfig 的基础上包了一层,
+    + 结构为：
+    ```go
+    type FilterChain struct {
+        FilterChainMatch string         `json:"match,omitempty"`
+        TLS              TLSConfig      `json:"tls_context,omitempty"`
+        Filters          []FilterConfig `json:"filters"`
+    }
+    ```
+    FilterConfig 定义了 proxy 具体参考
+
+## Upstream 配置块
+
+参考 [示例](Configfile.json) 中的 `clusters` 块，其对应的结构体为 `ClusterConfig`，
+定义了 MOSN 上游的 Cluster 以及 Host 信息
 
 ```go
 type ClusterConfig struct {
 	Name                 string
 	Type                 string
+	SubType              string `json:"sub_type"`
 	LbType               string `json:"lb_type"`
-	MaxRequestPerConn    uint64 `json:"max_request_per_conn"`
-	ConnBufferLimitBytes int
-	HealthCheck          HealthCheckConfig `json:"healthcheck"`
-	Hosts                []HostConfig
+	MaxRequestPerConn    uint32
+	ConnBufferLimitBytes uint32
+	CircuitBreakers      []*CircuitBreakerdConfig `json:"circuit_breakers"`
+	HealthCheck          ClusterHealthCheckConfig `json:"health_check,omitempty"` //v2.HealthCheck
+	ClusterSpecConfig    ClusterSpecConfig        `json:"spec,omitempty"`         //	ClusterSpecConfig
+	Hosts                []v2.Host                `json:"hosts,omitempty"`        //v2.Host
+	LBSubsetConfig       v2.LBSubsetConfig
+	TLS                  TLSConfig `json:"tls_context,omitempty"`
 }
 ```
-
-+ `HostConfig`
-对应一个Host
++ `CircuitBreakers` 为熔断的配置项
++ `HealthCheck` 定义了对此 cluster 做健康检查的配置
++ `LBSubsetConfig` 定义了此 cluster 的 subset 信息
++ `Hosts` 为 cluster 中具体的 host ，结构体定义为
 
 ```go
-type HostConfig struct {
+type Host struct {
 	Address  string
 	Hostname string
 	Weight   uint32
+	MetaData Metadata
 }
 ```
