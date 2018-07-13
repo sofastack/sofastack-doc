@@ -1,71 +1,59 @@
-# MOSN架构
+# MOSN 架构
 
-+ NET/IO 
-    + 屏蔽IO处理细节
-    + 定义网络链接生命周期
-    + 定义可编程的网络模型，核心方法，监控指标
-    + 定义可扩展的插件机制
-    + 定义适用于client/server端的能力
-    + 基于golang net包实现
-    
-+ PROTOCOL
-    + 定义编解码核心数据结构
-        + 三段式：Headers + Data + Trailers
-    + 定义编/解码器核心接口
-    + 定义扩展机制接受解码数据
-    + 提供通用的编/解码引擎
-        + 编码：对业务数据进行编码并根据控制指令发送数据
-        + 解码：对IO数据进行解码并通过扩展机制通知订阅方
+In mosn, we have 4 layers to build a mesh, which are NET/IO, Protocol、Stream、and Proxy
 
-+ STREAMING
-    + STREAM: 为网络协议请求/响应提供可编程的抽象载体
-        + 考虑PING-PONG，PIPELINE，分帧STREAM三种典型流程特征
-    + 定义STREAM生命周期，核心事件
-    + 定义STREAM层编/解码核心接口
-    + 核心数据结构复用PROTOCOL层
-    + 定义可扩展的插件机制
-    + 定义连接池模型
-    + 编/解码过程中需处理上层传入的全局状态定义
-    + 不同协议根据自身协议流程封装STREAM细节
++ Net/IO layer is the fundamental layer to support upper level's functionality;
+  Core model in network layer are listener and connection. 
+  Listener listens specified port, waiting for new connections.
+  Both listener and connection have a extension mechanism, implemented as listener and filter chain, which are used to fill in customized logic.
+  Event listeners are used to subscribe important event of Listener and Connection. Method in listener will be called on event occur, but not effect the control flow.
+  Filters are called on event occurs, it also returns a status to effect control flow. Currently 2 states are used: Continue to let it go, StopIteration to stop the control flow.
+  Filter has a callback handler to interactive with core model. For example, ReadFilterCallbacks can be used to continue filter chain in connection, on which is in a stopped state.
+  
+  + Listener:
+    + Event listener
+        + ListenerEventListener
+    + Filter
+  	    + ListenerFilter
+  + Connection:
+  	+ Event listener
+  	    + ConnectionEventListener
+  	+ Filter
+  	    + ReadFilter
+  	    + WriteFilter
+  
+  + Below is the basic relation on listener and connection:
+    ![NET/IO](./resource/NetIO.png)
 
-+ PROXY
-    + 基于STREAM提供多协议转发能力
-    + 提供云部署亲和的后端管理能力
-    + 提供负载均衡，健康检查等核心能力
-    + 提供可配置的路由转发能力
-    + 维护上/下游核心统计指标
-    + 基于全局状态定义的请求拦截，由STREAM进行协议转换
++ Protocol layer used to decode/encode request/response for different protocol. Stream layer leverages protocol's 
+  ability to do binary-model conversation. In detail, Stream uses Protocols's encode/decode facade method and DecodeFilter to receive decode event call.
 
-+ 协议支持
-    + SOFARPC
-        + 基于Codec扩展实现BOLT v1, v2，TR协议编解码
-        + 将SOFA RPC请求/响应分解为headers，body两部分
-        + Tr协议body中的request id并入headers
-        + 基于Stream扩展实现sofa rcp协议流程，链接池
-        + 链接池只有一个client，无扩容机制
-    
-    + HTTP
-        + 使用 fasthttp 开源软件
-    + HTTP2
-        + 使用go自带的 http2
-+ SOFARPC – 心跳处理
-    + SrvA 2 Mesh
-        + SrvA根据链接空闲状态开始/停止心跳发起
-        + Mesh收到心跳请求后根据后端cluster健康度对Srv A进行响应
-    + Mesh 2 Mesh
-        + Mesh定时异步对后端Mesh进行健康检查
-        + 后端Mesh收到健康检查请求后做带缓存的透传
-    + Mesh 2 Srv B
-        + 后端Mesh缓存失效后透传健康检查到Srv B
++ Stream layer is the inheritance layer to bond protocol layer and proxy layer together. 
+  Core model in stream layer is stream, which manages process of a round-trip, a request and a corresponding response.
+  Event listeners can be installed into a stream to monitor event.
+  + Stream has two related models, encoder and decoder:
+	+ StreamSender: a sender encodes request/response to binary and sends it out, flag 'endStream' means data is ready to sendout, no need to wait for further input.
+	+ StreamReceiver: It's more like a decode listener to get called on a receiver receives binary and decodes to a request/response.
+	+ Stream does not have a predetermined direction, so StreamSender could be a request encoder as a client or a response encoder as a server. It's just about the scenario, so does StreamReceiver.
+  + Stream:
+    + Event listener
+  		+ StreamEventListener
+    + Encoder
+  	    + StreamSender
+  	+ Decoder
+  	    + StreamReceiver
+  + In order to meet the expansion requirements in the stream processing, StreamEncoderFilters and StreamDecoderFilters are introduced as a filter chain in encode/decode process.
+  Filter's method will be called on corresponding stream process stage and returns a status(Continue/Stop) to effect the control flow.
+  + From an abstract perspective, stream represents a virtual process on underlying connection. To make stream interactive with connection, some intermediate object can be used.
+  StreamConnection is the core model to connect connection system to stream system. As a example, when proxy reads binary data from connection, it dispatches data to StreamConnection to do protocol decode.
+  Specifically, ClientStreamConnection uses a NewStream to exchange StreamReceiver with StreamSender.
+  Engine provides a callbacks(StreamSenderFilterCallbacks/StreamReceiverFilterCallbacks) to let filter interact with stream engine.
+  As a example, a encoder filter stopped the encode process, it can continue it by StreamSenderFilterCallbacks.ContinueEncoding later. Actually, a filter engine is a encoder/decoder itself.
 
-+ Mesh间通信-HTTP2
-    + HTTP 2特性
-        + 分帧多路复用
-        + 二进制传输
-        + 服务器推送
-        + 头信息压缩
-        + 数据流优先级
-        + PING帧探活
-    + 一期实现基于golang自带实现
- 
-   
+  + Below is the basic relation on stream and connection:
+    ![Stream](./resource/stream.png)
+
++ Proxy Layer used to retransmit the data between downstream and upstream which contains following parts:
+  + Router
+  + LoadBalancer
+  + HealthCheck 

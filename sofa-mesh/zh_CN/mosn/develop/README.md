@@ -4,11 +4,11 @@
 
 ## 快速开启 MOSN 开发之旅
    
-   参见[这里](develop/quickstart.md) 
+   参见[这里](quickstart.md) 
    
 ## 了解 MOSN 的架构和模块   
 
-关于 MOSN 的架构和模块请参考 [这里](../architecture.md)
+关于 MOSN 的架构和模块请参考 [这里](../design/Architecture.md)
 
 ## MOSN 的能力
 
