@@ -3,7 +3,7 @@
 ## Subset lb整体流程
 subset load balancer用于在cluster内部根据metadata做子集群匹配，发生在路由匹配到cluster成功之后，再挑选具体的子集群
 下面是带有suset lb功能的mosn的工作流程：
-![subsetlb](./resources/subsetlb.png)
+![subsetlb](resources/subsetlb.png)
 
 # 功能实现模块划分
   ##  part1.  RDS 路由模块

@@ -4,5 +4,5 @@
 + [从配置文件启动说明](./HowtoStartMosnFromConfig.md)
 + [Cluster动态更新API](./ClusterUpdateApi.md)
 + [对后端进行主动健康检查](./HealthCheck.md)
-+ [Subset LB开发文档](./SubsetLB.md)
-+ [MOSN RDS开发文档](./RDS.md)
++ [Subset LB开发文档](../develop/SubsetLB.md)
++ [MOSN RDS开发文档](../develop/RDS.md)
