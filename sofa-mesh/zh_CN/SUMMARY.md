@@ -20,7 +20,5 @@
   * [Zookeeper Adapter](./pilot/zookeeper-adapter.md)
   * [x-protocol](./pilot/x-protocol.md)
   * [Register Agent](./pilot/register-agent.md)
-- Mixer
-  * [Mixer介绍](./mixer/README.md)
-- Edge Sidecar
-  * [Edge Sidecar介绍](./edge/README.md)
+
+  ​
