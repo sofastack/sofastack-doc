@@ -1,3 +1,5 @@
 # MOSN参考文档
 
-TBD：帮助使用者了解使用MOSN。
++ [配置文件使用说明](./HowtoUseMosnAsClient.md)
++ [从配置文件启动说明](./HowtoStartMosnFromConfig.md)
+
