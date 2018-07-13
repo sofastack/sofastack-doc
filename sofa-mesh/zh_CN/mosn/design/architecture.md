@@ -1,4 +1,4 @@
-# MOSN 架构
+# MOSN 架构设计
 
 In mosn, we have 4 layers to build a mesh, which are NET/IO, Protocol、Stream、and Proxy
 
@@ -9,7 +9,7 @@ In mosn, we have 4 layers to build a mesh, which are NET/IO, Protocol、Stream�
   Event listeners are used to subscribe important event of Listener and Connection. Method in listener will be called on event occur, but not effect the control flow.
   Filters are called on event occurs, it also returns a status to effect control flow. Currently 2 states are used: Continue to let it go, StopIteration to stop the control flow.
   Filter has a callback handler to interactive with core model. For example, ReadFilterCallbacks can be used to continue filter chain in connection, on which is in a stopped state.
-  
+
   + Listener:
     + Event listener
         + ListenerEventListener
@@ -21,7 +21,7 @@ In mosn, we have 4 layers to build a mesh, which are NET/IO, Protocol、Stream�
   	+ Filter
   	    + ReadFilter
   	    + WriteFilter
-  
+
   + Below is the basic relation on listener and connection:
     ![NET/IO](./resource/NetIO.png)
 
@@ -32,9 +32,9 @@ In mosn, we have 4 layers to build a mesh, which are NET/IO, Protocol、Stream�
   Core model in stream layer is stream, which manages process of a round-trip, a request and a corresponding response.
   Event listeners can be installed into a stream to monitor event.
   + Stream has two related models, encoder and decoder:
-	+ StreamSender: a sender encodes request/response to binary and sends it out, flag 'endStream' means data is ready to sendout, no need to wait for further input.
-	+ StreamReceiver: It's more like a decode listener to get called on a receiver receives binary and decodes to a request/response.
-	+ Stream does not have a predetermined direction, so StreamSender could be a request encoder as a client or a response encoder as a server. It's just about the scenario, so does StreamReceiver.
+  + StreamSender: a sender encodes request/response to binary and sends it out, flag 'endStream' means data is ready to sendout, no need to wait for further input.
+  + StreamReceiver: It's more like a decode listener to get called on a receiver receives binary and decodes to a request/response.
+  + Stream does not have a predetermined direction, so StreamSender could be a request encoder as a client or a response encoder as a server. It's just about the scenario, so does StreamReceiver.
   + Stream:
     + Event listener
   		+ StreamEventListener

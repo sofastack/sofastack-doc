@@ -24,15 +24,15 @@ mkdir alipay
 cd alipay
 # clone mosn代码
 git clone git@github.com:alipay/sofa-mosn.git
-mv sofa-mesh sofamesh
-cd sofamesh
+mv sofa-mosn sofamosn
+cd sofamosn
 ```
 
-最终MOSN的源代码代码路径为 `$GOPATH/src/github.com/alipay/sofamesh`
+最终MOSN的源代码代码路径为 `$GOPATH/src/github.com/alipay/sofamosn`
 
 ## 导入IDE
 
-使用您喜爱的Golang IDE导入 `$GOPATH/src/github.com/alipay/sofamesh` 项目，推荐Goland。
+使用您喜爱的Golang IDE导入 `$GOPATH/src/github.com/alipay/sofamosn` 项目，推荐Goland。
 
 ## 编译代码
 

@@ -4,7 +4,7 @@
 
 MOSN是一款采用 Golang 开发的Service Mesh数据平面代理，功能和定位类似Envoy，旨在提供分布式，模块化，可观察，智能化的代理能力。MOSN支持Envoy和Istio的API，可以和Istio集成。Sofa Mesh中，我们使用MOSN替代Envoy。
 
-初始版本由蚂蚁金服开源贡献，期待社区一起来参与MOSN项目的后续开发。
+初始版本由蚂蚁金服技术团队开源贡献，期待社区一起来参与MOSN项目的后续开发，共建一个开源精品项目。
 
 ## 核心能力
 

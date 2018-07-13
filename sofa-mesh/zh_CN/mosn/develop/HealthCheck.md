@@ -1,5 +1,5 @@
 # 对后端进行主动健康检查
-支持对static cluster配置cluster维度的健康检查能力，配置包括使用的健康检查协议、interval、timeout等
+支持对 static cluster 配置 cluster 维度的健康检查能力，配置包括使用的健康检查协议、interval、timeout等
 
 ```go
 type HealthCheck struct {
@@ -32,7 +32,7 @@ var DefaultSofaRpcHealthCheckConf = v2.HealthCheck{
 }
 ```
 
-支持对于cluster内部所有hostSet的机器，单独运行健康检查，并根据健康检查的结果，更新host的健康状态
+支持对于 cluster 内部所有 hostSet 的机器，单独运行健康检查，并根据健康检查的结果，更新 host 的健康状态
 
 
 ```go

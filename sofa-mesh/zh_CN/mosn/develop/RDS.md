@@ -1,10 +1,11 @@
 # MOSN RDS 开发文档
 
 ## 概念：
-MOSN中的路由表由许多virtual host组成，每个virtual host又由许多router构成，每个router由匹配规则(Match)和对应的后端cluster组成;
+MOSN 中的路由表由许多 virtual host 组成，每个 virtual host 又由许多 router 构成，每个 router 由匹配规则（Match）和对应的后端 cluster 组成。
 
 + 路由表数据结构：
-在具体的实现中，路由表的数据结构为：
+
+  在具体的实现中，路由表的数据结构为：
 ```go
 // A router wrapper used to matches an incoming request headers to a backend cluster
 type RouteMatcher struct {
@@ -14,14 +15,15 @@ type RouteMatcher struct {
 }
 ```
 
-+ defaultVirtualHost 为默认使用的路由，在virtualHosts和wildcardVirtualHostSuffixes匹配失效的时候使用；
-+ virtualHosts 为map结构, key为host值(address或者域名)
-+ wildcardVirtualHostSuffixes 使用最长匹配策略，为二级索引结构，第一级索引为通配字符串长度，第二级索引为domain的
++ `defaultVirtualHost` 为默认使用的路由，在 `virtualHosts` 和 `wildcardVirtualHostSuffixes` 匹配失效的时候使用；
++ `virtualHosts` 为 map 结构，key 为 host 值（address 或者域名）
++ `wildcardVirtualHostSuffixes` 使用最长匹配策略，为二级索引结构，第一级索引为通配字符串长度，第二级索引为 domain 的；
 
 ## 路由表的创建：
-+ 路由表在mosn accept连接，新建proxy的时候创建，实现函数: `NewRouteMatcher`
-其中：先初始化virtualhost，实现函数：`NewVirtualHostImpl`
-+ 在NewVirtualHostImpl中，会根据RouterMatch中的配置，选择针对uri中的path，使用什么匹配策略，进而初始化具体的router entry，新建顺序：
++ 路由表在 mosn accept 连接，新建 proxy 的时候创建，实现函数：`NewRouteMatcher`
+
+  其中：先初始化 `virtualhost`，实现函数：`NewVirtualHostImpl`
++ 在 `NewVirtualHostImpl` 中，会根据 `RouterMatch` 中的配置，选择针对 uri 中的 path，使用什么匹配策略，进而初始化具体的 router entry，新建顺序：
 ```go
 if route.Match.Prefix != "" {
       use PrefixRouteEntryImpl
@@ -34,9 +36,8 @@ if route.Match.Prefix != "" {
 }
 
 ```
-即 path prefix匹配 -> path 完全匹配 -> path regex匹配 
-+ 对于http协议族，以上三者任意可满足创建条件，但是对于sofa，当前的处理策略是，在上述三者均不满足的情况下，会创建 
-之后，根据virtualHosts中的domain的值，初始化RouteMatcher，优先级顺序以及策略如下:
+即 path prefix 匹配 -> path 完全匹配 -> path regex 匹配 
++ 对于 http 协议族，以上三者任意可满足创建条件，但是对于 SOFA，当前的处理策略是，在上述三者均不满足的情况下，会创建 。之后，根据 `virtualHosts` 中的 `domain` 的值，初始化 `RouteMatcher`，优先级顺序以及策略如下：
 ```go
 swtich domain :
   case "*": defaultVirtualHost = virtualhost
@@ -50,16 +51,16 @@ swtich domain :
 ```go
 func (rm *RouteMatcher) Route(headers map[string]string, randomValue uint64) types.Route
 ```
-+ 先匹配host(domain)，获取对应的 virtual host，实现函数： findVirtualHost
-+ 之后匹配header, 支持regex匹配，实现函数：ConfigUtility:: MatchHeaders
-+ 之后匹配query parameters，支持regex，实现函数  ConfigUtility::MatchQueryParams
++ 先匹配 host（domain），获取对应的 virtual host，实现函数：`findVirtualHost`
++ 之后匹配header，支持 regex 匹配，实现函数：`ConfigUtility:: MatchHeaders`
++ 之后匹配 query parameters，支持regex，实现函数：`ConfigUtility::MatchQueryParams`
 + 之后匹配  path ，匹配优先级如下;
-  + 前缀匹配，见：PrefixRouteEntryImpl 
-  + 完全匹配 ，见：PathRouteRuleImpl
-  + 正则匹配，见：RegexRouteEntryImpl
+  + 前缀匹配，见：`PrefixRouteEntryImpl`
+  + 完全匹配 ，见：`PathRouteRuleImpl`
+  + 正则匹配，见：`RegexRouteEntryImpl`
 
 ## 附件
-+ 当前virtual host的配置
++ 当前 virtual host 的配置
 ```json
 
 "VirtualHosts": [
