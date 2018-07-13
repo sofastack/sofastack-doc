@@ -66,7 +66,7 @@ make unit-test
 
   + 参考 `mosn/pkg/tests/` 下的[事例](testandsamples/RunMosnTests.md)
   
-## 从配置文件启动 [MOSN](../reference/HowtoStartMosnFromConfig.md)
+## 从配置文件[启动 MOSN](../reference/HowtoStartMosnFromConfig.md)
 
 ```bash
  mosn start -c '$CONFIG_FILE'
