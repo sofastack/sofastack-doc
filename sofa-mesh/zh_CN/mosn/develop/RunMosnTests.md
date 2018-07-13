@@ -15,7 +15,7 @@
 cd bolt2http2
 go run proxy.go
 ```
-+ 当你看到如下的输出时，表明 clint -> mosh -> server 正向链路是通的
++ 当你看到如下的输出时，表明 client -> mosh -> server 正向链路是通的
 
 ```
 [UPSTREAM]receive request &{Method:POST
@@ -25,7 +25,7 @@ go run proxy.go
  ...
  
 ```
-+ 当你看到如下的输出时，表明 clint <- mosh <- server ，即response被正确转发
++ 当你看到如下的输出时，表明 client <- mosh <- server ，即response被正确转发
 ```
 [CLIENT]Receive data:
 **com.alipay.sofa.rpc.core.request.SofaRequestaccept-encodinggzipdateFri,
@@ -45,8 +45,8 @@ srv := server.NewServer(&server.Config{
     LogPath:  "stdout",
     LogLevel: log.DEBUG,
 }, cmf, cm)
- 
 ```
+
 + 如下用于添加更新cluster以及对应的host
 ```go
 cmf.cccb.UpdateClusterConfig(clustersrpc())
@@ -58,8 +58,8 @@ cmf.chcb.UpdateClusterHost(TestCluster, 0, rpchosts())
 srv.AddListener(rpcProxyListener(), &proxy.GenericProxyFilterConfigFactory{
     Proxy: genericProxyConfig(),
 }, []types.StreamFilterChainFactory{sf, sh})
-
-//其中rpcProxyListener()中可修改mosn监听的地址和端口等，
-// GenericProxyFilterConfigFactory用于生成proxy相关的配置，包括配置上下游监听协议、以及路由信息等，
-// StreamFilterChainFactory中可用于配置心跳、故障注入等stream级别的信息
 ```
++ 其中rpcProxyListener()中可修改mosn监听的地址和端口等
++ GenericProxyFilterConfigFactory用于生成proxy相关的配置，包括配置上下游监听协议、以及路由信息等
++ StreamFilterChainFactory中可用于配置心跳、故障注入等stream级别的信息
+
