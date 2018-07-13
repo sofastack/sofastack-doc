@@ -46,7 +46,11 @@ MOSN是一款采用 Golang 开发的Service Mesh数据平面代理，功能和�
 
 ## 快速开始
 
-* 参见[这里](develop/quickstart.md) 
+* [参考这里](develop/quickstart.md) 
+
+## 文档
+* [相关使用文档](reference/README.md)
+* [部分开发文档](develop/README.md)
 
 ## 社区
 * [Issues](https://github.com/alipay/mosn/issues)
@@ -55,6 +59,7 @@ MOSN是一款采用 Golang 开发的Service Mesh数据平面代理，功能和�
 + [代码贡献](./CONTRIBUTING.md) 
 + MOSN仍处在初级阶段，有很多能力需要补全，很多bug需要修复，欢迎所有人提交代码。我们欢迎您参与但不限于如下方面：
    + 核心路由功能点补全
+   + http/http2 性能优化
    + Outlier Detection
    + Tracing支持
    + 流控

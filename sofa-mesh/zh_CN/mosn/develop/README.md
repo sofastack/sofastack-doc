@@ -8,7 +8,11 @@
    
 ## 了解 MOSN 的架构和模块   
 
-以下为 MOSN 当前具备的能力和设计上的选型，关于 MOSN 的架构和模块请参考 [这里](../architecture.md)
+关于 MOSN 的架构和模块请参考 [这里](../architecture.md)
+
+## MOSN 的能力
+
+当前MESH具备的能力和一些选型上的思考，参考 [这里](./MosnAbility.md)
 
 ## MOSN 的一些开发文档
    + [Cluster动态更新API](./ClusterUpdateApi.md)
