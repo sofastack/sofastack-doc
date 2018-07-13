@@ -1,6 +1,6 @@
 # MOSN 架构
 
-[architecture](Architecture.md)
+[architecture](architecture.md)
 
 ## MOSN 工作流程
 
