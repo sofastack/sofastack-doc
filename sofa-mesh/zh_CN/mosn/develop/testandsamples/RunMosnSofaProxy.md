@@ -2,8 +2,7 @@
 
 ## 简介
 
-该样例工程演示了如何配置使得Mesher作为SofaRpc代理
-Mesher之间的协议是HTTP2
+该样例工程演示了如何配置使得Mesher作为SofaRpc代理。Mesher之间的协议是HTTP/2。
 
 ## 准备
 
