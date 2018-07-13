@@ -11,6 +11,7 @@ MOSN 的组成由 Net/IO、Protocol、Stream、Proxy 四层组成，具体请参
 ## MOSN 模块划分
 
 下图展示的是组成 MOSN 的模块，关于各个模块的详细信息请参考[模块详情介绍](MosnModulesDescribe.md)。
+
 ![modules](./resource/MosnModules.png)
 
 ## MOSN 内部数据流
