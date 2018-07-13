@@ -1,5 +1,6 @@
 # MOSN 架构
 
+MOSN 的组成由Net/IO、Protocol、Stream、Proxy 四层组成，具体请参见
 [architecture](architecture.md)
 
 ## MOSN 工作流程
