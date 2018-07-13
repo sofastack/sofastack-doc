@@ -8,7 +8,7 @@
 
 ## 设定控制平面
 
-Istio 控制平面由四个主要的服务组成：Pilot，Mixter，Citadel 以及 API server。
+Istio 控制平面由四个主要的服务组成：Pilot、Mixter、Citadel 以及 API server。
 
 ### API server
 
@@ -61,7 +61,7 @@ services:
 
 ### 其他控制平面组件
 
-目前 SOFA MOSN 还没有集成 Pilot 之外的其他组件，因此我们暂时无需安装 Mixer, Citadel 等组件。
+目前 SOFA MOSN 还没有集成 Pilot 之外的其他组件，因此我们暂时无需安装 Mixer、Citadel 等组件。
 
 ### 为微服务实例添加 SOAF MOSN Sidecar
 

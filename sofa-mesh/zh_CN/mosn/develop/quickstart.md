@@ -5,10 +5,10 @@ MOSN 基于 Golang 1.9.2 研发，使用dep进行依赖管理
 
 ## 准备运行环境
 
-+ 如果你使用容器运行MOSN, 请先 [安装docker](https://docs.docker.com/install/)
-+ 如果你使用本地机器，请使用类unix环境
++ 如果你使用容器运行 MOSN，请先[安装 docker](https://docs.docker.com/install/)
++ 如果你使用本地机器，请使用类 unix 环境
 + 安装 go 的编译环境 
-+ 安装 dep : 参考[官方安装文档](https://golang.github.io/dep/docs/installation.html)
++ 安装 dep：参考[官方安装文档](https://golang.github.io/dep/docs/installation.html)
 
 ## 获取代码
 
@@ -28,11 +28,11 @@ mv sofa-mesh sofamesh
 cd sofamesh
 ```
 
-最终MOSN的源代码代码路径为 `$GOPATH/src/github.com/alipay/sofamesh`
+最终 MOSN 的源代码代码路径为 `$GOPATH/src/github.com/alipay/sofamesh`
 
-## 导入IDE
+## 导入 IDE
 
-使用您喜爱的Golang IDE导入 `$GOPATH/src/github.com/alipay/sofamesh` 项目，推荐Goland。
+使用您喜爱的 Golang IDE 导入 `$GOPATH/src/github.com/alipay/sofamesh` 项目，推荐 Goland。
 
 ## 编译代码
 
