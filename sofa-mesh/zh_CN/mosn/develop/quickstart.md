@@ -43,15 +43,6 @@ make build-local   // 使用本地的go编译环境
 
 完成后可以在 `bundles/${version}/binary` 目录下找到编译好的二进制文件。
 
-
-## 运行测试
-
-在项目根目录下执行如下命令运行单元测试：
-
-```bash
-bundles/${version}/binary
-```
-
 ## 打包
 
 + 在项目根目录下执行如下命令进行打包：
@@ -73,11 +64,17 @@ make unit-test
 
 + 单独运行 mosn 作为proxy转发的事例:
 
-  + 参考 ``mosn/pkg/tests/`` 下的[事例](./RunMosnTests.md)
+  + 参考 `mosn/pkg/tests/` 下的[事例](testandsamples/RunMosnTests.md)
+  
+## 从配置文件[启动 MOSN](../reference/HowtoStartMosnFromConfig.md)
+
+```bash
+ mosn start -c '$CONFIG_FILE'
+```
  
 ## 如何快速启动一个 mosn 的转发程序
 
-参考 ``samples`` 目录下的示例工程
+参考 `samples` 目录下的示例工程
 
-+ [以sofa proxy为例](./RunMosnSofaProxy.md)
-+ [以http proxy为例](./RunMosnHttpProxy.md)
++ [以sofa proxy为例](testandsamples/RunMosnSofaProxy.md)
++ [以http proxy为例](testandsamples/RunMosnHttpProxy.md)
