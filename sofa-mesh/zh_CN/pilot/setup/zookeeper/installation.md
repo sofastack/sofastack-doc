@@ -1,6 +1,6 @@
 # 安装
 
-在非 Kubenetes 环境下使用 Istio 需要达成以下的关键任务：
+在非 Kubernetes 环境下使用 Istio 需要达成以下的关键任务：
 
 1. 为 Istio 控制平面配置 Istio API server，也可以通过 memostore 的方式启动 Pilot 用作演示用途。
 2. 给所有微服务实例手工添加 SOFA MOSN，并以 Sidecar 模式启动。
