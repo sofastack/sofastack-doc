@@ -1,3 +1,3 @@
-# Edge Sidecar介绍
+# Edge Sidecar 简介
 
 TBD
