@@ -25,6 +25,10 @@
 		- [Ark 容器启动流程](./sofa-ark/startup)
 		- [Ark 容器插件机制](./sofa-ark/plugin)
 		- [Ark 容器类加载机制](./sofa-ark/classloader)
+	- [发布历史](./sofa-ark/release)
+	- [常见问题](./sofa-ark/faq)
+	- [发展路线](./sofa-ark/roadmap)
+	- [参与贡献](./sofa-ark/contribution)
 * Jarslink
     * [产品概述](./sofa-jarslink/jarslink-readme)
     * 快速开始
