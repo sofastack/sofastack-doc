@@ -18,10 +18,9 @@ MOSN 项目的代码托管在 [github](https://github.com/alipay/sofa-mosn)，cl
 # 进入GOPATH下的scr目录
 cd $GOPATH/src
 # 创建 github.com/alipay 目录
-mkdir github.com
-cd github.com
-mkdir alipay
-cd alipay
+mkdir -p github.com/alipay
+cd github.com/alipay
+
 # clone mosn代码
 git clone git@github.com:alipay/sofa-mosn.git
 mv sofa-mosn sofamosn
