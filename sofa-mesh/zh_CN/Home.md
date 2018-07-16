@@ -32,3 +32,7 @@ SOFAMesh 中大幅扩展和增强 Istio 中的 Pilot 模块：
 3. 增加 Open Service Registry API，提供标准化的服务注册功能
 
 MOSN 和 Pilot 配合，将可以提供让传统侵入式框架（如 Spring Cloud、Dubbo、SOFA RPC 等）和 Service Mesh 产品可以相互通讯的功能，以便可以平滑的向 Service Mesh 产品演进和过渡。
+
+## 开源共建
+
+SOFAMesh的初始版本由蚂蚁金服和阿里大文娱UC事业部携手贡献，期待社区一起来参与后续开发，共建一个开源精品项目。
