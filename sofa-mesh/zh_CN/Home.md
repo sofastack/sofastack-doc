@@ -17,7 +17,8 @@ SOFAMesh 是基于 Istio 改进和扩展而来的 Service Mesh 大规模落地�
 
 ### SOFA MOSN
 
-SOFAMesh 中，我们采用 Golang 语言编写了名为 MOSN（Modular Observable Smart Net-stub）的模块，实现了 Envoy 的功能，完全兼容 Envoy 的 API，在数据平面中承担 Sidecar 功能以替代 Envoy 实现和 Istio 集成。
+在 SOFAMesh 中，数据面我们采用 Golang 语言编写了名为 MOSN（Modular Observable Smart Net-stub）的模块来替代 Envoy 与 Istio 集成以实现 Sidecar 的功能，
+同时 MOSN 完全兼容 Envoy 的 API。
 
 ![](./resources/mosn-sofa-mesh-golang-sidecar.png)
 

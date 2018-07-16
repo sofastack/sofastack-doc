@@ -17,7 +17,7 @@ Part3:ResponseHeaderFormat
 + ResponseFlag
 + UpstreamLocalAddress
 + DownstreamLocalAddress
-#####so you can choose above keys optionally to define part1 format such as
+##### so you can choose above keys optionally to define part1 format such as
 ```$xslt
 RequestInfoFormat = "%StartTime% %Protocol% %ResponseCode%"
 ```
