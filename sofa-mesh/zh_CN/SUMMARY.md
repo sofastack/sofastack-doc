@@ -4,7 +4,7 @@
   * 参考文档
     * [MOSN 参考文档](./mosn/reference/README.md)
     * [AccessLog 说明](./mosn/reference/AccessLogDetails.md)
-    * [MOSN 配置文件](./mosn/reference/Configfile.json)
+    * [MOSN 配置文件](mosn/reference/Configfile.md)
     * [如何使用配置文件说明](./mosn/reference/HowtoUseConfigfile.md)
     * [从配置文件启动 MOSN 说明](./mosn/reference/HowtoStartMosnFromConfig.md)
     * [如何使用 CodecClient](./mosn/reference/HowtoUseMosnAsClient.md)
