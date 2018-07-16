@@ -45,7 +45,7 @@ DUBBO, HSF 等
 
 MOSN 内部数据流如下图所示
 
-![MOSN 内部数据流示意图](./resource/MosnDataFlow.png)
+<img alt="MOSN 内部数据流示意图" src="./resource/MosnDataFlow.png" width="50%">
 
 + NET/IO 监测连接和数据包的到来
 + Protocol 对数据包进行检测，并使用对应协议做 decode 处理
