@@ -82,7 +82,7 @@ make unit-test
 
 ## 如何快速启动一个 mosn 的转发程序
 
-参考 `samples` 目录下的示例工程
+参考 `examples` 目录下的示例工程
 
 + [以sofa proxy为例](testandsamples/RunMosnSofaProxy.md)
 + [以http proxy为例](testandsamples/RunMosnHttpProxy.md)
