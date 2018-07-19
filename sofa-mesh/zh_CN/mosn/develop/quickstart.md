@@ -49,7 +49,7 @@ make build         //使用docker编译
 make build-local   // 使用本地的go编译环境
 ```
 
-完成后可以在 `bundles/${version}/binary` 目录下找到编译好的二进制文件。
+完成后可以在 `build/bundles/${version}/binary` 目录下找到编译好的二进制文件。
 
 ## 打包
 
@@ -59,7 +59,7 @@ make build-local   // 使用本地的go编译环境
 make rpm
 ```
 
-完成后可以在 `bundles/${version}/rpm` 目录下找到打包好的文件。
+完成后可以在 `build/bundles/${version}/rpm` 目录下找到打包好的文件。
 
 
 ## 运行测试
@@ -72,7 +72,7 @@ make unit-test
 
 单独运行 MOSN 作为 proxy 转发的示例:
 
-+ 参考 `mosn/pkg/tests/` 下的[示例](testandsamples/RunMosnTests.md)
++ 参考 `sofa-mosn/test/` 下的[示例](testandsamples/RunMosnTests.md)
 
 ## 从配置文件[启动 MOSN](../reference/HowtoStartMosnFromConfig.md)
 
