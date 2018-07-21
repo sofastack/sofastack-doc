@@ -27,9 +27,8 @@ SOFARPC 在蚂蚁金服内部大规模应用足以证明 SOFARPC 是一款可靠
 ### Q: 和Spring Cloud 的对比？
 SOFARPC 定位在 RPC 框架，和 Spring Cloud 的比较不在一个对比维度上面。 Spring Cloud 可对比的是 SOFAStack，SOFAStack 是蚂蚁金服自主研发的金融级分布式中间件，包含了构建金融级云原生架构所需的各个组件，包括微服务研发框架，RPC 框架，服务注册中心，分布式定时任务，限流/熔断框架，动态配置推送，分布式链路追踪，Metrics监控度量，以及分布式高可用消息队列，分布式事务框架，分布式数据库代理层等组件，是一套分布式架构的完整的解决方案。SOFAStack 的各个组件会在未来逐渐开源。
 
+另外，SOFARPC 的 Starter 是基于 Spring Boot 开发的，Spring Cloud 的各个组件也是基于 Spring Boot 开发的，所以两者并不冲突。
+
 ## 研发类
 ### Q: 为什么不使用 JDK8
 SOFARPC 在蚂蚁金服内部还有JDK6的使用场景，所以编译选择JDK7，而编译级别选择JDK6。
-
-### Q: SOFARPC 的性能测试数据有吗？
-目前正在整理中。

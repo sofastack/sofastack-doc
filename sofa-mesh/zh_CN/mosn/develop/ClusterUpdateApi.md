@@ -6,7 +6,7 @@
 
 + 具体流程：
 
-  配置中心回传数据时，registry模块会调用cluster的如下接口，做cluster以及对应的host更新：
+  配置中心(或者pilot) 回传数据时，update/callback 模块会调用 cluster 的如下接口，做 cluster 以及对应 host 的更新：
 
 	```go
 	TriggerClusterUpdate(serviceName string, hosts []v2.Host) 

@@ -2,7 +2,7 @@
 
 ## 配置文件示例
 
-+ [示例](Configfile.json)
++ [示例](Configfile.md)
 + 配置结构体
 
 MOSN 配置文件主要由如下 `MOSNConfig` 结构体中的成员组成
@@ -18,7 +18,7 @@ type MOSNConfig struct {
 ```   
 ## ServerConfig 配置块
 
-参考 [示例](Configfile.json) 中的 `servers` 块，其对应的结构体为 `ServerConfig`
+参考 [示例](Configfile.md) 中的 `servers` 块，其对应的结构体为 `ServerConfig`
 包含启动 MOSN 作为 Server 的一些配置项
 
 ```go
@@ -98,7 +98,7 @@ type ListenerConfig struct {
 
 ## Upstream 配置块
 
-参考 [示例](Configfile.json) 中的 `clusters` 块，其对应的结构体为 `ClusterConfig`，
+参考 [示例](Configfile.md) 中的 `clusters` 块，其对应的结构体为 `ClusterConfig`，
 定义了 MOSN 上游的 Cluster 以及 Host 信息
 
 ```go
