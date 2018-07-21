@@ -41,3 +41,9 @@ Jigsaw 作为 Java9 模块化方案，抛开内部实现细节，在使用规范
     </pluginRepositories>
 </profile>
 ```
+
+#### Q: 为什么使用 java -jar 启动 Spring Boot/SOFABoot 应用 Ark 包时，应用自动退出？
+因为 SOFAArk 容器不会开启任何非 Daemon 线程，如果是非 Web 应用或者应用启动时不会创建非 Daemon 线程，则应用在执行完 main 方法时，会正常退出。判断 Ark 包是否正常启动，可以观察是否有如下日志出现：
+```text
+Ark container started in xxx ms.
+```
