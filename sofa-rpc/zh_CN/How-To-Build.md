@@ -2,7 +2,7 @@
 
 > 安装 JDK7 及以上，Maven 3.2.5 及以上。
 
-直接下面代码，然后执行如下命令：
+直接下载代码，然后执行如下命令：
 ```
 cd sofa-rpc
 mvn clean install
