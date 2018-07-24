@@ -9,7 +9,7 @@ SOFARPC 从下到上分为两层：
 
 蚂蚁内部使用的版本也只是开源版本上增加一些内部扩展而已。
 
-当然你也可以增加自己三方扩展，参见：[扩展机制](#extensionloader)
+当然你也可以增加自己三方扩展，参见：[扩展机制](./Extension-Loader)
 
 ## 模块划分
 
@@ -29,7 +29,7 @@ example |        | 示例模块     |    | all
 test    |        | 测试模块     | 包含集成测试 | all
 core    |   api  |API模块       |各种基本流程接口、消息、上下文、扩展接口等  | common
 core    |common  |公共模块      |utils、数据结构                   | exception
-core    |exception|异常模块   |各种异常接口接口等 | common
+core    |exception|异常模块   |各种异常接口等 | common
 bootstrap|       |启动实现模块   |启动类，发布或者引用服务逻辑、以及registry的操作 | core
 proxy    |       |代理实现模块   |接口实现代理生成| core
 client   |       |客户端实现模块 |发送请求、接收响应、连接维护、路由、负载均衡、同步异步等| core
