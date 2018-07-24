@@ -21,6 +21,9 @@ Spring Boot 和 SOFABoot 都可以使用 Jarslink2.0，只需要添加指定依�
     <version>2.5.0-SNAPSHOT</version>
 </parent>
 ```
+
+**注意: 目前 Jarslink 2.0.0 还处于快照版本，它依赖的 SOFABoot 2.5.0 版本也将近期发布，目前需要引入 SOFABoot 2.5.0-SNAPSHOT 版本依赖**
+
 然后，添加一个 Spring Boot 官方或者 SOFABoot 官方的 Starter,如：
 ```xml
 <dependencies>
