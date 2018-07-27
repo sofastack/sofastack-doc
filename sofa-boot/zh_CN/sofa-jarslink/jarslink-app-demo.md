@@ -1,4 +1,4 @@
-> [工程地址](https://github.com/QilongZhang/jarslink-demo/tree/master/spring-boot-transform-sample)
+> [工程地址](https://github.com/alipay/sofa-jarslink/tree/master/sofa-jarslink-samples/spring-boot-transform-sample)
 
 ## 简介
 Spring Boot 和 SOFABoot 都可以使用 Jarslink2.0，只需要添加指定依赖即可。为了使用便利，推荐以 SOFABoot 工程形式使用 Jarslink2.0。本样例工程意在演示如何快速的将 Spring Boot 工程改造成 SOFABoot 工程。
@@ -22,7 +22,7 @@ Spring Boot 和 SOFABoot 都可以使用 Jarslink2.0，只需要添加指定依�
 </parent>
 ```
 
-**注意: 目前 Jarslink 2.0.0 还处于快照版本，它依赖的 SOFABoot 2.5.0 版本也将近期发布，目前需要引入 SOFABoot 2.5.0-SNAPSHOT 版本依赖**
+**注意: 目前 Jarslink 2.0.0 还处于快照版本，它依赖的 SOFABoot 2.5.0 版本也将近期发布，目前需要引入 SOFABoot 2.5.0-SNAPSHOT 版本依赖。SNAPSHOT 包拉取需要特殊的配置，详细请参考[FAQ: 如何配置拉取 SNAPSHOT 依赖包](./faq)**
 
 然后，添加一个 Spring Boot 官方或者 SOFABoot 官方的 Starter,如：
 ```xml
