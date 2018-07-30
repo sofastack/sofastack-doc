@@ -2,7 +2,34 @@
 
 SOFABoot 是蚂蚁金服开源的基于 Spring Boot 的研发框架，它在 Spring Boot 的基础上，提供了诸如 Readiness Check，类隔离，日志空间隔离等等能力。在增强了 Spring Boot 的同时，SOFABoot 提供了让用户可以在 Spring Boot 中非常方便地使用 SOFA 中间件的能力。
 
-当前 SOFABoot 的 2.4.0 版本是基于 Spring Boot 1.4.2.RELEASE 来构建的。
+当前 SOFABoot 的 2.4.0 版本是基于 Spring Boot 1.4.2.RELEASE 来构建的。为了方便社区同学能够基于 SOFABoot 使用 Spring Boot 2.0 进行开发，我们拉了 [3.0.0-SNAPSHOT](https://github.com/alipay/sofa-boot/tree/3.0.x) 快照分支，该版本是基于 Spring Boot 2.0.3.RELEASE，为了能够从中央仓库顺利拉取 SNAPSHOT 包，请在本地 maven setting.xml 文件增加如下 profile 配置:
+
+```xml
+<profile>
+    <id>default</id>
+    <activation>
+        <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <id>maven-snapshot</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <id>maven-snapshot</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </pluginRepository>
+    </pluginRepositories>
+</profile>
+```
 
 ## 功能描述
 
