@@ -42,4 +42,4 @@ Require-Module 用于定义模块之间的依赖顺序，值是以逗号分隔�
 
 SOFABoot 模块可以包含 Spring 配置文件，放置在 META-INF/spring 目录下，SOFABoot 启动时会自动扫描该目录，并把目录下所有 XML 文件作为本模块的 Spring 配置加载起来，我们可以在 Spring 配置文件中定义 Bean、发布服务等等。
 
-SOFABoot 模块一般用于封装对外发布服务接口的具体实现，属于业务层，Controller 属于展现层内容，我们不建议也不支持在 SOFABoot 模块中定义 Controller 组件，Controller 组件相关定义建议直接放在 Root Application Context。
+SOFABoot 模块一般用于封装对外发布服务接口的具体实现，属于业务层，Controller 属于展现层内容，我们不建议也不支持在 SOFABoot 模块中定义 Controller 组件，Controller 组件相关定义请直接放在 Root Application Context。
