@@ -3,7 +3,7 @@ Spring Boot的`@ConfigurationProperties` 进行的绑定。绑定属性类是`co
 
 ```java
 
-    static final String PREFIX = "com.alipay.sofa.rpc";
+static final String PREFIX = "com.alipay.sofa.rpc";
 ``` 
 
 那么在 application.properties 文件中，目前可以配置以下几个选项。其中使用者也可以根据自己的编码习惯，按照 Spring Boot的规范，按照驼峰，中划线等进行书写。
