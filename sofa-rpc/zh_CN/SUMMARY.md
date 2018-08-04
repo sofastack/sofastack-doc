@@ -27,6 +27,7 @@
         * [自动故障剔除](./Fault-Tolerance)
         * [Node跨语言调用](./Node-And-Java-Communicate)
     * [配置参考手册](./Configuration)
+        * [RPC应用参数配置](./Application-RPC-Config)
         * [发布订阅配置](./Configuration-Common)
         * [自动故障剔除配置](./Configuration-Fault-Tolerance)
 * 开发者手册
