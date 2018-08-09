@@ -1,0 +1,13 @@
+---
+author: 雪连
+updated_at: 2018-08-09T10:13:00.000Z
+created_at: 2018-08-09T10:00:00.000Z
+title: SOFABoot 2.4.4 发布
+tags: ["SOFABoot"]
+---
+
+**SOFABoot 2.4.4 发布：**
+1. 修复健康检查配置问题
+2. 修复模块化开发相关问题
+
+
