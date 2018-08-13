@@ -10,3 +10,4 @@
 - [版本查看](./ViewVersions)
 - [类隔离](./Classloader-Isolation)
 - [FAQ](./FAQ)
+- [Release Note](https://github.com/alipay/sofa-boot/releases)
