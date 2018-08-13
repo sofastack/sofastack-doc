@@ -29,7 +29,7 @@ SOFABoot 是直接构建在 Spring Boot 之上，因此可以使用 [Spring Boo
 <parent>
     <groupId>com.alipay.sofa</groupId>
     <artifactId>sofaboot-dependencies</artifactId>
-    <version>2.4.0</version>
+    <version>2.4.4</version>
 </parent>
 ```
 然后，添加一个 SOFABoot 健康检查扩展能力的依赖：
@@ -71,7 +71,7 @@ logging.path=./logs
     Built-Time: "2018-04-05T20:55:26+0800",
     Commit-Time: "2018-04-05T20:54:26+0800",
     Commit-Id: "049bf890bb468aafe6a3e07b77df45c831076996",
-    Version: "2.4.0"
+    Version: "2.4.4"
   }
 ]
 ```
@@ -333,7 +333,7 @@ public class JvmServiceConsumer implements ClientFactoryAware {
 <parent>
     <groupId>com.alipay.sofa</groupId>
     <artifactId>sofaboot-dependencies</artifactId>
-    <version>2.4.0</version>
+    <version>2.4.4</version>
 </parent>
 ```
 
