@@ -51,4 +51,4 @@ MOSN 内部数据流如下图所示
 + NET/IO 监测连接和数据包的到来
 + Protocol 对数据包进行检测，并使用对应协议做 decode 处理
 + Streaming 对 decode 的数据包做二次封装为stream
-+ Protocol 对封装的 stream 做 proxy
++ Proxy 对封装的 stream 做 proxy
