@@ -19,7 +19,6 @@
 | 代码 | etcd注册中心实现   |   中   | [@wynn5a](https://github.com/wynn5a)<br>2018-6    |            |      | [#153](https://github.com/alipay/sofa-rpc/issues/153)    |         | 
 | 代码 | eureka注册中心实现 |   中   | [@liufeiit](https://github.com/liufeiit)<br>2018-4 |            |     | [#52](https://github.com/alipay/sofa-rpc/issues/52)        | 
 | 代码 | gRPC 支持         |   高   |                  |            |     | [#57](https://github.com/alipay/sofa-rpc/issues/57) | 
-| 代码 | SkyWalking 支持   |   中   |                  |            |     | [#33](https://github.com/alipay/sofa-rpc/issues/33)  | 
 | 代码 | CXF 协议          |   高   |                  |            |     | [#58](https://github.com/alipay/sofa-rpc/issues/58)  | 
 | 代码 | TLS 支持          |   高   |                  |            |     |   | 
 
