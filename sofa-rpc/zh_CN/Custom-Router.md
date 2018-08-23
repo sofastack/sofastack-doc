@@ -11,7 +11,7 @@ public class CustomerRouter extends Router {
     }
     @Override
     public boolean needToLoad(ConsumerBootstrap consumerBootstrap) {
-       return ture;
+       return true;
     }
     @Override
     public List<ProviderInfo> route(SofaRequest request, List<ProviderInfo> providerInfos) {
