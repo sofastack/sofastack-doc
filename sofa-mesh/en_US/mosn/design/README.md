@@ -1,4 +1,4 @@
-# MOSN设计文档
+# MOSN Architecture
 
 In mosn, we have 4 layers to build a mesh, which are NET/IO, Protocol、Stream、and Proxy
 
@@ -39,17 +39,17 @@ In mosn, we have 4 layers to build a mesh, which are NET/IO, Protocol、Stream�
   + LoadBalancer
   + HealthCheck 
 
-## MOSN 工作流程
+## MOSN Work Flow
 
 Following pic shows how mosn works as a sidecar; You can assign the protocol used for downstream and upstream
 ![WorkFlow](./resource/MosnWorkFlow.png)
 
-## MOSN 模块划分
+## MOSN Modules
 
 Following pic shows the modules forming mosn, we will describe each part in detail [here](./architecture.md)
 ![modules](./resource/MosnModules.png)
 
-## MOSN 数据流转
+## MOSN Data Flow
 
 As described above, data flow transfered in follow pic
 ![DataFLow](./resource/MosnDataFlow.png)

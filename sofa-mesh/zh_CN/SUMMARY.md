@@ -12,7 +12,7 @@
     * [MOSN 开发文档简介](./mosn/develop/README.md)
     * [快速开始](./mosn/develop/quickstart.md)
     * [MOSN 当前能力介绍](./mosn/develop/MosnAbility.md)
-    * [运行 MOSN proxy 示例](./mosn/develop/testandsamples/RunMosnTests.md)
+    * [运行 MOSN TCP proxy 示例](mosn/develop/testandsamples/RunMosnTCPProxy.md)
     * [配置 SOFA HTTP 协议 Mesher](./mosn/develop/testandsamples/RunMosnHttpProxy.md)
     * [配置 SOFA RPC 协议 Mesher](./mosn/develop/testandsamples/RunMosnSofaProxy.md)
     * [MOSN 心跳开发文档](./mosn/develop/HealthCheck.md)

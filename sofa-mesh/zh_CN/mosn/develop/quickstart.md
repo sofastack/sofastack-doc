@@ -72,7 +72,7 @@ make unit-test
 
 单独运行 MOSN 作为 proxy 转发的示例:
 
-+ 参考 `sofa-mosn/test/` 下的[示例](testandsamples/RunMosnTests.md)
++ 参考 `sofa-mosn/test/` 下的[示例](testandsamples/RunMosnTCPProxy.md)
 
 ## 从配置文件[启动 MOSN](../reference/HowtoStartMosnFromConfig.md)
 
@@ -86,3 +86,4 @@ make unit-test
 
 + [以sofa proxy为例](testandsamples/RunMosnSofaProxy.md)
 + [以http proxy为例](testandsamples/RunMosnHttpProxy.md)
++ [以tcp proxy为例](testandsamples/RunMosnTCPProxy.md)

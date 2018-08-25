@@ -1,51 +1,66 @@
 ## 配置 SOFA RPC 协议 Mesher
+样例工程: `sofa-mosn/examples/sofarpc-sample`
 
 ## 简介
 
-`sofa-mosn/examples/sofarpc-sample`
-样例工程演示了如何配置使得 Mesher 作为 SOFA RPC 代理。Mesher 之间的协议是 HTTP/2。
++ 该样例工程演示了如何配置使得SOFAMesh作为SofaRpc代理
++ SOFAMesh之间的协议是HTTP2
++ 为了演示方便，SOFAMesh监听两个端口,一个转发Client的请求，一个收到请求以后转发给Server
 
 ## 准备
 
-需要一个编译好的 Mesher 程序
-```bash
-cd ${projectpath}/pkg/mosn
++ 需要一个编译好的SOFAMesh程序
+
+```
+cd ${projectpath}/cmd/mosn/main
 go build
 ```
++ 将编译好的程序移动到当前目录
 
-将编译好的程序移动到当前目录，目录结构如下 
+```
+mv main ${targetpath}/
+```
 
-```bash
-mosn  //Mesher程序
-server.go //模拟的SofaRpc Server
-server.json //SofaRpc Server的Mesher配置
-client.json //SofaRpc Client的Mesher配置
-client.go //模拟的SofaRpc client
-data.go //模拟的SofaRpc数据，用户client的请求和server的响应
+## 目录结构
+
+```
+main        // 编译完成的SOFAMesh程序
+server.go   // 模拟的SofaRpc Server
+client.go   // 模拟的SofaRpc client
+config.json // 非TLS的配置
+tls.json    // TLS配置
 ```
 
 ## 运行说明
 
-### 启动一个HTTP Server
+### 启动SOFA RPC Server
 
-```bash
-go run server.go data.go
+```
+go run server.go
 ```
 
-### 启动代理 HTTP Server 的 Mesher
+### 启动SOFAMesh
 
-```bash
-./mosn start -c server.json
++ 使用config.json 运行非TLS加密的SOFAMesh
+
+```
+./main start -c config.json
 ```
 
-### 启动代理HTTP Client的Mesher
++ 使用tls.json 开启SOFAMesh之间的TLS加密
 
-```bash
-./mosn start -c client.json
 ```
+./main start -c tls.json
+```
+
 
 ### 使用Client进行访问
 
-```bash
-go run client.go data.go
+```
+go run client.go
+```
++ 使用-t 让client持续发送请求 
+
+```
+go run client.go -t
 ```
