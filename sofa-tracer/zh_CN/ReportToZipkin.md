@@ -3,7 +3,7 @@
 考虑到 Zipkin 的数据上报能力不是 SOFATracer 默认开启的能力，所以期望使用 SOFATracer 做数据上报时，需要添加如下的 Zipkin 数据汇报的依赖：
 
 ```xml
- <dependency>
+<dependency>
     <groupId>io.zipkin.java</groupId>
     <artifactId>zipkin</artifactId>
     <version>1.19.2</version>

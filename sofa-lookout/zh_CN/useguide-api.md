@@ -8,7 +8,7 @@ SOFALookout 客户端设计上保持了 API 与实现解耦。如果我们只需
 
 ```xml
 <dependency>
-    <groupId>com.alipay.lookout</groupId>
+    <groupId>com.alipay.sofa.lookout</groupId>
     <artifactId>lookout-api</artifactId>
     <version>${lookout.client.version}</version>
 </dependency>
@@ -19,14 +19,16 @@ SOFALookout 客户端设计上保持了 API 与实现解耦。如果我们只需
 Lookout metrics 相比传统的 metrics 库单一维度的信息描述，提供了支持多维度描述的 tags 能力。 Lookout metrics 的唯一标识 Id 类，由 name 和 tags 构成。
 
 ```java
-Id id = registry.createId("rpc.provider.service.stats");
-basicId = id.withTag("service", "com.alipay.demo.demoService")
+Id basicId = registry.createId("rpc.provider.service.stats");
+id = basicId.withTag("service", "com.alipay.demo.demoService")
             .withTag("method", "sayHi")
             .withTag("protocol", "tr")
             .withTag("alias", "group1");
 ```
 
 上面是 Id 的简单示例了，如何创建 Id，如何打 tag，（每打一次 tag，都会生成并返回一个新的 Id 对象引用）切记！使用返回新的 Id 对象了哦。
+
+* 不要主动缓存 Id 或具体的 Metric 对象,Lookout 的 Registry 已经登记记录了。相等的 Id （ name 和 tags 一样）会复用已有的Id 对应 Metric 对象。
 
 #### 2.1 Priority tag (不是必须)
 
