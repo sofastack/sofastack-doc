@@ -139,6 +139,7 @@ com.alipay.sofa.rpc.client.Client              |客户端    | |Failover、Failf
 com.alipay.sofa.rpc.client.ConnectionHolder    |连接管理器 | |AllConnect（全部连接）
 com.alipay.sofa.rpc.client.AddressHolder       |地址管理器 | |单组、多组
 com.alipay.sofa.rpc.client.LoadBalancer        |负载均衡   | |随机、轮询、最少并发、一致性hash、本机优先
+com.alipay.sofa.rpc.client.Router              |路由器    | |
 com.alipay.sofa.rpc.codec.Compressor           |压缩      | |snappy、~~quicklz~~
 com.alipay.sofa.rpc.codec.Serializer           |序列化器  | |java、hessian、pb
 com.alipay.sofa.rpc.filter.Filter              |拦截器    | |

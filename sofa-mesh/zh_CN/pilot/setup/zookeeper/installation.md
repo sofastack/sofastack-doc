@@ -63,6 +63,6 @@ services:
 
 目前 SOFA MOSN 还没有集成 Pilot 之外的其他组件，因此我们暂时无需安装 Mixer、Citadel 等组件。
 
-### 为微服务实例添加 SOAF MOSN Sidecar
+### 为微服务实例添加 SOFA MOSN Sidecar
 
 微服务应用的每个实例都必须有个伴生的 SOFA MOSN 实例。

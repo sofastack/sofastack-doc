@@ -1,4 +1,4 @@
-SOFATracer 集成在 SOFARPC(5.4.0及之后的版本) 后输出链路数据的格式，默认为 `json` 数据格式，具体的字段含义解释如下：
+SOFATracer 集成在 SOFARPC(5.4.0及之后的版本) 后输出链路数据的格式，默认为 `JSON` 数据格式，具体的字段含义解释如下：
 
 ## RPC 客户端 摘要日志（ rpc-client-digest.log）
 

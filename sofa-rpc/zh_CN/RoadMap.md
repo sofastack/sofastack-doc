@@ -15,7 +15,6 @@
 |:----|:------------------|:-----:|:------------------|:------------|:----|:--------:|
 | 文档 | 文档翻译           |   低   |                 |            |     |         | 
 | 代码 | 弹性长连接管理方式  |   低  |                  |            |     | [#56](https://github.com/alipay/sofa-rpc/issues/56) | 
-| 代码 | Consul注册中心实现 |   中   | [@Moriadry](https://github.com/Moriadry)<br>2018-4 |            |     | [#54](https://github.com/alipay/sofa-rpc/issues/54)   | 
 | 代码 | etcd注册中心实现   |   中   | [@wynn5a](https://github.com/wynn5a)<br>2018-6    |            |      | [#153](https://github.com/alipay/sofa-rpc/issues/153)    |         | 
 | 代码 | eureka注册中心实现 |   中   | [@liufeiit](https://github.com/liufeiit)<br>2018-4 |            |     | [#52](https://github.com/alipay/sofa-rpc/issues/52)        | 
 | 代码 | gRPC 支持         |   高   |                  |            |     | [#57](https://github.com/alipay/sofa-rpc/issues/57) | 
@@ -26,20 +25,18 @@
 
 ### v5.5.0
 
-- BOLT 版本协商与 CRC 校验
 - JSON 序列化支持
 - H2的TLS安全支持
 - 弹性连接池
 - hystrix集成
-
+- Consul注册中心支持
 
 ### v5.6.0
 
 - grpc 通讯层支持
 - etcd注册中心支持
-- Consul注册中心支持
 - SofaMesh支持
-
+- BOLT 版本协商与 CRC 校验
 
 ### v5.7.0
 

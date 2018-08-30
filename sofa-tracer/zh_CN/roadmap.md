@@ -2,7 +2,7 @@
 
 <center>
 
-![roadmap](./resources/tracer-roadmap.png) 
+![roadmap](./resources/roadmap.png) 
 
 </center>
 
