@@ -1,7 +1,7 @@
 - [SOFATracer 介绍](./Home)
 - 快速开始
-    - [Spring MVC 埋点接入](./Usage_Of_MVC)
-    - [DataSource 埋点接入](./Usage_Of_Datasource)
+    * [Spring MVC 埋点接入](./Usage_Of_MVC)
+    * [DataSource 埋点接入](./Usage_Of_Datasource)
 - [名词解释](./Explanation)
 - [TraceId 和 SpanId 生成规则](./TraceIdGeneratedRule)
 - [应用日志打印 TraceId 和 SpanId](./PrintTraceIdSpanId)
@@ -9,9 +9,9 @@
 - [异步处理](./Async)
 - [上报数据到 Zipkin](./ReportToZipkin)
 - [SOFATracer 配置](./Configuration)
-- [日志格式]()
-     - [Spring MVC 日志](./SpringMVC)
-     - [SOFARPC 日志](./SOFARPC)
+- 日志格式
+     * [Spring MVC 日志](./SpringMVC)
+     * [SOFARPC 日志](./SOFARPC)
 - [RoadMap](./RoadMap)
 
 
