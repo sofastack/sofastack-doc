@@ -13,6 +13,13 @@ SOFABoot 为 Spring Boot 的健康检查能力增加了 Readiness Check 的能�
 
 *如果不引入 SOFABoot 的健康检查扩展，用户依然可以直接依赖 HealthIndicator 接口进行原生的 Spring Boot Actuator 的 Liveness Check。*
 
+
+## 安全提醒
+
+从 SOFABoot 2.3.0 开始，由于健康检查能力依赖于 SpringBoot 1.4.x 里的 `Actuator` 组件，而 `Actuator` 会默认开启很多 [EndPoint](https://docs.spring.io/spring-boot/docs/1.4.2.RELEASE/reference/html/production-ready-endpoints.html)，例如 `/dump`，`/trace` 等等，可能存在安全风险，可以参照官方文档里的[安全建议](https://docs.spring.io/spring-boot/docs/1.4.2.RELEASE/reference/html/production-ready-endpoints.html#_security_with_healthindicators)进行设置。
+
+> 后续 SpringBoot 1.5.x 和 SpringBoot 2.x 已修复了部分安全行为，SOFABoot 将通过升级 SpringBoot 内核进行支持。
+
 ## 查看健康检查结果
 
 加入健康检查扩展之后，我们可以直接在浏览器中输入 [http://localhost:8080/health/readiness](http://localhost:8080/health/readiness) 来查看 Readiness Check 的结果。如果要查看 Liveness Check 的结果，可以直接查看 Spring Boot 的健康检查的 URL [http://localhost:8080/health](http://localhost:8080/health)。
@@ -45,3 +52,4 @@ Readiness Check 配置项 | 说明 | 默认值
 com.alipay.sofa.healthcheck.skip.all | 是否跳过整个 Readiness Check 阶段  | false
 com.alipay.sofa.healthcheck.skip.component | 是否跳过 SOFA 中间件的 Readiness Check  | false
 com.alipay.sofa.healthcheck.skip.indicator | 是否跳过 HealthIndicator 的 Readiness Check  | false
+
