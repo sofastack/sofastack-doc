@@ -14,9 +14,11 @@
 <dependency>
     <groupId>com.alipay.sofa</groupId>
     <artifactId>sofa-rpc-all</artifactId>
-    <version>5.3.2</version>
+    <version>最新版本</version>
 </dependency>
 ```
+
+注：最新版本可以从 https://github.com/alipay/sofa-rpc/releases 里找到。
 
 
 ## 编写服务端实现
