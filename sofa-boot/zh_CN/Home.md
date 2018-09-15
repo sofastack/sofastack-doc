@@ -40,7 +40,7 @@ SOFABoot 在 Spring Boot 的基础上，提供了以下能力：
 * 提供类隔离的能力：基于 [SOFAArk](https://github.com/alipay/sofa-ark) 框架提供类隔离能力，方便使用者解决各种类冲突问题。
 * 提供模块化开发能力：基于 Spring 上下文隔离提供[模块化开发](./Modular-Development)能力，每个 SOFABoot 模块使用独立的 Spring 上下文，避免不同 SOFABoot 模块间的 BeanId 冲突。
 * 中间件的集成管理：统一管控、提供中间件统一易用的编程接口、每一个 SOFA 中间件都是独立可插拔的组件。
-* 完全兼容 Spring Boot：SOFABoot 基于 Spring Boot 的基础上进行构建，并且完全兼容 Spring Boot。
+* 完全兼容 Spring Boot：SOFABoot 基于 Spring Boot 的基础上进行构建，并且完全兼容 Spring Boot。
 
 ## 应用场景
 
