@@ -7,7 +7,7 @@ SOFATracer 2.2.0-SNAPSHOT 基于标准的 JDBC 接口实现，支持对标准的
 + 需要采用 Apache Maven 3.2.5 或者以上的版本来编译
 
 ## 创建工程
-SOFATracer 在 SOFABoot 和 Spring Boot 框架内均可使用。我们以 Spring Boot 为例演示，使用 [Spring Boot 的工程生成工具](https://start.spring.io/) 来生成。在该演示用例，我们需要添加一个 Web 的依赖同时编写一个简单的 REST 服务，以便最后在浏览器中查看效果。
+SOFATracer 在 SOFABoot 和 Spring Boot 框架内均可使用。我们以 Spring Boot 为例演示，使用 [Spring Boot 的工程生成工具](https://start.spring.io/) 来生成。在该演示用例，我们需要添加一个 Web 的依赖同时编写一个简单的 REST 服务，以便最后在浏览器中查看效果。
 
 ## 引入 SOFATracer
 在新建的 Spring Boot 工程引入 SOFATracer 依赖:
