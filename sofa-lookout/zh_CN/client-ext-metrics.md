@@ -1,6 +1,6 @@
 # 客户端内置扩展 Metrics 指标
 
-目前默认生效的的扩展模块是: lookout-ext-jvm 。 lookout-ext-os 暂时并未生效，可以按照 SPI 机制生效之。 
+目前默认生效的的扩展模块是: lookout-ext-jvm ， lookout-ext-os(from v1.5.0)。
 
 ## JVM 线程
 | metric name |  metric tags |  specification |
@@ -48,3 +48,37 @@
 | instance.processors |  |  --- |
 | instance.uptime |   |  --- |
 | instance.systemload.average |   |  --- |
+
+## Linux 操作系统信息 （1.5.0版本之后默认启用）
+| metric name |   metric tags |  specification |
+| --- |  --- |  --- |
+| os.systemload.average.1min |   |  --- |
+| os.systemload.average.5min |   |  --- |
+| os.systemload.average.15min |   |  --- |
+| os.cpu.idle |   |  --- |
+| os.cpu.iowait |   |  --- |
+| os.cpu.irq |   |  --- |
+| os.cpu.nice |   |  --- |
+| os.cpu.softirq |   |  --- |
+| os.cpu.system |   |  --- |
+| os.cpu.user |   |  --- |
+| os.disk.usage.percent.used | device,root,type  |  --- |
+| os.disk.usage.total.bytes | device,root,type  |  --- |
+| os.disk.usage.used.bytes |  device,root,type |  --- |
+| os.net.stats.in.bytes |  intfc |  --- |
+| os.net.stats.in.compressed |  intfc |  --- |
+| os.net.stats.in.dropped |  intfc |  --- |
+| os.net.stats.in.errs |  intfc |  --- |
+| os.net.stats.in.fifo.errs |  intfc |  --- |
+| os.net.stats.in.frame.errs |  intfc |  --- |
+| os.net.stats.in.multicast |  intfc |  --- |
+| os.net.stats.in.packets |  intfc |  --- |
+| os.net.stats.out.bytes |  intfc |  --- |
+| os.net.stats.out.carrier.errs |  intfc |  --- |
+| os.net.stats.out.collisions |  intfc |  --- |
+| os.net.stats.out.compressed |  intfc |  --- |
+| os.net.stats.out.dropped |  intfc |  --- |
+| os.net.stats.out.errs |  intfc |  --- |
+| os.net.stats.out.fifo.errs |  intfc |  --- |
+| os.net.stats.out.packets |  intfc |  --- |
+
