@@ -29,20 +29,22 @@
 - [贡献 Contributors](#contributors)
 - [用户 End User](#enduser)
 
-## 资源 <span id="resources" />
+<span id="resources" />
+## 资源
 
 - [官网](http://www.sofastack.tech)
 - [源码](https://github.com/alipay?q=sofa)
 - [蚂蚁金融科技](https://www.cloud.alipay.com/products/SOFA)
 
-## 项目 <span id="projects" />
+<span id="projects" />
+## 项目 
 
 已开源项目：
 
 - [SOFABoot](https://github.com/alipay/sofa-boot) 是基于 Spring Boot 的一套研发框架，完全兼容 Spring Boot 的基础上，还提供了启动期监控检查，上下文隔离，模块化开发，类隔离，日志空间隔离等等能力。
 - [SOFARPC](https://github.com/alipay/sofa-rpc) 是一个高可扩展性、高性能、生产级的 Java RPC 框架。
 - [SOFAMesh](https://github.com/alipay/sofa-mesh) 是基于 Istio 改进和扩展而来的 Service Mesh 大规模落地实践方案。
-- [SOFAMOSN](https://github.com/alipay/sofa-mosn) 是 Golang 开发的 Service Mesh 数据平面代理，旨在提供分布式，模块化，可观察，智能化的代理能力。
+- [SOFAMosn](https://github.com/alipay/sofa-mosn) 是 Golang 开发的 Service Mesh 数据平面代理，旨在提供分布式，模块化，可观察，智能化的代理能力。
 - [SOFATracer](https://github.com/alipay/sofa-tracer) 是基于 OpenTracing 规范 的分布式链路跟踪系统。
 - [SOFALookout](https://github.com/alipay/sofa-lookout) 是一款解决系统的度量和监控问题的轻量级中间件服务。
 - [SOFABolt](https://github.com/alipay/sofa-bolt) 是基于 Netty 实现的网络通信框架。
@@ -53,17 +55,20 @@
 
 未开源项目可通过调查问卷反馈。包括但不限于注册中心、消息、配置中心、熔断限流、分库分表、分布式事务等等组件。
 
-## 文章 <span id="articles" />
+<span id="articles" />
+## 文章
 
 - [SOFAStack 官网文章](http://www.sofastack.tech/posts)
 - [SOFAStack 知乎专栏](https://zhuanlan.zhihu.com/sofastack)
 - [SOFA 公开文章](https://www.yuque.com/huarou/gd4szw)
 
-## 工具 <span id="tools" />
+<span id="tools" />
+## 工具
 
 - [Alipay Intellij IDEA 插件](https://github.com/alipay/alipay-intellij-plugin)
 
-## 社区 <span id="community" />
+<span id="community" />
+## 社区
 
 - [Github](https://github.com/alipay/)
 - <SOFA:Lab /> SOFA源码研究实验室：加入我们，回到写代码最初的样子
@@ -81,7 +86,8 @@
 - [SegmentFault](https://segmentfault.com/t/sofa)
 - [掘金](https://juejin.im/user/5a42596ff265da43062b06e8)
 
-## 贡献 <span id="contributors" />
+<span id="contributors" />
+## 贡献
 
 目前已经几十位小伙伴为 SOFA 贡献了文章和代码，他们分别是：
 > 本列表线上的 Github 用户 ID，按首字母排序，每月初更新
@@ -105,6 +111,7 @@
 
 想要参与贡献，可以直接去[项目列表](#projects)找到您关注的产品。
 
-## 用户 <span id="enduser" />
+<span id="enduser" />
+## 用户
 
 整理中，欢迎通过调查问卷或者 Issue 收录。
