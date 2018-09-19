@@ -30,6 +30,7 @@
 - [用户 End User](#enduser)
 
 <span id="resources" />
+
 ## 资源
 
 - [官网](http://www.sofastack.tech)
@@ -37,6 +38,7 @@
 - [蚂蚁金融科技](https://www.cloud.alipay.com/products/SOFA)
 
 <span id="projects" />
+
 ## 项目 
 
 已开源项目：
@@ -56,6 +58,7 @@
 未开源项目可通过调查问卷反馈。包括但不限于注册中心、消息、配置中心、熔断限流、分库分表、分布式事务等等组件。
 
 <span id="articles" />
+
 ## 文章
 
 - [SOFAStack 官网文章](http://www.sofastack.tech/posts)
@@ -63,11 +66,13 @@
 - [SOFA 公开文章](https://www.yuque.com/huarou/gd4szw)
 
 <span id="tools" />
+
 ## 工具
 
 - [Alipay Intellij IDEA 插件](https://github.com/alipay/alipay-intellij-plugin)
 
 <span id="community" />
+
 ## 社区
 
 - [Github](https://github.com/alipay/)
@@ -87,6 +92,7 @@
 - [掘金](https://juejin.im/user/5a42596ff265da43062b06e8)
 
 <span id="contributors" />
+
 ## 贡献
 
 目前已经几十位小伙伴为 SOFA 贡献了文章和代码，他们分别是：
@@ -112,6 +118,7 @@
 想要参与贡献，可以直接去[项目列表](#projects)找到您关注的产品。
 
 <span id="enduser" />
+
 ## 用户
 
 整理中，欢迎通过调查问卷或者 Issue 收录。
