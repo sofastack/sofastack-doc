@@ -63,7 +63,7 @@ counter.inc();
 ```
 
 #### Timer 「耗时统计器」
-- 场景:统计任务，方法耗时，支持[分桶统计](https://github.com/alipay/sofastack-doc/blob/master/sofa-lookout/zh_CN/useguide-buckets.md)
+- 场景:统计任务，方法耗时，支持[分桶统计](./useguide-buckets)
 - 主动汇报的数据包括：elapPerExec (单次执行耗时), total 耗时，Max 耗时,（上报单位：秒）；
 - 使用方式
 
@@ -73,7 +73,7 @@ timer.record(2, TimeUnit.SECONDS);
 ```
 #### DistributionSummary 「值分布情况统计器」
 
-- 场景：比如 io 流量，支持[分桶统计](https://github.com/alipay/sofastack-doc/blob/master/sofa-lookout/zh_CN/useguide-buckets.md)
+- 场景：比如 io 流量，支持[分桶统计](./useguide-buckets)
 - 主动汇报的数据包括: count, total(size), max(size)；
 - 使用方式:
 
