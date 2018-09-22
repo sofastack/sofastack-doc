@@ -96,4 +96,4 @@ consumerConfig.setMethods(methodConfigs);  //客户端设置
 
 SOFARPC 里面的某些配置在服务提供方可以设置，在服务调用方也可以设置，比如调用的超时的 timeout 属性，这些配置的优先级为：
 
-服务调用方方法级别设置 >> 服务调用方 Reference 级别设置 >> 服务提供方方法级别设置 >> 服务提供方 Service 级别设置
+线程调用级别设置 >> 服务调用方方法级别设置 >> 服务调用方 Reference 级别设置 >> 服务提供方方法级别设置 >> 服务提供方 Service 级别设置
