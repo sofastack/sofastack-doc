@@ -29,10 +29,10 @@ SOFABoot 是直接构建在 Spring Boot 之上，因此可以使用 [Spring Boot
 <parent>
     <groupId>com.alipay.sofa</groupId>
     <artifactId>sofaboot-dependencies</artifactId>
-    <version>2.4.4</version>
+    <version>${sofa.boot.version}</version>
 </parent>
 ```
-然后，添加一个 SOFABoot 健康检查扩展能力的依赖：
+这里的 `${sofa.boot.version}` 指定具体的 SOFABoot 版本，参考[发布历史](https://github.com/alipay/sofa-boot/releases)。 然后，添加一个 SOFABoot 健康检查扩展能力的依赖：
 ```xml
 <dependency>
     <groupId>com.alipay.sofa</groupId>
@@ -40,7 +40,7 @@ SOFABoot 是直接构建在 Spring Boot 之上，因此可以使用 [Spring Boot
 </dependency>
 ```
 
-最后，在工程的 `application.properties` 文件下添加一个 SOFABoot 必须要使用的参数，包括`spring.application.name` 用于标示当前应用的名称；`logging path` 用于指定日志的输出目录。
+最后，在工程的 `application.properties` 文件下添加 SOFABoot 工程常用的参数配置，其中 `spring.application.name` 是必需的参数，用于标示当前应用的名称；`logging path` 用于指定日志的输出目录。
 
 ```
 # Application Name
@@ -75,6 +75,7 @@ logging.path=./logs
   }
 ]
 ```
+**注: 在 SOFABoot 3.x 中调整了 endpoint 路径，sofaboot/versions 更改为 actuator/versions**
 
 可以通过在浏览器中输入 [http://localhost:8080/health/readiness](http://localhost:8080/health/readiness) 查看应用 Readiness Check 的状况，类似如下：
 
@@ -95,6 +96,7 @@ logging.path=./logs
   }
 }
 ```
+**注: 在 SOFABoot 3.x 中调整了 endpoint 路径，health/readiness 更改为 actuator/readiness**
 
 `status: "UP"` 表示应用 Readiness Check 健康的。可以通过在浏览器中输入 `http://localhost:8080/health` 来查看应用的运行时健康状态（可能会随着时间发生变化）。
 
