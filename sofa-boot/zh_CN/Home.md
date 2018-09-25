@@ -2,7 +2,16 @@
 
 SOFABoot 是蚂蚁金服开源的基于 Spring Boot 的研发框架，它在 Spring Boot 的基础上，提供了诸如 Readiness Check，类隔离，日志空间隔离等等能力。在增强了 Spring Boot 的同时，SOFABoot 提供了让用户可以在 Spring Boot 中非常方便地使用 SOFA 中间件的能力。
 
-当前 SOFABoot 的 2.4.0 版本是基于 Spring Boot 1.4.2.RELEASE 来构建的。为了方便社区同学能够基于 SOFABoot 使用 Spring Boot 2.0 进行开发，我们拉了 [3.0.0-SNAPSHOT](https://github.com/alipay/sofa-boot/tree/3.0.x) 快照分支，该版本是基于 Spring Boot 2.0.3.RELEASE，为了能够从中央仓库顺利拉取 SNAPSHOT 包，请在本地 maven setting.xml 文件增加如下 profile 配置:
+你可以在[发布历史](https://github.com/alipay/sofa-boot/releases)中查看所有的发布报告，SOFABoot 版本和 Spring Boot 版本对应关系如下：
+
+|SOFABoot 版本| Spring Boot 版本|
+|:---:|:---:|
+|2.3.x|1.4.2.RELEASE|
+|2.4.x|1.4.2.RELEASE|
+|2.5.x|1.5.x|
+|3.x.x|2.x.x|
+
+即在 SOFABoot 2.3.x 和 2.4.x 系列版本构建在 Spring Boot 1.4.2.RELEASE 基础之上；SOFABoot 2.5.x 系列版本构建在 Spring Boot 1.5.x 基础之上；SOFABoot 3.x 系列版本将构建在 Spring Boot 2.x 基础之上。目前 SOFABoot 3.x 系列还没有 RELEASE 版本，为了方便社区同学能够基于 SOFABoot 使用 Spring Boot 2.0 进行开发，我们发布了 [3.0.0-SNAPSHOT](https://github.com/alipay/sofa-boot/tree/3.0.x) 快照分支，该版本是基于 Spring Boot 2.0.3.RELEASE。从中央仓库顺利拉取 SNAPSHOT 包，需要在本地 maven setting.xml 文件增加如下 profile 配置:
 
 ```xml
 <profile>
