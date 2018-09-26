@@ -252,6 +252,3 @@ public class UnitTestCaseWithoutArk {
 }
 ```
 
-## 目前 SOFABoot 中内置支持类隔离的插件
-
-* [SOFARPC](https://github.com/alipay/sofa-rpc)
