@@ -1,11 +1,11 @@
 - [简介](./Home)
 - [快速开始](./QuickStart)
-- [组件管理](./DependencyManagement)
+- [依赖管理](./DependencyManagement)
 - [健康检查](./HealthCheck)
 - [版本查看](./ViewVersions)
 - 模块隔离
   - [简介](./Modular-Development)
-  - [SOFABoot 模块](./SOFABoot-Module)
+  - [模块配置](./SOFABoot-Module)
   - [JVM服务发布与引用](./Module-Service)
   - [模块并行化启动](./parallel-start)
   - [SOFABoot Profile](./SOFABoot-Profile)

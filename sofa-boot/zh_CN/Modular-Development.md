@@ -19,7 +19,7 @@ SOFABoot 框架定义了 SOFABoot 模块的概念，一个 SOFABoot 模块是一
 - 运行时，每个 SOFABoot 模块的 Spring 上下文是隔离的，模块间定义的 Bean 不会相互影响；
 - 每个 SOFABoot 模块是功能完备且自包含的，可以很容易在不同的 SOFABoot 应用中进行模块迁移和复用，只需将 SOFABoot 模块整个拷贝过去，调整 Maven 依赖，即可运行。
 
-SOFABoot 模块的格式定义见: [SOFABoot 模块](./SOFABoot-Module)。
+SOFABoot 模块的格式定义见: [模块配置](./SOFABoot-Module)。
 
 ### SOFABoot 模块间通信
 
