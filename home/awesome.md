@@ -115,7 +115,7 @@
 | @xzchaoo | @yangl | @zhaojigang | @zhenhua | @zorkeAccount |
 | @zyjibmcn | @ZZMarquis | | | |
 
-想要参与贡献，可以直接去[项目列表](#projects)找到您关注的产品。
+想要参与贡献，可以直接去[项目列表](#projects)找到您关注的项目。
 
 <span id="enduser" />
 
