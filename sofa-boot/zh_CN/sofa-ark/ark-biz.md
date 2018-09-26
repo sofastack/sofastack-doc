@@ -8,7 +8,7 @@
     <plugin>
         <groupId>com.alipay.sofa</groupId>
         <artifactId>sofa-ark-maven-plugin</artifactId>
-        <version>0.2.0</version>
+        <version>${sofa.ark.version}</version>
         <executions>
             <execution>
                 <id>default-cli</id>
