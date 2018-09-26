@@ -25,7 +25,6 @@
     - [Ark 容器插件机制](./sofa-ark/plugin)
     - [Ark 容器类加载机制](./sofa-ark/classloader)
   - [发布历史](./sofa-ark/release)
-  - [常见问题](./sofa-ark/faq)
   - [发展路线](./sofa-ark/roadmap)
   - [参与贡献](./sofa-ark/contribution)
 - 动态部署
@@ -46,7 +45,6 @@
     - [基础模型](./sofa-jarslink/model)
     - [版本发布](./sofa-jarslink/version)
   - [发布历史](./sofa-jarslink/release)
-  - [常见问题](./sofa-jarslink/faq)
   - [发展路线](./sofa-jarslink/roadmap)
   - [参与贡献](./sofa-jarslink/contribution)
 - [FAQ](./FAQ)
