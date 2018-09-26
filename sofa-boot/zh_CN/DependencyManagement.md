@@ -30,8 +30,8 @@ SOFABoot 使用一系列后缀为 `-sofa-boot-starter` 来标示一个中间件�
 |中间件|starter|文档地址|
 |:---:|:---:|:---:|
 |SOFARPC|rpc-sofa-boot-starter||
-|SOFATracer|tracer-sofa-boot-starter|s|
-|SOFALookout|lookout-sofa-boot-starter|s|
+|SOFATracer|tracer-sofa-boot-starter||
+|SOFALookout|lookout-sofa-boot-starter||
 
 ## 引入 SOFABoot 扩展组件
 SOFABoot 基于 Spring Boot 提供了健康检查，模块隔离，类隔离等扩展能力。遵循 Spring Boot 依赖即服务的理念，添加相关组件依赖之后，扩展能力即可生效。目前提供的扩展组件如下：
@@ -39,8 +39,8 @@ SOFABoot 基于 Spring Boot 提供了健康检查，模块隔离，类隔离等�
 |扩展组件|starter|文档地址|
 |:---:|:---:|:---:|
 |健康检查|healthcheck-sofa-boot-starter||
-|模块化隔离|isle-sofa-boot-starter|s|
-|类隔离|sofa-ark-springboot-starter|s|
+|模块化隔离|isle-sofa-boot-starter||
+|类隔离|sofa-ark-springboot-starter||
 |测试扩展|test-sofa-boot-starter||
 
 ## 引入 SOFA 中间件 ark 插件 
