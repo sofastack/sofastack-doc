@@ -2,38 +2,21 @@ SOFABoot 是在 Spring Boot 的基础上提供的功能扩展。基于 Spring Bo
 
 ## SOFABoot 依赖管理
 
-在使用 SOFA 中间件之前，首先需要在一个现有的 Spring Boot 的工程中添加对应的依赖，有两种方式可以引入 SOFABoot 的依赖管理，一种是通过修改 `<parent>` 的方式，一种是在 `dependencyManagement` 下增加依赖的方式。
-
-修改 `<parent>` 的方式，只需要将原来的 Spring Boot 工程中的 `<parent>` 改成如下的配置即可：
+在使用 SOFA 中间件之前，需要引入 SOFABoot 依赖管理。类似 Spring Boot 引入方式，在工程中增加如下 `<parent/>` 标签配置的方式:
 
 ```xml
 <parent>
     <groupId>com.alipay.sofa</groupId>
     <artifactId>sofaboot-dependencies</artifactId>
-    <version>${sofaboot.version}</version>
+    <version>${sofa.boot.version}</version>
 </parent>
 ```
-
-在 `dependencyManagement` 下增加依赖的方式，只需要将下面的依赖加入到 `dependencyManagement` 下即可：
-
-```xml
-<dependency>
-    <groupId>com.alipay.sofa</groupId>
-    <artifactId>sofaboot-dependencies</artifactId>
-    <version>${sofaboot.version}</version>
-    <type>pom</type>
-    <scope>import</scope>
-</dependency>
-```
-
-**说明: `${sofaboot.version}` 为具体的 SOFABoot 版本，如：`2.4.0`。**
-
-**请注意，当前的 `SOFABoot` 的 `2.4.0` 的版本是基于 `Spring Boot 1.4.2.RELEASE` 来构建的。而大家通过 dependencyManagement 方式添加的 SOFABoot 依赖，只管控了 SOFABoot 相关的版本，由于并未修改 parent Spring Boot 的管控依赖方式，所以 Spring Boot 的实际版本和其相关依赖以具体依赖的 Spring Boot 版本为准。如果遇到兼容问题，请第一时间联系我们。**
+其中 `${sofa.boot.version}` 为具体的 SOFABoot 版本，参考[发布历史](https://github.com/alipay/sofa-boot/releases)。
 
 
 ## 引入 SOFA 中间件
 
-SOFABoot 使用一系列后缀为 `-sofa-boot-starter` 来标示一个中间件服务，如果想要使用某个中间件，直接添加对应的依赖即可。例如，如果期望使用 SOFARPC，只需增加下面的 Maven 依赖即可：
+SOFABoot 使用一系列后缀为 `-sofa-boot-starter` 来标示一个中间件组件，如果想要使用某个中间件，直接添加对应的依赖即可。例如，如果期望使用 SOFARPC，只需增加下面的 Maven 依赖即可：
 
 ```xml
 <dependency>
@@ -42,7 +25,31 @@ SOFABoot 使用一系列后缀为 `-sofa-boot-starter` 来标示一个中间件�
 </dependency>
 ```
 
-注意上面的 Maven 依赖中并没有声明版本，这个是因为版本已经在 `sofaboot-dependencies` 里面声明好。这样做的好处是对于 SOFA 中间件，用户统一进行升级即可，不需要单独升级一个中间件的版本，防止出现依赖冲突以及兼容性的问题。
+注意上面的 Maven 依赖中并没有声明版本，这个是因为版本已经在 `sofaboot-dependencies` 里面声明好。这样做的好处是对于 SOFA 中间件，用户统一进行升级即可，不需要单独升级一个中间件的版本，防止出现依赖冲突以及兼容性的问题。目前管控的 SOFABoot 中间件列表如下:
+
+|中间件|starter|文档地址|
+|:---:|:---:|:---:|
+|SOFARPC|rpc-sofa-boot-starter||
+|SOFATracer|tracer-sofa-boot-starter|s|
+|SOFALookout|lookout-sofa-boot-starter|s|
+
+## 引入 SOFABoot 扩展组件
+SOFABoot 基于 Spring Boot 提供了健康检查，模块隔离，类隔离等扩展能力。遵循 Spring Boot 依赖即服务的理念，添加相关组件依赖之后，扩展能力即可生效。目前提供的扩展组件如下：
+
+|扩展组件|starter|文档地址|
+|:---:|:---:|:---:|
+|健康检查|healthcheck-sofa-boot-starter||
+|模块化隔离|isle-sofa-boot-starter|s|
+|类隔离|sofa-ark-springboot-starter|s|
+|测试扩展|test-sofa-boot-starter||
+
+## 引入 SOFA 中间件 ark 插件 
+SOFABoot 提供了类隔离组件 [SOFAArk](./sofa-ark/readme)，借助 SOFAArk 容器，用户可以将依赖冲突的三方包打包成 ark 插件。运行时，ark 插件使用单独的类加载器加载，可以和其他 ark 插件以及业务依赖隔离，解决类冲突问题。SOFABoot 官方提供了 SOFARPC 和 SOFATracer 的 ark 插件，例如在应用中引入 SOFARPC ark 插件依赖替代 SOFARPC starter，从而隔离应用和 SOFARPC 及其间接依赖。目前管控的 ark 插件列表如下:
+
+|Ark插件|plugin|文档地址|
+|:---:|:---:|:---:|
+|SOFARPC|rpc-sofa-boot-plugin||
+|SOFATracer|tracer-sofa-boot-plugin||
 
 ## 引入 SOFABoot 命名空间
 
