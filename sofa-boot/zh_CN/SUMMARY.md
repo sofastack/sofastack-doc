@@ -28,7 +28,7 @@
   - [常见问题](./sofa-ark/faq)
   - [发展路线](./sofa-ark/roadmap)
   - [参与贡献](./sofa-ark/contribution)
-- Jarslink
+- 动态部署
   - [产品概述](./sofa-jarslink/jarslink-readme)
   - 快速开始
     - [如何创建 SOFABoot 应用](./sofa-jarslink/jarslink-app-demo)

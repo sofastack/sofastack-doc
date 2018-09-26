@@ -11,14 +11,14 @@ SOFABoot 为 Spring Boot 的健康检查能力增加了 Readiness Check 的能�
 </dependency>
 ```
 
-*如果不引入 SOFABoot 的健康检查扩展，用户依然可以直接依赖 HealthIndicator 接口进行原生的 Spring Boot Actuator 的 Liveness Check。*
+**如果不引入 SOFABoot 的健康检查扩展，用户依然可以直接依赖 HealthIndicator 接口进行原生的 Spring Boot Actuator 的 Liveness Check。**
 
 
 ## 安全提醒
 
 从 SOFABoot 2.3.0 开始，由于健康检查能力依赖于 SpringBoot 1.4.x 里的 `Actuator` 组件，而 `Actuator` 会默认开启很多 [EndPoint](https://docs.spring.io/spring-boot/docs/1.4.2.RELEASE/reference/html/production-ready-endpoints.html)，例如 `/dump`，`/trace` 等等，可能存在安全风险，可以参照官方文档里的[安全建议](https://docs.spring.io/spring-boot/docs/1.4.2.RELEASE/reference/html/production-ready-endpoints.html#_security_with_healthindicators)进行设置。
 
-> 后续 SpringBoot 1.5.x 和 SpringBoot 2.x 已修复了部分安全行为，SOFABoot 将通过升级 SpringBoot 内核进行支持。
+> SpringBoot 1.5.x 和 SpringBoot 2.x 已修复了部分安全行为，SOFABoot 将通过升级 SpringBoot 内核进行支持。
 
 ## 查看健康检查结果
 
@@ -31,6 +31,8 @@ SOFABoot 为 Spring Boot 的健康检查能力增加了 Readiness Check 的能�
 ```
 
 目前 SOFA 中间件已经通过 SOFABoot 的 Readiness Check 的能力来控制了上游流量的进入，但是一个应用的流量可能并不是全部都是从中间件进入的，比较常见的还有从负载均衡器进入的，为了控制从负载均衡器进入的流量，建议使用者通过 PAAS 来访问 Readiness Check 的结果，根据结果来控制是否要在负载均衡器中上线对应的节点。
+
+**注: 在 SOFABoot 3.x 中调整了 endpoint 路径，health/readiness 更改为 actuator/readiness**
 
 ## 扩展 Readiness Check 能力
 

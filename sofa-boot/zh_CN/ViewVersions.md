@@ -28,3 +28,4 @@
   }
 ]
 ```
+**注: 在 SOFABoot 3.x 中调整了 endpoint 路径，sofaboot/versions 更改为 actuator/versions**

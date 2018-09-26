@@ -27,29 +27,29 @@ SOFABoot 使用一系列后缀为 `-sofa-boot-starter` 来标示一个中间件�
 
 注意上面的 Maven 依赖中并没有声明版本，这个是因为版本已经在 `sofaboot-dependencies` 里面声明好。这样做的好处是对于 SOFA 中间件，用户统一进行升级即可，不需要单独升级一个中间件的版本，防止出现依赖冲突以及兼容性的问题。目前管控的 SOFABoot 中间件列表如下:
 
-|中间件|starter|文档地址|
-|:---:|:---:|:---:|
-|SOFARPC|rpc-sofa-boot-starter||
-|SOFATracer|tracer-sofa-boot-starter||
-|SOFALookout|lookout-sofa-boot-starter||
+|中间件|starter|
+|:---:|:---:|
+|SOFARPC|rpc-sofa-boot-starter|
+|SOFATracer|tracer-sofa-boot-starter|
+|SOFALookout|lookout-sofa-boot-starter|
 
 ## 引入 SOFABoot 扩展组件
 SOFABoot 基于 Spring Boot 提供了健康检查，模块隔离，类隔离等扩展能力。遵循 Spring Boot 依赖即服务的理念，添加相关组件依赖之后，扩展能力即可生效。目前提供的扩展组件如下：
 
-|扩展组件|starter|文档地址|
-|:---:|:---:|:---:|
-|健康检查|healthcheck-sofa-boot-starter||
-|模块化隔离|isle-sofa-boot-starter||
-|类隔离|sofa-ark-springboot-starter||
-|测试扩展|test-sofa-boot-starter||
+|扩展组件|starter|
+|:---:|:---:|
+|健康检查|healthcheck-sofa-boot-starter|
+|模块化隔离|isle-sofa-boot-starter|
+|类隔离|sofa-ark-springboot-starter|
+|测试扩展|test-sofa-boot-starter|
 
 ## 引入 SOFA 中间件 ark 插件 
 SOFABoot 提供了类隔离组件 [SOFAArk](./sofa-ark/readme)，借助 SOFAArk 容器，用户可以将依赖冲突的三方包打包成 ark 插件。运行时，ark 插件使用单独的类加载器加载，可以和其他 ark 插件以及业务依赖隔离，解决类冲突问题。SOFABoot 官方提供了 SOFARPC 和 SOFATracer 的 ark 插件，例如在应用中引入 SOFARPC ark 插件依赖替代 SOFARPC starter，从而隔离应用和 SOFARPC 及其间接依赖。目前管控的 ark 插件列表如下:
 
-|Ark插件|plugin|文档地址|
-|:---:|:---:|:---:|
-|SOFARPC|rpc-sofa-boot-plugin||
-|SOFATracer|tracer-sofa-boot-plugin||
+|Ark插件|plugin|
+|:---:|:---:|
+|SOFARPC|rpc-sofa-boot-plugin|
+|SOFATracer|tracer-sofa-boot-plugin|
 
 ## 引入 SOFABoot 命名空间
 
