@@ -9,7 +9,7 @@ static final String PREFIX = "com.alipay.sofa.rpc";
 那么在 application.properties 文件中，目前可以配置以下几个选项。其中使用者也可以根据自己的编码习惯，按照 Spring Boot的规范，按照驼峰，中划线等进行书写。
 
 ```xml
-#  单机故障剔除
+# 单机故障剔除
 com.alipay.sofa.rpc.aft.regulation.effective # 是否开启单机故障剔除功能
 com.alipay.sofa.rpc.aft.degrade.effective  # 是否开启降级
 com.alipay.sofa.rpc.aft.time.window # 时间窗口
@@ -20,7 +20,7 @@ com.alipay.sofa.rpc.aft.weight.recover.rate # 恢复速率
 com.alipay.sofa.rpc.aft.degrade.least.weight #降级最小权重
 com.alipay.sofa.rpc.aft.degrade.max.ip.count # 最大降级 ip
 
-#  bolt
+# bolt
 com.alipay.sofa.rpc.bolt.port # bolt 端口
 com.alipay.sofa.rpc.bolt.thread.pool.core.size # bolt 核心线程数
 com.alipay.sofa.rpc.bolt.thread.pool.max.size # bolt 最大线程数
@@ -63,4 +63,7 @@ com.alipay.sofa.rpc.h2c.accepts.size # 服务端允许客户端建立的连接�
 
 # 扩展
 com.alipay.sofa.rpc.lookout.collect.disable # 是否关闭 lookout
+
+# 代理
+com.alipay.sofa.rpc.consumer.repeated.reference.limit # 允许客户端对同一个服务生成的引用代理数量，默认为3;
 ```

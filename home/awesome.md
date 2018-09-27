@@ -55,7 +55,7 @@
 
 更多已项目直接关注：[github/alipay](https://github.com/alipay?q=sofa)
 
-未开源项目可通过调查问卷反馈。包括但不限于注册中心、消息、配置中心、熔断限流、分库分表、分布式事务等等组件。
+未开源项目可通过[SOFAStack 使用调查问卷](https://wj.qq.com/s/2698623/5fe1)反馈。包括但不限于注册中心、消息、配置中心、熔断限流、分库分表、分布式事务等等组件。
 
 <span id="articles" />
 
@@ -115,10 +115,10 @@
 | @xzchaoo | @yangl | @zhaojigang | @zhenhua | @zorkeAccount |
 | @zyjibmcn | @ZZMarquis | | | |
 
-想要参与贡献，可以直接去[项目列表](#projects)找到您关注的产品。
+想要参与贡献，可以直接去[项目列表](#projects)找到您关注的项目。
 
 <span id="enduser" />
 
 ## 用户
 
-整理中，欢迎通过调查问卷或者 Issue 收录。
+欢迎通过 [SOFAStack 使用调查问卷](https://wj.qq.com/s/2698623/5fe1)反馈。
