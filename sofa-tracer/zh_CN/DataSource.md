@@ -63,7 +63,7 @@ key | 表达含义
    </tr>
    <tr>
       <td colspan="2">success</td>
-      <td>请求结果：Y 表示成功(1 开头和 2 开头的结果码算是成功的，302表示的重定向算成功，其他算是失败的)；N 表示失败</td>
+      <td>请求结果：Y 表示成功；N 表示失败</td>
    </tr>
    <tr>
       <td colspan="2">load.test</td>
