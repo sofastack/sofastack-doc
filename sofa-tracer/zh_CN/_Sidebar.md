@@ -2,6 +2,7 @@
 - 快速开始
     * [Spring MVC 埋点接入](./Usage_Of_MVC)
     * [DataSource 埋点接入](./Usage_Of_Datasource)
+    * [HttpClient 埋点接入](./Usage_Of_HttpClient)
 - [名词解释](./Explanation)
 - [TraceId 和 SpanId 生成规则](./TraceIdGeneratedRule)
 - [应用日志打印 TraceId 和 SpanId](./PrintTraceIdSpanId)
@@ -12,5 +13,6 @@
 - 日志格式
      * [Spring MVC 日志](./SpringMVC)
      * [SOFARPC 日志](./SOFARPC)
+     * [HttpClient 日志](./HttpClient)
 - [RoadMap](./RoadMap)
 
