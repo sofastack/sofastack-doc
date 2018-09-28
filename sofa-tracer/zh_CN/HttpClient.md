@@ -22,7 +22,7 @@ key | 表达含义
 
 样例：
 
-```
+```json
 {"time":"2018-09-27 21:58:43.067","local.app":"HttpClientDemo","traceId":"0a0fe8801538056723034100235072","spanId":"0","request.url":"http://localhost:8080/httpclient","method":"GET","result.code":"200","req.size.bytes":0,"resp.size.bytes":-1,"time.cost.milliseconds":33,"current.thread.name":"I/O dispatcher 1","remote.app":"","baggage":""}
 ```
 
@@ -74,7 +74,7 @@ key | 表达含义
 
 样例：
 
-```
+```json
 {"time":"2018-09-27 21:59:42.233","stat.key":{"request.url":"http://localhost:8080/httpclient","local.app":"HttpClientDemo","method":"GET"},"count":2,"total.cost.milliseconds":562,"success":"true","load.test":"F"}
 ```
 
