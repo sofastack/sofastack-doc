@@ -49,9 +49,12 @@ com.alipay.sofa.healthcheck.startup.SofaBootAfterReadinessCheckCallback | 如果
 
 应用在引入 SOFABoot 的健康检查扩展之后，可以在 Spring Boot 的配置文件 `application.properties` 中添加相关配置项来定制 Readiness Check 的相关行为。
 
-Readiness Check 配置项 | 说明 | 默认值
-----|------|----
-com.alipay.sofa.healthcheck.skip.all | 是否跳过整个 Readiness Check 阶段  | false
-com.alipay.sofa.healthcheck.skip.component | 是否跳过 SOFA 中间件的 Readiness Check  | false
-com.alipay.sofa.healthcheck.skip.indicator | 是否跳过 HealthIndicator 的 Readiness Check  | false
-
+Readiness Check 配置项 | 说明 | 默认值 | 开始支持版本 |
+----|------|------|----
+com.alipay.sofa.healthcheck.skip.all | 是否跳过整个 Readiness Check 阶段  | false | 一直支持
+com.alipay.sofa.healthcheck.skip.component | 是否跳过 SOFA 中间件的 Readiness Check  | false | 一直支持
+com.alipay.sofa.healthcheck.skip.indicator | 是否跳过 HealthIndicator 的 Readiness Check  | false | 一直支持
+com.alipay.sofa.healthcheck.component.check.retry.count | 组件健康检查重试次数 | 20 | 2.4.10 (之前版本重试次数为 0)
+com.alipay.sofa.healthcheck.component.check.retry.interval | 组件健康检查重试间隔时间 | 1000 (单位：ms) | 2.4.10 (之前版本重试间隔为 0)
+com.alipay.sofa.healthcheck.module.check.retry.count | sofaboot 模块健康检查重试次数 | 0 | 2.4.10
+com.alipay.sofa.healthcheck.module.check.retry.interval | sofaboot 模块健康检查重试间隔时间 | 1000 (单位：ms) | 2.4.10 (之前版本重试间隔为 0)
