@@ -74,11 +74,11 @@ SofaTracerSpanContext sofaTracerSpanContext = sofaTracerSpan.getSofaTracerSpanCo
 
 Map<String, String> bizBaggage = new HashMap<String, String>();
 bizBaggage.put("bizKey","bizVal");
-Map<String, String> bizBaggages = sofaTracerSpanContext.addBizBaggage(bizBaggage);
+sofaTracerSpanContext.addBizBaggage(bizBaggage);
 
 Map<String, String> sysBaggage = new HashMap<String, String>();
 sysBaggage.put("sysKey","sysVal");
-Map<String, String> sysBaggages = sofaTracerSpanContext.addSysBaggage(sysBaggage);
+sofaTracerSpanContext.addSysBaggage(sysBaggage);
 ```
 
 2、获取 'Baggage' 数据
