@@ -1,4 +1,4 @@
-SOFATracer 2.2.0-SNAPSHOT 基于标准的 JDBC 接口实现，支持对标准的数据库连接池（如 DBCP、Druid、c3p0、tomcat、HikariCP、BoneCP）埋点。下面演示如何接入 SOFATracer 埋点能力。
+SOFATracer 2.2.0 基于标准的 JDBC 接口实现，支持对标准的数据库连接池（如 DBCP、Druid、c3p0、tomcat、HikariCP、BoneCP）埋点。下面演示如何接入 SOFATracer 埋点能力。
 
 ## 环境准备
 使用 SOFATracer，需要先准备好基础环境，SOFATracer 依赖以下环境：
@@ -15,7 +15,7 @@ SOFATracer 在 SOFABoot 和 Spring Boot 框架内均可使用。我们以 Spring
 <dependency>
 	<groupId>com.alipay.sofa</groupId>
 	<artifactId>tracer-sofa-boot-starter</artifactId>
-	<version>2.2.0-SNAPSHOT</version>
+	<version>2.2.0</version>
 </dependency>
 ```
 
@@ -161,7 +161,7 @@ com.alipay.sofa.tracer.datasource.enable=false
 
 ## 注意
 + 引入 SOFATracer 需要强制配置应用名，否则应用启动失败。属性名称为：`spring.application.name`
-+ SOFATracer 2.2.0-SNAPSHOT 基于标准的 JDBC 接口实现，理论上支持对所有标准的数据库连接池（如 DBCP，BoneCP 等）埋点。在 Spring Boot 环境，对于 DBCP、Druid、c3p0、tomcat、HikariCP 五种连接池支持自动埋点，即用户只需要引入 SOFATracer 依赖即可。在非 Spring Boot 环境或者对其他连接池（如 BoneCP）还需要增加手动配置，比如：
++ SOFATracer 2.2.0基于标准的 JDBC 接口实现，理论上支持对所有标准的数据库连接池（如 DBCP，BoneCP 等）埋点。在 Spring Boot 环境，对于 DBCP、Druid、c3p0、tomcat、HikariCP 五种连接池支持自动埋点，即用户只需要引入 SOFATracer 依赖即可。在非 Spring Boot 环境或者对其他连接池（如 BoneCP）还需要增加手动配置，比如：
 ```xml
 <bean id="smartDataSource" class="com.alipay.sofa.tracer.plugins.datasource.SmartDataSource" init-method="init">
     <property name="delegate" ref="simpleDataSource"/>
