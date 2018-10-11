@@ -31,3 +31,7 @@ SOFATracer 可以将链路跟踪数据远程上报到开源产品 [Zipkin](https
 ## 三、应用场景
 
 解决在实施大规模微服务架构时的链路跟踪问题，达到透视化网络调用的目的，并可用于故障的快速发现，服务治理等。
+
+## 四、组件埋点
+目前 SOFATracer 支持 Spring MVC、标准 JDBC 接口实现的数据库连接池(DBCP、Druid、c3p0、tomcat、HikariCP、BoneCP)、HttpClient 等开源组件，其他开源组件如 MQ、Redis 已经在开发中。
+
