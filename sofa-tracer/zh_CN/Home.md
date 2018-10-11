@@ -33,5 +33,16 @@ SOFATracer 可以将链路跟踪数据远程上报到开源产品 [Zipkin](https
 解决在实施大规模微服务架构时的链路跟踪问题，达到透视化网络调用的目的，并可用于故障的快速发现，服务治理等。
 
 ## 四、组件埋点
-目前 SOFATracer 支持 Spring MVC、标准 JDBC 接口实现的数据库连接池(DBCP、Druid、c3p0、tomcat、HikariCP、BoneCP)、HttpClient 等开源组件，其他开源组件如 MQ、Redis 已经在开发中。
+目前 SOFATracer 支持 Spring MVC、标准 JDBC 接口实现的数据库连接池(DBCP、Druid、c3p0、tomcat、HikariCP、BoneCP)、HttpClient 等开源组件，其他开源组件（如 MQ、Redis）埋点支持在开发中。
+
+支持组件 | 接入文档 | 支持版本
+--------- | -------------  | -------------
+Spring MVC | [doc link](http://www.sofastack.tech/sofa-tracer/docs/Usage_Of_MVC) | 2.1.0
+DBCP | [doc link](http://www.sofastack.tech/sofa-tracer/docs/Usage_Of_Datasource) | 2.2.0
+Druid | [doc link](http://www.sofastack.tech/sofa-tracer/docs/Usage_Of_Datasource) | 2.2.0
+c3p0 | [doc link](http://www.sofastack.tech/sofa-tracer/docs/Usage_Of_Datasource) | 2.2.0
+HikariCP | [doc link](http://www.sofastack.tech/sofa-tracer/docs/Usage_Of_Datasource) | 2.2.0
+HttpClient | [doc link](http://www.sofastack.tech/sofa-tracer/docs/Usage_Of_Datasource) | 2.2.0
+Redis | TODO | 
+MQ | TODO | 
 
