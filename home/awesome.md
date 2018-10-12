@@ -121,4 +121,4 @@
 
 ## 用户
 
-欢迎通过 [SOFAStack 使用调查问卷](https://wj.qq.com/s/2698623/5fe1)反馈。
+此处会列出使用 SOFAStack 开源版的公司或组织，大家可以通过 [SOFAStack 使用者登记](https://github.com/alipay/sofastack-doc/issues/42) 进行登记，或者可以通过 [SOFAStack 使用调查问卷](https://wj.qq.com/s/2698623/5fe1) 进行反馈。
