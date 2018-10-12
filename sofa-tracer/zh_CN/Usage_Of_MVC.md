@@ -29,9 +29,10 @@ SOFABoot 是直接构建在 Spring Boot 之上，因此可以使用 [Spring Boot
 <parent>
     <groupId>com.alipay.sofa</groupId>
     <artifactId>sofaboot-dependencies</artifactId>
-    <version>2.4.0</version>
+    <version>${sofa.boot.version}</version>
 </parent>
 ```
+这里的 `${sofa.boot.version}` 指定具体的 SOFABoot 最新版本，参考[发布历史](https://github.com/alipay/sofa-boot/releases)。 然后，添加一个 SOFABoot 健康检查扩展能力的依赖：
 
 然后，添加一个 SOFATracer 依赖：
 
