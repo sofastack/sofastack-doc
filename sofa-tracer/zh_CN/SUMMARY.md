@@ -1,5 +1,5 @@
 - [SOFATracer 介绍](./Home)
-- 组件埋点接入
+- 快速开始
     * [Spring MVC 埋点接入](./Usage_Of_MVC)
     * [DataSource 埋点接入](./Usage_Of_Datasource)
     * [HttpClient 埋点接入](./Usage_Of_HttpClient)
