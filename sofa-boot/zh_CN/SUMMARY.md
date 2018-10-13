@@ -47,4 +47,6 @@
   - [发布历史](./sofa-jarslink/release)
   - [发展路线](./sofa-jarslink/roadmap)
   - [参与贡献](./sofa-jarslink/contribution)
+- 升级文档
+  - [SOFABoot 2.5.x 升级注意文档](upgrade_2_5_x)
 - [FAQ](./FAQ)
