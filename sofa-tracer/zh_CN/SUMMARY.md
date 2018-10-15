@@ -15,6 +15,7 @@
      * [SOFARPC 日志](./SOFARPC)
      * [HttpClient 日志](./HttpClient)
      * [DataSource 日志](./Datasource)
+- [发布历史](https://github.com/alipay/sofa-tracer/releases)
 - [RoadMap](./RoadMap)
 
 
