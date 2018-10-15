@@ -69,8 +69,6 @@
 
 ## 工具
 
-- [Alipay Intellij IDEA 插件](https://github.com/alipay/alipay-intellij-plugin)
-
 <span id="community" />
 
 ## 社区
@@ -101,19 +99,19 @@
 | -- | -- | -- | -- | -- |
 | -- | -- | -- | -- | -- |
 | @315157973 | @boliza | @caojie09 | @chenhui0212 | @choleraehyq |
-| @cp3fantasy | @cytnju | @dawxy | @dbl-x | @eonezhang |
-| @FzNl | @glmapper | @guanchao-yang | @gxcsoccer | @huangyunbin |
-| @jaredleechn | @JarVZhao | @JervyShi | @jjtyro | @JoeKerouac |
-| @junxiong | @kelvinji2009 | @kevin21th | @khotyn | @kiral |
-| @kswapd | @lazyrabbit2004 | @ldxdl | @leizhiyuan | @leyou240 |
-| @liangyuanpeng | @Lingtaonju | @liymg | @lookuptable | @luyiisme |
-| @meua | @michalyao | @moeyui1 | @Moriadry | @NeGnail |
-| @nejisama | @neverhook | @popomore | @pxzero | @QilongZhang |
-| @quaff | @rootsongjc | @ScienJus | @shaoshuai0102 | @skyao |
-| @stdupp | @SteNicholas | @straybirdzls | @taoyuanyuan | @tinycedar |
-| @tonyhawkwen | @TreeLin | @ujjboy | @wanderxjtu | @xmtsui |
-| @xzchaoo | @yangl | @zhaojigang | @zhenhua | @zorkeAccount |
-| @zyjibmcn | @ZZMarquis | | | |
+| @cp3fantasy | @cytnju | @dawxy | @dbl-x | @detailyang |
+| @eonezhang | @FzNl | @glmapper | @guanchao-yang | @gxcsoccer |
+| @huangyunbin | @jaredleechn | @JarVZhao | @JervyShi | @jjtyro |
+| @JoeKerouac | @junxiong | @kelvinji2009 | @kevin21th | @khotyn |
+| @kiral | @kswapd | @lazyrabbit2004 | @ldxdl | @leizhiyuan |
+| @leyou240 | @liangyuanpeng | @Lingtaonju | @liymg | @lookuptable |
+| @luyiisme | @meua | @michalyao | @moeyui1 | @Moriadry |
+| @NeGnail | @nejisama | @neverhook | @popomore | @pxzero |
+| @QilongZhang | @quaff | @rootsongjc | @ScienJus | @shaoshuai0102 |
+| @skyao | @stdupp | @SteNicholas | @straybirdzls | @taoyuanyuan |
+| @tinycedar | @tonyhawkwen | @TreeLin | @ujjboy | @wanderxjtu |
+| @xiaoguoqiang | @xmtsui | @xzchaoo | @yangl | @zhaojigang |
+| @zhenhua | @zorkeAccount | @zyjibmcn | @ZZMarquis 
 
 想要参与贡献，可以直接去[项目列表](#projects)找到您关注的项目。
 
