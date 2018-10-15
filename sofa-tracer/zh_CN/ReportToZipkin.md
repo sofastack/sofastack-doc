@@ -3,16 +3,16 @@
 考虑到 Zipkin 的数据上报能力不是 SOFATracer 默认开启的能力，所以期望使用 SOFATracer 做数据上报时，需要添加如下的 Zipkin 数据汇报的依赖：
 
 ```xml
-<dependency>
-    <groupId>io.zipkin.java</groupId>
-    <artifactId>zipkin</artifactId>
-    <version>1.19.2</version>
-</dependency>
-<dependency>
-    <groupId>io.zipkin.reporter</groupId>
-    <artifactId>zipkin-reporter</artifactId>
-    <version>0.6.12</version>
-</dependency>
+ <dependency>
+     <groupId>io.zipkin.zipkin2</groupId>
+     <artifactId>zipkin</artifactId>
+     <version>2.11.1</version>
+ </dependency>
+ <dependency>
+     <groupId>io.zipkin.reporter2</groupId>
+     <artifactId>zipkin-reporter</artifactId>
+     <version>2.7.7</version>
+ </dependency>
 ```
 ## 启动 Zipkin 服务端
 
