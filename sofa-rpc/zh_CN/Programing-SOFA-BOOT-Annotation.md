@@ -24,7 +24,7 @@ public class AnnotationServiceImpl implements AnnotationService {
 
 ### 服务引用
 
-对于需要引用远程服务的 bean, 只需要在属性,或者方法上,打上Reference 的注解即可.暂时只支持 bolt 协议
+对于需要引用远程服务的 bean, 只需要在属性,或者方法上,打上Reference 的注解即可，支持 bolt, dubbo, rest 协议。
 
 ```java
 @Component
