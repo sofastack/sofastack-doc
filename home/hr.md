@@ -1,3 +1,5 @@
+![Welcome](./resources/hr_1.jpg)
+
 ## 蚂蚁金服-Java 服务框架开发工程师/专家
 *P6~P8 杭州市，上海市，广州市*
 
