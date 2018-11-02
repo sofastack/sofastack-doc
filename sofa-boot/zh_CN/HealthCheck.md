@@ -32,6 +32,8 @@ SOFABoot 为 Spring Boot 的健康检查能力增加了 Readiness Check 的能�
 
 目前 SOFA 中间件已经通过 SOFABoot 的 Readiness Check 的能力来控制了上游流量的进入，但是一个应用的流量可能并不是全部都是从中间件进入的，比较常见的还有从负载均衡器进入的，为了控制从负载均衡器进入的流量，建议使用者通过 PAAS 来访问 Readiness Check 的结果，根据结果来控制是否要在负载均衡器中上线对应的节点。
 
+**注: 自 SOFABoot 2.x 之后，不在间接引入 spring-boot-starter-web，如果需要在浏览器中查看健康检查结果，需要额外在工程中引入 web 容器依赖。**
+
 **注: 在 SOFABoot 3.x 中调整了 endpoint 路径，health/readiness 更改为 actuator/readiness**
 
 ## 扩展 Readiness Check 能力
