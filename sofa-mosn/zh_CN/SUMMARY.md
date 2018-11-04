@@ -1,4 +1,4 @@
-- [MOSN 简介](./README.md)
+- [MOSN 简介](Home.md)
 - 参考文档
 - 开发文档
   - [快速开始](docs/quickstart/Setup.md)
