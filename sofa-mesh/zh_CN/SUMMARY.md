@@ -6,6 +6,6 @@
   * [Zookeeper Adapter](./pilot/zookeeper-adapter.md)
   * [x-protocol](./pilot/x-protocol.md)
   * [Register Agent](./pilot/register-agent.md)
-- SOFA-Mosn
+- SOFAMosn
   * [SOFAMosn 简介](sofa-mosn/README.md)
   * [使用 SOFAMosn 集成 SOFAMesh](sofa-mosn/docs/quickstart/RunWithSOFAMesh.md)
