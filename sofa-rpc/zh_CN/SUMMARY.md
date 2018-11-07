@@ -27,8 +27,9 @@
         * [自动故障剔除](./Fault-Tolerance)
         * [Node跨语言调用](./Node-And-Java-Communicate)
     * [配置参考手册](./Configuration)
+        * [SOFABoot 环境发布订阅说明](./RPC-Config-Xml-Explain.md)
         * [RPC应用参数配置](./Application-RPC-Config)
-        * [发布订阅配置](./Configuration-Common)
+        * [RPC发布订阅配置](./Configuration-Common)
         * [自动故障剔除配置](./Configuration-Fault-Tolerance)
 * 开发者手册
     * [如何编译](./How-To-Build)
