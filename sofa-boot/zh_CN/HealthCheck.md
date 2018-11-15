@@ -38,7 +38,7 @@ SOFABoot 为 Spring Boot 的健康检查能力增加了 Readiness Check 的能�
 
 ## 扩展 Readiness Check 能力
 
-在 Readiness Check 的各个阶段，SOFABoot 都提供了扩展的能力，应用可以根据自己的需要进行扩展，目前可供扩展的点如下：
+在 Readiness Check 的各个阶段，SOFABoot 都提供了扩展的能力，应用可以根据自己的需要进行扩展，在 2.x 版本中，可供扩展的点如下：
 
 回调接口 | 说明 |
 ----|-----
@@ -46,6 +46,16 @@ org.springframework.context.ApplicationListener | 如果想要在 Readiness Chec
 org.springframework.boot.actuate.health.HealthIndicator | 如果想要在 SOFABoot 的 Readiness Check 里面增加一个检查项，那么可以直接扩展 Spring Boot 的这个接口。
 com.alipay.sofa.healthcheck.startup.SofaBootAfterReadinessCheckCallback | 如果想要在 Readiness Check 之后做一些事情，那么可以扩展 SOFABoot 的这个接口。
 
+在 3.x 版本中，可供扩展点如下：
+
+回调接口 | 说明 |
+----|-----
+com.alipay.sofa.healthcheck.core.HealthChecker | 如果想要在 SOFABoot 的 Readiness Check 里面增加一个检查项，可以直接扩展该接口。相较于 Spring Boot 本身的 HealthIndicator 接口，该接口提供了一些额外的参数配置，比如检查失败重试次数等。
+org.springframework.boot.actuate.health.HealthIndicator | 如果想要在 SOFABoot 的 Readiness Check 里面增加一个检查项，那么可以直接扩展 Spring Boot 的这个接口。
+org.springframework.boot.actuate.health.ReactiveHealthIndicator | 在 WebFlux 中，如果想要在 SOFABoot 的 Readiness Check 里面增加一个检查项，那么可以直接扩展 Spring Boot 的这个接口。
+com.alipay.sofa.healthcheck.startup.ReadinessCheckCallback | 如果想要在 Readiness Check 之后做一些事情，那么可以扩展 SOFABoot 的这个接口。
+
+需要指出的是，上述四个扩展接口均可以通过 Spring Boot 标准的 `Ordered`, `PriorityOrdered` 和注解 `@Order` 实现执行顺序的设置。
 
 ## Readiness Check 配置项
 
