@@ -21,7 +21,7 @@
 <parent>
     <groupId>com.alipay.sofa</groupId>
     <artifactId>sofaboot-dependencies</artifactId>
-    <version>2.4.4</version>
+    <version>3.0.0</version>
 </parent>
 ```
 4. 配置 application.properties 。
