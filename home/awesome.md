@@ -25,7 +25,7 @@
 - [项目 Projects](#projects)
 - [文章 Articles](#articles)
 - [工具 Tools](#tools)
-- [社区 Ccommunity](#community)
+- [社区 Community](#community)
 - [贡献 Contributors](#contributors)
 - [用户 End User](#enduser)
 
