@@ -58,7 +58,7 @@ threadPool.setPrestartAllCoreThreads(false);
 threadPool.setAllowCoreThreadTimeOut(false);
 threadPool.setQueueSize(200);
 
-UserThreadPoolManager.registerUserThread("com.alipay.sofa.rpc.quickstart.HelloService", threadPool);
+UserThreadPoolManager.registerUserThread(ConfigUniqueNameGenerator.getUniqueName(providerConfig), threadPool);
 ```
 
 如上为 HelloService 服务设置了一个自定义线程池。

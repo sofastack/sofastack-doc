@@ -30,7 +30,7 @@ public class RestfulSampleServiceImpl implements SampleService {
 }
 ```
 
-如果要通过其他的方式发布服务，请参考 [Bolt 协议基本使用](./Bolt_Usage.md)。
+如果要通过其他的方式发布服务，请参考 [Bolt 协议基本使用](./Bolt-Usage.md)。
 
 ### 通过浏览器访问服务
 
@@ -51,4 +51,4 @@ SOFARPC 的 RESTful 服务的默认端口为 8341。
 private SampleService sampleService;
 ```
 
-如果要使用其他的方式引用服务，请参考 [Bolt 协议基本使用](./Bolt_Usage.md)。
+如果要使用其他的方式引用服务，请参考 [Bolt 协议基本使用](./Bolt-Usage.md)。
