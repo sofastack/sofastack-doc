@@ -2,6 +2,7 @@
 
 * [服务发布与引用](./Publish-And-Reference)
 * [注册中心使用](./Registry-Usage.md)
+* [通信协议](./Protocol.md)
 * [直连调用](./Peer-To-Peer)
 * [调用方式](./Invoke-Type)
 * [泛化调用](./Generic-Invoke)
