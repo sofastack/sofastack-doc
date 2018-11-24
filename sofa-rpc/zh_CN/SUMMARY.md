@@ -17,7 +17,7 @@
                 * [泛化调用](./Generic-Invoke)
                 * [序列化协议](./Serialization)
                 * [自定义线程池](./Custom-ThreadPool)
-            * [RESTful 协议](./Rest)
+            * [RESTful 协议](./RESTful)
                 * [基本使用](./RESTful-Basic)
         * [注册中心使用](./Registry-Usage)
         * [直连调用](./Peer-To-Peer)
@@ -57,5 +57,5 @@
     * [提交PR](https://github.com/alipay/sofa-rpc/compare)
 * [版权说明](./NOTICE)
 
-![加好友回复"SOFA"进群](./resources/wx-1.png)
+![加好友回复"SOFA"进群](./resources/wx_1.png)
 
