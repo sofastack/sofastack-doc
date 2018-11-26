@@ -1,6 +1,6 @@
 ## H2C 协议基本使用
 
-在 SOFARPC 中，使用不同的通信协议只要设置使用不同的 Binding 即可，如果需要使用 H2C 协议，只要将 Binding 设置为 H2C 即可。下面使用以注解的方式来例举，其他的使用方式可以参考 [Bolt 协议基本使用](./Bolt-Usage.md)，这里不再重复说明。：
+在 SOFARPC 中，使用不同的通信协议只要设置使用不同的 Binding 即可，如果需要使用 H2C 协议，只要将 Binding 设置为 H2C 即可。下面使用以注解的方式来例举，其他的使用方式可以参考 [Bolt 协议基本使用](./Bolt-Usage)，这里不再重复说明。：
 
 ### 发布服务
 
@@ -8,7 +8,7 @@
 
 ```java
 @Service
-@SofaService(bindings = {@SofaServiceBinding(bindingType = "dubbo")})
+@SofaService(bindings = {@SofaServiceBinding(bindingType = "h2c")})
 public class SampleServiceImpl implements SampleService {
 }
 ```
