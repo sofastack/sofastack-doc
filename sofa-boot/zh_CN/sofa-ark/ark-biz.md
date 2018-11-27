@@ -26,7 +26,7 @@
 
 那 `Ark Biz` 和 `Ark 包` 有什么区别呢？ 简单来说，`Ark Biz` 是工程应用所有资源的组织单元，它包含了应用启动所需的所有资源，详细可参考下文描述的 `Ark Biz` 目录格式；而工程应用打出来的 `Ark 包`，是一个通过 `java -jar` 启动，运行在 SOFAArk 容器的 Fat Jar，不仅包含应用工程对应的 `Ark Biz`，也包含 `Ark Container`，以及应用依赖的 `Ark Plugin`；
 
-通常情况，只需要发布 `Ark 包` 即可，但是 SOFAArk 是支持运行多个 `Ark Biz`的，因此如果开发者希望自己应用的 `Ark Biz` 包能够被其他应用直接当成 Jar 包依赖，进而运行在同一个 SOFAArk 容器之上，那么就需要打包发布 `Ark 包`；
+通常情况，只需要发布 `Ark 包` 即可，但是 SOFAArk 是支持运行多个 `Ark Biz`的，因此如果开发者希望自己应用的 `Ark Biz` 包能够被其他应用直接当成 Jar 包依赖，进而运行在同一个 SOFAArk 容器之上，那么就需要打包发布 `Ark Biz 包`；
 
 
 ## Ark-Biz 典型目录结构
