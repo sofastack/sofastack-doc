@@ -20,6 +20,7 @@
             * [RESTful 协议](./RESTful)
                 * [基本使用](./RESTful-Basic)
                 * [自定义 Filter](./RESTful-Filter)
+                * [集成 Swagger](./RESTful-Swagger)
             * [Dubbo](./Dubbo)
                 * [基本使用](./Dubbo-Usage)
             * [H2C](./H2c)
