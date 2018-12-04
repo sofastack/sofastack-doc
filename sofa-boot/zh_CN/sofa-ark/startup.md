@@ -1,8 +1,10 @@
 # Ark 容器启动流程
 
-Ark 容器的整体启动如下图所述：
+Ark 应用的整体启动流程如下图所述：
 
-![image.png | left | 484x181](https://gw.alipayobjects.com/zos/skylark/7147df70-4f4b-4d45-84be-99af5bca3a45/2018/png/334a5ff9-b15b-4fbe-85a1-d6abe46e7d6d.png "")
+![image](https://user-images.githubusercontent.com/7148759/49442454-86cdec00-f804-11e8-8298-4f6165631298.png)
+
+当用 java -jar 启动 Ark 包 或者 在 IDE 中通过 `SofaArkBootstrap.launch` 启动 Ark 应用时，相应 `Launcher` 入口会负责启动应用，其中会反射调用 `ArkContainer` 的入口，初始化 `ArkService` ，然后依次执行 pipeline，来完成整个 Ark 应用的启动。
 
 ## ArkService
 
@@ -33,7 +35,17 @@ public interface ArkService {
 Pipeline 也是注册在 Ark Service 容器中的一个服务，服务本身是没有顺序和优先级的，在 Pipeline 中会对服务进行一些组装，同时完成整个 Ark 容器的启动
 
 ### Archive 解析
+
 在 Pipeline 的最开始，会将运行的 fatjar 进行解析，解析成运行时需要的模型，主要包括 Ark 插件模型和 Ark 业务模型，并将这些模型注册到 Ark Service 中的 `PluginManagerService` 以及 `BizManagerService` 中
+
+### 初始化环境
+
+设置一些运行时需要的默认参数，比如设置 `log4j.ignoreTCL` 为 `true` 让 log4j/log4j2 初始化是日志不要从 `ThreadContextClassloader` 中寻找配置文件([背景](https://github.com/alipay/sofa-ark/issues/57))
+
+### 注册容器服务
+
+在 Ark 容器中会发布一些服务供其它的插件来使用，比如 `BizDeployer` 来让 SOFAArk 官方插件 [sofa-jarslink](https://github.com/alipay/sofa-jarslink) 来完成 biz 的动态加载/卸载等
+
 
 ### 部署 Ark 插件
 从 `PluginManagerService` 中获取到所有的 Ark 插件，并按照插件优先级顺序：
