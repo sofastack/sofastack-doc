@@ -2,7 +2,7 @@
 
 Ark 应用的整体启动流程如下图所述：
 
-![image](https://user-images.githubusercontent.com/7148759/49442454-86cdec00-f804-11e8-8298-4f6165631298.png)
+<image src="https://user-images.githubusercontent.com/7148759/49442454-86cdec00-f804-11e8-8298-4f6165631298.png" width="600"/>
 
 当用 java -jar 启动 Ark 包 或者 在 IDE 中通过 `SofaArkBootstrap.launch` 启动 Ark 应用时，相应 `Launcher` 入口会负责启动应用，其中会反射调用 `ArkContainer` 的入口，初始化 `ArkService` ，然后依次执行 pipeline，来完成整个 Ark 应用的启动。
 
