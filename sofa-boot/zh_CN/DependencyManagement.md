@@ -1,6 +1,6 @@
 SOFABoot 是在 Spring Boot 的基础上提供的功能扩展。基于 Spring Boot 的机制，SOFABoot 管理了 SOFA 中间件的依赖，并且提供了 Spring Boot 的 Starter，方便用户在 Spring Boot 中使用 SOFA 中间件。
 
-## SOFABoot 依赖管理
+## SOFABoot 依赖管理 -- Maven
 
 在使用 SOFA 中间件之前，需要引入 SOFABoot 依赖管理。类似 Spring Boot 引入方式，在工程中增加如下 `<parent/>` 标签配置的方式:
 
@@ -13,6 +13,52 @@ SOFABoot 是在 Spring Boot 的基础上提供的功能扩展。基于 Spring Bo
 ```
 其中 `${sofa.boot.version}` 为具体的 SOFABoot 版本，参考[发布历史](https://github.com/alipay/sofa-boot/releases)。
 
+## SOFABoot 依赖管理 -- Gradle
+
+从 SOFABoot 3.1.1 版本开始，SOFABoot 开始支持使用 Gradle 来进行依赖管理，如果要使用 Gradle 来进行依赖管理，需要按照如下的形式来配置 `build.gradle`：
+
+```groovy
+buildscript {
+    ext {
+        sofaBootVersion = '3.1.1'
+    }
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("com.alipay.sofa:sofa-boot-gradle-plugin:${sofaBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'com.alipay.sofa.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+
+dependencies {
+    implementation('com.alipay.sofa:rpc-sofa-boot-starter')
+    implementation('org.springframework.boot:spring-boot-starter')
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+}
+```
+
+主要有几个步骤：
+
+1. 添加 `buildScript`，增加 `sofa-boot-gradle-plugin` 的依赖，其中版本号为你使用的 SOFABoot 的版本。
+2. 添加两个 plugin，分别是 `com.alipay.sofa.boot` 和 `io.spring.dependency-management`。
+
+这样，在 `dependencies` 里面，就可以直接添加 SOFABoot 管理的各种中间件和依赖了，而不用声明版本号。
 
 ## 引入 SOFA 中间件
 
