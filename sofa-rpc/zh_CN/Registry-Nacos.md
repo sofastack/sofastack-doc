@@ -6,3 +6,7 @@
 ```
 com.alipay.sofa.rpc.registry.address=nacos://127.0.0.1:8848
 ```
+
+支持 Nacos 的版本：
+
+SOFA RPC: 5.5.0+, SOFA Boot: 2.5.3+。
