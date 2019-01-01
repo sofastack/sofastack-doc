@@ -11,3 +11,29 @@ SOFABoot RPC 也提供一个缓存文件(目前暂不支持)，当 Zookeeper 不
 ```
 com.alipay.sofa.rpc.registry.address=zookeeper://xxx:2181?file=/home/admin/registry
 ```
+
+
+### Zookeeper Auth 支持
+
+
+#### SOFARPC API 支持
+
+在构造注册中心的时候，将Auth添加上
+
+```java
+  parameters.put("scheme", "digest");
+        //如果存在多个认证信息，则在参数形式为为user1:passwd1,user2:passwd2
+  parameters.put("addAuth", "sofazk:rpc1");
+
+  registryConfig = new RegistryConfig()
+            .setProtocol("zookeeper")
+            .setAddress("127.0.0.1:2181/authtest")
+            .setParameters(parameters);
+```
+
+之后其他没有使用正确auth的，将无法访问authtest目录
+
+
+#### SOFABoot 环境支持
+
+暂未开放
