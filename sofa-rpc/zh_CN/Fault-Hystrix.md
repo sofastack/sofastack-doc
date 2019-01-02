@@ -1,6 +1,6 @@
 ## 客户端熔断
 
-SOFA RPC 已集成 Hystrix 提供熔断能力，当前提供第一个预览版。关于 Hystrix 的更多介绍可以参考 [Hystrix 官方文档](https://github.com/Netflix/Hystrix)，Hystrix 集成能力主要由 @ScienJus 提供，感谢贡献。
+SOFA RPC 已集成 Hystrix 提供熔断能力，当前提供第一个预览版。关于 Hystrix 的更多介绍可以参考 [Hystrix 官方文档](https://github.com/Netflix/Hystrix)，Hystrix 集成能力主要由 [ScienJus](https://github.com/ScienJus) 提供，感谢贡献。
 
 接下来介绍一下如何体验 Hystrix 带来的熔断能力，以下示例使用 `SOFA RPC 5.5.0` 版本，更多 `Hystrix` 的配置及 `SOFA Boot` 集成使用方式将在后续版本提供，敬请关注。
 
@@ -54,3 +54,9 @@ SofaHystrixConfig.registerFallbackFactory(consumerConfig, new HelloServiceFallba
 ```java
 SofaHystrixConfig.registerSetterFactory(consumerConfig, new CustomSetterFactory());
 ```
+
+### 支持 Hystrix 的版本信息
+
+SOFA RPC: [5.5.0](https://github.com/alipay/sofa-rpc/releases), SOFA Boot: [2.5.3](https://github.com/alipay/sofa-boot/releases/)。
+
+SOAF RPC 集成验证 Hystrix 版本：`1.5.12`。

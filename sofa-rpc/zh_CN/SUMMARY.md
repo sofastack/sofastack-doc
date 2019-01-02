@@ -43,7 +43,7 @@
         * [预热权重](./Provider-Warmup-Weight)
         * [容灾恢复](./Fault)
             * [自动故障剔除](./Fault-Tolerance)
-            * [客户端熔断](./Fault-Hystrix)
+            * [Hystrix 客户端熔断](./Fault-Hystrix)
         * [Node跨语言调用](./Node-And-Java-Communicate)
         * [优雅关闭](./Graceful-Shutdown)
     * [配置参考手册](./Configuration)
