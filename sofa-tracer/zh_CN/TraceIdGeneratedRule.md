@@ -11,7 +11,7 @@ SOFATracer 通过 TraceId 来将一个请求在各个服务器上的调用日志
 之后的 4 位 `1003` 是一个自增的序列，从 1000 涨到 9000，到达 9000 后回到 1000 再开始往上涨。
 最后的 5 位 `56696` 是当前的进程 ID，为了防止单机多进程出现 TraceId 冲突的情况，所以在 TraceId 末尾添加了当前的进程 ID。
 
-> TraceId 目前的生成的规则参考了淘宝的鹰眼组件。 
+> TraceId 目前的生成的规则参考了阿里的鹰眼组件。 
 
 
 ### SpanId 生成规则
@@ -20,9 +20,7 @@ SOFATracer 中的 SpanId 代表本次调用在整个调用链路树中的位置�
 
 我们假设一次分布式调用中产生的 TraceId 是 `0a1234`（实际不会这么短），那么根据上文 SpanId 的产生过程，有下图：
 
-<center>
+<center>![traceId](./resources/traceid.png)</center>
 
-![traceId](./resources/traceid.png) 
-
-</center>
+> SpanId 目前的生成的规则参考了阿里的鹰眼组件。 
 
