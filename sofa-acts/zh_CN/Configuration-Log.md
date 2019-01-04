@@ -45,7 +45,6 @@
 
 ```
 
-
 ## log4j日志工具
 
 ```
@@ -57,4 +56,3 @@ log4j.appender.ACTS.File=logs/acts-sql.log
 log4j.appender.ACTS.layout=org.apache.log4j.PatternLayout
 log4j.appender.ACTS.layout.ConversionPattern=%d{HH:mm:ss,SSS} [%t] %-5p %C{1} : %m%n
 ```
-

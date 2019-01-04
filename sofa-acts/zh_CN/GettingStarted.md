@@ -1,24 +1,25 @@
 # 快速开始
 
-本文档共分为三部分：
+本文档共分为四部分：
 
 第一部分：指引你如何在Intellij Idea上安装ACTS IDE；
 
 第二部分：向你介绍如何在多模块工程中引入ACTS依赖；
 
-第三部分：test模块下一键搭建acts框架管理后续ACTS测试用例。
+第三部分：test模块下一键搭建ACTS框架管理后续ACTS测试用例；
+
+第四部分：一键生成ACTS测试脚本；
 
 ## 1.安装ACTS IDE
 
 __推荐Intellij Idea 2017版本__。本地磁盘安装：Preference->Plugins->Install plugin from disk->Restart Idea
 
+__为了您的安全，请仅从该下载源获取ACTS IDE安装包：__[点击下载ACTS IDE](https://gw.alipayobjects.com/os/basement_prod/c09f3a6a-b49a-4ab9-a56e-4994e033ae7b.zip)。
 
 ![qk_1.png](./resources/qk_1.png)
 <div data-type="alignment" data-value="center" style="text-align:center">
   <div data-type="p">图1.1</div>
 </div>
-
-[点击下载acts ide](https://gw.alipayobjects.com/os/basement_prod/6024b00f-7581-4818-b56a-54d19a4d60b1.zip)
 
 ## 2.引入acts依赖
 在引入ACTS依赖之前，需要你的应用是一个多模块工程（包含test模块），后续ACTS会将全部的测试代码放置在test模块，便于管理测试用例。
@@ -49,7 +50,7 @@ __推荐Intellij Idea 2017版本__。本地磁盘安装：Preference->Plugins->I
 
 这里是使用IDEA来创建子模块。
 
-对着父工程右键 --> New -->; Module --> 输入test模块名字（一般是appname-test），分步示例图如下：
+对着父工程右键 --> New --> Module --> 输入test模块名字（一般是appname-test），分步示例图如下：
 
 #### 第一步：新建test模块
 
@@ -116,7 +117,7 @@ __注：本部分同样适用于从零创建多模块工程。__
 
 ![qk_7.png](./resources/qk_7.png)
 <div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图2.6(qk_7)</div>
+  <div data-type="p">图2.6</div>
 </div>
 
 #### 第二步：新建子模块
@@ -170,7 +171,7 @@ __注：本部分同样适用于从零创建多模块工程。__
   <div data-type="p">图3.2</div>
 </div>
 
-## 4.生成测试脚本
+## 4.一键生成测试脚本
 
 ### 4.1启动类
 将service模块中的启动类，如SOFABootApplication拷贝到test模块，并增加需要加载的配置文件：
@@ -191,7 +192,7 @@ classpath*:META-INF/spring/acts-core.xml
 
 ![qk_15.png](./resources/qk_15.png)
 <div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图4.2(qk_15)</div>
+  <div data-type="p">图4.2</div>
 </div>
 
 
@@ -206,5 +207,4 @@ classpath*:META-INF/spring/acts-core.xml
   <div data-type="p">图4.4</div>
 </div>
 
-感谢你的关注！如有任何问题，可以通过github issue或者公众号向我们留言反馈。
-
+感谢您的关注！如有任何问题，您可以通过github issue向我们留言反馈。
