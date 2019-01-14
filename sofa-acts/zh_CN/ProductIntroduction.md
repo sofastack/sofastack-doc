@@ -20,28 +20,28 @@ ACTS是基于数据模型驱动测试引擎执行的的新一代测试框架（�
 
 | 说明 | 方法 |
 | :--- | :--- |
-| 清理 | clear(actsRuntimeContext); |
-| 准备 | prepare(actsRuntimeContext); |
-| 执行 | execute(actsRuntimeContext); |
-| 检查 | check(actsRuntimeContext); |
+| 清理 | clear(actsRuntimeContext) |
+| 准备 | prepare(actsRuntimeContext) |
+| 执行 | execute(actsRuntimeContext) |
+| 检查 | check(actsRuntimeContext) |
 
 方法功能说明：
-清理阶段：清理准备数据、校验数据，防止脏数据对测试脚本产生影响；
-准备阶段：准备DB数据；
-执行阶段：调用被测方法；
-检查阶段：根据测试数据，校验返回结果、DB数据和异常信息等内容。
++ 清理阶段：清理准备数据、校验数据，防止脏数据对测试脚本产生影响；
++ 准备阶段：准备DB数据；
++ 执行阶段：调用被测方法；
++ 检查阶段：根据测试数据，校验返回结果、DB数据和异常信息等内容。
 
 ## 功能描述
-ACTS提供了以下的能力：
-### 2.1 数据可视化编辑
+ACTS提供了以下能力：
+### 2.1 一站式编辑
 框架实现了测试数据与测试代码的分离，同时配套提供可视化编辑器ACTS IDE，通过ACTS IDE可以快速地录入、查看和管理用例数据，有效减少重复性的数据准备代码。
 ### 2.2 精细化校验
 为了提高返回结果、DB数据等期望数据的填写效率和减少检验点遗漏，框架提供了预跑返填功能;在ACTS校验规则标签的标记下，实现期望DB数据、期望结果等数据的精细化校验。
 ### 2.3 灵活可扩展
-ACTS提供了了丰富的API，其封装于ActsRuntimeContext类中，借助API可快速获取和设置自定义参数、用例入参、期望结果等，满足用户对用例数据的自定义操作；
-### 2.4 自定义引擎各阶段
-为了提高ACTS的灵活可扩展性，框架的ActsTestBase测试基类对外暴露各个执行阶段方法，包括prepare，execute，check，clear等，例如在测试类中通过重写process方法可将整个测试脚本重新编排。
-### 2.5 统一配置能力
+ACTS提供了丰富的API，其封装于ActsRuntimeContext类中，借助API可快速获取和设置自定义参数、用例入参、期望结果等，满足用户对用例数据的自定义操作；
+
+同时，框架的ActsTestBase测试基类对外暴露各个执行阶段方法，包括prepare，execute，check，clear等，例如在测试类中通过重写process方法可将整个测试脚本重新编排。
+### 2.4 统一配置能力
 配置文件中提供丰富的配置能力以定制化框架的个性需求。
 
 ## 应用场景
