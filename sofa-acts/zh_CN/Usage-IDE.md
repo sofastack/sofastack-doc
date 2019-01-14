@@ -2,7 +2,7 @@
 
 ## 打开插件编辑器
 
-在package视图下，右键含@Test注解的函数名，Acts 功能-修改测试用例。如下图：
+在package视图下，右键含@Test注解的函数名，ACTS功能->修改测试用例。如下图：
 
 ![us_24](./resources/us_24.png)
 <div data-type="alignment" data-value="center" style="text-align:center">
@@ -35,13 +35,13 @@
   <div data-type="p">图27</div>
 </div>
 
-接着 __生成测试用例__，然后 __打开编辑器__，可以看到复杂数据对象，直接进行编辑。
+接着 __生成测试用例__，然后 __打开ACTS IDE编辑器__，可以看到复杂数据对象，直接进行编辑。
 ![us_28](./resources/us_28.png)
 <div data-type="alignment" data-value="center" style="text-align:center">
   <div data-type="p">图28</div>
 </div>
 
-如果生成用例没有识别到入参，可以先生成入参模型后，再在插件编辑器中自行模版选择添加：入参设置上右键－>模版选择->复杂类型选择：<br >
+如果生成用例时没有识别出入参和结果，参考[对象模型生成](./Usage-Model.md#对象模型生成) 先行生成入参模型，再在ACTS IDE中自行选择模版添加：入参设置上右键->模版选择->复杂类型选择。
 
 ![us_29](./resources/us_29.png)
 <div data-type="alignment" data-value="center" style="text-align:center">
@@ -105,7 +105,7 @@ interestRecoverTypeEnum: !!com.alipay.fc.loancore.common.util.enums.InterestReco
 </div>
 
 ### 编码方式准备入参
-覆盖prepare方法，通过actsRuntimeContext的方法，快速获取和设置用例入参，如图38所示：
+覆盖prepare方法，通过ActsRuntimeContext的方法，快速获取和设置用例入参，如图38所示：
 
 1. 获取所有入参：List getInputParams()
 2. 按位置获取：Object getInputParamByPos(int i)
@@ -117,10 +117,10 @@ interestRecoverTypeEnum: !!com.alipay.fc.loancore.common.util.enums.InterestReco
   <div data-type="p">图38</div>
 </div>
 
-## 准备db数据
+## 准备DB数据
 
-### 准备db数据-单列场景
-如图39，在数据库准备设置位置右键，选择好要插入的db模板（请先确保该db模板已经生成），图中1、2、3步骤之后点击OK即插入db准备模板，如图41可对要插入db的数据进行编辑：<br >
+### 准备DB数据-单列场景
+如图39，在数据库准备设置位置右键，选择好要插入的DB模板（请先确保该DB模板已经生成），图中1、2、3步骤之后点击OK即插入DB准备模板，如图41可对要插入DB的数据进行编辑：
 
 
 ![us_39](./resources/us_39.png)
@@ -138,7 +138,7 @@ interestRecoverTypeEnum: !!com.alipay.fc.loancore.common.util.enums.InterestReco
   <div data-type="p">图41</div>
 </div>
 
-### 准备db数据-多列场景
+### 准备DB数据-多列场景
 选中一列数据，点击复制，按此方法可复制多列数据，然后进行编辑即可：
 
 ![us_42](./resources/us_42.jpeg)
@@ -146,7 +146,7 @@ interestRecoverTypeEnum: !!com.alipay.fc.loancore.common.util.enums.InterestReco
   <div data-type="p">图42</div>
 </div>
 
-### 准备db数据-flag说明
+### 准备DB数据-flag说明
 数据依赖标记：
 ```
 Y: 插入
@@ -185,17 +185,17 @@ ME：map默认全key校验，ME则以期望key为准，实际值多余期望值�
 4. D200 | 2015-01-01 00:00:00/null －> 代表与2015-01-01 00:00:00/new Date()相差200秒
 
 ### 编码方式准备期望result数据
-覆盖prepare方法，通过actsRuntimeContext的如下方法，快速获取和设置期望结果
+覆盖prepare方法，通过ActsRuntimeContext的如下方法，快速获取和设置期望结果
 1. 获取期望结果：Object getExpectResult() 
 2. 设置期望结果：Boolean setExpectResult(Object objToSet) 
 
-## 准备期望db数据
-### 准备期望db数据-单列场景
-在数据库期望设置里配置，操作参考[准备db数据-单列场景](#准备db数据-单列场景)
-### 准备期望db数据-多列场景
-在数据库期望设置里配置，操作参考[准备db数据-多列场景](#准备db数据-多列场景)
+## 准备期望DB数据
+### 准备期望DB数据-单列场景
+在数据库期望设置里配置，操作参考[准备DB数据-单列场景](#准备DB数据-单列场景)
+### 准备期望DB数据-多列场景
+在数据库期望设置里配置，操作参考[准备DB数据-多列场景](#准备DB数据-多列场景)
 
-### 准备期望db数据-flag说明
+### 准备期望DB数据-flag说明
 数据校验标记：
 ```
 Y: 校验
@@ -204,7 +204,7 @@ C：以此为条件select然后比较，如果结果有多个，则返回的结�
 CN： 这个flag表名当前这张表中以C和CN为条件查询出的结果为空
 D200：表示对比时间的时候误差200s之内都算通过，日期类型的格式为：today
 L： 数据库大字段换行数据校验，准备方式为A=B;C=D
-P：db大字段校验，以期望结果的kv为基准，对db大字段里的kv进行校验，要求db里的kv之间是换行分隔
+P：DB大字段校验，以期望结果的kv为基准，对DB大字段里的kv进行校验，要求DB里的kv之间是换行分隔
 R：正则匹配校验
 ```
 
@@ -330,10 +330,10 @@ R：正则匹配校验
 
 ## 预跑返填
 为了提高期望数据值（结果、表数据、消息）的快速填写，框架提供了预跑返填功能，一个用例准备好入参、准备数据等，用例执行的基本数据后，可先不必填写期望数据，用例运行起来后，框架可自动抓取运行结果、表变更数据、消息等，运行后打开编辑器点击“预跑返填”，可填充指定用例的期望数据。具体使用案例：
-前置条件：[配置acts日志](./Configuration-Log.md)
+前置条件：[配置ACTS日志](./Configuration-Log.md)
 
 1. acts-config.properties配置文件中开关设置：collect_case_result=true；
-2. 正常执行ACTs用例；
+2. 正常执行ACTS用例；
 3. 通过插件反填结果，需要选中要操作的那一行
 
 

@@ -15,6 +15,7 @@
 支持范围：入参、返回结果、数据库表字段，支持类型：目前仅支持String的参数化。
 
 使用方法：
+
 1、界面以$开头定义变量：
 
 ![us_60](./resources/us_60.png)
@@ -89,7 +90,7 @@ actsRuntimeContext.paramMap.put("param1","123");
 
 __目前仅支持String的组件化__
 
-如果属性是需要动态生成的字符串，例如某些ID，可以通过“@”符号来调用一个组件生成这个属性，组件要放在跟test同级的component包下，即：com.corpname.appname.acts.component (!!!这里appname是系统名，corpname是公司名，如alipay)。
+如果属性是需要动态生成的字符串，例如某些ID，可以通过“@”符号来调用一个组件生成这个属性，组件要放在跟test同级的component包下，即：com.corpname.appname.acts.component (这里appname是系统名，corpname是公司名，如alipay)。
 ```
 public class MyComponent {
     @TestComponent(id = "test")
@@ -116,18 +117,18 @@ ActsComponentUtil.run("@test?param=123");
 ```
 自定义组件多个参数的场景使用&分割参数：@test?param1=xxx&param2=yyy
 
-## db工具类
+## DB工具类
 
-1.指定数据源进行表的访问。
+### 1.指定数据源进行DB表访问
 
-框架ActsDBUtils方法中提供了DB的指定数据源访问，用于个性化DB操作。例如某张表的某条纪录不是准备数据、也不是校验数据，但是需要在运行后删掉或更新，此时就需要用到该工具操作db数据。
+框架ActsDBUtils方法中提供了DB的指定数据源访问，用于个性化DB操作。例如某张表的某条纪录不是准备数据也不是校验数据，但是需要在运行后删掉或更新，此时就需要用到该工具操作DB数据。
 
 __使用前配置__
 
 使用指定数据源方式需要在acts-config.properties文件中首先将要指定的数据源进行配置，配置例子如下：
 
 ```
-datasource_bean_name_fcdetConfigZdalDataSource=com.alipay.fc.debittrans.common.dal;fcdetConfigZdalDataSource
+datasource_bean_name_exampleDataSource=com.alipay.example.dal;exampleDataSource
 
 整体配置的格式为：datasource_bean_name_XXXX(数据源名字)=XXX(数据源所在的bundle);XXXX(数据源名字)
 ```
@@ -148,17 +149,17 @@ public static List<Map<String, Object>> getQueryResultMap(String sql, String tab
 封装。
 ```
 
-2.不指定数据源进行表的访问。
+### 2.不指定数据源进行DB表访问
 
-不指定数据源进行表访问的方法采用了ACTS框架默认根据表名搜索数据源的方式，工具方法的使用步奏如下：
+该方式下ACTS框架默认根据表名搜索数据源，工具方法的使用步骤如下：
 
 __使用前配置__
 ```
-datasource_bundle_name=com.alipay.fc.debittrans.common.dal
-ds_fcdetConfigZdalDataSource= det_system_param,det_account_summary_config
+datasource_bundle_name=com.alipay.example.common.dal
+ds_exampleDataSource= table1,tabal2
 
 整体配置的格式为：
-datasource_bundle_name=数据源所在bundlename
+datasource_bundle_name=数据源所在模块名
 ds_数据源名字=该数据源下的逻辑表名
 ```
 
@@ -174,21 +175,11 @@ public static List<Map<String, Object>> getQueryResultMap(String sql, String tab
 
 ```
 
-## acts各阶段注解扩展
+## ACTS各阶段注解扩展
 
 被打上注解的自定义方法，可以在注解标示的不同阶段扩展个性化操作。
 
 ```
-@BeforeTable
-public void beforeTableExecute(String tbName, String groupId) {
-    System.out.println("每张表执行前执行!!");
-}
-
-@AfterTable
-public void afterTableExecute(String tbName, String groupId) {
-    System.out.println("每张表执行后执行!!");
-}
-
 @BeforeClean
 public void beforeClean(ActsRuntimeContext actsRuntimeContext) {
     System.out.println("数据清理前执行!!");
@@ -219,11 +210,6 @@ public void afterCheck(ActsRuntimeContext actsRuntimeContext) {
     System.out.println("数据check之后执行!!");
 }
 
-@Executor(group = "", Order = 0)
-public void excute(ActsRuntimeContext actsRuntimeContext) {
-    System.out.println("多阶段接口执行");
-}
-
 ```
 
-使用中只需要在想要执行的方法上打上如上标签即可，被注解方法的参数需要符合上述示例中的参数，框架会自动传递表名，groupid，acts上下文参数供注解方法使用。
+使用中只需要在想要执行的方法上打上如上标签即可，被注解方法的参数需要符合上述示例中的参数，框架会自动传递ActsRuntimeContext供注解方法使用。

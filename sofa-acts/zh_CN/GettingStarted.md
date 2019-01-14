@@ -21,15 +21,15 @@ __为了您的安全，请仅从该下载源获取ACTS IDE安装包：__[点击�
   <div data-type="p">图1.1</div>
 </div>
 
-## 2.引入acts依赖
+## 2.引入ACTS依赖
 在引入ACTS依赖之前，需要你的应用是一个多模块工程（包含test模块），后续ACTS会将全部的测试代码放置在test模块，便于管理测试用例。
 你可以依据应用的具体情况，选择性的阅读以下内容：
 
-应用已经是完整的多模块工程，可参考[文档2.1部分](#2.1多模块应用（有test模块）)，帮助你引入acts依赖；
+应用已经是完整的多模块工程，可参考[文档2.1部分](#21多模块应用（有test模块）)，帮助你引入acts依赖；
 
-应用是多模块工程但无test模块，可参考[文档2.2部分](#2.2多模块应用（无test模块）)，帮助你快速添加test模块；
+应用是多模块工程但无test模块，可参考[文档2.2部分](#22多模块应用（无test模块）)，帮助你快速添加test模块；
 
-应用不是一个多模块工程，可参考[文档2.3部分](#2.3非多模块应用)，帮助你快速构建多模块工程。
+应用不是一个多模块工程，可参考[文档2.3部分](#23非多模块应用)，帮助你快速构建多模块工程。
 
 如果还没有创建工程，可参考 [SOFABoot快速开始](http://www.sofastack.tech/sofa-boot/docs/QuickStart) 搭建应用。
 
@@ -50,7 +50,7 @@ __为了您的安全，请仅从该下载源获取ACTS IDE安装包：__[点击�
 
 这里是使用IDEA来创建子模块。
 
-对着父工程右键 --> New --> Module --> 输入test模块名字（一般是appname-test），分步示例图如下：
+对着父工程右键 -> New -> Module -> 输入test模块名字（一般是appname-test），分步示例图如下：
 
 #### 第一步：新建test模块
 
@@ -85,7 +85,7 @@ __为了您的安全，请仅从该下载源获取ACTS IDE安装包：__[点击�
 </div>
 
 
-#### 第三步：依赖acts引入
+#### 第三步：依赖ACTS引入
 最后，找到刚刚新建的test模块，并在其pom.xml中引入acts-bom即可。
 ```
 <​!-- 引入包含SOFABootApplication的pom -->
@@ -93,13 +93,8 @@ __为了您的安全，请仅从该下载源获取ACTS IDE安装包：__[点击�
     <groupId>com.example</groupId>
     <artifactId>example-service</artifactId>
 </dependency>
-<!-- 引入sofa-test的start -->
-<dependency>
-    <groupId>com.alipay.sofa</groupId>
-    <artifactId>test-alipay-sofa-boot-starter</artifactId>
-    <scope>test</scope>
-</dependency>
-<!-- 引入acts依赖 -->
+
+<!-- 引入ACTS依赖 -->
 <dependency>
     <groupId>com.alipay.sofa.acts</groupId>
     <artifactId>acts-bom</artifactId>
@@ -188,7 +183,7 @@ classpath*:META-INF/spring/acts-core.xml
 
 前提条件：__务必事先生成对象模型，即方法的入参、返回结果等模型生成，否则会造成ACTS IDE不可预料的错误，如无法编辑、编辑数据不正确等。__
 
-接口定义的方法上点击，选择Acts功能-->生成测试用例。
+接口定义的方法上点击，选择ACTS功能->生成测试用例。
 
 ![qk_15.png](./resources/qk_15.png)
 <div data-type="alignment" data-value="center" style="text-align:center">

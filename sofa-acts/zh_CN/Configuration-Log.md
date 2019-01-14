@@ -6,10 +6,8 @@
 <appender name="ACTS" class="ch.qos.logback.core.rolling.RollingFileAppender">
     <append>true</append>
     <!-- a filter that show green light for object that has a error log level-->
-    <filter class="ch.qos.logback.classic.filter.LevelFilter">
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
         <level>debug</level>
-        <onMatch>ACCEPT</onMatch>
-        <onMismatch>DENY</onMismatch>
     </filter>
     <!-- log name -->
     <file>${logging.path}/acts-sql.log</file>

@@ -2,11 +2,10 @@
 
 ## 1.如何编译
 > 安装 JDK7 及以上，Maven 3.2.5 及以上。
-直接下载代码，然后执行如下命令：
+直接下载代码，然后在代码目录下执行如下命令：
 
 ```
-    cd acts
-    mvn clean install
+mvn clean install
 ```
 
 ## 2.版本发布
