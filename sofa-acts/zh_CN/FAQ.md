@@ -1,21 +1,21 @@
 # 常见问题
 
-## Q：报错误NoSuchMethodError
+## Q：报错误 NoSuchMethodError
 
-一般情况下该类错误由依赖冲突导致。已知普遍导致冲突的jar列举如下，遇到时选择性排除它们。
+一般情况下该类错误由依赖冲突导致。已知的依赖冲突列举如下，遇到时选择性排除它们。
 
 ### 日志冲突
-#### commons-logging冲突
-```
+#### commons-logging 冲突
+```xml
 <exclusion>
     <artifactId>commons-logging</artifactId>
     <groupId>commons-logging</groupId>
 </exclusion>
 ```
 
-#### logback冲突
-其中spring-boot-starter-logging和spring-test为应用依赖的对应版本
-```
+#### logback-classic 冲突
+在冲突位置将 logback-classic 排除，如 spring-boot-starter-logging 和 spring-test 为存在冲突的应用依赖。
+```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-logging</artifactId>
@@ -40,16 +40,14 @@
 </dependency>
 ```
 
-### yaml冲突
+### snakeyaml 冲突
 
-```
+```java
 java.lang.NoSuchMethodError: org.yaml.snakeyaml.Yaml.<init>(Lorg/yaml/snakeyaml/constructor/BaseConstructor;)V
 ```
 
-spring-boot-starter-test里引用的yaml和org.testng里面引用的yaml冲突。
-
-这里以排除spring-boot-starter-test中的yaml为例（也可选择在org.testng等其他位置排除冲突）
-```
+spring-boot-starter-test 与 org.testng 中引用的 org.yaml 存在冲突。这里以排除spring-boot-starter-test中的 org.yaml 为例（也可选择在org.testng等其他位置排除冲突）
+```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-test</artifactId>
@@ -63,17 +61,17 @@ spring-boot-starter-test里引用的yaml和org.testng里面引用的yaml冲突�
 </dependency>
 ```
 
-## Q：报错NoClassDefFoundError
+## Q：报错 NoClassDefFoundError
 
 一般情况下依赖缺失或者依赖冲突会导致该类问题。
 
-### mockito报错找不到类
+### Mockito 报错找不到类
 
-sofaboot使用mockito时，spring-boot-starter-test里包含了mockito，无需重复依赖。
+SOFABoot使用 Mockito 时，如果已经存在 spring-boot-starter-test 则无需重复引入 Mockito。
 
-## Q：报错no bean dataAccessConfigManager
+## Q：报错 No bean dataAccessConfigManager available
 
-在ACTS测试脚本指定的Application启动类中，却少缺少acts-core.xml，如图添加即可。
+ACTS 测试脚本指定的 Application 启动类中缺少 acts-core.xml，如图添加即可。
 
 ![faq_01.png](./resources/faq/faq_1.png)
 <div data-type="alignment" data-value="center" style="text-align:center">
@@ -83,11 +81,10 @@ sofaboot使用mockito时，spring-boot-starter-test里包含了mockito，无需�
 
 ## Q：No runnable methods
 
-一般是选择了Junit运行ACTS测试脚本导致的，ACTS测试脚本需要使用TestNG运行。
+一般是由于选择 Junit 运行 ACTS 测试脚本导致的，ACTS 测试脚本可使用 TestNG 方式运行。
 
 ## Q：生成模版异常
-有较多情况会导致这一现象，较为常见的是，新编写的类或者对类进行变更后，没有进行mvn编译。
-先执行mvn clean install -Dmaven.test.skip=true，再进行模版生成。
+有较多情况会导致这一现象，常见的是新编写的类或者对类进行变更后，没有进行mvn编译。先执行 `mvn clean install -Dmaven.test.skip=true`，再进行模版生成。
 
 ![image | left](./resources/faq/faq_2.png)
 <div data-type="alignment" data-value="center" style="text-align:center">
@@ -95,14 +92,13 @@ sofaboot使用mockito时，spring-boot-starter-test里包含了mockito，无需�
 </div>
 
 ## Q：编辑器设置入参错误
-使用ACTS IDE操作入参时，出现无法选中或者设置数值出错等情况，一般是生成测试脚本操作有误，没有生成入参模版而直接生成测试脚本，导致初始生成的yaml中入参数据不正确。
+使用 ACTS IDE 操作入参时，出现无法选中或者设置数值出错等情况，一般是生成测试脚本操作有误，没有生成入参模版而直接生成测试脚本，导致初始生成的 YAML 中入参不正确。
 
-解法一：通过编辑器删除该节点，然后右键入参设置-->模版选择，给入参一个正确的模版值。
-解法二：删除测试脚本对应的yaml文件，然后打开ACTS IDE，右键入参设置-->模版选择，给入参一个正确的模版值，yaml会自动重建。
-解法三：删除生成的测试脚本和yaml文件，生成入参模版，重新生成测试脚本，yaml中会默认带入参设置；
+解法一：删除测试脚本对应的 YAML 文件，然后打开 ACTS IDE并右键入参设置 -> 模版选择，编辑后保存则 YAML 文件会自动重建。
+解法二：删除生成的测试脚本和 YAML 文件，首先生成入参的模版，再重新生成测试脚本即可，YAML 中会默认带入参设置；
 
-## Q：argument type mismatch
-该问题一般是被测方法有多个同名重载方法，导致参数不匹配报错。
+## Q：报错 argument type mismatch
+该问题一般是被测接口有多个同名重载方法导致的，从而引发反射时参数不匹配错误。
 
 ![image | left](./resources/faq/faq_3.png)
 <div data-type="alignment" data-value="center" style="text-align:center">
@@ -111,25 +107,28 @@ sofaboot使用mockito时，spring-boot-starter-test里包含了mockito，无需�
 
 + 解决方法
 
-可以在脚本中重写基类的findMethod 方法，返回真正要测的对象。下面的方法也适用于获取被测方法失败的情况。 
+可以在脚本中重写 ACTS 测试基类的 findMethod 方法，返回真正被测的方法对象。下面的方法也适用于获取被测方法失败的情况。 
 
-```
+```java
 @Override
-    public void beforeActsTest(ActsRuntimeContext actsRuntimeContext) {
+public void beforeActsTest(ActsRuntimeContext actsRuntimeContext) {
 
-        Method method =null;
-        try {
-            method = VirtualAssetQueryService.class.getDeclaredMethod ("query", QueryVirtualAssetListParam.class);
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (SecurityException e) {
-            e.printStackTrace();
-        }
-        actsRuntimeContext.setTestedMethod(method);
+    Method method =null;
+    try {
+        method = VirtualAssetQueryService.class.getDeclaredMethod ("query", QueryVirtualAssetListParam.class);
+    } catch (NoSuchMethodException e) {
+        e.printStackTrace();
+    } catch (SecurityException e) {
+        e.printStackTrace();
     }
+    actsRuntimeContext.setTestedMethod(method);
+}
 ```
 
 ![image | left](./resources/faq/faq_4.png)
 <div data-type="alignment" data-value="center" style="text-align:center">
   <div data-type="p">图4</div>
 </div>
+
+## 使用 ACTS IDE 编辑类的属性后保存取值失效
+ACTS IDE默认 类 是标准的 JavaBean 形式，会调用属性的 set 方法为其赋值，如果不存在 set 方法则无法保存取值。

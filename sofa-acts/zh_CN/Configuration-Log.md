@@ -1,8 +1,8 @@
 # 预跑返填日志配置
 
-## logback日志工具
+## logback 日志工具
 
-```
+```xml
 <appender name="ACTS" class="ch.qos.logback.core.rolling.RollingFileAppender">
     <append>true</append>
     <!-- a filter that show green light for object that has a error log level-->
@@ -27,7 +27,7 @@
     </encoder>
 </appender>
 
-<!--以ibatis日志为例-->
+<!--以 iBatis 日志为例-->
 <logger name="com.ibatis" level="DEBUG">
     <appender-ref ref="ACTS"/>
 </logger>
@@ -36,16 +36,15 @@
     <appender-ref ref="ACTS"/>
 </logger>
 
-<!--ACTS日志标记-->
+<!-- ACTS 日志标记-->
 <logger name="acts-sql-logger" level="debug"
     <appender-ref ref="ACTS"/>
 </logger>
-
 ```
 
-## log4j日志工具
+## log4j 日志工具
 
-```
+```plain
 log4j.logger.com.ibatis=debug,ACTS
 log4j.logger.java.sql=debug,ACTS
 log4j.logger.acts-sql-logger=INFO,ACTS

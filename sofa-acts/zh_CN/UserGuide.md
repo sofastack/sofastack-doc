@@ -1,6 +1,6 @@
 # 用户手册
 
-## ACTS安装
+## ACTS 安装
 * [快速开始](./GettingStarted.md)
 
 ## 框架准备
