@@ -26,7 +26,7 @@ SOFABoot 在 v2.6.0 开始提供异步初始化 Spring Bean 能力，引入如�
             http://sofastack.io/schema/sofaboot   http://sofastack.io/schema/sofaboot.xsd"
        default-autowire="byName">
     <!-- async init  test -->
-    <bean id="testBean" class="com.alipay.sofa.runtime.beans.TimeWasteBean" init-method="init"/>
+    <bean id="testBean" class="com.alipay.sofa.runtime.beans.TimeWasteBean" init-method="init" async-init="true"/>
 </beans>
 ```
 
