@@ -16,7 +16,7 @@
 
 使用方法：
 
-1、界面以 `$` 开头定义变量：
+（1）界面以 `$` 开头定义变量
 
 ![us_60](./resources/us_60.png)
 <div data-type="alignment" data-value="center" style="text-align:center">
@@ -24,7 +24,7 @@
 </div>
 
 
-2、代码中给变量赋值：
+（2）代码中给变量赋值
 
 ```java
 @Override

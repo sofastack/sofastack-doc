@@ -5,6 +5,7 @@
 
 ## 框架准备
 * [框架准备](./Usage-Ready.md)
+* [实践视频](https://antloop.github.io/)
 
 ## 功能特性
 * [一键模型化](./Usage-Model.md)

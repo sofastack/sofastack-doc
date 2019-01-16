@@ -1,5 +1,6 @@
-* [产品介绍](./Home)
+* [产品介绍](./Home.md)
 * [快速开始](./GettingStarted.md)
+* [实践视频](https://antloop.github.io/)
 * [用户手册](./UserGuide.md)
 * [开发者手册](./DeveloperGuide.md)
 * [参与贡献](./Contributing.md)

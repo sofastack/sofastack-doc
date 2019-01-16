@@ -4,7 +4,7 @@
 
 第一部分：指引你如何在 Intellij IDEA 上安装 ACTS IDE ；
 
-第二部分：向你介绍如何在多模块工程中引入ACTS依赖；
+第二部分：向你介绍如何在多模块工程中引入 ACTS 依赖；
 
 第三部分：test 模块下一键搭建 ACTS 框架管理后续 ACTS 用例；
 
@@ -12,7 +12,7 @@
 
 ## 1.安装 ACTS IDE
 
-__推荐 Intellij IDEA 2017 版本__。本地磁盘安装：Preference->Plugins->Install plugin from disk->Restart Idea 。
+__推荐 Intellij IDEA 2017 版本__。本地磁盘安装：Preference -> Plugins -> Install plugin from disk -> Restart Idea 。
 
 __为了您的安全，请仅从该下载源获取 ACTS IDE 安装包：__[点击下载 ACTS IDE](https://gw.alipayobjects.com/os/basement_prod/c09f3a6a-b49a-4ab9-a56e-4994e033ae7b.zip)。
 
@@ -25,15 +25,15 @@ __为了您的安全，请仅从该下载源获取 ACTS IDE 安装包：__[点�
 在引入 ACTS 依赖之前，需要你的应用是一个多模块工程（包含 test 模块），后续 ACTS 会将全部的测试代码放置在 test 模块，便于管理测试用例。
 你可以依据应用的具体情况，选择性的阅读以下内容：
 
-应用已经是完整的多模块工程，可参考[文档2.1部分](#21多模块应用-包含&nbsp;test&nbsp;模块)，帮助你引入 ACTS 依赖；
+应用已经是完整的多模块工程，可参考[文档2.1部分](#21多模块应用-包含test模块)，帮助你引入 ACTS 依赖；
 
-应用是多模块工程但无test模块，可参考[文档2.2部分](#22多模块应用-无&nbsp;test&nbsp;模块)，帮助你快速添加 test 模块；
+应用是多模块工程但无test模块，可参考[文档2.2部分](#22多模块应用-无test模块)，帮助你快速添加 test 模块；
 
 应用不是一个多模块工程，可参考[文档2.3部分](#23非多模块应用)，帮助你快速构建多模块工程。
 
 如果还没有创建工程，可参考 [SOFABoot快速开始](http://www.sofastack.tech/sofa-boot/docs/QuickStart) 搭建应用。
 
-### 2.1多模块应用-包含&nbsp;test&nbsp;模块
+### 2.1多模块应用-包含 test 模块
 
 只需在 test 模块的 pom.xml 中引入 acts-bom 即可。
 ```xml
@@ -46,7 +46,7 @@ __为了您的安全，请仅从该下载源获取 ACTS IDE 安装包：__[点�
 ```
 
 
-### 2.2多模块应用-无&nbsp;test&nbsp;模块
+### 2.2多模块应用-无 test 模块
 
 这里是使用 Intellij IDEA 来创建子模块。
 
@@ -178,7 +178,7 @@ __为了您的安全，请仅从该下载源获取 ACTS IDE 安装包：__[点�
 
 ### 4.2测试脚本
 
-前提条件：__务必事先生成对象模型，即方法的入参、返回结果等模型生成，否则会造成 ACTS IDE 不可预料的错误，如无法编辑、编辑数据不正确等。__
+前提条件：__务必 mvn 编译工程和生成对象模型，否则会造成 ACTS IDE 不可预料的错误，如无法编辑、数据不正确等。__
 
 接口定义的方法上点击，选择 ACTS 功能 -> 生成测试用例。
 
@@ -198,5 +198,3 @@ __为了您的安全，请仅从该下载源获取 ACTS IDE 安装包：__[点�
 <div data-type="alignment" data-value="center" style="text-align:center">
   <div data-type="p">图4.4</div>
 </div>
-
-感谢您的关注！如有任何问题，您可以通过 GitHub issue 向我们留言反馈。

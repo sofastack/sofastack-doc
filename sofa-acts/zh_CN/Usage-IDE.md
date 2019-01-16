@@ -2,7 +2,7 @@
 
 ## 打开插件编辑器
 
-在 package 视图下，右键含@Test注解的函数名，ACTS 功能->修改测试用例。如下图：
+在 package 视图下，右键含 @Test 注解的函数名，ACTS 功能->修改测试用例，如下图：
 
 ![us_24](./resources/us_24.png)
 <div data-type="alignment" data-value="center" style="text-align:center">
@@ -11,7 +11,7 @@
 
 ## 编写测试数据
 ## 准备入参
-根据被测的接口方法的入参（类型、顺序、数量）正确准备入参数据。简单类型：String、Date、Integer、Float、Double、Long、Short、Byte（包含其对应的基本类型，即 int、float 等）；复杂类型：List、Map、Set、自定义类、Java 定义的类以及前面五者的嵌套等。
+根据被测的接口方法的入参（类型、顺序、数量）正确准备入参数据，简单类型包括String、Date、Integer、Float、Double、Long、Short、Byte（包含其对应的基本类型，即 int、float 等）；复杂类型为 List、Map、Set、自定义类、Java 定义的类以及前面五者的嵌套等。
 ### 简单入参
 入参设置上右键 -> 模版选择 -> 简单入参选择：
 
@@ -21,7 +21,7 @@
 </div>
 
 导入简单入参后，值直接在这里填写；
-自上而下表示被测接口方法的第1、第2、第3等参数，右键可以调节顺序。
+自上而下表示被测接口方法的第1个、第2个和第3个参数，右键可以调节顺序。
 
 ![us_26](./resources/us_26.png)
 <div data-type="alignment" data-value="center" style="text-align:center">
@@ -30,7 +30,7 @@
 
 ### 复杂入参
 
-首先生成用例所需的类模板，截图示例中数据模板是 AccountTransRequest 和 BusinessActionContext，具体操作参考 [对象模型生成](./Usage-Model.md#对象模型生成) 部分。
+首先生成用例所需的类模板，截图示例中数据模板是 AccountTransRequest 和 BusinessActionContext，具体操作参考[对象模型生成](./Usage-Model.md#对象模型生成)部分。
 
 ![us_27](./resources/us_27.png)
 <div data-type="alignment" data-value="center" style="text-align:center">
@@ -44,7 +44,7 @@
   <div data-type="p">图28</div>
 </div>
 
-如果生成用例时没有识别出入参和结果，参考[对象模型生成](./Usage-Model.md#对象模型生成) 先行生成入参模型，再在 ACTS IDE 中自行选择模版添加：入参设置上右键 -> 模版选择 -> 复杂类型选择。
+如果生成用例时没有识别出入参和结果，参考[对象模型生成](./Usage-Model.md#对象模型生成)先行生成入参模型，再在 ACTS IDE 中自行选择模版添加：入参设置上右键 -> 模版选择 -> 复杂类型选择。
 
 ![us_29](./resources/us_29.png)
 <div data-type="alignment" data-value="center" style="text-align:center">
@@ -64,8 +64,8 @@
 </div>
 
 ### map
-以示例2为例（Set于此类似）
-图32中它的第参数为Map&lt;String, Object&gt;类型，生成用例。由于 Object 不是具体类型，如果要设置 Object 为复杂对象，则需要去编辑 YAML。例如设置 Object 为 AccountTransResult 类型，则按照如下编辑：
+以示例2为例（Set 与此类似）
+图32中，演示示例2的方法入参为 Map<String, Object> 类型。由于 Object 不是具体类型，如果要设置 Object 为复杂对象，则需要去编辑 YAML。例如设置 Object 为 AccountTransResult 类型，则按照如下编辑：
 ![us_32](./resources/us_32.png)
 <div data-type="alignment" data-value="center" style="text-align:center">
   <div data-type="p">图32</div>
@@ -120,9 +120,9 @@ interestRecoverTypeEnum: !!com.alipay.fc.loancore.common.util.enums.InterestReco
   <div data-type="p">图38</div>
 </div>
 
-## 准备&nbsp;DB&nbsp;数据
+## 准备 DB 数据
 
-### 准备&nbsp;DB&nbsp;数据-单列场景
+### 准备 DB 数据-单列场景
 如图39，在数据库准备设置位置右键，选择好要插入的 DB 模板（请先确保该DB模板已经生成），图中1、2、3步骤之后点击 OK 即插入 DB 准备模板，如图41 可对要插入 DB 的数据进行编辑：
 
 
@@ -141,7 +141,7 @@ interestRecoverTypeEnum: !!com.alipay.fc.loancore.common.util.enums.InterestReco
   <div data-type="p">图41</div>
 </div>
 
-### 准备&nbsp;DB&nbsp;数据-多列场景
+### 准备 DB 数据-多列场景
 选中一列数据，点击复制，按此方法可复制多列数据，然后进行编辑即可：
 
 ![us_42](./resources/us_42.jpeg)
@@ -192,13 +192,13 @@ ME：map 默认全 key 校验，ME则以期望 key 为准，实际值多余期�
 1. 获取期望结果：Object getExpectResult() 
 2. 设置期望结果：Boolean setExpectResult(Object objToSet) 
 
-## 准备期望&nbsp;DB&nbsp;数据
-### 准备期望&nbsp;DB&nbsp;数据-单列场景
-在数据库期望设置里配置，操作参考[准备 DB 数据-单列场景](#准备&nbsp;DB&nbsp;数据-单列场景)
-### 准备期望&nbsp;DB&nbsp;数据-多列场景
-在数据库期望设置里配置，操作参考[准备 DB 数据-多列场景](#准备&nbsp;DB&nbsp;数据-多列场景)
+## 准备期望 DB 数据
+### 准备期望 DB 数据-单列场景
+在数据库期望设置里配置，操作参考[准备 DB 数据-单列场景](#准备DB数据-单列场景)
+### 准备期望 DB 数据-多列场景
+在数据库期望设置里配置，操作参考[准备 DB 数据-多列场景](#准备DB数据-多列场景)
 
-### 期望&nbsp;DB&nbsp;数据的 flag 说明
+### 期望 DB 数据的 flag 说明
 数据校验标记：
 ```plain
 Y: 校验
@@ -279,7 +279,7 @@ R：正则匹配校验
   <div data-type="p">图51</div>
 </div>
 
-### list编辑
+### list 编辑
 以自定义参数设置添加 List<String> 为例，模板选择 List 模板：
 
 ![us_52](./resources/us_52.png)
@@ -294,10 +294,10 @@ R：正则匹配校验
   <div data-type="p">图53</div>
 </div>
 
-### map编辑
+### map 编辑
 可参照入参中有关 [map](#map) 部分。
 
-### enum编辑
+### enum 编辑
 可参照入参中有关 [enum](#enum) 部分。
 
 ## 右键功能说明
@@ -348,7 +348,7 @@ R：正则匹配校验
 
 ### 一键返填
 
-选中需要反填的用例，确认即可。
+如图59，选中需要反填的用例，确认即可。
 
 ![us_59](./resources/us_59.png)
 <div data-type="alignment" data-value="center" style="text-align:center">

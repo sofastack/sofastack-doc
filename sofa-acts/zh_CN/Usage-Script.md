@@ -15,9 +15,9 @@
 
 ## 测试脚本生成
 
-前提条件：__务必事先生成对象模型，即方法的入参、返回结果等模型生成，否则会造成 ACTS IDE 出现不可预料的错误，如无法编辑、编辑数据不正确等。__
+前提条件：____务必 mvn 编译工程和生成对象模型，否则会造成 ACTS IDE 不可预料的错误，如无法编辑、数据不正确等。__
 
-接口定义的方法上点击，选择 ACTS 功能-->生成测试用例。
+接口定义的方法上点击，选择 ACTS 功能 -> 生成测试用例。
 
 ![us_17](./resources/us_17.png)
 <div data-type="alignment" data-value="center" style="text-align:center">
@@ -70,10 +70,11 @@
 
 ## 脚本用例拆分功能
 
-默认每个测试脚本的所有用例数据保存在同一个yaml中，ACTS 支持用例数据根据开关 `spilt_yaml_by_case` 来决定同一测试脚本的所有用例数据存储在一个 YAML 中还是每个用例存储为一个 YAML。
+默认每个测试脚本的所有用例数据保存在同一个 YAML 中，ACTS 支持用例数据根据开关 `spilt_yaml_by_case` 来决定同一测试脚本的所有用例数据存储在一个 YAML 中还是每个用例存储为一个 YAML。
 开关默认为关闭，即同一测试脚本的所有测试数据存储在一个 YAML 文件中。
 
-在 acts-config.properities 中设置 `spilt_yaml_by_case=true` 即可打开开关，之后新生成测试脚本时每个用例对应一个单独的 YAML，其名称为 caseId，拆分的方式可以降低多人研发同一接口带来的文件冲突问题。 
+在 `acts-config.properities` 中设置 `spilt_yaml_by_case=true` 即可打开开关，之后新生成测试脚本时每个用例对应一个单独的以 caseId 命名的 YAML文件，拆分的方式可以降低多人研发同一接口带来的文件冲突问题。 
+
 此外，为了支持将老的 YAML 文件按用例拆分，ACTS 提供了工具类，如下，支持将指定脚本下，指定路径的 YAML 文件按用例拆分。
 
    __BaseDataUtil.saveYamlDataToCaseByCase__
@@ -84,22 +85,29 @@
 ACTS 提供了数据自定义 API 接口，封装于 ActsRuntimeContext 类中，如下：
 * 快速获取和设置自定义参数
 
-获取全部自定义参数：getParamMap getParamMap()
-按 key 获取：Object getParamByName(String paraName)
-新增自定义参数：void addOneParam(String paraName, Object paraObj)
-替换自定义参数：void setParamMap(Map<String, Object> paramMap)
-泛型方式获取自定义参数，避免强转：T getParamByNameWithGeneric(String paraName)
+    获取全部自定义参数：getParamMap getParamMap()
+    
+    按 key 获取：Object getParamByName(String paraName)
+    
+    新增自定义参数：void addOneParam(String paraName, Object paraObj)
+    
+    替换自定义参数：void setParamMap(Map<String, Object> paramMap)
+    
+    泛型方式获取自定义参数，避免强转：T getParamByNameWithGeneric(String paraName)
 
 + 快速获取和设置用例入参
 
-获取所有入参：List getInputParams() 
-按位置获取：Object getInputParamByPos(int i)
-新增用例参数：void addInputParam(Object obj) 
+    获取所有入参：List getInputParams()
+    
+    按位置获取：Object getInputParamByPos(int i)
+    
+    新增用例参数：void addInputParam(Object obj) 
 
 + 快速获取和设置期望结果
 
-获取期望结果：Object getExpectResult() 
-设置期望结果：Boolean setExpectResult(Object objToSet)
+    获取期望结果：Object getExpectResult()
+    
+    设置期望结果：Boolean setExpectResult(Object objToSet)
 
 ## Mock 功能使用
 mock 功能目前是采用 Mockito 的方案，如下配置使用；具体资料见（[Mockito英文文档](https://static.javadoc.io/org.mockito/mockito-core/2.18.3/org/mockito/Mockito.html)和[Mockito中文文档](https://github.com/hehonghui/mockito-doc-zh)
