@@ -48,9 +48,10 @@ SOFABoot 是蚂蚁金服开源的基于 Spring Boot 的研发框架，它在 Spr
 SOFABoot 在 Spring Boot 的基础上，提供了以下能力：
 
 * 扩展 Spring Boot 的健康检查的能力：在 Spring Boot 健康检查能力的基础上，提供了 Readiness Check 的能力，保证应用实例安全上线。
+* 提供模块化开发能力：基于 Spring 上下文隔离提供[模块化开发](./Modular-Development)能力，每个 SOFABoot 模块使用独立的 Spring 上下文，避免不同 SOFABoot 模块间的 BeanId 冲突。
+* 提供模块并行加载和 Spring Bean 异步初始化能力，加速应用启动；
 * 日志空间隔离能力：中间件框架自动发现应用的日志实现依赖并独立打印日志，避免中间件和应用日志实现绑定，通过 [sofa-common-tools](https://github.com/alipay/sofa-common-tools) 实现。
 * 提供类隔离的能力：基于 [SOFAArk](https://github.com/alipay/sofa-ark) 框架提供类隔离能力，方便使用者解决各种类冲突问题。
-* 提供模块化开发能力：基于 Spring 上下文隔离提供[模块化开发](./Modular-Development)能力，每个 SOFABoot 模块使用独立的 Spring 上下文，避免不同 SOFABoot 模块间的 BeanId 冲突。
 * 中间件的集成管理：统一管控、提供中间件统一易用的编程接口、每一个 SOFA 中间件都是独立可插拔的组件。
 * 完全兼容 Spring Boot：SOFABoot 基于 Spring Boot 的基础上进行构建，并且完全兼容 Spring Boot。
 

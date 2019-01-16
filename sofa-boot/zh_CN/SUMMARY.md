@@ -3,6 +3,7 @@
 - [依赖管理](./DependencyManagement)
 - [健康检查](./HealthCheck)
 - [版本查看](./ViewVersions)
+- [启动加速](./SpeedUpStartup)
 - 模块隔离
   - [简介](./Modular-Development)
   - [模块配置](./SOFABoot-Module)
