@@ -88,6 +88,30 @@ public class SampleServiceRef {
 }
 ```
 
+使用 @SofaService 注解发布服务时，需要在实现类上打上 @SofaService 注解；在 Spring Boot 使用 Bean Method 创建 Bean 时，会导致 @Bean 和 @SofaService 分散在两处，而且无法对同一个实现类使用不同的 unique id。因此自 SOFABoot v2.6.0 及 v3.1.0 版本起，支持 @SofaService 作用在 Bean Method 之上，例如：
+```java
+@Configuration
+public class SampleSofaServiceConfiguration {
+    @Bean("sampleSofaService")
+    @SofaService(uniqueId = "service1")
+    SampleService service() {
+        return new SampleServiceImpl("");
+    }
+}
+```
+
+同样为了方便在 Spring Boot Bean Method 使用注解 @SofaReference 引用服务，自 SOFABoot v2.6.0 及 v3.1.0 版本起，支持在 Bean Method 参数上使用 @SofaReference 注解引用 JVM 服务，例如：
+```java
+@Configuration
+public class MultiSofaReferenceConfiguration {
+    @Bean("sampleReference")
+    TestService service(@Value("$spring.application.name") String appName,
+                        @SofaReference(uniqueId = "service") SampleService service) {
+        return new TestService(service);
+    }
+}
+```
+
 ### 编程 API 方式
 
 SOFABoot 为 JVM 服务的发布和引用提供了一套编程 API 方式，方便直接在代码中发布和引用 JVM 服务，与 Spring 的 ApplicationContextAware 类似，为使用编程 API 方式，首先需要实现 ClientFactoryAware 接口获取编程组件 API：
