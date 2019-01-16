@@ -15,7 +15,7 @@
 
 ## 测试脚本生成
 
-前提条件：____务必 mvn 编译工程和生成对象模型，否则会造成 ACTS IDE 不可预料的错误，如无法编辑、数据不正确等。__
+前提条件：__务必 mvn 编译工程和生成对象模型，否则会造成 ACTS IDE 不可预料的错误，如无法编辑、数据不正确等__。
 
 接口定义的方法上点击，选择 ACTS 功能 -> 生成测试用例。
 
@@ -110,7 +110,7 @@ ACTS 提供了数据自定义 API 接口，封装于 ActsRuntimeContext 类中�
     设置期望结果：Boolean setExpectResult(Object objToSet)
 
 ## Mock 功能使用
-mock 功能目前是采用 Mockito 的方案，如下配置使用；具体资料见（[Mockito英文文档](https://static.javadoc.io/org.mockito/mockito-core/2.18.3/org/mockito/Mockito.html)和[Mockito中文文档](https://github.com/hehonghui/mockito-doc-zh)
+mock 功能目前是采用 Mockito 的方案，如下配置使用；具体资料见 [Mockito英文文档](https://static.javadoc.io/org.mockito/mockito-core/2.18.3/org/mockito/Mockito.html)和[Mockito中文文档](https://github.com/hehonghui/mockito-doc-zh)
 ### 增加依赖
 ```xml
 <dependency>
