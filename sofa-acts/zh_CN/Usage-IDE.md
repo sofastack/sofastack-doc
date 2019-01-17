@@ -1,6 +1,6 @@
 # 一站式编辑
 
-## 打开插件编辑器
+## 打开 ACTS IDE
 
 在 package 视图下，右键含 @Test 注解的函数名，ACTS 功能->修改测试用例，如下图：
 
@@ -11,7 +11,7 @@
 
 ## 编写测试数据
 ## 准备入参
-根据被测的接口方法的入参（类型、顺序、数量）正确准备入参数据，简单类型包括String、Date、Integer、Float、Double、Long、Short、Byte（包含其对应的基本类型，即 int、float 等）；复杂类型为 List、Map、Set、自定义类、Java 定义的类以及前面五者的嵌套等。
+根据被测的接口方法的入参（类型、顺序、数量）正确准备入参数据，简单类型包括 String、Date、Integer、Float、Double、Long、Short、Byte（包含其对应的基本类型，即 int、float 等）；复杂类型为 List、Map、Set、自定义类、Java 定义的类以及前面五者的嵌套等。
 ### 简单入参
 入参设置上右键 -> 模版选择 -> 简单入参选择：
 

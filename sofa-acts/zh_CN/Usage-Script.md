@@ -83,30 +83,23 @@
 
 ## 编码方式准备数据
 ACTS 提供了数据自定义 API 接口，封装于 ActsRuntimeContext 类中，如下：
-* 快速获取和设置自定义参数
-
-    获取全部自定义参数：getParamMap getParamMap()
++ 快速获取和设置自定义参数
     
-    按 key 获取：Object getParamByName(String paraName)
-    
-    新增自定义参数：void addOneParam(String paraName, Object paraObj)
-    
-    替换自定义参数：void setParamMap(Map<String, Object> paramMap)
-    
-    泛型方式获取自定义参数，避免强转：T getParamByNameWithGeneric(String paraName)
+    获取全部自定义参数：getParamMap getParamMap() <br/>
+    按 key 获取：Object getParamByName(String paraName) <br/>
+    新增自定义参数：void addOneParam(String paraName, Object paraObj) <br/>
+    替换自定义参数：void setParamMap(Map<String, Object> paramMap) <br/>
+    泛型方式获取自定义参数：T getParamByNameWithGeneric(String paraName)
 
 + 快速获取和设置用例入参
 
-    获取所有入参：List getInputParams()
-    
-    按位置获取：Object getInputParamByPos(int i)
-    
+    获取所有入参：List getInputParams() <br/>
+    按位置获取：Object getInputParamByPos(int i) <br/>
     新增用例参数：void addInputParam(Object obj) 
 
 + 快速获取和设置期望结果
 
-    获取期望结果：Object getExpectResult()
-    
+    获取期望结果：Object getExpectResult() <br/>
     设置期望结果：Boolean setExpectResult(Object objToSet)
 
 ## Mock 功能使用
