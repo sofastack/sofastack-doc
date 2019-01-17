@@ -17,18 +17,14 @@ ACTS 的模版有可以有效应对上述问题，通过将类和表固化为 CS
 
 在 test 模块的 resource/model 目录可以查看已经存在的模型。
 ![us_4](./resources/us_4.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图4</div>
-</div>
+<p align="center">图4</p>
 
 ## 数据表模型生成
 
 ### 数据表模型样例
 
 ![us_5](./resources/us_5.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图5</div>
-</div>
+<p align="center">图5</p>
 
 1. flag说明
     ```plain
@@ -45,63 +41,41 @@ ACTS 的模版有可以有效应对上述问题，通过将类和表固化为 CS
 ### 生成表模型
 
 ![us_6](./resources/us_6.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图6</div>
-</div>
+<p align="center">图6</p>
 
 
 ![us_7](./resources/us_7.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="alignment" data-value="center" style="text-align:center">
-    <div data-type="p">图7</div>
-  </div>
-</div>
+<p align="center">图7</p>
 
 
 ![us_8](./resources/us_8.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="alignment" data-value="center" style="text-align:center">
-    <div data-type="p">图8</div>
-  </div>
-</div>
+<p align="center">图8</p>
 
-点击 OK 后生成模板如下：
+点击 OK 后生成模板，如图9：
 
 ![us_9](./resources/us_9.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="alignment" data-value="center" style="text-align:center">
-    <div data-type="p">图9</div>
-  </div>
-</div>
+<p align="center">图9</p>
 
 
 同时支持不配置直连获取表结构的方式生成表模型，即在 DO 类上右键根据类生成表模型：
 DO 类上右击 -> ACTS 功能 -> 生成 DO 模型：
 
 ![us_10](./resources/us_10.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图10</div>
-</div>
+<p align="center">图10</p>
 
 
 ![us_11](./resources/us_11.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图11</div>
-</div>
+<p align="center">图11</p>
 
 ## 对象模型生成
 
 ### 对象模型样例
 
 ![us_12](./resources/us_12.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图12</div>
-</div>
+<p align="center">图12</p>
 
 ![us_13](./resources/us_13.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图13</div>
-</div>
+<p align="center">图13</p>
 
 一个复杂对象是一个闭包，不但包含其自身模型还包含其嵌套对象的模型。
 
@@ -115,13 +89,9 @@ ACTS IDE 使用模型快速导入数据，编辑复杂对象时（包括入参�
 （1）待构建模型的类定义的任意方法上点击，生成当前类的模型。
 
 ![us_14](./resources/us_14.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图14</div>
-</div>
+<p align="center">图14</p>
 
 （2）接口定义任意方法上点击，生成当前接口中，所有方法的复杂入参、复杂返回结果的模型。
 
 ![us_15](./resources/us_15.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图15</div>
-</div>
+<p align="center">图15</p>

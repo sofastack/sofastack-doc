@@ -19,9 +19,7 @@
 （1）界面以 `$` 开头定义变量
 
 ![us_60](./resources/us_60.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图60</div>
-</div>
+<p align="center">图60</p>
 
 
 （2）代码中给变量赋值
@@ -37,14 +35,10 @@ public void beforeActsTest(ActsRuntimeContext actsRuntimeContext) {
 在写 DB 数据期望的时候，也可以通过 `=` 符号来进行赋值，表示这个值来自于查询结果，后面的表就可以使用这个变量作为值。
 
 ![us_61](./resources/us_61.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图61</div>
-</div>
+<p align="center">图61</p>
 
 ![us_62](./resources/us_62.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图62</div>
-</div>
+<p align="center">图62</p>
 
 假设接口会向 2 张表插入数据
 
@@ -103,9 +97,7 @@ param_components=IdGenerateComponent,NoGenerateComponent
 ```
 
 ![us_63](./resources/us_63.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图63</div>
-</div>
+<p align="center">图63</p>
 
 如上图 alis_value 值为 `@test?param=123` 则在用例运行时会自动替换 alis_value 的取值。
 
@@ -115,7 +107,7 @@ param_components=IdGenerateComponent,NoGenerateComponent
 ```java
 ActsComponentUtil.run("@test?param=123");
 ```
-自定义组件多个参数的场景使用 & 分割参数，如 `@test?param1=xxx&param2=yyy`
+自定义组件多个参数的场景使用 `&` 分割参数，如 `@test?param1=xxx&param2=yyy`
 
 ## DB 工具类
 

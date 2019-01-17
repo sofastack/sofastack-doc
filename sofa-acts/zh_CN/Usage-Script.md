@@ -9,9 +9,7 @@
 左图为 TestNG 用例，右图为 ACTS 用例，重复性代码一去不回，代码体积明显缩小。区别于普通测试脚本，ACTS 脚本继承自 ActsTestBase 类，封装了数据加载、驱动、执行引擎和校验规则，无需用户来组织清理数据、准备数据、执行用例和校验结果，对于简单业务可以做到零编码，极大释放代码编写和后期维护成本。
 
 ![us_16](./resources/us_16.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图16</div>
-</div>
+<p align="center">图16</p>
 
 ## 测试脚本生成
 
@@ -20,40 +18,30 @@
 接口定义的方法上点击，选择 ACTS 功能 -> 生成测试用例。
 
 ![us_17](./resources/us_17.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图17</div>
-</div>
+<p align="center">图17</p>
 
 
 ![us_18](./resources/us_18.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图18</div>
-</div>
+<p align="center">图18</p>
 
 
 ![us_19](./resources/us_19.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图19</div>
-</div>
+<p align="center">图19</p>
 
 ## 测试脚本运行
 方法：右键 ACTS 脚本中的被测方法，选择 TestNG 来执行测试脚本，如下图：
 
 ![us_20](./resources/us_20.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图20</div>
-</div>
+<p align="center">图20</p>
 
 ## 指定测试脚本运行
 
-1. 在 `src/test/resource/config/acts-config.properties` 中配置 `test_only＝^T`，表示只跑用例名称以T开头的用例，`^T` 也可以换成其他正则表达式；
+1. 在 `src/test/resource/config/acts-config.properties` 中配置 `test_only＝^T`，表示只跑用例名称以 `T` 开头的用例，`^T` 也可以换成其他正则表达式；
 
 2. 修改要测试的用例名称，在用例名前面加 `T`，ACTS 运行时时仅执行用例名称以 `T` 开头的用例。
 
 ![us_21](./resources/us_21.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图21</div>
-</div>
+<p align="center">图21</p>
 
 
 ![us_22](./resources/us_22.png)

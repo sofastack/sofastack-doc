@@ -46,7 +46,7 @@
 java.lang.NoSuchMethodError: org.yaml.snakeyaml.Yaml.<init>(Lorg/yaml/snakeyaml/constructor/BaseConstructor;)V
 ```
 
-spring-boot-starter-test 与 org.testng 中引用的 org.yaml 存在冲突。这里以排除spring-boot-starter-test中的 org.yaml 为例（也可选择在org.testng等其他位置排除冲突）
+spring-boot-starter-test 与 org.testng 中引用的 org.yaml 存在冲突。这里以排除 spring-boot-starter-test 中的 org.yaml 为例（也可在 org.testng 等冲突位置排除）
 ```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -67,43 +67,36 @@ spring-boot-starter-test 与 org.testng 中引用的 org.yaml 存在冲突。这
 
 ### Mockito 报错找不到类
 
-SOFABoot使用 Mockito 时，如果已经存在 spring-boot-starter-test 则无需重复引入 Mockito。
+SOFABoot 使用 Mockito 时，如果已经存在 spring-boot-starter-test 则无需重复引入 Mockito。
 
 ## Q：报错 No bean dataAccessConfigManager available
 
 ACTS 测试脚本指定的 Application 启动类中缺少 acts-core.xml，如图添加即可。
 
 ![faq_01.png](./resources/faq/faq_1.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图1</div>
-</div>
-
+<p align="center">图1</p>
 
 ## Q：No runnable methods
 
 一般是由于选择 Junit 运行 ACTS 测试脚本导致的，ACTS 测试脚本可使用 TestNG 方式运行。
 
 ## Q：生成模版异常
-有较多情况会导致这一现象，常见的是新编写的类或者对类进行变更后，没有进行mvn编译。先执行 `mvn clean install -Dmaven.test.skip=true`，再进行模版生成。
+有较多情况会导致这一现象，常见的是新编写的类或者对类进行变更后，没有进行 mvn 编译。先执行 `mvn clean install -Dmaven.test.skip=true`，再进行模版生成。
 
 ![image | left](./resources/faq/faq_2.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图2</div>
-</div>
+<p align="center">图2</p>
 
 ## Q：编辑器设置入参错误
 使用 ACTS IDE 操作入参时，出现无法选中或者设置数值出错等情况，一般是生成测试脚本操作有误，没有生成入参模版而直接生成测试脚本，导致初始生成的 YAML 中入参不正确。
 
-解法一：删除测试脚本对应的 YAML 文件，然后打开 ACTS IDE并右键入参设置 -> 模版选择，编辑后保存则 YAML 文件会自动重建。
+解法一：删除测试脚本对应的 YAML 文件，然后打开 ACTS IDE 并右键入参设置 -> 模版选择，编辑后保存则 YAML 文件会自动重建。<br/>
 解法二：删除生成的测试脚本和 YAML 文件，首先生成入参的模版，再重新生成测试脚本即可，YAML 中会默认带入参设置；
 
 ## Q：报错 argument type mismatch
 该问题一般是被测接口有多个同名重载方法导致的，从而引发反射时参数不匹配错误。
 
 ![image | left](./resources/faq/faq_3.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图3</div>
-</div>
+<p align="center">图3</p>
 
 + 解决方法
 
@@ -126,9 +119,7 @@ public void beforeActsTest(ActsRuntimeContext actsRuntimeContext) {
 ```
 
 ![image | left](./resources/faq/faq_4.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图4</div>
-</div>
+<p align="center">图4</p>
 
 ## 使用 ACTS IDE 编辑类的属性后保存取值失效
-ACTS IDE默认 类 是标准的 JavaBean 形式，会调用属性的 set 方法为其赋值，如果不存在 set 方法则无法保存取值。
+ACTS IDE 默认类是标准的 JavaBean 形式，会调用属性的 set 方法为其赋值，如果不存在 set 方法则无法保存取值。

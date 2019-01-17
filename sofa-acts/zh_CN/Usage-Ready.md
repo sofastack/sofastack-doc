@@ -7,16 +7,12 @@
 生成脚本选择的编码，如下图设置：
 
 ![us_1](./resources/us_1.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图1</div>
-</div>
+<p align="center">图1</p>
 
 Idea workspace 的编码
 
 ![us_2](./resources/us_2.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">图2</div>
-</div>
+<p align="center">图2</p>
 
 ## 数据源配置
 
@@ -32,9 +28,7 @@ ds_数据源bean2=逻辑表名3,逻辑表名4
 其中数据源 bean1、数据源 bean2 是应用代码中 dal 层的数据源 bean 的名称，支持多个数据源。表名支持正则表达式，无需带分库分表后缀，若有多个数据源时请注意，某张表只能属于一个数据源，如下图：
 
 ![us_3](./resources/us_3.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-    <div data-type="p">图3</div>
-</div>
+<p align="center">图3</p>
 
 #### 数据库直连
 数据库直连，用于 DB 数据模型的生成。在 `src/test/resource/config/dbConf/` 下的 devdb.conf 或 testdb.conf 中配置如下：
@@ -58,6 +52,4 @@ xxx_password = mypswd
 #### 配置文件
 
 ![us_2](./resources/ur_1.png)
-<div data-type="alignment" data-value="center" style="text-align:center">
-    <div data-type="p">图4</div>
-</div>
+<p align="center">图4</p>
