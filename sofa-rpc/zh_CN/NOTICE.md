@@ -13,7 +13,7 @@ SOFARPC 使用了一些三方开源组件，他们分别是：
 
 一些扩展依赖：
 - [protobuf](https://github.com/google/protobuf) under `New BSD License`
-- [Snappy](https://github.com/google/snappy) under `New BSD License`
+- [Snappy](https://github.com/dain/snappy) under `Apache License 2.0`
 - [dubbo](https://github.com/alibaba/dubbo) under `Apache License 2.0`
 
 ... 其它整理中。
