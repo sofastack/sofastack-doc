@@ -232,7 +232,7 @@ public class SpringListExtensionDescriptor {
 
 ## 通过客户端方式定义扩展点和扩展
 
-除了通过上述 xml 的方式配置定义扩展点和扩展以外，SOFABoot 中还提供了 `com.alipay.sofa.runtime.api.client.ExtensionClient` 的方式来定义扩展点和扩展，
+除了通过上述 xml 的方式配置定义扩展点和扩展以外，SOFABoot 中还提供了 `com.alipay.sofa.runtime.api.client.ExtensionClient` 的方式来定义扩展点和扩展
 
 ### 获取 `ExtensionClient`
 
