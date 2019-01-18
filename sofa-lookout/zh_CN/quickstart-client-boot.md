@@ -4,7 +4,7 @@
 
 ## 新建 SpringBoot（或 SofaBoot ）项目
 
-新建一个 Spring Boot 的应用（如果是 SOFABoot 工程按照 [SOFABoot 文档--依赖管理](http://www.sofastack.tech/sofa-boot/docs/DependencyManagement)中的方式引入 SOFABoot 即可）。
+新建一个 Spring Boot 的应用（如果是 SOFABoot 工程按照 [SOFABoot 文档--依赖管理](https://www.sofastack.tech/sofa-boot/docs/DependencyManagement)中的方式引入 SOFABoot 即可）。
 
 ## 引入 Lookout 的 Starter 依赖
 

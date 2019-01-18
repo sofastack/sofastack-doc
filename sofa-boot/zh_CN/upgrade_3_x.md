@@ -14,7 +14,7 @@ SOFABoot 3.0 版本升级 Spring Boot 版本至 2.0。鉴于Spring Boot 社区�
 ## WebFlux 框架兼容
 Spring Boot 2.x 引入了 WebFlux 框架，SOFABoot 3.x 主要在两个方面兼容了 WebFlux 框架；
 + 健康检查兼容了 ReactiveHealthIndicator 扩展接口，业务对这个接口的扩展实现将会纳入到 Readiness Check；
-+ 兼容对 WebFlux 网络请求进行埋点，埋点日志格式和文件保持对普通 MVC 请求兼容，详细参考[MVC 埋点请求](http://www.sofastack.tech/sofa-tracer/docs/Usage_Of_MVC)
++ 兼容对 WebFlux 网络请求进行埋点，埋点日志格式和文件保持对普通 MVC 请求兼容，详细参考[MVC 埋点请求](https://www.sofastack.tech/sofa-tracer/docs/Usage_Of_MVC)
 
 ## JDK 版本支持
 SOFABoot 3.x 最低要求运行在 JDK 8 及其以上版本，不支持 JDK 6，7。
