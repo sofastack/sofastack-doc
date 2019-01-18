@@ -11,7 +11,7 @@
 
 ## 参数化
 
-在结果期望和数据期望里面可以使用 `$变量名` 来标识某个值是变量，测试脚本中可以把值设置进去；
+在结果期望和数据库期望中可以使用 `$变量名` 来标识某个值是变量，测试脚本中可以把值设置进去；
 支持范围：入参、返回结果、数据库表字段，支持类型：目前仅支持 String 的参数化。
 
 使用方法：
@@ -67,7 +67,7 @@ public void beforeActsTest(ActsRuntimeContext actsRuntimeContext) {
 
 上面操作说明：
 
-(1）`=param2` 和 `$param2` 的操作，表示框架会先从 A 表查出 value_A 然后 select from B where id_B = value_A，进而得到全部 B 表的属性值；
+(1）`=param2` 和 `$param2` 的操作，表示框架会先从 A 表查出 value_A 然后 `select from B where id_B = value_A`，进而得到全部 B 表的属性值；
 
 (2）`$param1` 表示可以在代码中对 id_A 赋值，代码形如：
 
@@ -122,7 +122,7 @@ __使用前配置__
 ```plain
 datasource_bean_name_exampleDataSource=com.alipay.example.dal;exampleDataSource
 
-整体配置的格式为：datasource_bean_name_XXXX(数据源名字)=XXX(数据源所在的bundle);XXXX(数据源名字)
+#整体配置的格式为：datasource_bean_name_xxx(数据源名字)=yyy(数据源所在 Module);xxx(数据源名字)
 ```
 
 __指定数据源方法__
@@ -134,7 +134,7 @@ public static int getUpdateResultMap(String sql,String tableName,String dbConfig
 ```
 
 该方法用于指定数据源进行表的增、删和改的操作。sql 为标准 sql 语句，tableName 为逻辑表名，dbConfigKey 为该
-表所在的逻辑数据源配置，与 `acts-config.properties` 配置的XXXX(数据源名字)相同。
+表所在的逻辑数据源配置，与 `acts-config.properties` 配置的 xxx（数据源名字）相同。
 
 ```java
 public static List<Map<String, Object>> getQueryResultMap(String sql, String tableName,String dbConfigKey);
@@ -150,11 +150,11 @@ public static List<Map<String, Object>> getQueryResultMap(String sql, String tab
 __使用前配置__
 ```plain
 datasource_bundle_name=com.alipay.example.common.dal
-ds_exampleDataSource= table1,tabal2
+ds_exampleDataSource=table1,tabal2
 
-整体配置的格式为
-datasource_bundle_name=数据源所在模块名
-ds_数据源名字=该数据源下的逻辑表名
+#整体配置的格式为
+#datasource_bundle_name=数据源所在模块名
+#ds_数据源名字=该数据源下的逻辑表名
 ```
 
 __不指定数据源方法__
@@ -206,4 +206,4 @@ public void afterCheck(ActsRuntimeContext actsRuntimeContext) {
 
 ```
 
-使用中只需要在想要执行的方法上打上如上标签即可，被注解方法的参数需要符合上述示例中的参数，框架会自动传递 ActsRuntimeContext 供被注解方法使用。
+使用中只需在想要执行的方法上打上如上注解即可，被注解方法的参数需要符合上述示例中的参数，框架会自动传递 ActsRuntimeContext 供被注解方法使用。

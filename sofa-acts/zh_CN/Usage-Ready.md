@@ -9,7 +9,7 @@
 ![us_1](./resources/us_1.png)
 <p align="center">图1</p>
 
-Idea workspace 的编码
+IDEA workspace 的编码：
 
 ![us_2](./resources/us_2.png)
 <p align="center">图2</p>
@@ -22,8 +22,11 @@ ACTS 配置数据源的目的，是为了在数据准备、数据清理、数据
 在 `src/test/resource/config/acts-config.properties` 中配置 dal 层的 ModuleName、数据源以及表的对应关系，以 ds_ 开头，如下：
 ```plain
 datasource_bundle_name =com.alipay.testapp.common.dal
-ds_数据源bean1=逻辑表名1,逻辑表名2
-ds_数据源bean2=逻辑表名3,逻辑表名4
+ds_bean1=table1,table2
+ds_bean2=table3,table4
+
+#配置格式
+#ds_数据源bean=逻辑表名1,逻辑表名2
 ```
 其中数据源 bean1、数据源 bean2 是应用代码中 dal 层的数据源 bean 的名称，支持多个数据源。表名支持正则表达式，无需带分库分表后缀，若有多个数据源时请注意，某张表只能属于一个数据源，如下图：
 

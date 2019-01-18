@@ -2,7 +2,7 @@
 
 ## 打开 ACTS IDE
 
-在 package 视图下，右键含 @Test 注解的函数名，ACTS 功能->修改测试用例，如下图：
+在 Package 视图下，右键含 @Test 注解的函数名，ACTS 功能 -> 修改测试用例，如下图：
 
 ![us_24](./resources/us_24.png)
 <p align="center">图24</p>
@@ -24,17 +24,15 @@
 
 ### 复杂入参
 
-首先生成用例所需的类模板，截图示例中数据模板是 AccountTransRequest 和 BusinessActionContext，具体操作参考[对象模型生成](./Usage-Model.md#对象模型生成)部分。
+如图27所示，AccountTransRequest 和 BusinessActionContext 类需要生成入参模板，一般情况下，在一键生成测试脚本时会自动生成方法的入参和返回结果的类模板，打开 ACTS IDE 可对其进行编辑，如图28。
 
 ![us_27](./resources/us_27.png)
 <p align="center">图27</p>
 
-事先生成复杂入参的模版，然后打开 ACTS IDE 编辑器，在入参设置上右键 -> 模版选择 -> 复杂入参选择，添加后可以看到复杂对象，直接进行编辑。
-
 ![us_28](./resources/us_28.png)
 <p align="center">图28</p>
 
-如果生成用例时没有识别出入参和结果，参考[对象模型生成](./Usage-Model.md#对象模型生成)先行生成入参模型，再在 ACTS IDE 中自行选择模版添加：入参设置上右键 -> 模版选择 -> 复杂类型选择。
+如果生成测试脚本时没有识别出方法的入参和返回结果模版，可先生成复杂入参和结果模版（具体操作参考[对象模型生成](./Usage-Model#对象模型生成)），然后打开 ACTS IDE 编辑器，在入参设置上右键 -> 模版选择 -> 复杂类型，添加后可以看到复杂对象，直接进行编辑。
 
 ![us_29](./resources/us_29.png)
 <p align="center">图29</p>
@@ -66,10 +64,12 @@
 ![us_35](./resources/us_35.png)
 <p align="center">图35</p>
 
-1.如果枚举嵌套在其他类中，则在该类的 CSV 模版中设置枚举的值为 DEBIT；
-2.ACTS IDE 编辑器中，编辑如下：
+1.在 ACTS IDE 中编辑如下：
+
 ![us_36](./resources/us_36.png)
 <p align="center">图36</p>
+
+2.如果枚举嵌套在其他类中，则在该类的 CSV 模版中设置枚举的值为 DEBIT；
 
 3.用例数据 YAML 中，如图37：
 ```yaml
@@ -82,9 +82,9 @@ interestRecoverTypeEnum: !!com.alipay.fc.loancore.common.util.enums.InterestReco
 ### 编码方式准备入参
 覆盖 prepare 方法，通过 ActsRuntimeContext 的方法，快速获取和设置用例入参，如图38所示：
 
-1. 获取所有入参：List getInputParams()
-2. 按位置获取：Object getInputParamByPos(int i)
-3. 新增用例参数：void addInputParam(Object obj)
+1. 获取所有入参：`List getInputParams()`
+2. 按位置获取：`Object getInputParamByPos(int i)`
+3. 新增用例参数：`void addInputParam(Object obj)`
 
 
 ![us_38](./resources/us_38.png)
@@ -95,8 +95,7 @@ interestRecoverTypeEnum: !!com.alipay.fc.loancore.common.util.enums.InterestReco
 ## 准备 DB 数据
 
 ### 准备 DB 数据-单列场景
-如图39，在数据库准备设置位置右键，选择好要插入的 DB 模板（请先确保该DB模板已经生成），图中1、2、3步骤之后点击 OK 即插入 DB 准备模板，如图41 可对要插入 DB 的数据进行编辑：
-
+如图39，在数据库准备设置位置右键，选择好要插入的 DB 模板（请先确保该DB模板已经生成），图中1、2、3步骤之后点击 OK 即插入 DB 准备模板，如图41，可对要插入 DB 的数据进行编辑：
 
 ![us_39](./resources/us_39.png)
 <p align="center">图39</p>
@@ -142,15 +141,15 @@ ME：map 默认全 key 校验，ME则以期望 key 为准，实际值多余期�
 ```
 
 对于返回结果的时间 Date 类型字段校验说明：
-1. Y | null -> 代表期望为null
-2. Y | 2015-01-01 00:00:00 -> 代表期望为2015-01-01 00:00:00
+1. Y | null -> 代表期望为 null
+2. Y | 2015-01-01 00:00:00 -> 代表期望为 2015-01-01 00:00:00
 3. N | null -> 代表不校验
-4. D200 | 2015-01-01 00:00:00/null -> 代表与 2015-01-01 00:00:00/new Date()相差 200 秒
+4. D200 | 2015-01-01 00:00:00/null -> 代表与 2015-01-01 00:00:00/new Date() 相差 200 秒
 
 ### 编码方式准备期望结果
 覆盖 prepare 方法，通过 ActsRuntimeContext 的如下方法，快速获取和设置期望结果。
-1. 获取期望结果：Object getExpectResult() 
-2. 设置期望结果：Boolean setExpectResult(Object objToSet) 
+1. 获取期望结果：`Object getExpectResult()`
+2. 设置期望结果：`Boolean setExpectResult(Object objToSet)`
 
 ## 准备期望 DB 数据
 ### 准备期望 DB 数据-单列场景
@@ -163,8 +162,8 @@ ME：map 默认全 key 校验，ME则以期望 key 为准，实际值多余期�
 ```plain
 Y: 校验
 N：不校验
-C：以此为条件 select 然后比较，如果结果有多个，则返回的结果所有记录都要和当前需要校验的数据进行校验。
-CN： 这个 flag 表名当前这张表中以 C 和 CN 为条件查询出的结果为空
+C：以此为条件 select 然后比较，如果结果有多个，则返回的结果所有记录都要和当前需要校验的数据进行校验
+CN： 这个 flag 表示当前这张表中以 C 和 CN 为条件查询出的结果为空
 D200：表示对比时间的时候误差 200s 之内都算通过，日期类型的格式为：today
 L： 数据库大字段换行数据校验，准备方式为 A=B;C=D
 P：DB 大字段校验，以期望结果的 kv 为基准，对 DB 大字段里的 kv 进行校验，要求 DB 里的 kv 之间是换行分隔
@@ -186,11 +185,11 @@ R：正则匹配校验
 ### 编码方式准备自定义数据
 快速获取和设置自定义参数：
 
-1. 获取全部自定义参数：getParamMap getParamMap() 
-2. 按 key 获取：Object getParamByName(String paraName) 
-3. 新增自定义参数：void addOneParam(String paraName, Object paraObj)
-4. 替换自定义参数：void setParamMap(Map<String, Object> paramMap) 
-5. 以范型方式获取自定义参数：T getParamByNameWithGeneric(String paraName)
+1. 获取全部自定义参数：`getParamMap getParamMap()`
+2. 按 key 获取：`Object getParamByName(String paraName)`
+3. 新增自定义参数：`void addOneParam(String paraName, Object paraObj)`
+4. 替换自定义参数：`void setParamMap(Map<String, Object> paramMap)`
+5. 以范型方式获取自定义参数：`T getParamByNameWithGeneric(String paraName)`
 
 
 ## 不同数据类型编辑方式

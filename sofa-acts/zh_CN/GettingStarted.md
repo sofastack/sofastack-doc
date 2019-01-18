@@ -2,14 +2,16 @@
 
 本文档共分为四部分：
 
-第一部分：指引你如何在 Intellij IDEA 上安装 ACTS IDE 可视化编辑器；<br/>
-第二部分：向你介绍如何在多模块工程中引入 ACTS 依赖；<br/>
-第三部分：测试模块下一键搭建 ACTS 框架管理后续 ACTS 用例；<br/>
+第一部分：在 Intellij IDEA 上安装 ACTS IDE 可视化编辑器；<br/>
+第二部分：向您介绍如何在多模块工程中引入 ACTS 依赖；<br/>
+第三部分：测试模块下一键搭建 ACTS 框架以管理后续 ACTS 用例；<br/>
 第四部分：一键生成 ACTS 测试脚本；
 
 ## 1.安装 ACTS IDE
 
-__推荐使用 Intellij IDEA 2017，为了您的安全，请仅从该下载源获取 ACTS IDE 安装包：__[点击下载 ACTS IDE](https://gw.alipayobjects.com/os/basement_prod/c09f3a6a-b49a-4ab9-a56e-4994e033ae7b.zip)，本地磁盘安装：Preference -> Plugins -> Install plugin from disk -> Restart Idea 即可。
+__推荐使用 Intellij IDEA 2017，为了您的安全，请仅从该下载源获取 ACTS IDE 安装包：__
+[点击下载 ACTS IDE](https://gw.alipayobjects.com/os/basement_prod/c09f3a6a-b49a-4ab9-a56e-4994e033ae7b.zip)，
+本地磁盘安装：Preference -> Plugins -> Install plugin from disk -> Restart IDEA 即可。
 
 ![qk_1.png](./resources/qk_1.png)
 <p align="center">图1.1</p>
@@ -123,7 +125,7 @@ __推荐使用 Intellij IDEA 2017，为了您的安全，请仅从该下载源�
 
 ## 3.一键初始化 ACTS 测试框架
 下面只需要你轻轻动动手指即可完成初始化工作。在图3.2中，你需要正确填写应用名称并选择适合应用的编码格式。
-有关一键初始化生成的文件有何作用，可以参考 ACTS 使用手册的[框架准备](./Usage-Ready.md#一键配置的说明)部分。
+有关一键初始化生成的文件有何作用，可以参考 ACTS 使用手册的[框架准备](./Usage-Ready#一键配置的说明)部分。
 
 ![qk_12.png](./resources/qk_12.png)
 <p align="center">图3.1</p>
@@ -143,7 +145,7 @@ __推荐使用 Intellij IDEA 2017，为了您的安全，请仅从该下载源�
 
 前提条件：__务必 mvn 编译工程和生成对象模型，否则会造成 ACTS IDE 不可预料的错误，如无法编辑、数据不正确等。__
 
-接口定义的方法上点击，选择 ACTS 功能 -> 生成测试用例。
+接口定义的方法上点击，选择 ACTS 功能 -> 生成测试用例，并在刚生成的测试脚本中矫正 SOFABoot 启动类的 import 位置。
 
 ![qk_15.png](./resources/qk_15.png)
 <p align="center">图4.2</p>

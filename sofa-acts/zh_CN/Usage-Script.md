@@ -73,25 +73,27 @@
 ACTS 提供了数据自定义 API 接口，封装于 ActsRuntimeContext 类中，如下：
 + 快速获取和设置自定义参数
     
-    获取全部自定义参数：getParamMap getParamMap() <br/>
-    按 key 获取：Object getParamByName(String paraName) <br/>
-    新增自定义参数：void addOneParam(String paraName, Object paraObj) <br/>
-    替换自定义参数：void setParamMap(Map<String, Object> paramMap) <br/>
-    泛型方式获取自定义参数：T getParamByNameWithGeneric(String paraName)
+    获取全部自定义参数：`getParamMap getParamMap()` <br/>
+    按 key 获取：`Object getParamByName(String paraName)` <br/>
+    新增自定义参数：`void addOneParam(String paraName, Object paraObj)` <br/>
+    替换自定义参数：`void setParamMap(Map<String, Object> paramMap)` <br/>
+    泛型方式获取自定义参数：`T getParamByNameWithGeneric(String paraName)`
 
 + 快速获取和设置用例入参
 
-    获取所有入参：List getInputParams() <br/>
-    按位置获取：Object getInputParamByPos(int i) <br/>
-    新增用例参数：void addInputParam(Object obj) 
+    获取所有入参：`List getInputParams()` <br/>
+    按位置获取：`Object getInputParamByPos(int i)` <br/>
+    新增用例参数：`void addInputParam(Object obj)` 
 
 + 快速获取和设置期望结果
 
-    获取期望结果：Object getExpectResult() <br/>
-    设置期望结果：Boolean setExpectResult(Object objToSet)
+    获取期望结果：`Object getExpectResult()` <br/>
+    设置期望结果：`Boolean setExpectResult(Object objToSet)`
 
 ## Mock 功能使用
-mock 功能目前是采用 Mockito 的方案，如下配置使用；具体资料见 [Mockito英文文档](https://static.javadoc.io/org.mockito/mockito-core/2.18.3/org/mockito/Mockito.html)和[Mockito中文文档](https://github.com/hehonghui/mockito-doc-zh)
+Mock 功能目前是采用 Mockito 的方案，如下配置使用；具体资料见 
+[Mockito英文文档](https://static.javadoc.io/org.mockito/mockito-core/2.18.3/org/mockito/Mockito.html)和
+[Mockito中文文档](https://github.com/hehonghui/mockito-doc-zh)
 ### 增加依赖
 ```xml
 <dependency>
