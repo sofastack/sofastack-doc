@@ -225,7 +225,7 @@ R：正则匹配校验
 <p align="center">图51</p>
 
 ### list 编辑
-以自定义参数设置添加 List<String> 为例，模板选择 list 模板：
+以自定义参数设置添加 `List<String>` 为例，模板选择 list 模板：
 
 ![us_52](./resources/us_52.png)
 <p align="center">图52</p>

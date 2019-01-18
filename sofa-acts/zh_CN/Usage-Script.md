@@ -91,10 +91,11 @@ ACTS 提供了数据自定义 API 接口，封装于 ActsRuntimeContext 类中�
     设置期望结果：`Boolean setExpectResult(Object objToSet)`
 
 ## Mock 功能使用
-Mock 功能目前是采用 Mockito 的方案，如下配置使用；具体资料见 
+Mock 功能目前是采用 Mockito 的方案，具体资料见 
 [Mockito英文文档](https://static.javadoc.io/org.mockito/mockito-core/2.18.3/org/mockito/Mockito.html)和
 [Mockito中文文档](https://github.com/hehonghui/mockito-doc-zh)
 ### 增加依赖
+在 test 模块增加如下依赖（如果已经引入 SOFABoot 的测试 starter 则无需重复引入）
 ```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -111,7 +112,7 @@ Mock 功能目前是采用 Mockito 的方案，如下配置使用；具体资料
 </dependency>
 ```
 
-__Mockito__ 用于测试时进行打桩处理，通过它可以指定某个类的某个方法在什么情况下返回什么样的值。Mockito 库能够 Mock 对象、验证结果以及打桩，demo 如下：
+__Mockito__ 用于测试时进行打桩处理，通过它可以指定某个类的某个方法在什么情况下返回什么样的值。Mockito 库能够 Mock 对象、验证结果以及打桩，示例如下：
 
 ```java
 @SpringBootTest(classes = SOFABootApplication.class)
