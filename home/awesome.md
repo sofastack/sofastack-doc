@@ -33,7 +33,7 @@
 
 ## 资源
 
-- [开源官网](http://www.sofastack.tech)
+- [开源官网](https://www.sofastack.tech)
 - [Github源码](https://github.com/alipay?q=sofa)
 - [蚂蚁金融科技](https://tech.antfin.com/sofa)
 
@@ -61,7 +61,7 @@
 
 ## 文章
 
-- [SOFAStack 官网文章](http://www.sofastack.tech/posts)
+- [SOFAStack 官网文章](https://www.sofastack.tech/posts)
 - [SOFAStack 知乎专栏](https://zhuanlan.zhihu.com/sofastack)
 - [SOFA 公开文章](https://www.yuque.com/huarou/gd4szw)
 
@@ -101,15 +101,16 @@
 | @315157973 | @boliza | @caojie09 | @chenhui0212 | @choleraehyq |
 | @cp3fantasy | @cytnju | @dawxy | @dbl-x | @detailyang |
 | @easonzhang1992 | @eonezhang | @fleeto | @FzNl | @glmapper |
-| @guanchao-yang | @gxcsoccer | @huangyunbin | @JamazRuan | @jaredleechn |
-| @JarVZhao | @JervyShi | @jjtyro | @JoeKerouac | @junxiong |
-| @kelvinji2009 | @kevin21th | @khotyn | @killagu | @kiral |
-| @kswapd | @lazyrabbit2004 | @ldxdl | @leizhiyuan | @leoner |
-| @leyou240 | @liangyuanpeng | @lichuang | @Lingtaonju | @liymg |
-| @lonnng | @lookuptable | @luyiisme | @meua | @michalyao |
-| @moeyui1 | @Moriadry | @NeGnail | @nejisama | @neverhook |
-| @popomore | @pxzero | @QilongZhang | @quaff | @rootsongjc |
-| @ScienJus | @shaoshuai0102 | @silentred | @skyao | @stdupp |
+| @guanchao-yang | @gxcsoccer | @hqq2023623 | @huangyunbin | @JamazRuan |
+| @jaredleechn | @JarVZhao | @JervyShi | @jewin | @jiangyunpeng |
+| @jjtyro | @JoeKerouac | @junxiong | @kelvinji2009 | @kevin21th |
+| @khotyn | @killagu | @kiral | @kswapd | @lazyrabbit2004 |
+| @ldxdl | @leizhiyuan | @leoner | @leyou240 | @liangyuanpeng |
+| @lichuang | @Lingtaonju | @liymg | @lonng | @lookuptable |
+| @luyiisme | @meua | @michalyao | @moeyui1 | @Moriadry |
+| @NeGnail | @nejisama | @neverhook | @OrezzerO | @popomore |
+| @pxzero | @QilongZhang | @quaff | @rootsongjc | @ScienJus |
+| @sevennt | @shaoshuai0102 | @silentred | @skyao | @stdupp |
 | @SteNicholas | @straybirdzls | @taoyuanyuan | @tinycedar | @tonyhawkwen |
 | @TreeLin | @ujjboy | @wanderxjtu | @XadillaX | @xiaoguoqiang |
 | @xmtsui | @xzchaoo | @yangl | @zhaojigang | @zhenhua |
