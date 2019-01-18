@@ -62,7 +62,6 @@ public class ExtensionImpl implements IExtension {
 </bean>
 ```
 
-
 ### 定义扩展点
 
 在上面的 bean 中有一个字段 word ，在实际中，我们希望这个字段能够被其他的模块自定义进行覆盖，这里我们将其以扩展点的形式暴露出来。
@@ -128,7 +127,6 @@ public class ExtensionDescriptor {
 - 通过 `XNodeMap` 扩展出了 `XNodeMapSpring`
 
 这部分的扩展能力，让扩展点的能力更加丰富，描述对象中可以直接指向一个 SpringBean(用户配置 bean 的名字，SOFABoot 会根据名字从 spring 上下文中获取到 bean)，这里举一个使用 `XNodeListSpring` 的例子，依然是上述描述的三个步骤：
-
 
 ### 定义提供扩展能力的 bean
 
