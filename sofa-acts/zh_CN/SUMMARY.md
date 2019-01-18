@@ -1,7 +1,13 @@
 * [产品介绍](./Home)
 * [快速开始](./GettingStarted)
 * [实践视频](https://antloop.github.io/)
-* [用户手册](./UserGuide)
+* 用户手册
+    * [框架准备](./Usage-Ready)
+    * 功能特性
+        * [一键模型化](./Usage-Model)
+        * [一键脚本化](./Usage-Script)
+        * [一站式编辑](./Usage-IDE)
+    * [扩展功能](./Usage-API)
 * [开发者手册](./DeveloperGuide)
 * [参与贡献](./Contributing)
 * [常见问题](./FAQ)
