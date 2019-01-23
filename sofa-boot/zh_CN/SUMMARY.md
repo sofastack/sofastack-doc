@@ -9,7 +9,8 @@
   - [模块配置](./SOFABoot-Module)
   - [JVM服务发布与引用](./Module-Service)
   - [模块并行化启动](./parallel-start)
-  - [SOFABoot Profile](./SOFABoot-Profile)
+  - [SOFABoot Profile](./SOFABoot-Profile)  
+  - [SOFABoot 扩展点](./extension)
 - 类隔离
   - [简介](./sofa-ark/readme)
   - 快速开始
@@ -53,3 +54,4 @@
   - [SOFABoot 3.0 升级注意文档](upgrade_3_x)
 - [发布历史](https://github.com/alipay/sofa-boot/releases)
 - [FAQ](./FAQ)
+- [版权说明](./NOTICE)
