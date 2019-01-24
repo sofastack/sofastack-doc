@@ -61,12 +61,14 @@
 ### 2.4.0
 
 * SOFATracer 支持 Dubbo
-* SOFATracer 支持 Opentracing 0.30.0+ 版本
-* SOFATracer 支持 基于 Opentracing API 埋点方式
-* SOFATracer 支持 manual report
+* SOFATracer 支持 Kafka
+* SOFATracer 性能优化专题
 
 ### 2.5.0
 
 * SOFATracer 支持单机版链路分析并给用户通过注解使用的埋点方式，数据汇报到 Zipkin 展示
-* SOFATracer 性能优化专题
+* SOFATracer 支持 Opentracing 0.30.0+ 版本
+* SOFATracer 支持 基于 Opentracing API 埋点方式
+* SOFATracer 支持 manual report
+
 
