@@ -140,7 +140,7 @@ CloseableHttpAsyncClient asyncHttpclient = httpAsyncClientBuilder.setDefaultRequ
 
 可以将工程导入到 IDE 中运行工程里面中的 `main` 方法（本实例 main 方法在 HttpClientDemoApplication 中）启动应用，在控制台中看到启动打印的日志如下：
 
-```json
+```
 2018-09-27 20:31:21.465  INFO 33277 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
 2018-09-27 20:31:21.599  INFO 33277 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
 2018-09-27 20:31:21.608  INFO 33277 --- [           main] c.a.s.t.e.h.HttpClientDemoApplication    : Started HttpClientDemoApplication in 5.949 seconds (JVM running for 6.573)
@@ -148,7 +148,7 @@ CloseableHttpAsyncClient asyncHttpclient = httpAsyncClientBuilder.setDefaultRequ
 
 当有类似如下的日志时，说明 HttpClient 的调用成功：
 
-```json
+```
 2018-09-27 20:31:22.336  INFO 33277 --- [           main] c.a.s.t.e.h.HttpClientDemoApplication    : Response is {"count":1,"name":"httpclient"}
 2018-09-27 20:31:22.453  INFO 33277 --- [           main] c.a.s.t.e.h.HttpClientDemoApplication    : Async Response is {"count":2,"name":"httpclient"}
 ```
