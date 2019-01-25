@@ -1,6 +1,6 @@
 # 使用 SOFATracer 记录 HttpClient 链路调用数据
 
-本示例演示如何在集成了 SOFATracer 的应用，通过配置 HttpClient 的使用方式将链路数据记录在文件中。
+本示例演示如何在集成了 SOFATracer 的应用中，通过配置 HttpClient 的使用方式将链路数据记录在文件中。
 
 ## 环境准备
 
@@ -38,13 +38,13 @@
 <dependency>
     <groupId>com.alipay.sofa</groupId>
     <artifactId>tracer-sofa-boot-starter</artifactId>
-    <version>2.2.0</version>
+    <version>2.3.0</version>
 </dependency>
 ```
 
 最后，在工程的 `application.properties` 文件下添加一个 SOFATracer 要使用的参数，包括`spring.application.name` 用于标示当前应用的名称；`logging.path` 用于指定日志的输出目录。
 
-```
+```properties
 # Application Name
 spring.application.name=HttpClientDemo
 # logging path
@@ -61,12 +61,12 @@ logging.path=./logs
 <dependency>
     <groupId>com.alipay.sofa</groupId>
     <artifactId>tracer-sofa-boot-starter</artifactId>
-    <version>2.2.0</version>
+    <version>2.3.0</version>
 </dependency>
 <dependency>
     <groupId>com.alipay.sofa</groupId>
     <artifactId>sofa-tracer-httpclient-plugin</artifactId>
-    <version>2.2.0</version>
+    <version>2.3.0</version>
 </dependency>
 <!-- HttpClient Dependency -->
 <dependency>
@@ -171,13 +171,13 @@ CloseableHttpAsyncClient asyncHttpclient = httpAsyncClientBuilder.setDefaultRequ
 
 ```
 
-示例中通过构造两个 HttpClient（一个同步一个异步） 发起对同一个 RESTful 服务的调用，调用完成后可以在 httpclient-digest.log 中看到类似如下的日志，而对于每一个输出字段的含义可以看 SOFATracer 的说明文档：
+示例中通过构造两个 HttpClient（一个同步一个异步） 发起对同一个 RESTful 服务的调用，调用完成后可以在 httpclient-digest.log 中看到类似如下的日志，而对于每一个输出字段的含义可以参考 [HttpClient 日志](https://www.sofastack.tech/sofa-tracer/docs/HttpClient)：
 
-```
+```json
 {"time":"2018-09-27 20:31:22.328","local.app":"HttpClientDemo","traceId":"0a0fe8801538051482054100133277","spanId":"0","request.url":"http://localhost:8080/httpclient","method":"GET","result.code":"200","req.size.bytes":0,"resp.size.bytes":-1,"time.cost.milliseconds":274,"current.thread.name":"main","remote.app":"","baggage":""}
 {"time":"2018-09-27 20:31:22.443","local.app":"HttpClientDemo","traceId":"0a0fe8801538051482410100233277","spanId":"0","request.url":"http://localhost:8080/httpclient","method":"GET","result.code":"200","req.size.bytes":0,"resp.size.bytes":-1,"time.cost.milliseconds":33,"current.thread.name":"I/O dispatcher 1","remote.app":"","baggage":""}
 ```
 
-附此示例工程的[源代码地址](https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-httpclient)。
+附此示例工程的 [源代码地址](https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-httpclient)。
 
 
