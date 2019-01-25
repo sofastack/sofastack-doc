@@ -8,7 +8,7 @@
 
 ## 创建工程
 
-SOFABoot 是直接构建在 Spring Boot 之上的，因此可以使用 [Spring Boot 的工程生成工具](http://start.spring.io/) 来生成；在本文档中，我们需要添加一个 Web 的依赖同时编写一个简单的 REST 服务，以便最后在浏览器中查看效果。
+SOFABoot 是直接构建在 Spring Boot 之上的，因此可以使用 [Spring Boot 的工程生成工具](http://start.spring.io/) 来生成 SOFABoot 工程；在本文档中，我们需要添加一个 Web 的依赖同时编写一个简单的 REST 服务，以便最后在浏览器中查看效果。
 
 ## 引入 SOFABoot 
 
