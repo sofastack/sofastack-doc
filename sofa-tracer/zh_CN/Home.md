@@ -18,7 +18,7 @@ SOFATracer 日志支持自清除和滚动能力，支持按照按照天清除和
 
 ### 2.4 基于 SLF4J MDC 的扩展能力
 
-SLF4J 提供了 MDC（Mapped Diagnostic Contexts）功能，可以支持用户定义和修改日志的输出格式以及内容。SOFATracer 集成了 SLF4J MDC 功能，方便用户在只简单修改日志配置文件的条件下，即可输出当前 Tracer 上下文的 `TraceId` 和 `SpanId`。
+SLF4J 提供了 MDC（Mapped Diagnostic Contexts）功能，可以支持用户定义和修改日志的输出格式以及内容。SOFATracer 集成了 SLF4J MDC 功能，用户只需要简单修改日志配置文件，即可输出当前 Tracer 上下文的 `TraceId` 和 `SpanId`。
 
 ### 2.5 界面展示能力
 
