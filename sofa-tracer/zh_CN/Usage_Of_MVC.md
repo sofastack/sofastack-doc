@@ -116,7 +116,7 @@ public class SampleRestController {
 
 ```
 
-通过访问 [http://localhost:8080/springmvc](http://localhost:8080/springmvc) SOFATracer 会记录每一次访问的摘要日志，可以打开 `spring-mvc-digest.log` 看到具体的输出内容，而对于每一个输出字段的含义[可以参考这里]()。
+通过访问 [http://localhost:8080/springmvc](http://localhost:8080/springmvc) SOFATracer 会记录每一次访问的摘要日志，可以打开 `spring-mvc-digest.log` 看到具体的输出内容，而对于每一个输出字段的含义[可以参考这里](https://www.sofastack.tech/sofa-tracer/docs/SpringMVC)。
 
 ```json
 {"time":"2018-05-17 22:20:34.279","local.app":"SOFATracerSpringMVC","traceId":"0a0fe9391526566833985100139443","spanId":"0","request.url":"http://localhost:8080/springmvc","method":"GET","result.code":"200","req.size.bytes":-1,"resp.size.bytes":69,"time.cost.milliseconds":284,"current.thread.name":"http-nio-8080-exec-1","baggage":""}
