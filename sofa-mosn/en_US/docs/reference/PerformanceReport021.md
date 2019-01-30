@@ -1,167 +1,168 @@
-# 性能报告说明
+# Instructions on performance report 
 
-以下性能报告的基准版本为 SOFAMosn 0.2.1。在 0.2.1 版本中，我们进行了如下一些优化手段：
-- 添加内存复用框架，涵盖 io/protocol/stream/proxy 层级，减少对象分配、内存使用和GC压力
-- 针对大量链接场景，新增 Raw Epoll 模式，该模式使用了事件回调机制+IO协程池，规避了海量协程带来的堆栈内存消耗以及调度开销
+The baseline version of the following performance report is SOFAMosn 0.2.1. In version 0.2.1, we have made the following optimizations:
 
-需要注意的是，由于目前sofarpc和h2的压测工具还没有pxx指标的展示，我们在性能报告中选取的数据都为**均值**。后续需要我们自行进行相关压测环境工具的建设来完善相关指标(P99,P95...)
+- Added memory reuse framework that covers the io/protocol/stream/proxy layers, thus reducing object allocation, memory usage, and GC stress.
+- For the scenario where there are a large number of connections, added the Raw Epoll mode. This mode uses the event callback mechanism + IO goroutine pool to avoid stack memory consumption and scheduling overhead caused by massive goroutines.
+
+Note that, since the pressure test tools for SOFARPC and h2 have no pxx indicators presented, the data selected in the performance report is **average**. In the future, we will improve the relevant pressure test environment tools to supplement relevant indicators (P99,P95...).
 
 ---
 
-# 总览
+# Overview
 
-本次性能报告在`0.1.0性能报告`的基础上，新增了若干场景的覆盖，总体包含以下几部分:
-- 单核性能(sidecar场景)
-  - 7层代理
-    - Bolt(串联)
-    - Http/1.1(串联)
-    - Http/2(串联)
-- 多核性能(gateway场景)
-  - 7层代理
-    - Bolt(直连)
-    - Http/1.1(直连)
-    - Http/2(直连)
-- 长连接网关
-    - Bolt(read/write loop with goroutine / raw epoll)
+This performance report added several scenarios based on v0.1.0 performance report. The report mainly contains the following 3 parts:
+- Single-core performance (Sidecar)
+   - Layer-7 proxy
+     - Bolt (connected)
+     - Http/1.1 (connected)
+     - Http/2 (connected)
+- Multi-core performance (gateway)
+   - Layer-7 proxy
+     - Bolt (direct connected)
+     - Http/1.1 (direct connected)
+     - Http/2 (direct connected)
+- Persistent connection gateway
+     - Bolt (read/write loop with goroutine/Raw Epoll)
 
-# 单核性能(sidecar场景)
+# Single-core performance (SideCar)
 
-## 测试环境
+## Test environment
 
-### 机器信息
+### Machine information
 
-| 机器 | OS | CPU |
+| Machine | OS | CPU |
 | -------- | -------- | -------- |
 | 11.166.190.224 | 3.10.0-327.ali2010.rc7.alios7.x86_64 | Intel(R) Xeon(R) CPU E5-2640 v3 @ 2.60GHz |
 | 11.166.136.110 | 3.10.0-327.ali2010.rc7.alios7.x86_64 | Intel(R) Xeon(R) CPU E5-2430 0 @ 2.20GHz |
-| bolt client |  client为压力平台，有5台压力机，共计与client mosn之间会建立500条链接  |
+| bolt client |  The client serves as the load platform which consists of 5 load generators. It is estimated that there may be 500 connections between the client and client MOSN.|
 | http1 client(10.210.168.5) | ApacheBench/2.3  | -n 2000000 -c 500 -k |
 | http2 client(10.210.168.5) | nghttp.h2load  | -n1000000 -c5 -m100 -t4 |
 
-### 部署结构
+### Deployment structure
 
-| 压测模式 | 部署结构 |
+| Test mode | Deployment structure |
 | -------- | -------- |
-| 串联     | client --> mosn(11.166.190.224) --> mosn(11.166.136.110) --> server(11.166.136.110)  |
+| Connected     | client --> mosn(11.166.190.224) --> mosn(11.166.136.110) --> server(11.166.136.110)  |
 
-### 网络时延
+### Network delay
 
-| 节点 | PING |
+| Node | PING |
 | -------- | -------- |
 | client --> mosn(11.166.190.224) | 1.356ms |
 | mosn(11.166.190.224) --> mosn(11.166.136.110) | 0.097 ms |
 
-### 请求模式
+### Request mode
 
-| 请求内容 |
+| Request content |
 | -------- |
 | 1K req/resp  |
 
-## 7层代理
+## Layer-7 proxy
 
-| 场景 | QPS | RT(ms) | MEM(K) | CPU(%) |
+| Scenario | QPS | RT (ms) | MEM (K) | CPU (%) |
 | -------- | -------- | -------- | -------- | -------- |
 | Bolt       | 16000     |15.8     | 77184     |98     |
 | Http/1.1   | 4610     |67    | 47336     |90     |
 | Http/2     | 5219     |81     | 31244     |74     |
 
 
-# 多核性能(gateway场景)
+# Multi-core performance (gateway)
+## Test environment
 
-## 测试环境
+### Machine information
 
-### 机器信息
-
-| 机器 | OS | CPU |
+| Machine | OS | CPU |
 | -------- | -------- | -------- |
 | 11.166.190.224 | 3.10.0-327.ali2010.rc7.alios7.x86_64 | Intel(R) Xeon(R) CPU E5-2640 v3 @ 2.60GHz |
 | 11.166.136.110 | 3.10.0-327.ali2010.rc7.alios7.x86_64 | Intel(R) Xeon(R) CPU E5-2430 0 @ 2.20GHz |
-| bolt client |  client为压力平台，有5台压力机，共计与client mosn之间会建立500条链接  |
+| bolt client |  The client serves as the load platform which consists of 5 load generators. It is estimated that there may be 500 connections between the client and client MOSN.  |
 | http1 client(10.210.168.5) | ApacheBench/2.3  | -n 2000000 -c 500 -k |
 | http2 client(10.210.168.5) | nghttp.h2load  | -n1000000 -c5 -m100 -t4 |
 
-### 部署结构
+### Deployment structure
 
-| 压测模式 | 部署结构 |
+| Test mode | Deployment structure |
 | -------- | -------- |
-| 直连     | client --> mosn(11.166.190.224) --> server(11.166.136.110)  |
+| Direct connected     | client --> mosn(11.166.190.224) --> server(11.166.136.110)  |
 
-### 网络时延
+### Network delay
 
-| 节点 | PING |
+| Node | PING |
 | -------- | -------- |
 | client --> mosn(11.166.190.224) | 1.356ms |
 | mosn(11.166.190.224) --> mosn(11.166.136.110) | 0.097 ms |
 
-### 请求模式
+### Request mode
 
-| 请求内容 |
+| Request content |
 | -------- |
 | 1K req/resp  |
 
-## 7层代理
+## Layer-7 proxy
 
-| 场景 | QPS | RT(ms) | MEM(K) | CPU(%) |
+| Scenario | QPS | RT(ms) | MEM(K) | CPU(%) |
 | -------- | -------- | -------- | -------- | -------- |
 | Bolt       | 45000     |23.4     | 544732     |380     |
 | Http/1.1   | 21584     |23     | 42768    |380     |
 | Http/2     | 8180     |51.7     | 173180     |300     |
 
-# 长连接网关
+# Persistent connection gateway
 
-## 测试环境
+## Test environment
 
-### 机器信息
+### Machine information
 
-| 机器 | OS | CPU |
+| Machine | OS | CPU |
 | -------- | -------- | -------- |
 | 11.166.190.224 | 3.10.0-327.ali2010.rc7.alios7.x86_64 | Intel(R) Xeon(R) CPU E5-2640 v3 @ 2.60GHz |
 | 11.166.136.110 | 3.10.0-327.ali2010.rc7.alios7.x86_64 | Intel(R) Xeon(R) CPU E5-2430 0 @ 2.20GHz |
 
-### 部署结构
+### Deployment structure
 
-| 压测模式 | 部署结构 |
+| Test mode | Deployment structure |
 | -------- | -------- |
-| 直连     | client --> mosn(11.166.190.224) --> server(11.166.136.110)  |
+| Direct connected     | client --> mosn(11.166.190.224) --> server(11.166.136.110)  |
 
-### 网络时延
+### Network delay
 
-| 节点 | PING |
+| Node | PING |
 | -------- | -------- |
 | client --> mosn(11.166.190.224) | 1.356ms |
 | mosn(11.166.190.224) --> mosn(11.166.136.110) | 0.097 ms |
 
-### 请求模式
+### Request mode
 
-| 链接数 | 请求内容 |
+| Connection counts|Request content |
 | -------- | -------- |
-| 2台压力机，每台5w链接+500QPS，共计10W链接+1000QPS | 1K req/resp  |
+| 2 load generators，50,000 connections + 500 QPS for each load generators，100,000 connections + 1000 QPS in total | 1K req/resp  |
 
-## 长连接网关
+## Persistent connection gateway
 
-| 场景 | QPS | MEM(g) | CPU(%) | goroutine |
+| Scenario | QPS | MEM (g) | CPU (%) | goroutine |
 | -------- | -------- | -------- | -------- | -------- |
 | RWLoop + goroutine | 1000    | 3.3     |60     | 200028 |
 | Raw epoll   | 1000     | 2.5   |  18  | 28 |
 
 
-# 总结
+#  Conclusion
 
-MOSN`0.2.1`引入了`内存复用框架`，相比`0.1.0`，在`bolt协议转发`场景性能表现得到了大幅优化。在提升了**20**%的QPS的同时，还优化了**30**%的内存占用。
+MOSN 0.2.1 has introduced the memory reuse framework. Compared with MOSN 0.1.0, MOSN 0.2.1 has great performance improvement in the scenario of bolt protocol forwarding, with QPS increased by **20%** and memory usage saved by **30%**.
 
-与此同时，我们对HTTP/1.1及HTTP/2的场景也进行了初步的性能测试，目前来看性能表现比较一般。这主要是由于目前HTTP协议族的IO、Stream都由三方库进行处理，与MOSN现有的处理框架整合度较差。我们会在后续迭代进行专项优化，提升MOSN处理HTTP协议族的表现。
+At the same time, we have also conducted preliminary performance tests respectively in the scenarios of HTTP/1.1 and HTTP/2. So far, the performance indifferent. This is mainly because the IO and Stream of HTTP protocol family are processed by the third-party library, with poor integration with the existing processing framework of MOSN. We will perform optimizations in subsequent iterations to improve the performance of the MOSN in processing HTTP protocol family.
 
-此外，针对大量链接场景(例如长连接网关)，我们引入了Raw Epoll+协程池的模式来应对协程暴增的问题，从而大幅优化了该场景下的QPS和内存表现。
+In addition, for the scenario where there are a large number of links (such as persistent connection gateway), SOFAMson has introduced the Raw Epoll + goroutine pool mode to cope with sharp goroutine increase, thus greatly optimizing the QPS and memory performance in such scenario.
 
-# 附录
 
-## 版本对比
+# Appendix
 
-页面大小 0~10k 平均5k
-downstream链接 1000  upstream链接 6
-单核压测
+## Version comparison
 
-| __版本__ | __QPS__ | 内存 |
+Page size 0~10k, 5k in average
+1000 downstream connections; 6 upstream connections
+Single-core pressure test
+
+| __Version__ | __QPS__ | Memory |
 | --- | --- | --- |
 | 0.1.0 | 10500 | 175M |
 | 0.2.1 | 13000 | 122M |

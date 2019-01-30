@@ -5,9 +5,9 @@
 您可以直接在工程下找到本文档的[示例代码](https://github.com/alipay/sofa-rpc-boot-projects/tree/master/sofa-boot-samples)。注意,示例代码中需要本地安装 zookeeper 环境,如果没有安装.需要将`application.properties`中的`com.alipay.sofa.rpc.registry.address` 配置注释掉.走本地文件注册中心的方式
 
 ## 创建工程
-1. 环境准备。SOFABoot 需要 JDK7 或者 JDK8 ，需要采用 Apache Maven 2.2.5 或者以上的版本来编译。
-2. 工程构建。SOFABoot 构建在 Spring Boot 之上。因此可以使用 [Spring Boot 的工程生成工具 ](http://start.spring.io/)来生成一个标准的Spring Boot 工程。
-3. 引入 SOFABoot 环境。生成的 Spring Boot 标准工程直接使用的 Spring Boot 的 parent 依赖，改为 SOFABoot 提供的 parent 依赖，该parent 提供并管控了多种 SOFABoot 提供的 starter。
+1. 环境准备：SOFABoot 需要 JDK7 或者 JDK8 ，需要采用 Apache Maven 2.2.5 或者以上的版本来编译。
+2. 工程构建：SOFABoot 构建在 Spring Boot 之上。因此可以使用 [Spring Boot 的工程生成工具 ](http://start.spring.io/)来生成一个标准的Spring Boot 工程。
+3. 引入 SOFABoot 环境：生成的 Spring Boot 标准工程直接使用的 Spring Boot 的 parent 依赖，改为 SOFABoot 提供的 parent 依赖，该parent 提供并管控了多种 SOFABoot 提供的 starter。
 ```xml
 <parent>
     <groupId>org.springframework.boot</groupId>
@@ -24,19 +24,19 @@
     <version>3.0.0</version>
 </parent>
 ```
-4. 配置 application.properties 。
+4. 配置 application.properties ：
 application.properties 是 SOFABoot 工程中的配置文件。这里需要配置一个必不可少的配置项，即应用名。
 ```
 spring.application.name=AppName
 ```
-5. 引入 RPC Starter。
+5. 引入 RPC Starter：
 ```xml
 <dependency>
      <groupId>com.alipay.sofa</groupId>
      <artifactId>rpc-sofa-boot-starter</artifactId>
 </dependency>
 ```
-6. 声明 SOFABoot 的 xsd 文件
+6. 声明 SOFABoot 的 xsd 文件：
   在要使用的 XML 配置文件中将头部 xsd 文件的声明设置为如下。这样就能够使用 SOFABoot 定义的 XML 元素进行开发。
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
