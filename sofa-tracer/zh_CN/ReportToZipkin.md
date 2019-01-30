@@ -10,7 +10,7 @@
 - JDK7 或 JDK8
 - 需要采用 Apache Maven 3.2.5 或者以上的版本来编译
 
-## 引入 SOFATracer
+## 引入 SOFABoot
 
 在创建好一个 Spring Boot 的工程之后，接下来就需要引入 SOFABoot 的依赖，首先，需要将上文中生成的 Spring Boot 工程的 `zip` 包解压后，修改 Maven 项目的配置文件 `pom.xml`，将
 
