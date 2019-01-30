@@ -1,106 +1,111 @@
-# 快速开始
+# Get started 
 
-本文用于帮助初次接触 MOSN 项目的开发人员，快速搭建开发环境，完成构建，测试，打包和事例代码的运行。
-注：MOSN 基于 GoLang 1.9.2 研发，使用 dep 进行依赖管理
+This article is intended to help developers who are new to the MOSN project to quickly build a development environment, and compile, test, package, and run sample code.
 
-## 准备运行环境
+Note: MOSN is developed based on GoLang 1.9.2 and uses dep for dependency management.
 
-+ 如果你使用容器运行MOSN, 请先 [安装 docker](https://docs.docker.com/install/)
-+ 如果你使用本地机器，请使用类 Unix 环境
-+ 安装 GoLang 的编译环境 
-+ 安装 dep : 参考[官方安装文档](https://golang.github.io/dep/docs/installation.html)
+## Prepare running environment
 
-## 获取代码
++ If you use a container to run MOSN, you must [install Docker](https://docs.docker.com/install/) first.
++ If you use a local machine, you must use a Unix-like environment.
++ Install GoLang's build environment.
++ Install dep. See the [official installation documentation](https://golang.github.io/dep/docs/installation.html).
 
-MOSN 项目的代码托管在 [github](https://github.com/alipay/sofa-mosn)，获取方式如下：
+## Get codes
+
+The codes for the MOSN project are hosted in [GitHub] (https://github.com/alipay/sofa-mosn) and can be obtained in the following way:
+
 
 ```bash
 go get github.com/alipay/sofa-mosn
 ```
 
-如果你的 go get 下载存在问题，请手动创建项目工程
+If an error occurs when run "go get", just create the project manually.
 
 ```bash
-# 进入GOPATH下的src目录
+# Enter src dirctory under GOPATH
 cd $GOPATH/src
-# 创建 github.com/alipay 目录
+# Create github.com/alipay dirctory
 mkdir -p github.com/alipay
 cd github.com/alipay
 
-# clone mosn代码
+# clone mosn codes
 git clone git@github.com:alipay/sofa-mosn.git
 cd sofa-mosn
 ```
 
-最终MOSN的源代码代码路径为 `$GOPATH/src/github.com/alipay/sofa-mosn`
+The final path of MOSN source codes is `$GOPATH/src/github.com/alipay/sofa-mosn`.
 
-## 导入IDE
+## Import by using IDE
 
-使用您喜爱的Golang IDE导入 `$GOPATH/src/github.com/alipay/sofa-mosn` 项目，推荐Goland。
+Use the Golang IDE to import the `$GOPATH/src/github.com/alipay/sofa-mosn` project. Goland is recommended.
 
-## 编译代码
+## Compile codes
 
-在项目根目录下，根据自己机器的类型以及欲执行二进制的环境，选择以下命令编译 MOSN 的二进制文件：
-+ 使用 docker 镜像编译
+In the project root directory, select the following command to compile the MOSN binary file according to your machine type and the environment where you want to execute binary:
+
++ Compile with Docker image
 ```bash
-    make build // 编译出 linux 64bit 可运行二进制文件
+     make build // compile linux 64bit executable binary
 ```
-+ 非 docker，本地编译
-    + 编译本地可运行二进制文件
-    ```bash
-        make build-local
-    ```
-    + 非 linux 机器交叉编译 linux 64bit 可运行二进制文件
-    ```bash
-        make build-linux64
-    ```
-    + 非 linux 机器交叉编译 linux 32bit 可运行二进制文件
-    ```bash
-        make build-linux32
-    ```
-完成后可以在 `build/bundles/${version}/binary` 目录下找到编译好的二进制文件。
++ non-docker, local compilation
+     + Compile local executable binary files
+     ```bash
+         make build-local
+     ```
+     + Non-Linux machine compiles Linux 64-bit executable binary files crosswise
+     
+     ```bash
+         make build-linux64
+     ```
+     + Non-Linux machine compiles Linux 32-bit executable binary files crosswise
+     ```bash
+         make build-linux32
+     ```
+Once compiled, the compiled binary files can be found in the `build/bundles/${version}/binary` directory.
 
-## 打包
+## Package files
 
-+ 在项目根目录下执行如下命令进行打包：
++ Execute the following command in the project root directory to package files:
 
 ```bash
 make rpm
 ```
 
-完成后可以在 `build/bundles/${version}/rpm` 目录下找到打包好的文件。
+After that, you can find the packaged file in the `build/bundles/${version}/rpm` directory.
 
-## 创建镜像
-+ 执行如下命令进行镜像创建：
+## Create image
+Run the following command to create an image:
 
 ```bash
 make image
 ```
 
-## 获取镜像
+## Obtain image
+Run the following command to obtain the image:
 
 ```bash
 docker pull sofastack/mosn
 ```
 
-## 运行测试
-在项目根目录下执行如下命令运行单元测试：
+## Run test
+In the project root directory, run the unit test:
 
 ```bash
 make unit-test
 ```
 
-## 从配置文件启动 MOSN
+## Start MOSN from configuration file
 
 ```bash
  ./mosn start -c '$CONFIG_FILE'
 ```
 
-## 开启 MOSN 转发事例程序
+## Start MOSN forwarding sample program
 
-参考 `examples` 目录下的示例工程
+See the sample project in the `examples` directory.
 
-+ [运行Samples](RunSamples.md)
++ [Run samples](RunSamples.md)
 
-## 使用 MOSN 搭建 ServiceMesh 平台
-+ [Istio集成](RunWithSOFAMesh.md)
+## Use MOSN to build a ServiceMesh platform
++ [Integrate Istio](RunWithSOFAMesh.md)

@@ -29,14 +29,7 @@ com.alipay.sofa.rpc.context.RpcRuntimeContext
         }
 ```
 
-
-这个 ShutdownHook 的作用是当发布平台/用户执行
-
-```bash
-kill pid
-```
-
-的时候，会先执行 ShutdownHook 中的逻辑。在销毁操作中，RPC 框架会先执行向注册中心取消服务注册、关闭服务端口等动作。
+这个 ShutdownHook 的作用是当发布平台/用户执行 `kill pid` 的时候，会先执行 ShutdownHook 中的逻辑。在销毁操作中，RPC 框架会先执行向注册中心取消服务注册、关闭服务端口等动作。
 
 
 ```java
@@ -172,5 +165,4 @@ com.alipay.sofa.rpc.client.AbstractCluster
 
 ## 最佳实践
 
-可以看到，优雅关闭是需要和发布平台联动的。如果强制 kill， 那么任何优雅关闭的方案都不会生效。后续我们会考虑在 SOFABoot 层面提供一个
-统一的 API， 来给发布平台调用。而不是依赖 hook 的逻辑。
+可以看到，优雅关闭是需要和发布平台联动的。如果强制 kill，那么任何优雅关闭的方案都不会生效。后续我们会考虑在 SOFABoot 层面提供一个统一的 API， 来给发布平台调用。而不是依赖 hook 的逻辑。

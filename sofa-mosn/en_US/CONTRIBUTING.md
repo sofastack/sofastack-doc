@@ -46,5 +46,6 @@ As you may know, MOSN's version contains three digit, the first one is for compa
 1. Check the issue with this PR
 2. Check the solution's reasonability
 3. Check UT's and Benchmark's result
-4. Pay attention to the code which make the code structure change, the usage of the global variable, the handling of the corner case and concurrency
+4. Pay attention to the code which make the code structure change,
+ the usage of the global variable, the handling of the corner case and concurrency
 5. Check goimports and golint result

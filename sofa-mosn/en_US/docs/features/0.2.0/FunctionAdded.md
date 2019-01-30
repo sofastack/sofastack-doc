@@ -1,11 +1,13 @@
-# 0.2.0 核心能力补充
-## 路由能力补充
-### 支持路由时 cluster 带权重
-+ [issue](https://github.com/alipay/sofa-mosn/issues/92)
-+ 功能描述
-  * 在当前的路由匹配逻辑中，router match 成功，会选中 router 中对应的 cluster，在这个功能中，一个
-  router 允许配置多个带有权重的 cluster，在 router 匹配成功的时候，会根据 cluster 的 weight 随机返回某一个cluster
-+ 配置示例
+# 0.2.0 Core capability supplementation
+## Supplement to routing capability
+### Support clusters with weight when routing
++ [Issue](https://github.com/alipay/sofa-mosn/issues/92)
++ Function description<br>
+
+	In the current route matching logic, when the router match succeeds, the corresponding cluster in the router is selected. This function allows you to configure multiple clusters with weights for one router. When the router is successfully matched, the system randomly returns a cluster according to the weight of the cluster.
+
++ Configuration example
+
 ```json
 
                               {
@@ -40,11 +42,12 @@
                               }
 
 ```
-## LB 能力补充
+## Supplement to LB capability
 + [issue](https://github.com/alipay/sofa-mosn/issues/91)
-### 支持 host 带权重
-+ 支持 host 上配置权重，用来做基于 weight 的 LB 算法
-+ 配置示例
+### Support configuring weight on host
++ Support configuring weight on host to perform the weight-based LB algorithm.
+
++ Configuration example
 ```json
         {
         "hosts": [
@@ -66,9 +69,12 @@
         }
 
 ```
-### 支持 smooth wrr loadbalancer
-+ 算法实现: `smoothWeightedRRLoadBalancer`
-+ 算法细节
+### Support smooth WRR load balancer
++ Algorithm implementation: 
+	`smoothWeightedRRLoadBalancer`
+
++ Algorithm details<br>
+
 ```cgo
 /*
 SW (smoothWeightedRRLoadBalancer) is a struct that contains weighted items and provides methods to select a weighted item.
@@ -106,20 +112,22 @@ current_weight's:
 */
 ```
 
-## XDS 能力补充
-### CDS 相关
-+ [issue](https://github.com/alipay/sofa-mosn/issues/116)
-+ 提供 cluster 的添加和更新能力
-   + 外部接口：`TriggerClusterAddOrUpdate`
-   + 内部接口: `AddOrUpdatePrimaryCluster`
-+ 提供 cluster 删除能力
-   + 外部接口: `TriggerClusterDel`
-   + 内部接口: `RemovePrimaryCluster`
-### LDS 相关
-+ [issue](https://github.com/alipay/sofa-mosn/issues/117)
-+ 提供 Listener 的添加和更新能力
-  + 外部接口: `AddOrUpdateListener`
-  + 内部接口: `AddOrUpdateListener`
-+ 提供 Listener 的删除能力
-  + 外部接口: `DeleteListener`
-  + 内部接口: `StopListener` 与 `RemoveListeners`
+## Supplement XDS capability
+
+### CDS 
++ [Issue](https://github.com/alipay/sofa-mosn/issues/116)
++ Provide the capability of adding and updating clusters.
+	+ External interface: `TriggerClusterAddOrUpdate`
+	+ Internal interface: `AddOrUpdatePrimaryCluster`
++ Provide the capability of deleting clusters.
+	+ External interface: `TriggerClusterDel`
+	+ Internal interface: `RemovePrimaryCluster`
+   
+### LDS 
++ [Issue](https://github.com/alipay/sofa-mosn/issues/117)
++ Provide the capability of adding and updating listeners
+	+  External interface: `AddOrUpdateListener`
+	+ Internal interface: `AddOrUpdateListener`
++ Provide the capability of deleting listeners.
+	+ External interface: `DeleteListener`
+	+ Internal interface: `StopListener` and `RemoveListeners`

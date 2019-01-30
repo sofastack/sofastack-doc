@@ -5,8 +5,8 @@
 ### 当前能力
 todo
 ### 背景
-+ 目前再 MOSN 中有三种类型的Filter： stream filter、network filter 和 listener filter
-+ network filter设计上应该支持扩展，并且也有几个内置的扩展实现（proxy、tcpproxy、 fault injection）
++ 目前在 MOSN 中有三种类型的Filter： stream filter、network filter 和 listener filter
++ network filter 设计上支持扩展，并且也有几个内置的扩展实现（proxy、tcpproxy、 fault injection）
 ,但是没有对应的扩展机制来保证，本次改造就是要增加network filter的扩展机制，其中stream filter的扩展机制已经存在，
 network filter以此为参考进行改造
 
