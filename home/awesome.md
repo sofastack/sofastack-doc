@@ -1,22 +1,22 @@
 # Awesome SOFA
 
 ```plain
-                       .---                                                                 ---.
-                     / ..-        ╭───╮╭──╮  ╭──╮  ╭──╮ ╭───╮  ╭──╮  ╭─── ───╮   ╭──╮      -..  \
-                    _|_|_        /    ││  │──│  │  / ╭─╯/ ╭──╯ /    \ │   │   │  / ╭─╯        _|_|_
-                  /    O  \     │  o  ││  │  │  │ /  ╰─(   \─╮│      ││ ─   ─ │ /  ╰─╮      /   O    \
-                  \_______/     │     ││  │  │  ││   ╭─╯\__  ││   O  ││  \_/  ││   ╭─╯      \_______/
-                   /   \        │  _  ││  `  '  ││   ╰─╮/  \ ││      ││   │   ││   ╰─╮         /   \
-                  /   \/        │  │  │ \      / │     │\    │ \    / │   │   ││     │         \/   \
-                 /'---'\        ╰──┴──╯  ╰──╯─╯  ╰─────╯ ╰───╯  ╰──╯  ╰───╯───╯╰─────╯         /'---'\
-           _____/    |  \____                                                             ____/  |    \_____
-        _/      \____/\__     _____  ___   _____   ____  _____ ______   ____    __  __  _     __/\____/      \_
-      /           |          / ___/ /   \ |     | /    |/ ___/|      | /    |  /  ]|  |/ ]        |            \
-    _'      /\  __/ \       (   \_ |     ||   __||  o  (   \_ |      ||  o  | /  / |  ' /        / \__  /\      '_
-  /        / __/     \       \__  ||  O  ||  |_  |     |\__  ||_|  |_||     |/  /  |    \       /     \__ \        \
-/_________/_/        /       /  \ ||     ||   _] |  _  |/  \ |  |  |  |  _  /   \_ |     \      \        \_\_________\
-   /     /          /        \    ||     ||  |   |  |  |\    |  |  |  |  |  \     ||  .  |       \          \     \
-        /          /          \___| \___/ |__|   |__|__| \___|  |__|  |__|__|\____||__|\_|        \          \
+                       .---                                                                                                   ---.
+                     /  ..-          ___   ____    __    ____  _______     _______.  ______   .___  ___.  _______             -.. \
+                    _|_|_           /   \  \   \  /  \  /   / |   ____|   /       | /  __  \  |   \/   | |   ____|              _|_|_
+                  /    O  \        /  ^  \  \   \/    \/   /  |  |__     |   (----`|  |  |  | |  \  /  | |  |__               /  O    \
+                  \_______/       /  /_\  \  \            /   |   __|     \   \    |  |  |  | |  |\/|  | |   __|              \_______/
+                   /   \         /  _____  \  \    /\    /    |  |____.----)   |   |  `--'  | |  |  |  | |  |____                /   \
+                  /   \/        /__/     \__\  \__/  \__/     |_______|_______/     \______/  |__|  |__| |_______|               \/   \
+                 /'---'\                                                                                                         /'---'\
+           _____/    |  \____                                                                                               ____/  |    \_____
+        _/      \____/\__     _______.  ______    _______    ___           _______.___________.    ___       ______  __  ___    __/\____/      \_
+      /           |          /       | /  __  \  |   ____|  /   \         /       |           |   /   \     /      ||  |/  /         |            \
+    _'      /\  __/ \       |   (----`|  |  |  | |  |__    /  ^  \       |   (----`---|  |----`  /  ^  \   |  ,----'|  '  /         / \__  /\      '_
+  /        / __/     \       \   \    |  |  |  | |   __|  /  /_\  \       \   \       |  |      /  /_\  \  |  |     |    <         /     \__ \        \
+/_________/_/        /   .----)   |   |  `--'  | |  |    /  _____  \  .----)   |      |  |     /  _____  \ |  `----.|  .  \        \        \_\_________\
+   /     /          /    |_______/     \______/  |__|   /__/     \__\ |_______/       |__|    /__/     \__\ \______||__|\__\        \          \     \
+        /          /                                                                                                                 \          \
 ```
 
 ## 目录
@@ -25,7 +25,7 @@
 - [项目 Projects](#projects)
 - [文章 Articles](#articles)
 - [工具 Tools](#tools)
-- [社区 Ccommunity](#community)
+- [社区 Community](#community)
 - [贡献 Contributors](#contributors)
 - [用户 End User](#enduser)
 
@@ -33,9 +33,9 @@
 
 ## 资源
 
-- [官网](http://www.sofastack.tech)
-- [源码](https://github.com/alipay?q=sofa)
-- [蚂蚁金融科技](https://www.cloud.alipay.com/products/SOFA)
+- [开源官网](https://www.sofastack.tech)
+- [Github源码](https://github.com/alipay?q=sofa)
+- [蚂蚁金融科技](https://tech.antfin.com/sofa)
 
 <span id="projects" />
 
@@ -61,7 +61,7 @@
 
 ## 文章
 
-- [SOFAStack 官网文章](http://www.sofastack.tech/posts)
+- [SOFAStack 官网文章](https://www.sofastack.tech/posts)
 - [SOFAStack 知乎专栏](https://zhuanlan.zhihu.com/sofastack)
 - [SOFA 公开文章](https://www.yuque.com/huarou/gd4szw)
 
@@ -100,18 +100,21 @@
 | -- | -- | -- | -- | -- |
 | @315157973 | @boliza | @caojie09 | @chenhui0212 | @choleraehyq |
 | @cp3fantasy | @cytnju | @dawxy | @dbl-x | @detailyang |
-| @eonezhang | @FzNl | @glmapper | @guanchao-yang | @gxcsoccer |
-| @huangyunbin | @jaredleechn | @JarVZhao | @JervyShi | @jjtyro |
-| @JoeKerouac | @junxiong | @kelvinji2009 | @kevin21th | @khotyn |
-| @kiral | @kswapd | @lazyrabbit2004 | @ldxdl | @leizhiyuan |
-| @leyou240 | @liangyuanpeng | @Lingtaonju | @liymg | @lookuptable |
+| @easonzhang1992 | @eonezhang | @fleeto | @FzNl | @glmapper |
+| @guanchao-yang | @gxcsoccer | @hqq2023623 | @huangyunbin | @JamazRuan |
+| @jaredleechn | @JarVZhao | @JervyShi | @jewin | @jiangyunpeng |
+| @jjtyro | @JoeKerouac | @junxiong | @kelvinji2009 | @kevin21th |
+| @khotyn | @killagu | @kiral | @kswapd | @lazyrabbit2004 |
+| @ldxdl | @leizhiyuan | @leoner | @leyou240 | @liangyuanpeng |
+| @lichuang | @Lingtaonju | @liymg | @lonng | @lookuptable |
 | @luyiisme | @meua | @michalyao | @moeyui1 | @Moriadry |
-| @NeGnail | @nejisama | @neverhook | @popomore | @pxzero |
-| @QilongZhang | @quaff | @rootsongjc | @ScienJus | @shaoshuai0102 |
-| @skyao | @stdupp | @SteNicholas | @straybirdzls | @taoyuanyuan |
-| @tinycedar | @tonyhawkwen | @TreeLin | @ujjboy | @wanderxjtu |
-| @xiaoguoqiang | @xmtsui | @xzchaoo | @yangl | @zhaojigang |
-| @zhenhua | @zorkeAccount | @zyjibmcn | @ZZMarquis 
+| @NeGnail | @nejisama | @neverhook | @OrezzerO | @popomore |
+| @pxzero | @QilongZhang | @quaff | @rootsongjc | @ScienJus |
+| @sevennt | @shaoshuai0102 | @silentred | @skyao | @stdupp |
+| @SteNicholas | @straybirdzls | @taoyuanyuan | @tinycedar | @tonyhawkwen |
+| @TreeLin | @ujjboy | @wanderxjtu | @XadillaX | @xiaoguoqiang |
+| @xmtsui | @xzchaoo | @yangl | @zhaojigang | @zhenhua |
+| @zorkeAccount | @zyjibmcn | @ZZMarquis 
 
 想要参与贡献，可以直接去[项目列表](#projects)找到您关注的项目。
 
@@ -120,3 +123,12 @@
 ## 用户
 
 此处会列出使用 SOFAStack 开源版的公司或组织，大家可以通过 [SOFAStack 使用者登记](https://github.com/alipay/sofastack-doc/issues/42) 进行登记，或者可以通过 [SOFAStack 使用调查问卷](https://wj.qq.com/s/2698623/5fe1) 进行反馈。
+
+排名不分先后
+
+- 杭州米雅信息科技
+- 申通快递
+- 深圳市大头兄弟传媒有限公司
+- 译筑科技
+- 运满满
+- 烽火科技

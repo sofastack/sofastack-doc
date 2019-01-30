@@ -1,6 +1,47 @@
-## 泛化调用
+# 泛化调用
 
-客户端在不需要依赖服务端的接口情况下就能够发起调用。
+泛化调用提供了让客户端在不需要依赖服务端的接口情况下就能够发起调用的能力。目前 SOFARPC 的泛化调用仅支持在 Bolt 通信协议下使用 Hessian2 作为序列化协议，其他的方式并不支持。
+
+## SOFABoot 环境
+
+### 发布服务
+
+发布服务没有什么特殊的,正常发布服务即可.比如
+
+```xml
+<!-- generic -->
+<bean id="sampleGenericServiceImpl" class="com.alipay.sofa.rpc.samples.generic.SampleGenericServiceImpl"/>
+<sofa:service ref="sampleGenericServiceImpl" interface="com.alipay.sofa.rpc.samples.generic.SampleGenericService">
+    <sofa:binding.bolt/>
+</sofa:service>
+
+```
+
+### 引用服务
+```xml
+<sofa:reference jvm-first="false" id="sampleGenericServiceReference" interface="com.alipay.sofa.rpc.api.GenericService">
+    <sofa:binding.bolt>
+        <sofa:global-attrs generic-interface="com.alipay.sofa.rpc.samples.generic.SampleGenericService"/>
+    </sofa:binding.bolt>
+</sofa:reference>
+```
+
+其中,jvm-first根据实际情况,默认可以不写,接口写泛化调用的通用接口,generic-interface中写上自己要调用的接口名称即可.
+
+### 发起调用
+
+````java
+ GenericService sampleGenericServiceReference = (GenericService) applicationContext
+            .getBean("sampleGenericServiceReference");
+ GenericObject genericResult = (GenericObject) sampleGenericServiceReference.$genericInvoke("sayGeneric",
+            new String[] { "com.alipay.sofa.rpc.samples.generic.SampleGenericParamModel" },
+            new Object[] { genericObject });
+````
+
+## RPC API 
+
+
+
 ```java
 ConsumerConfig<GenericService> consumerConfig = new ConsumerConfig<GenericService>()
            .setInterfaceId("com.alipay.sofa.rpc.quickstart.HelloService")

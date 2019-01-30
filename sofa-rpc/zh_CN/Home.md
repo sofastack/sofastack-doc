@@ -1,14 +1,10 @@
-### 产品描述
+### 项目简介
 
-SOFARPC 是一款基于 Java 实现的 RPC 服务框架。
+SOFARPC 是蚂蚁金服开源的一款基于 Java 实现的 RPC 服务框架，为应用之间提供远程服务调用能力，具有高可伸缩性，高容错性，目前蚂蚁金服所有的业务的相互间的 RPC 调用都是采用 SOFARPC。SOFARPC 为用户提供了负载均衡，流量转发，链路追踪，链路数据透传，故障剔除等功能。 
 
-SOFARPC 为应用之间提供远程服务调用能力，具有高可伸缩性，高容错性。 
+SOFARPC 还支持不同的协议，目前包括 [bolt](./Bolt)，[RESTful](./RESTful)，[dubbo](./Dubbo)，[H2C](./H2c) 协议进行通信。其中 bolt 是蚂蚁金融服务集团开放的基于 Netty 开发的网络通信框架。
 
-提供负载均衡，流量转发，链路追踪，链路数据透传，故障剔除等功能。 
-
-支持 [bolt](https://github.com/alipay/sofa-bolt)，rest，dubbo 协议进行通信。其中 bolt 是蚂蚁金融服务集团开放的基于 Netty 开发的网络通信框架。
-
-### 实现原理
+### 基本原理
 
 ![image.png | left | 748x404](./resources/home_1.png)
 

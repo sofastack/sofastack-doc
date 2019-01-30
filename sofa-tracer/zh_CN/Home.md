@@ -1,6 +1,6 @@
 ## 一、SOFATracer 介绍
 
-SOFATracer 是蚂蚁金服开发的基于 [OpenTracing 规范](http://opentracing.io/documentation/pages/spec.html) 的分布式链路跟踪系统，其核心理念就是通过一个全局的 `TraceId` 将分布在各个服务节点上的同一次请求串联起来。通过统一的 `TraceId` 将调用链路中的各种网络调用情况以日志的方式记录下来同时也提供远程汇报到 [Zipkin](https://zipkin.io/) 进行展示的能力，以此达到透视化网络调用的目的。
+SOFATracer 是蚂蚁金服基于 [OpenTracing 规范](http://opentracing.io/documentation/pages/spec.html) 开发的分布式链路跟踪组件，其核心理念就是通过一个全局的 `TraceId` 将分布在各个服务节点上的同一次请求串联起来。通过统一的 `TraceId` 将调用链路中的各种网络调用情况以日志的方式记录下来，同时也提供远程汇报到 [Zipkin](https://zipkin.io/) 进行展示的能力，以此达到透视化网络调用的目的。
 
 ## 二、功能描述
 
@@ -14,11 +14,11 @@ SOFATracer 是蚂蚁金服开发的基于 [OpenTracing 规范](http://opentracin
 
 ### 2.3 支持日志自清除和滚动能力
 
-异步落地磁盘的 SOFATracer 日志支持自清除和滚动能力，支持按照按照天清除和按照小时或者天滚动的能力
+SOFATracer 日志支持自清除和滚动能力，支持按照按照天清除和按照小时或者天滚动的能力
 
 ### 2.4 基于 SLF4J MDC 的扩展能力
 
-SLF4J 提供了 MDC（Mapped Diagnostic Contexts）功能，可以支持用户定义和修改日志的输出格式以及内容。SOFATracer 集成了 SLF4J MDC 功能，方便用户在只简单修改日志配置文件即可输出当前 Tracer 上下文的 `TraceId` 和 `SpanId`。
+SLF4J 提供了 MDC（Mapped Diagnostic Contexts）功能，可以支持用户定义和修改日志的输出格式以及内容。SOFATracer 集成了 SLF4J MDC 功能，用户只需要简单修改日志配置文件，即可输出当前 Tracer 上下文的 `TraceId` 和 `SpanId`。
 
 ### 2.5 界面展示能力
 
@@ -37,12 +37,13 @@ SOFATracer 可以将链路跟踪数据远程上报到开源产品 [Zipkin](https
 
 支持组件 | 接入文档 | 支持版本
 --------- | -------------  | -------------
-Spring MVC | [doc link](http://www.sofastack.tech/sofa-tracer/docs/Usage_Of_MVC) | 2.1.0
-DBCP | [doc link](http://www.sofastack.tech/sofa-tracer/docs/Usage_Of_Datasource) | 2.2.0
-Druid | [doc link](http://www.sofastack.tech/sofa-tracer/docs/Usage_Of_Datasource) | 2.2.0
-c3p0 | [doc link](http://www.sofastack.tech/sofa-tracer/docs/Usage_Of_Datasource) | 2.2.0
-HikariCP | [doc link](http://www.sofastack.tech/sofa-tracer/docs/Usage_Of_Datasource) | 2.2.0
-HttpClient | [doc link](http://www.sofastack.tech/sofa-tracer/docs/Usage_Of_Datasource) | 2.2.0
+Spring MVC | [doc link](https://www.sofastack.tech/sofa-tracer/docs/Usage_Of_MVC) | 2.1.0
+DBCP | [doc link](https://www.sofastack.tech/sofa-tracer/docs/Usage_Of_Datasource) | 2.2.0
+Druid | [doc link](https://www.sofastack.tech/sofa-tracer/docs/Usage_Of_Datasource) | 2.2.0
+c3p0 | [doc link](https://www.sofastack.tech/sofa-tracer/docs/Usage_Of_Datasource) | 2.2.0
+HikariCP | [doc link](https://www.sofastack.tech/sofa-tracer/docs/Usage_Of_Datasource) | 2.2.0
+HttpClient | [doc link](https://www.sofastack.tech/sofa-tracer/docs/Usage_Of_Datasource) | 2.2.0
+RestTempalte | [doc link](https://www.sofastack.tech/sofa-tracer/docs/Usage_Of_RestTemplate) | 2.3.0
 Redis | TODO | 
 MQ | TODO | 
 

@@ -2,7 +2,7 @@
 
 应用在引入 SOFATracer 后，可以在 Spring Boot 的配置文件 `application.properties` 中添加相关配置项来定制 SOFATracer 的相关行为。
 
-SOFATracer 的日志输出目录，可以在 `application.properties` 中配置 `logging.path` 的路径，那么其日志输出路径为 `${logging.path}/logs/tracelog`；如果没有配置 `logging.path`，那么 SOFATracer 的默认输出路径为 `${user.home}/logs/tracelog`。
+SOFATracer 的日志输出目录，可以在 `application.properties` 中配置 `logging.path` 的路径，那么其日志输出路径为 `${logging.path}/tracelog`；如果没有配置 `logging.path`，那么 SOFATracer 的默认输出路径为 `${user.home}/logs/tracelog`。
 
 SOFATracer 配置项 | 说明 | 默认值
 ----|------|----

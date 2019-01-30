@@ -4,5 +4,5 @@
 
 
 * [发布订阅配置](./Configuration-Common)
-* [预热转发配置](./Configuration-Warmup)
+* [预热转发配置](./Provider-Warmup-Weight)
 * [自动故障剔除配置](./Configuration-Fault-Tolerance)
