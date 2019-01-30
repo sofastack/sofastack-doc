@@ -43,5 +43,6 @@ Druid | [doc link](http://www.sofastack.tech/sofa-tracer/docs/Usage_Of_Datasourc
 C3p0 | [doc link](http://www.sofastack.tech/sofa-tracer/docs/Usage_Of_Datasource) | 2.2.0
 HikariCP | [doc link](http://www.sofastack.tech/sofa-tracer/docs/Usage_Of_Datasource) | 2.2.0
 HttpClient | [doc link](http://www.sofastack.tech/sofa-tracer/docs/Usage_Of_Datasource) | 2.2.0
+RestTemplate | [doc link](http://www.sofastack.tech/sofa-tracer/docs/Usage_Of_RestTemplate) | 2.3.0
 Redis | TODO | 
 MQ | TODO | 
