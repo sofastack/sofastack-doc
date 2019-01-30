@@ -2,7 +2,7 @@
 
 <center>
 
-
+![roadmap](./resources/roadmap.png) 
 
 </center>
 
