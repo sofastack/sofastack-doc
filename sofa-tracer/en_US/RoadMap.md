@@ -41,32 +41,34 @@ You are welcome to claim the task and [make contributions](https://github.com/al
 
 ### 2.2.0 
 
-* SOFATracer performance optimization
+* SOFATracer supports the common data source
+    * SOFATracer supports Mysql Driver
+    * SOFATracer supports [Sharding-JDBC](https://github.com/sharding-sphere/sharding-sphere)
+    * SOFATracer supports Mysql-JDBC
+    * SOFATracer supports Druid 
+    * SOFATracer supports c3p0 
+    * SOFATracer supports Tomcat-JDBC
+    * SOFATracer supports HikariCP 
 * SOFATracer supports HttpClient
-* SOFATracer supports running and configuring data reporting in non-SOFABoot framework
-* SOFATracer provides sampling capability
-* SOFATracer supports Zipkin 2.XX for development, verification and testing
+* SOFATracer supports zipkin 2.X.X version
 
 ### 2.3.0
 
-* SOFATracer supports Mysql Driver
-* SOFATracer supports [Sharding-JDBC](https://github.com/sharding-sphere/sharding-sphere)
-* SOFATracer supports Mysql-JDBC
-* SOFATracer supports Druid 
-* SOFATracer supports c3p0 
-* SOFATracer supports Tomcat-JDBC
-* SOFATracer supports HikariCP 
+* SOFATracer supports RestTemplate & AsyncRestTemplate
+* SOFATracer supports Sampler customization capability
+* SOFATracer supports The standard servlet container
+* SOFATracer supports Zipkin UI interface in Chinese
+* SOFATracer supports Report date to Zipkin in Spring Project
 
 ### 2.4.0
 
 * SOFATracer supports Dubbo
-* SOFATracer supports RestTemplate and AsyncRestTemplate
-* SOFATracer supports HttpServer Tomcat 8
-* SOFATracer supports HttpServer Tomcat 9
+* SOFATracer supports Kafka
+* SOFATracer Performance optimization
 
 ### 2.5.0
 
-* SOFATracer supports standalone link analysis, allows users to track events by annotation and supports reporting data to Zipkin for presentation
-* SOFATracer supports Jetty9
-* SOFATracer supports dbcp 
-* SOFATracer supports dbcp2
+* SOFATracer supports stand-alone version link analysis ability
+* SOFATracer supports manual reporting
+* SOFATracer supports opentracing API buried point way 
+* SOFATracer supports opentracing 0.30.x 
