@@ -1,30 +1,30 @@
 
-Currently,SOFATracer provides two sampling modes. One is the fixed sampling rate based on BitSet. The other is the sampling provided to the user to customize the implementation sampling.The following example shows how to use it.
+目前 SOFATracer 提供了两种采样模式，一种是基于 BitSet 实现的基于固定采样率的采样模式；另外一种是提供给用户自定义实现采样的采样模式。下面通过案例来演示如何使用。
 
-This example is based on the tracer-sampled-with-springmvc project,Except for `application.properties`, everything else is the same.
+本示例基于 tracer-sample-with-springmvc 工程；除 `application.properties` 之外，其他均相同。
 
-## Sampling mode based on fixed sampling rate
+### 基于固定采样率的采样模式
 
-### Add sampling related configuration items in application.properties
+#### 在 application.properties 中增加采样相关配置项
 
 ```properties
-#Sampling rate  0~100
+#采样率  0~100
 com.alipay.sofa.tracer.samplerPercentage=100
-#Sampling type name
+#采样模式类型名称
 com.alipay.sofa.tracer.samplerName=PercentageBasedSampler
 ```
 
-### Verification
+#### 验证方式
 
-* When the sample rate is set to 100, the degist log is printed each time.
-* When the sample rate is set to 0, the degist log is not printed.
-* Print by probability when the sampling rate is set between 0 and 100.
+* 当采样率设置为100时，每次都会打印摘要日志。
+* 当采样率设置为0时，不打印
+* 当采样率设置为0~100之间时，按概率打印
 
-The result is verified by requesting 10 times.
+以请求 10 次来验证下结果。
 
-1、When the sample rate is set to 100, the degist log is printed each time.
+1、当采样率设置为100时，每次都会打印摘要日志
 
-Start the project and enter in the browser:http://localhost:8080/springmvc ,And refresh the address 10 times, check the log as follows:
+启动工程，浏览器中输入：http://localhost:8080/springmvc ；并且刷新地址10次，查看日志如下：
 
 ```json
 {"time":"2018-11-09 11:54:47.643","local.app":"SOFATracerSpringMVC","traceId":"0a0fe8ec154173568757510019269","spanId":"0.1","request.url":"http://localhost:8080/springmvc","method":"GET","result.code":"200","req.size.bytes":-1,"resp.size.bytes":0,"time.cost.milliseconds":68,"current.thread.name":"http-nio-8080-exec-1","baggage":""}
@@ -39,37 +39,34 @@ Start the project and enter in the browser:http://localhost:8080/springmvc ,And 
 {"time":"2018-11-09 11:54:54.565","local.app":"SOFATracerSpringMVC","traceId":"0a0fe8ec154173569456310189269","spanId":"0.1","request.url":"http://localhost:8080/springmvc","method":"GET","result.code":"200","req.size.bytes":-1,"resp.size.bytes":0,"time.cost.milliseconds":2,"current.thread.name":"http-nio-8080-exec-8","baggage":""}
 ```
 
-2、When the sample rate is set to 0, the degist log is not printed.
+2、当采样率设置为0时，不打印
 
-Start the project and enter in the browser:http://localhost:8080/springmvc ,And refresh the address 10 times, 
-View the ./logs/tracerlog/ directory without the spring-mvc-degist.log log file
+启动工程，浏览器中输入：http://localhost:8080/springmvc ；并且刷新地址10次，查看 ./logs/tracerlog/ 目录，没有 spring-mvc-degist.log 日志文件
 
-3、Print by probability when the sampling rate is set between 0 and 100.
+3、当采样率设置为0~100之间时，按概率打印
 
-Set the sampling rate to 20
+这里设置成 20
 
-* Request 10 times
-
+* 刷新10次请求
 ```json
 {"time":"2018-11-09 12:14:29.466","local.app":"SOFATracerSpringMVC","traceId":"0a0fe8ec154173686946410159846","spanId":"0.1","request.url":"http://localhost:8080/springmvc","method":"GET","result.code":"200","req.size.bytes":-1,"resp.size.bytes":0,"time.cost.milliseconds":2,"current.thread.name":"http-nio-8080-exec-5","baggage":""}
 {"time":"2018-11-09 12:15:21.776","local.app":"SOFATracerSpringMVC","traceId":"0a0fe8ec154173692177410319846","spanId":"0.1","request.url":"http://localhost:8080/springmvc","method":"GET","result.code":"200","req.size.bytes":-1,"resp.size.bytes":0,"time.cost.milliseconds":2,"current.thread.name":"http-nio-8080-exec-2","baggage":""}
 ```
 
-* Request 20 times
-
+* 刷新20次请求
 ```json
 {"time":"2018-11-09 12:14:29.466","local.app":"SOFATracerSpringMVC","traceId":"0a0fe8ec154173686946410159846","spanId":"0.1","request.url":"http://localhost:8080/springmvc","method":"GET","result.code":"200","req.size.bytes":-1,"resp.size.bytes":0,"time.cost.milliseconds":2,"current.thread.name":"http-nio-8080-exec-5","baggage":""}
 {"time":"2018-11-09 12:15:21.776","local.app":"SOFATracerSpringMVC","traceId":"0a0fe8ec154173692177410319846","spanId":"0.1","request.url":"http://localhost:8080/springmvc","method":"GET","result.code":"200","req.size.bytes":-1,"resp.size.bytes":0,"time.cost.milliseconds":2,"current.thread.name":"http-nio-8080-exec-2","baggage":""}
 {"time":"2018-11-09 12:15:22.439","local.app":"SOFATracerSpringMVC","traceId":"0a0fe8ec154173692243810359846","spanId":"0.1","request.url":"http://localhost:8080/springmvc","method":"GET","result.code":"200","req.size.bytes":-1,"resp.size.bytes":0,"time.cost.milliseconds":1,"current.thread.name":"http-nio-8080-exec-6","baggage":""}
 {"time":"2018-11-09 12:15:22.817","local.app":"SOFATracerSpringMVC","traceId":"0a0fe8ec154173692281510379846","spanId":"0.1","request.url":"http://localhost:8080/springmvc","method":"GET","result.code":"200","req.size.bytes":-1,"resp.size.bytes":0,"time.cost.milliseconds":2,"current.thread.name":"http-nio-8080-exec-8","baggage":""}
 ```
-> The test results are for reference only
+> 按 20% 进行采样，测试结果仅供参考
 
-## Custom sampling mode
+### 自定义采样模式
 
-An sampler interface for sample rate calculation is provided in SOFATracer. If you need to customize your own sampling strategy, you can extend it by implementing this interface. Let's use a simple demo to demonstrate how to use the custom sampling mode.
+SOFATracer 中提供了一个采样率计算的接口 Sampler ，如果你需要定制化自己的采样策略，可通过实现此接口来进行扩展。下面通过一个简单的Demo 来演示如何使用自定义采样模式。
 
-### Custom sampling rule class
+#### 自定义采样规则类
 
 ```java
 public class CustomOpenRulesSamplerRuler implements Sampler {
@@ -103,15 +100,13 @@ public class CustomOpenRulesSamplerRuler implements Sampler {
     }
 }
 ```
-In the sample method, the user can decide whether to print based on the information provided by the current sofaTracerSpan. This case determines whether to sample by isServer, isServer=true, does not sample, otherwise samples.
+在 sample 方法中，用户可以根据当前 sofaTracerSpan 提供的信息来决定是否进行打印。这个案例是通过判断 isServer 来决定是否采样，isServer=true,不采样，否则采样。
 
-### Add sampling related configuration items in application.properties
+#### 在 application.properties 中增加采样相关配置项
 
 ```properties
 com.alipay.sofa.tracer.samplerName.samplerCustomRuleClassName=com.alipay.sofa.tracer.examples.springmvc.sampler.CustomOpenRulesSamplerRuler
 ```
 
-The relevant test results can be verified by yourself.
-
-
+相关实验结果，可以自行验证下。
 

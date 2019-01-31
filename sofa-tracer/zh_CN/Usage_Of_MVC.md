@@ -1,4 +1,4 @@
-本示例演示如何在集成了 SOFATracer 的应用中，通过 sofa-tracer-springmvc-plugin 插件，将经过 springmvc 组件的请求链路数据记录在日志中。
+在本文档中，将创建一个 Spring Boot 的工程，引入 SOFABoot 基础依赖管控，并且引入 SOFATracer ，演示如何快速上手 SOFATracer。
 
 ## 环境准备
 
@@ -8,7 +8,7 @@
 
 ## 创建工程
 
-SOFABoot 是直接构建在 Spring Boot 之上的，因此可以使用 [Spring Boot 的工程生成工具](http://start.spring.io/) 来生成 SOFABoot 工程；在本文档中，我们需要添加一个 Web 的依赖同时编写一个简单的 REST 服务，以便最后在浏览器中查看效果。
+SOFABoot 是直接构建在 Spring Boot 之上，因此可以使用 [Spring Boot 的工程生成工具](http://start.spring.io/) 来生成，在本文档中，我们需要添加一个 Web 的依赖同时编写一个简单的 REST 服务，以便最后在浏览器中查看效果。
 
 ## 引入 SOFABoot 
 
@@ -44,9 +44,9 @@ SOFABoot 是直接构建在 Spring Boot 之上的，因此可以使用 [Spring B
 </dependency>
 ```
 
-最后，在工程的 `application.properties` 文件下添加 SOFATracer 要使用的参数，包括`spring.application.name` 用于标示当前应用的名称；`logging.path` 用于指定日志的输出目录。
+最后，在工程的 `application.properties` 文件下添加一个 SOFATracer 要使用的参数，包括`spring.application.name` 用于标示当前应用的名称；`logging.path` 用于指定日志的输出目录。
 
-```properties
+```
 # Application Name
 spring.application.name=SOFATracerSpringMVC
 # logging path
@@ -83,15 +83,15 @@ public class SampleRestController {
 
 ## 运行
 
-可以将工程导入到 IDE 中，运行工程里面中的 `main` 方法（一般上在 XXXApplication 这个类中）来启动应用，也可以直接在该工程的根目录下运行 `mvn spring-boot:run` 进行启动，然后会在控制台中看到启动打印的日志：
+可以将工程导入到 IDE 中运行生成的工程里面中的 `main` 方法（一般上在 XXXApplication 这个类中）启动应用，也可以直接在该工程的根目录下运行 `mvn spring-boot:run`，将会在控制台中看到启动打印的日志：
 
-```json
+```
 2018-05-11 11:55:11.932  INFO 66490 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'SpringMvcOpenTracingFilter' to urls: [/*]
 2018-05-11 11:55:13.961  INFO 66490 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
 2018-05-11 11:55:13.970  INFO 66490 --- [           main] c.a.s.t.e.springmvc.DemoApplication      : Started DemoApplication in 8.361 seconds (JVM running for 9.34)
 ```
 
-通过在浏览器中输入 [http://localhost:8080/springmvc](http://localhost:8080/springmvc) 来访问 REST 服务，结果如下：
+可以通过在浏览器中输入 [http://localhost:8080/springmvc](http://localhost:8080/springmvc) 来访问 REST 服务，结果类似如下：
 
 ```json
 {
@@ -103,7 +103,7 @@ public class SampleRestController {
 
 ## 查看日志
 
-在上面的 `application.properties` 里面，我们配置的日志打印目录是 `./logs`，即当前应用的根目录（我们可以根据自己的实践需要配置），在当前工程的根目录下可以看到类似如下结构的日志文件：
+在上面的 `application.properties` 里面，我们配置的日志打印目录是 `./logs` 即当前应用的根目录（我们可以根据自己的实践需要配置），在当前工程的根目录下可以看到类似如下结构的日志文件：
 
 ```
 ./logs
@@ -123,4 +123,4 @@ public class SampleRestController {
 
 ```
 
-附此示例工程的 [源代码地址](https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-springmvc)。
+附此示例工程的[源代码地址](https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-springmvc)。

@@ -10,7 +10,7 @@ To use SOFABoot, you need to prepare the basic environment first. SOFABoot relie
 + JDK7 or JDK8
 + Apache Maven 3.2.5+ required for compilation
 
-## Introduce SOFATracer
+## Introduce SOFABoot
 
 After creating a Spring Boot project, you need to introduce the SOFABoot dependency. First, you need to unzip the `zip` package of the Spring Boot project generated above and modify the Maven project configuration file `pom.xml`.
 
