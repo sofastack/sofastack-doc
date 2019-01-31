@@ -10,7 +10,7 @@
 - JDK7 或 JDK8
 - 需要采用 Apache Maven 3.2.5 或者以上的版本来编译
 
-## 引入 SOFATracer
+## 引入 SOFABoot
 
 在创建好一个 Spring Boot 的工程之后，接下来就需要引入 SOFABoot 的依赖，首先，需要将上文中生成的 Spring Boot 工程的 `zip` 包解压后，修改 Maven 项目的配置文件 `pom.xml`，将
 
@@ -48,16 +48,15 @@
 
 ## 配置文件
 
-最后，在工程的 `application.properties` 文件下添加 SOFATracer 要使用的参数，包括`spring.application.name` 用于标示当前应用的名称；`logging.path` 用于指定日志的输出目录。
+最后，在工程的 `application.properties` 文件下添加一个 SOFATracer 要使用的参数，包括`spring.application.name` 用于标示当前应用的名称；`logging.path` 用于指定日志的输出目录。
 
 ```properties
 # Application Name
 spring.application.name=SOFATracerReportZipkin
 # logging path
 logging.path=./logs
-# 开启zipkin 上报
+
 com.alipay.sofa.tracer.zipkin.enabled=true
-# 指定zipkin server 地址
 com.alipay.sofa.tracer.zipkin.baseUrl=http://localhost:9411
 ```
 
@@ -84,15 +83,15 @@ com.alipay.sofa.tracer.zipkin.baseUrl=http://localhost:9411
 
 ## 运行
 
-可以将工程导入到 IDE 中运行生成的工程里面中的 `main` 方法（一般上在 XXXApplication 这个类中）启动应用，也可以直接在该工程的根目录下运行 `mvn spring-boot:run`，将会在控制台中看到启动日志：
+可以将工程导入到 IDE 中运行生成的工程里面中的 `main` 方法启动应用，也可以直接在该工程的根目录下运行 `mvn spring-boot:run`，将会在控制台中看到启动日志：
 
-```json
+```
 2018-05-12 13:12:05.868  INFO 76572 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'SpringMvcSofaTracerFilter' to urls: [/*]
 2018-05-12 13:12:06.543  INFO 76572 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zipkin]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.alipay.sofa.tracer.examples.zipkin.controller.SampleRestController.zipkin(java.lang.String)
 2018-05-12 13:12:07.164  INFO 76572 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
 ```
 
-可以通过在浏览器中输入 [http://localhost:8080/zipkin](http://localhost:8080/zipkin) 来访问 REST 服务，结果类似如下：
+可以通过在浏览器中输入 [http://localhost:8080/helloZipkin](http://localhost:8080/helloZipkin) 来访问 REST 服务，结果类似如下：
 
 ```json
 {
@@ -104,13 +103,11 @@ com.alipay.sofa.tracer.zipkin.baseUrl=http://localhost:9411
 
 ## 查看 Zipkin 服务端展示
 
-打开 Zipkin 服务端界面，假设我们部署的 Zipkin 服务端的地址是 `http://zipkin-cloud-3.host.net:9411`，打开 URL 并搜索 `zipkin`(由于我们本地访问的地址是 localhost:8080/zipkin)，可以看到展示的链路图。
+打开 Zipkin 服务端界面，假设我们部署的 Zipkin 服务端的地址是 `http://zipkin-cloud-3.host.net:9411`，打开 URL 并搜索 `zipkin`(由于我们本地访问的地址是 localhost:8080/helloZipkin)，可以看到展示的链路图。
 
 ## Spring 工程运行
 
 对于一般的 Spring 工程，我们通常使用 tomcat/jetty 作为 servlet 容器来启动应用。具体工程参考 [在 Spring 工程中使用 SOFATracer](https://github.com/glmapper/tracer-zipkin-plugin-demo)
-
-附:[远程上报数据到 Zipkin 的源代码地址](https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-zipkin)。前提：需要[参考此文档](https://zipkin.io/)对 Zipkin 服务端进行配置和搭建。
 
 
 
