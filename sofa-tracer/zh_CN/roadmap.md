@@ -40,23 +40,24 @@
 
 ### 2.2.0 
 
+* SOFATracer 支持 JDBC 数据源
+    * SOFATracer 支持 Mysql Driver
+    * SOFATracer 支持 [Sharding-JDBC](https://github.com/sharding-sphere/sharding-sphere)
+    * SOFATracer 支持  Mysql-JDBC
+    * SOFATracer 支持  Druid 
+    * SOFATracer 支持  c3p0 
+    * SOFATracer 支持  Tomcat-JDBC
+    * SOFATracer 支持  HikariCP 
 * SOFATracer 支持 HttpClient
-* SOFATracer 数据汇报能力提供在非 SOFABoot 框架下的运行和配置能力
-* SOFATracer 提供采样能力
 * SOFATracer 支持 Zipkin 2.X.X 版本，开发验证并测试
 
 ### 2.3.0
 
-* SOFATracer 支持 Mysql Driver
-* SOFATracer 支持 [Sharding-JDBC](https://github.com/sharding-sphere/sharding-sphere)
-* SOFATracer 支持  Mysql-JDBC
-* SOFATracer 支持  Druid 
-* SOFATracer 支持  c3p0 
-* SOFATracer 支持  Tomcat-JDBC
-* SOFATracer 支持  HikariCP 
-* SOFATracer 支持  RestTemplate 和 AsyncRestTemplate
-* SOFATracer 支持  标准 servlet 容器
-
+* SOFATracer 支持RestTemplate 和 AsyncRestTemplate
+* SOFATracer 支持提供采样能力
+* SOFATracer 支持标准 servlet 容器
+* SOFATracer 支持 Zipkin UI 中文界面
+* SOFATracer 支持数据汇报能力提供在非 SOFABoot 框架下的运行和配置能力
 
 ### 2.4.0
 
@@ -67,8 +68,8 @@
 ### 2.5.0
 
 * SOFATracer 支持单机版链路分析并给用户通过注解使用的埋点方式，数据汇报到 Zipkin 展示
-* SOFATracer 支持 Opentracing 0.30.0+ 版本
-* SOFATracer 支持 基于 Opentracing API 埋点方式
 * SOFATracer 支持 manual report
+* SOFATracer 支持 基于 Opentracing API 埋点方式
+* SOFATracer 支持 Opentracing 0.30.0+ 版本
 
 
