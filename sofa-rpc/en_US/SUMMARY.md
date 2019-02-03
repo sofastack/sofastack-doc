@@ -1,4 +1,4 @@
-* Quick start guide
+* Quick start
     * [SOFARPC](./Getting-Started-With-RPC)
     * [SOFABoot](./Getting-Started-With-SOFA-Boot)
 * User guide

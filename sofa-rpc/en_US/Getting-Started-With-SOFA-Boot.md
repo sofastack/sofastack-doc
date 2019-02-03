@@ -38,8 +38,9 @@ spring.application.name=AppName
 5. Introduce RPC starter:
 
 ```xml 
-<dependency> 
-     <groupId>com.alipay.sofa<
+<dependency>
+     <groupId>com.alipay.sofa</groupId>
+     <artifactId>rpc-sofa-boot-starter</artifactId>
 </dependency> 
 ``` 
 
