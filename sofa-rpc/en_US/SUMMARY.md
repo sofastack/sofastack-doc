@@ -1,7 +1,7 @@
-* Quick start
+* Quick Start
     * [SOFARPC](./Getting-Started-With-RPC)
     * [SOFABoot](./Getting-Started-With-SOFA-Boot)
-* User guide
+* User Guide
     * [Programming interface](./Programming)
         * [Use API in non-spring environment](./Programing-RPC)
         * [Use XML in SOFABoot environment](./Programing-SOFA-BOOT-XML)
@@ -48,7 +48,7 @@
         * [RPC application parameter configuration](./Application-RPC-Config)
         * [RPC publishing and reference configuration](./Configuration-Common)
         * [Fault tolerance configuration](./Configuration-Fault-Tolerance)
-* Developer guide
+* Developer Guide
     * [How to compile](./How-To-Build)
     * [Architecture](./Structure-Intro)
     * [Call flow](./Client-Invoke-Flow)
@@ -60,7 +60,7 @@
 * [Release notes](./ReleaseNotes)
 * [FAQ](./FAQ)
 * [Development roadmap](./RoadMap)
-* Communication
+* Contribution
     * [Contribution](./Contributing)
     * [Submit issue](https://github.com/alipay/sofa-rpc/issues/new)
     * [Submit PR](https://github.com/alipay/sofa-rpc/compare)
