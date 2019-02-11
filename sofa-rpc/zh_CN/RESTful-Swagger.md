@@ -1,10 +1,29 @@
 ## 集成 SOFARPC RESTful 服务和 Swagger
 
-目前 SOFARPC 并没有提供 RESTful 服务和 [Swagger](https://swagger.io/) 的一键集成的能力，一键集成的能力将会在后续的版本中提供，但是用户可以参考如下的文档，在现有的 SOFARPC 的版本上将 RESTful 服务和 Swagger 集成在一起。
+从 `rpc-sofa-boot-starter` 6.0.1 版本开始，SOFARPC 提供了 RESTful 服务和 [Swagger](https://swagger.io/) 的一键集成的能力。
 
-### 引入 Swagger 相关依赖
+在使用了 `rpc-sofa-boot-starter` 的情况下，如果想要开启 swagger 的能力，首先需要在 pom.xml 中增加 Swagger 的依赖：
 
-要集成 Swagger，首先，需要在应用中引入 Swagger 相关的依赖，由于 SOFARPC 的 RESTful 协议走的是 JAXRS 标准，因此我们引入 Swagger 的 JAXRS 依赖即可：
+```xml
+<dependency>
+    <groupId>io.swagger.core.v3</groupId>
+    <artifactId>swagger-jaxrs2</artifactId>
+    <version>2.0.0</version>
+</dependency>
+<dependency>
+    <groupId>com.google.guava</groupId>
+    <artifactId>guava</artifactId>
+    <version>20.0</version>
+</dependency>
+```
+
+然后在 `application.properties` 里面增加 `com.alipay.sofa.rpc.restSwagger=true`。
+
+最后，访问 `http://localhost:8341/swagger/openapi` 就可以拿到 SOFARPC 的 RESTful 的 Swagger OpenAPI 内容。
+
+如果没有使用 `rpc-sofa-boot-starter` 或者在 `rpc-sofa-boot-starter` 的版本低于 6.0.1，可以采用如下的方式集成 Swagger。
+
+首先，需要在应用中引入 Swagger 相关的依赖，由于 SOFARPC 的 RESTful 协议走的是 JAXRS 标准，因此我们引入 Swagger 的 JAXRS 依赖即可：
 
 ```xml
 <dependency>
