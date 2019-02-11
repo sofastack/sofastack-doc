@@ -9,26 +9,26 @@
 
 ```java
  // 只有1个线程 执行
-        ServerConfig serverConfig = new ServerConfig()
-            .setStopTimeout(60000)
-            .setPort(12300)
-            .setProtocol(RpcConstants.PROTOCOL_TYPE_HTTP)
-            .setDaemon(true);
+ServerConfig serverConfig = new ServerConfig()
+.setStopTimeout(60000)
+.setPort(12300)
+.setProtocol(RpcConstants.PROTOCOL_TYPE_HTTP)
+.setDaemon(true);
 
-        // 发布一个服务，每个请求要执行1秒
-        ProviderConfig<HttpService> providerConfig = new ProviderConfig<HttpService>()
-            .setInterfaceId(HttpService.class.getName())
-            .setRef(new HttpServiceImpl())
-            .setApplication(new ApplicationConfig().setAppName("serverApp"))
-            .setServer(serverConfig)
-            .setUniqueId("uuu")
-            .setRegister(false);
-        providerConfig.export();
+// 发布一个服务，每个请求要执行1秒
+ProviderConfig<HttpService> providerConfig = new ProviderConfig<HttpService>()
+.setInterfaceId(HttpService.class.getName())
+.setRef(new HttpServiceImpl())
+.setApplication(new ApplicationConfig().setAppName("serverApp"))
+.setServer(serverConfig)
+.setUniqueId("uuu")
+.setRegister(false);
+providerConfig.export();
 ```
 
 #### 服务引用
 
-因为是HTTP+Json，所以引用方可以直接通过HttpClient进行调用,以下为一段测试代码。
+因为是Http+Json，所以引用方可以直接通过HttpClient进行调用,以下为一段测试代码。
 
 ```java
 private ObjectMapper mapper = new ObjectMapper();

@@ -15,25 +15,31 @@ com.alipay.sofa.rpc.registry.address=zookeeper://xxx:2181?file=/home/admin/regis
 
 ### Zookeeper Auth 支持
 
+当用户需要对发布和消费服务，进行权限认证的时候，可以通过在操作 zookeeper 时，指定对应的目录和账号密码来进行读写。这样只有使用了相同密码的
+服务方或者消费方才能进行读写。
+
 
 #### SOFARPC API 支持
 
 在构造注册中心的时候，将Auth添加上
 
 ```java
-  parameters.put("scheme", "digest");
-        //如果存在多个认证信息，则在参数形式为为user1:passwd1,user2:passwd2
-  parameters.put("addAuth", "sofazk:rpc1");
+parameters.put("scheme", "digest");
+//如果存在多个认证信息，则在参数形式为为user1:passwd1,user2:passwd2
+parameters.put("addAuth", "sofazk:rpc1");
 
-  registryConfig = new RegistryConfig()
-            .setProtocol("zookeeper")
-            .setAddress("127.0.0.1:2181/authtest")
-            .setParameters(parameters);
+registryConfig = new RegistryConfig()
+.setProtocol("zookeeper")
+.setAddress("127.0.0.1:2181/authtest")
+.setParameters(parameters);
 ```
 
 之后其他没有使用正确auth的，将无法访问authtest目录
 
 
-#### SOFABoot 环境支持
+#### XML 方式支持
 
-暂未开放
+如下使用即可
+```xml
+com.alipay.sofa.rpc.registry.address=zookeeper://xxx:2181?file=/home/admin/registry&scheme=digest&addAuth=sofazk:rpc1
+```
