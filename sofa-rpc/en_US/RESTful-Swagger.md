@@ -1,10 +1,8 @@
 ## Integrate SOFARPC RESTful service with Swagger
 
-Currently, SOFARPC does not provide the ability to integrate RESTful service with [Swagger](https://swagger.io/) via one click. The ability will be provided in future versions, but you can refer to this document to integrate RESTful service with Swagger in the existing versions of SOFARPC.
+Since `rpc-sofa-boot-starter` version 6.0.1, SOFARPC provide the ability to integrate RESTful service with [Swagger](https://swagger.io/) easily.
 
-### Introduce Swagger related dependencies
-
-To integrate Swagger, first, you need to introduce Swagger-related dependencies into your application. Since SOFARPC's RESTful protocol is based on the JAXRS standard, we just need to introduce Swagger's JAXRS dependency:
+If you are using `rpc-sofa-boot-starter` in SOFABoot or Spring Boot environment and you want to enable Swagger support, first, you need add Swagger dependencies in your pom.xml:
 
 ```xml
 <dependency>
@@ -19,11 +17,34 @@ To integrate Swagger, first, you need to introduce Swagger-related dependencies 
 </dependency>
 ```
 
-As above, the 20.0 version of Guava was introduced to resolve Guava version conflict.
+Then you need add a configuration `com.alipay.sofa.rpc.restSwagger=true` in `application.properties`.
+
+Finally, visit `http://localhost:8341/swagger/openapi` and you can get all the Swagger OpenAPI information about SOFARPC's RESTful services.
+
+If you are not using `rpc-sofa-boot-starter` or the version of `rpc-sofa-boot-starter` you depends is smaller then 6.0.1, you can integration SOFARPC RESTful service with Swagger by using the following tutorial.
+
+Currently, SOFARPC does not provide the ability to integrate RESTful service with [Swagger](https://swagger.io/) via one click. The ability will be provided in future versions, but you can refer to this document to integrate RESTful service with Swagger in the existing versions of SOFARPC.
+
+First, you need to add Swagger related dependencies into your application. Since SOFARPC's RESTful protocol is based on the JAXRS, so you just need to add Swagger's JAXRS dependency:
+
+```xml
+<dependency>
+    <groupId>io.swagger.core.v3</groupId>
+    <artifactId>swagger-jaxrs2</artifactId>
+    <version>2.0.0</version>
+</dependency>
+<dependency>
+    <groupId>com.google.guava</groupId>
+    <artifactId>guava</artifactId>
+    <version>20.0</version>
+</dependency>
+```
+
+The 20.0 version of Guava was added to resolve Guava version conflict.
 
 ### Add a Swagger RESTful service
 
-To enable Swagger to expose SOFARPC's RESTful services through Swagger OpenAPI, in turn, we can provide Swagger's OpenAPI services through SOFARPC's RESTful services. First, you need to create a new interface:
+To enable Swagger to expose SOFARPC's RESTful services through Swagger OpenAPI, we can provide Swagger's OpenAPI services through SOFARPC's RESTful services. First, you need to create a new interface:
 
 ```java
 @Path("swagger")
