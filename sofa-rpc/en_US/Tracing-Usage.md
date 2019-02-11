@@ -3,7 +3,7 @@ By default, SOFARPC has integrated SOFATracer. Also, you can use other APM produ
 * [SOFATracer](./SOFATracer-Usage)
 * [Skywalking](./Skywalking-Usage)
 
-If you wants to disable the tracing ability of SOFARPC, you can do it in two ways.
+If you want to disable the tracing ability of SOFARPC, you can do it in two ways.
 
 If you are using `rpc-sofa-boot-starter` in SOFABoot or Spring Boot environment, you can add a configuration `com.alipay.sofa.rpc.defaultTracer=` in `application.properties`.
 
