@@ -1,6 +1,6 @@
 * Quick Start
-    * [SOFARPC](./Getting-Started-With-RPC)
-    * [SOFABoot](./Getting-Started-With-SOFA-Boot)
+    * [With SOFARPC](./Getting-Started-With-RPC)
+    * [With SOFABoot](./Getting-Started-With-SOFA-Boot)
 * User Guide
     * [Programming interface](./Programming)
         * [Use API in non-spring environment](./Programing-RPC)
