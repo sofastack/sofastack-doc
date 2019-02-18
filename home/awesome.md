@@ -99,22 +99,23 @@
 | -- | -- | -- | -- | -- |
 | -- | -- | -- | -- | -- |
 | @315157973 | @boliza | @caojie09 | @chenhui0212 | @choleraehyq |
-| @cp3fantasy | @cytnju | @dawxy | @dbl-x | @detailyang |
-| @easonzhang1992 | @eonezhang | @fleeto | @FzNl | @glmapper |
-| @guanchao-yang | @gxcsoccer | @hqq2023623 | @huangyunbin | @JamazRuan |
-| @jaredleechn | @JarVZhao | @JervyShi | @jewin | @jiangyunpeng |
-| @jjtyro | @JoeKerouac | @junxiong | @kelvinji2009 | @kevin21th |
-| @khotyn | @killagu | @kiral | @kswapd | @lazyrabbit2004 |
-| @ldxdl | @leizhiyuan | @leoner | @leyou240 | @liangyuanpeng |
-| @lichuang | @Lingtaonju | @liymg | @lonng | @lookuptable |
-| @luyiisme | @meua | @michalyao | @moeyui1 | @Moriadry |
-| @NeGnail | @nejisama | @neverhook | @OrezzerO | @popomore |
-| @pxzero | @QilongZhang | @quaff | @rootsongjc | @ScienJus |
-| @sevennt | @shaoshuai0102 | @silentred | @skyao | @stdupp |
-| @SteNicholas | @straybirdzls | @taoyuanyuan | @tinycedar | @tonyhawkwen |
-| @TreeLin | @ujjboy | @wanderxjtu | @XadillaX | @xiaoguoqiang |
-| @xmtsui | @xzchaoo | @yangl | @zhaojigang | @zhenhua |
-| @zorkeAccount | @zyjibmcn | @ZZMarquis 
+| @coolme200 | @cp3fantasy | @cytnju | @dawxy | @dbl-x |
+| @detailyang | @easonzhang1992 | @elseifer | @eonezhang | @fleeto |
+| @FzNl | @glmapper | @guanchao-yang | @gxcsoccer | @hqq2023623 |
+| @huangyunbin | @ITGrocery | @JamazRuan | @jaredleechn | @JarVZhao |
+| @JervyShi | @jewin | @jiangyunpeng | @jjtyro | @JoeKerouac |
+| @junxiong | @kelvinji2009 | @kevin21th | @khotyn | @killagu |
+| @kiral | @kswapd | @lazyrabbit2004 | @ldxdl | @leizhiyuan |
+| @leoner | @leyou240 | @liangyuanpeng | @lichuang | @Lingtaonju |
+| @liymg | @lonng | @lookuptable | @luyiisme | @meua |
+| @michalyao | @minli04g | @moeyui1 | @Moriadry | @NeGnail |
+| @nejisama | @neverhook | @OrezzerO | @popomore | @pxzero |
+| @QilongZhang | @quaff | @rootsongjc | @ScienJus | @sevennt |
+| @shaoshuai0102 | @silentred | @skyao | @stdupp | @SteNicholas |
+| @straybirdzls | @taoyuanyuan | @tinycedar | @tonyhawkwen | @TreeLin |
+| @ujjboy | @wanderxjtu | @XadillaX | @xiaoguoqiang | @xmtsui |
+| @xzchaoo | @yangl | @zhaojigang | @zhenhua | @zorkeAccount |
+| @zyjibmcn | @ZZMarquis 
 
 想要参与贡献，可以直接去[项目列表](#projects)找到您关注的项目。
 
@@ -132,3 +133,6 @@
 - 译筑科技
 - 运满满
 - 烽火科技
+- 挖财
+- OPPO 金融
+- 拍拍贷
