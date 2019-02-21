@@ -128,6 +128,21 @@
 
 排名不分先后
 
+<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*DGxOR4fiPWoAAAAAAAAAAABjARQnAQ" alt="蚂蚁金服" height="80" />
+<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*M2zuRorMbjQAAAAAAAAAAABjARQnAQ" alt="网商银行" height="80" />
+<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*heWwQZR3kesAAAAAAAAAAABjARQnAQ" alt="天弘基金" height="80" />
+<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*gZMVR4j8GbEAAAAAAAAAAABjARQnAQ" alt="数立" height="80" />
+<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*Yxv1Q7Q6jzsAAAAAAAAAAABjARQnAQ" alt="恒生电子" height="80" />
+<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*YWGHQqZfZKAAAAAAAAAAAABjARQnAQ" alt="Paytm" height="80" />
+<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*uVwgSbpWM80AAAAAAAAAAABjARQnAQ" alt="信美相互" height="80" />
+<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*I3l2T49Qp2UAAAAAAAAAAABjARQnAQ" alt="中国人保" height="80" />
+<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*SyKdS7ggwocAAAAAAAAAAABjARQnAQ" alt="南京银行" height="80" />
+<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*OtbNS59qaAMAAAAAAAAAAABjARQnAQ" alt="重庆农商行" height="80" />
+<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*2xQ1TbXdTAcAAAAAAAAAAABjARQnAQ" alt="天津银行" height="80" />
+<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*dJL2QrY0BCEAAAAAAAAAAABjARQnAQ" alt="兴业银行" height="80" />
+<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*3oHaQJ7718wAAAAAAAAAAABjARQnAQ" alt="邦道科技" height="80" />
+<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*VaeBRYeUGYgAAAAAAAAAAABjARQnAQ" alt="挖财" height="80" />
+
 - 杭州米雅信息科技
 - 申通快递
 - 深圳市大头兄弟传媒有限公司
