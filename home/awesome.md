@@ -21,7 +21,7 @@
 
 ## 目录
 
-- [用户 End User](#enduser)
+- [已知用户 Known User](#knownuser)
 - [资源 Resources](#resources)
 - [项目 Projects](#projects)
 - [文章 Articles](#articles)
@@ -29,11 +29,11 @@
 - [社区 Community](#community)
 - [贡献 Contributors](#contributors)
 
-<span id="enduser" /> 
+<span id="knownuser" /> 
 
-## 用户
+## 已知用户
 
-此处会列出使用 SOFAStack 的公司或组织，大家可以通过 [SOFAStack 使用者登记](https://github.com/alipay/sofastack-doc/issues/42) 进行登记，或者可以通过 [SOFAStack 使用调查问卷](https://wj.qq.com/s/2698623/5fe1) 进行反馈。以下排名不分先后:
+此处会列出我们已知的使用 SOFAStack 的公司或组织，大家可以通过 [SOFAStack 使用者登记](https://github.com/alipay/sofastack-doc/issues/42) 进行登记，或者可以通过 [SOFAStack 使用调查问卷](https://wj.qq.com/s/2698623/5fe1) 进行反馈。以下排名不分先后:
 
 <img alt="蚂蚁金服" src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*5LsoS4R5rzAAAAAAAAAAAABjARQnAQ" height="60" />
 <img alt="网商银行" src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*uAmFRZQ0Z4YAAAAAAAAAAABjARQnAQ" height="60" />
