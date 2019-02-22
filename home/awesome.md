@@ -21,13 +21,43 @@
 
 ## 目录
 
+- [用户 End User](#enduser)
 - [资源 Resources](#resources)
 - [项目 Projects](#projects)
 - [文章 Articles](#articles)
 - [工具 Tools](#tools)
 - [社区 Community](#community)
 - [贡献 Contributors](#contributors)
-- [用户 End User](#enduser)
+
+<span id="enduser" /> 
+
+## 用户
+
+此处会列出使用 SOFAStack 开源版的公司或组织，大家可以通过 [SOFAStack 使用者登记](https://github.com/alipay/sofastack-doc/issues/42) 进行登记，或者可以通过 [SOFAStack 使用调查问卷](https://wj.qq.com/s/2698623/5fe1) 进行反馈。
+
+排名不分先后
+
+![蚂蚁金服](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*5LsoS4R5rzAAAAAAAAAAAABjARQnAQ)
+![网商银行](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*uAmFRZQ0Z4YAAAAAAAAAAABjARQnAQ)
+![恒生电子](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*_iGLRq0Ih-IAAAAAAAAAAABjARQnAQ)
+![杭州数立](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*VYr5Q5hdrwoAAAAAAAAAAABjARQnAQ)
+![Paytm](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*a0fvTKJ1Xv8AAAAAAAAAAABjARQnAQ)
+![天弘基金](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*99OQT7lDBsMAAAAAAAAAAABjARQnAQ)
+![中国人保](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*P1BARJxwv1sAAAAAAAAAAABjARQnAQ)
+![信美相互](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*jAzWQpIgFUAAAAAAAAAAAABjARQnAQ)
+![南京银行](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*q9PMQI7hs8sAAAAAAAAAAABjARQnAQ)
+![民生银行](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*GnUuSKmOtS4AAAAAAAAAAABjARQnAQ)
+![重庆农商行](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*FKrxSYhdi2wAAAAAAAAAAABjARQnAQ)
+![挖财](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*lVrVT4dpSDEAAAAAAAAAAABjARQnAQ)
+![拍拍贷](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*TAePS6j56LsAAAAAAAAAAABjARQnAQ)
+![运满满](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*_kBbQYUYdIQAAAAAAAAAAABjARQnAQ)
+![OPPO金融](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*mU40QaJkwZYAAAAAAAAAAABjARQnAQ)
+![译筑科技](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*wuKSTpZSEkEAAAAAAAAAAABjARQnAQ)
+![杭州米雅信息科技](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*v6pyR5YsFmUAAAAAAAAAAABjARQnAQ)
+![邦道科技]https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*nsw1S5bt9DkAAAAAAAAAAABjARQnAQ)
+![申通快递](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*C3ncSpDsjS8AAAAAAAAAAABjARQnAQ)
+![深圳大头兄弟文化](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*8AYmRowxSC0AAAAAAAAAAABjARQnAQ)
+![烽火科技](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*MjuuT4omCrwAAAAAAAAAAABjARQnAQ)
 
 <span id="resources" /> 
 
@@ -83,7 +113,7 @@
   - 微信群：目前九个群，四千多一线开发用户交流群体，加`蚂蚁金服科技小助手(ant-techfin02)`为好友，回复 `SOFA` 入群。
 - 钉钉
   - 钉钉交流群：金融级分布式架构 SOFA，群号：23127468
-  - SOFA 公司用户群：公司用户实名认证，SOFA开发团队直接提供支持。 准备中。
+  - 钉钉交流群：SOFAStack 金牌用户服务群，如果您已经在生产环境使用了 SOFAStack 相关组件，还请告知我们，我们将会邀请您加入到此群中，以便更加快捷的沟通和更加高效的线上使用问题支持。
 - [新浪微博](https://weibo.com/sofastack)
 
 - [SegmentFault](https://segmentfault.com/t/sofa)
@@ -119,36 +149,3 @@
 
 
 想要参与贡献，可以直接去[项目列表](#projects)找到您关注的项目。
-
-<span id="enduser" /> 
-
-## 用户
-
-此处会列出使用 SOFAStack 开源版的公司或组织，大家可以通过 [SOFAStack 使用者登记](https://github.com/alipay/sofastack-doc/issues/42) 进行登记，或者可以通过 [SOFAStack 使用调查问卷](https://wj.qq.com/s/2698623/5fe1) 进行反馈。
-
-排名不分先后
-
-<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*DGxOR4fiPWoAAAAAAAAAAABjARQnAQ" alt="蚂蚁金服" height="80" />
-<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*M2zuRorMbjQAAAAAAAAAAABjARQnAQ" alt="网商银行" height="80" />
-<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*heWwQZR3kesAAAAAAAAAAABjARQnAQ" alt="天弘基金" height="80" />
-<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*gZMVR4j8GbEAAAAAAAAAAABjARQnAQ" alt="数立" height="80" />
-<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*Yxv1Q7Q6jzsAAAAAAAAAAABjARQnAQ" alt="恒生电子" height="80" />
-<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*YWGHQqZfZKAAAAAAAAAAAABjARQnAQ" alt="Paytm" height="80" />
-<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*uVwgSbpWM80AAAAAAAAAAABjARQnAQ" alt="信美相互" height="80" />
-<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*I3l2T49Qp2UAAAAAAAAAAABjARQnAQ" alt="中国人保" height="80" />
-<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*SyKdS7ggwocAAAAAAAAAAABjARQnAQ" alt="南京银行" height="80" />
-<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*OtbNS59qaAMAAAAAAAAAAABjARQnAQ" alt="重庆农商行" height="80" />
-<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*2xQ1TbXdTAcAAAAAAAAAAABjARQnAQ" alt="天津银行" height="80" />
-<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*dJL2QrY0BCEAAAAAAAAAAABjARQnAQ" alt="兴业银行" height="80" />
-<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*3oHaQJ7718wAAAAAAAAAAABjARQnAQ" alt="邦道科技" height="80" />
-<img src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*VaeBRYeUGYgAAAAAAAAAAABjARQnAQ" alt="挖财" height="80" />
-
-- 杭州米雅信息科技
-- 申通快递
-- 深圳市大头兄弟传媒有限公司
-- 译筑科技
-- 运满满
-- 烽火科技
-- 挖财
-- OPPO 金融
-- 拍拍贷
