@@ -33,7 +33,7 @@
 
 ## 已知用户
 
-此处会列出我们已知的使用 SOFAStack 的公司或组织，大家可以通过 [SOFAStack 使用者登记](https://github.com/alipay/sofastack-doc/issues/42) 进行登记，或者可以通过 [SOFAStack 使用调查问卷](https://wj.qq.com/s/2698623/5fe1) 进行反馈。以下排名不分先后:
+此处会列出我们已知的在生产环境使用了 SOFAStack 全部或者部分组件的公司或组织，大家可以通过 [SOFAStack 使用者登记](https://github.com/alipay/sofastack-doc/issues/42) 进行登记。登记后我们会邀请加入「SOFAStack 金牌用户服务群」，以便更加快捷的沟通和更加高效的线上使用问题支持。以下排名不分先后:
 
 <img alt="蚂蚁金服" src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*5LsoS4R5rzAAAAAAAAAAAABjARQnAQ" height="60" />
 <img alt="网商银行" src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*uAmFRZQ0Z4YAAAAAAAAAAABjARQnAQ" height="60" />
@@ -56,6 +56,9 @@
 <img alt="申通快递" src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*C3ncSpDsjS8AAAAAAAAAAABjARQnAQ" height="60" />
 <img alt="深圳大头兄弟文化" src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*8AYmRowxSC0AAAAAAAAAAABjARQnAQ" height="60" />
 <img alt="烽火科技" src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*MjuuT4omCrwAAAAAAAAAAABjARQnAQ" height="60" />
+<img alt="成都云智天下科技" src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*p0OkQbC5RvsAAAAAAAAAAABjARQnAQ" height="60" />
+<img alt="亚信科技" src="https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*LMfqTaP7-F8AAAAAAAAAAABjARQnAQ" height="60" />
+
 
 <span id="resources" /> 
 
@@ -80,6 +83,7 @@
 - [SOFABolt](https://github.com/alipay/sofa-bolt) 是基于 Netty 实现的网络通信框架。
 - [SOFAArk](https://github.com/alipay/sofa-ark) 是一款基于 Java 实现的轻量级类隔离容器。
 - [SOFAJarslink](https://github.com/alipay/sofa-jarslink) 是基于SOFAArk的动态模块和合并部署的解决方案。
+- [SOFAActs](https://github.com/alipay/sofa-acts) 是是一款白盒测试框架，旨在为企业提供高效、精细化的接口自动化测试。
 
 更多已项目直接关注：[github/alipay](https://github.com/alipay?q=sofa)
 
