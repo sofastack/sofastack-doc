@@ -21,7 +21,7 @@
 
 ## 目录
 
-- [已知用户 Known User](#knownuser)
+- [已知用户 Known Users](#knownusers)
 - [资源 Resources](#resources)
 - [项目 Projects](#projects)
 - [文章 Articles](#articles)
@@ -29,7 +29,7 @@
 - [社区 Community](#community)
 - [贡献 Contributors](#contributors)
 
-<span id="knownuser" /> 
+<span id="knownusers" /> 
 
 ## 已知用户
 
