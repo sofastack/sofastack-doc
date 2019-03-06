@@ -47,7 +47,7 @@ SOFARPC 的 RESTful 服务的默认端口为 8341。
 除了通过浏览器访问 SOFARPC 发布的 RESTful 服务之外，用户也可以通过 SOFARPC 标准的服务引用的方式来引用服务，比如通过 Annotation 的方式：
 
 ```java
-@SofaReference(binding = @SofaReferenceBinding(bindingType = "bolt"))
+@SofaReference(binding = @SofaReferenceBinding(bindingType = "rest"))
 private SampleService sampleService;
 ```
 
