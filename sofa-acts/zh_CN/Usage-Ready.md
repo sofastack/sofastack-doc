@@ -1,7 +1,6 @@
 # 框架准备
 
-在阅读前，您可以参考[快速开始](./GettingStarted)下载并安装 ACTS IDE 和引入 ACTS 依赖，
-浏览[实践视频](https://antloop.github.io/)了解 ACTS 的配置和基本使用。
+在阅读前，您可以参考[快速开始](./GettingStarted)下载并安装 ACTS IDE 和引入 ACTS 框架.
 
 本部分主要包含编码说明、数据源配置和一键配置说明，以帮助您使用 ACTS 框架。
 

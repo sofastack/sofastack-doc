@@ -1,6 +1,5 @@
 * [产品介绍](./Home)
 * [快速开始](./GettingStarted)
-* [实践视频](https://antloop.github.io/)
 * 用户手册
     * [框架准备](./Usage-Ready)
     * 功能特性
