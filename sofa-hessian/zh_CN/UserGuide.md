@@ -160,5 +160,5 @@ public static void main(String[] args) throws IOException {
 
 
 # FAQ
-1. SOFA RPC 里引用的 `SOFA-Hessian` 与业务使用的 `Hessian` 类冲突了怎么办？
+1. SOFARPC 里引用的 `SOFA-Hessian` 与业务使用的 `Hessian` 类冲突了怎么办？
 > 可以使用 SOFA Boot 类隔离能力，参见 [SOFA Ark](https://github.com/alipay/sofa-ark)

@@ -6,7 +6,7 @@ SOFAMesh is a large-scale implementation solution for Service Mesh which is impr
 1. Replace Envoy with MOSN that is written with Golang;
 2. Merge Mixer into the data plane to address the  performance bottlenecks;
 3. Enhance Pilot for a more flexible service discovery mechanism;
-4. Add support for SOFA RPC and Dubbo.
+4. Add support for SOFARPC and Dubbo.
 
 The following figure shows the architectural differences between SOFAMesh and Istio:
 
@@ -30,7 +30,7 @@ SOFAMesh greatly expands and enhances the Pilot module in Istio:
 2. Add data synchronization modules to enable data exchange between multiple service registry centers;
 3. Add Open Service Registry API to provide standardized service registration.
 
-Together with Pilot and MOSN, SOFAMesh provides the ability to enable traditional intrusive frameworks (such as Spring Cloud, Dubbo and SOFA RPC) and Service Mesh products to communicate with each other, thus it can smoothly evolve and transit to Service Mesh.
+Together with Pilot and MOSN, SOFAMesh provides the ability to enable traditional intrusive frameworks (such as Spring Cloud, Dubbo and SOFARPC) and Service Mesh products to communicate with each other, thus it can smoothly evolve and transit to Service Mesh.
 
 ## Open source co-construction
 
