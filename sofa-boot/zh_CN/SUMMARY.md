@@ -14,11 +14,11 @@
 - 类隔离
   - [简介](./sofa-ark/readme)
   - 快速开始
-    - [Ark-Plugin 工程演示](./sofa-ark/ark-plugin-demo)
-    - [Ark 工程演示](./sofa-ark/ark-demo)
+    - [如何打包 Ark Plugin](./sofa-ark/ark-plugin-demo)
+    - [如何打包 Ark 包](./sofa-ark/ark-demo)
   - 用户文档
     - [名词解释](./sofa-ark/terminology)
-    - [Ark 包](./sofa-ark/ark-jar)
+    - [Executable Ark Jar](./sofa-ark/ark-jar)
     - [Ark Plugin](./sofa-ark/ark-plugin)
     - [Ark Biz](sofa-ark/ark-biz.md)
     - [SOFABoot 使用](./ClassLoader-Isolation)

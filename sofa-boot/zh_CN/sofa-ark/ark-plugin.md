@@ -25,7 +25,7 @@
 <plugin>
     <groupId>com.alipay.sofa</groupId>
     <artifactId>sofa-ark-plugin-maven-plugin</artifactId>
-    <version>${sofa.ark.version}</version>
+    <version>${demo.version}</version>
 </plugin>
 ```
 
