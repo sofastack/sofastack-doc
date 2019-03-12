@@ -86,6 +86,9 @@
 
                     <!-- 配置插件的名字，务必配置对，运行时，是插件的唯一标识 ID。比如 sofa-rpc 插件，可以配置为 sofa-rpc; 默认为 ${artifactId} -->
                     <pluginName>${ark.plugin.name}</pluginName>
+                    
+                    <!--设置 ark plugin 的 classifier, 默认为空, 如非必要，建议不用设置-->
+                    <classifier>ark-plugin</classifier>
 
                     <!-- 配置导入类、资源 -->
                     <imported>
@@ -140,6 +143,10 @@
                         <excludeArtifactId>sofa-ark-spi</excludeArtifactId>
                     </excludeArtifactIds>
 
+                    <!--将指定的 Jar 包 shade 至 ark plugin-->
+                    <shades>
+                        <shade>groupId:artifactId[:classifier]:version</shade>
+                    </shades>
                 </configuration>
             </execution>
 
@@ -169,6 +176,9 @@
 
 + `excludeArtifactIds`: 打包插件时，排除和指定 artifactId 相同的包依赖；
 
++ `classifier`: 如非必要，建议不用设置，默认为空，只会打包生成 ark plugin; 如果配置不为空，则会额外打包生成普通的 Jar 包。
+
++ `shades`: 打包插件时，将指定的 Jar 包 shade 进入 ark plugin.
 
 ## 构建
 对于普通的 Java 工程，为了生成标准的 `Ark Plugin` ，只需要三步操作：
@@ -188,7 +198,16 @@
 
 
 ## 发布
-在工程主 pom 中配置仓库地址，然后敲击 `mvn deploy` 命令，即可发布该 `Ark Plugin` ;需要指出的是，发布的 `Ark Plugin` 坐标会带上 `classifier = ark-plugin` ；如上述构建描述，会生成如下坐标的 `Ark Plugin` :
+在工程主 pom 中配置仓库地址，然后敲击 `mvn deploy` 命令，即可发布该 `Ark Plugin` ;需要指出的是，如果没有设置 `classifier`，则生成的 ark plugin 坐标为：
+```xml
+<dependency>
+    <groupId>com.alipay.sofa</groupId>
+    <artifactId>sofa-ark-plugin-demo</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+如果设置了 `classifier=ark-plugin`，发布的 `Ark Plugin` 坐标会带上 `classifier = ark-plugin` ；则生成的 ark plugin 坐标为:
 
 ```xml
 <dependency>
@@ -202,25 +221,32 @@
 其他应用通过该坐标即可引用该插件。
 
 ## Ark Plugin 典型目录结构
+以 [快速开始]() 为例，该 Demo 打包生成的 ark plugin 目录结构如下：
+
 ```text
 .
-│
+├── META-INF
+│   ├── MANIFEST.MF
+│   └── maven
+│       └── com.alipay.sofa
+│           └── sample-ark-plugin
+│               ├── pom.properties
+│               └── pom.xml
 ├── com
 │   └── alipay
 │       └── sofa
 │           └── ark
-│               └── plugin
-│                   └── mark
-│
-├── META-INF
-│   └── MANIFEST.MF
-│
-├── conf
-│   └── export.index
+│               ├── plugin
+│               │   └── mark
+│               └── sample
+│                   ├── activator
+│                   ├── facade
+│                   └── impl
 └── lib
-    ├── commons-lang3-3.3.1.jar
-    ├── sample-plugin-1.0.0.jar
-    └── sample-plugin-common-1.0.0.jar
+    ├── sample-ark-plugin-0.6.0.jar
+    ├── sample-ark-plugin-common-0.6.0.jar
+    ├── sofa-ark-exception-0.6.0.jar
+    └── sofa-ark-spi-0.6.0.jar
 ```
 
 上述目录结构相关文件和目录说明如下：
@@ -228,20 +254,23 @@
 * `com/alipay/sofa/ark/plugin/mark` ：标记文件，标记该 Jar 包是 `sofa-ark-plugin-maven-plugin` 打包生成的 `Ark Plugin` 文件。
 
 * `META-INF/MANIFEST.MF` ：记录插件元信息，内容类似如下：
-  ```manifest
-  Manifest-Version: 1.0
-  groupId: com.alipay.sofa
-  artifactId: sample-plugin
-  version: 1.0.0
-  priority: 2000
-  pluginName: sample-demo-plugin
-  activator: com.alipay.sofa.ark.service.impl.SampleActivator
-  import-packages: javax.servlet,org.springframework
-  import-classes: com.alipay.sofa.rpc.config.ProviderConfig
-  export-packages: com.alipay.sofa.ark.service
-  export-classes: com.alipay.sofa.ark.common.CommonUtils,com.alipay.sofa.mock
-  ```
-  
-* `conf/export.index` ：插件导出类索引文件；为了避免在运行时计算插件 `export-packages` 下面具体的导出类，在打包生成 `Ark Plugin` 时，会生成插件所有导出类的索引文件，缩短 `Ark Container` 解析配置时间。而导入类只需要读取 `META-INF/MANIFEST.MF` 配置信息，直接比较 `import-packages` 和 `import-classes` 前缀即可，无需生成索引文件。
+```manifest
+Manifest-Version: 1.0
+groupId: com.alipay.sofa
+artifactId: sample-ark-plugin
+version: 0.6.0
+priority: 100
+pluginName: sample-ark-plugin
+description:  
+activator: com.alipay.sofa.ark.sample.activator.SamplePluginActivator
+import-packages: 
+import-classes: 
+import-resources: 
+export-packages: com.alipay.sofa.ark.sample.common
+export-classes: com.alipay.sofa.ark.sample.facade.SamplePluginService
+export-resources: Sample_Resource_Exported
+```
 
 * `lib/` : lib 目录存放插件工程依赖的普通 Jar 包，一般包含插件需要和其他插件或者业务有隔离需求的 Jar 包；插件配置的导出类都包含在这些 Jar 包中。
+
+* `com/alipay/sofa/ark/sample/*`: ark plugin 模块中包含的类文件
