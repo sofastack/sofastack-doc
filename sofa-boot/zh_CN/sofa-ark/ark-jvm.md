@@ -233,3 +233,47 @@ public class ClientBean {
 
 上面说的是在 XML 的方式中使用 uniqueId。当你用 Annotation 的方式发布 JVM 服务和引用的时候，可以通过设置 @SofaService 和 @SofaReference 的 uniqueId 属性来设置 uniqueId。当你用编程 API 的方式发布或者引用 JVM 服务的时候，可以通过 ServiceParam 和 ReferenceParam 的 setUniqueId 方法来设置 uniqueId。 
 
+### 跳过序列化
+在 Biz 之间使用 JVM 服务调用时，因为每个 Biz 有单独的类加载器加载，因此每次 JVM 调用都会走 Hessian 序列化协议；为了性能的提升，有时不希望走序列化，而是走直接调用的方式，此时需要做两步额外的工作，以下面接口服务为例：
+
+```java
+public interface SampleService {
+    Result service();
+}
+```
+
++ 打包插件
+
+因为走直接调用的方式，因此接口类 SampleService 及其依赖（比如参数，返回值）等都需要下沉为 Ark Plugin ，并在插件配置中将这些类导出，这样做的目的是多个 Biz 中使用接口时，该接口类统一委托给 Plugin 加载，否则报错如下：
+
+```text
+java.lang.IllegalArgumentException: object is not an instance of declaring class
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.runtime.integration.invoke.DynamicJvmServiceProxyFinder$DynamicJvmServiceInvoker.doInvoke(DynamicJvmServiceProxyFinder.java:164)
+	at com.alipay.sofa.runtime.spi.service.ServiceProxy.invoke(ServiceProxy.java:39)
+	at com.alipay.sofa.runtime.service.binding.JvmBindingAdapter$JvmServiceInvoker.doInvoke(JvmBindingAdapter.java:171)
+	at com.alipay.sofa.runtime.spi.service.ServiceProxy.invoke(ServiceProxy.java:39)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy73.service(Unknown Source)
+	at com.alipay.sofa.demo.service.SampleRestService.sampleService(SampleRestService.java:87)
+```
+
++ 发布服务指定跳过序列化
+
+默认情况下，通过注解或者xml发布 JVM 服务，在跨 Biz 调用时，都会走序列化，如果想跳过，需要在发布服务时，指定 `serialize = false`
+
+1、注解指定
+
+```java
+@SofaService(bindings = {@SofaServiceBinding(serialize = false)})
+```
+
+2、xml 指定
+
+```xml
+<sofa:binding.jvm serialize="true"/>
+```

@@ -16,9 +16,6 @@
   - 快速开始
     - [如何打包 Ark Plugin](./sofa-ark/ark-plugin-demo)
     - [如何打包 Ark 包](./sofa-ark/ark-demo)
-    - [插件和应用通信]
-    - [应用和应用通信]
-    - [共享宿主应用数据源]
   - 用户文档
     - [名词解释](./sofa-ark/terminology)
     - [Executable Ark Jar](./sofa-ark/ark-jar)
