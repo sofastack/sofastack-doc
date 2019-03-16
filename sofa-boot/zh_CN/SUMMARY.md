@@ -27,10 +27,10 @@
     - [SOFAArk 配置](./sofa-ark/ark-config)
     - [Ark Biz 生命周期](./sofa-ark/biz-lifecycle)
     - [Zookeeper 配置](./sofa-ark/zk-config)
-    - [Ark 事件机制]
-    - [Ark 服务通信]
+    - [Ark 服务机制](./sofa-ark/ark-service)
+    - [Ark 事件机制](./sofa-ark/ark-event)
     - [Ark 扩展机制]
-    - [Ark 容器服务]
+    - [Ark 服务通信]
     - [Telnet 指令]
     - [Ark 日志]
     - [SOFABoot 使用](./ClassLoader-Isolation)
