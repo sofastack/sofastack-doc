@@ -29,10 +29,10 @@
     - [Zookeeper 配置](./sofa-ark/zk-config)
     - [Ark 服务机制](./sofa-ark/ark-service)
     - [Ark 事件机制](./sofa-ark/ark-event)
-    - [Ark 扩展机制]
-    - [Ark 服务通信]
-    - [Telnet 指令]
-    - [Ark 日志]
+    - [Ark 扩展机制](./sofa-ark/ark-extension)
+    - [Ark 服务通信](./sofa-ark/ark-jvm)
+    - [Telnet 指令](./sofa-ark/ark-telnet)
+    - [Ark 日志](./sofa-ark/ark-log)
     - [SOFABoot 使用](./ClassLoader-Isolation)
   - 开发文档
     - [Ark 容器启动流程](./sofa-ark/startup)

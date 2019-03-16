@@ -99,7 +99,7 @@ SOFAArk 提供集成 Spring Boot/SOFABoot 功能，在 Field 上打上 `@ArkInje
 
 在插件内部，有时候也可以使用 `@ArkInject` 引用服务，即插件在发布某个服务时，服务内部可以直接使用 `@ArkInject` 引用服务；需要注意的是，被引用的服务如果是其他插件发布的，则必须满足其他插件优先当前插件启动。
 
-### 默认服务
+#### 默认服务
 前面提到，为了方便 Plugin 和 Biz 开发高级特性，SOFAArk 将内部功能组件发布成服务，包括：
 
 + BizManageService
@@ -121,3 +121,6 @@ SOFAArk 提供集成 Spring Boot/SOFABoot 功能，在 Field 上打上 `@ArkInje
 > 插件服务管理器，真正用于发布和引用插件服务, 不推荐 Biz 使用它来发布服务，Biz 只能引用服务，否则可能导致 Biz 不能完全卸载
 
 上述服务有 SOFAArk 容器默认发布，其他 Plugin 和 Biz 可以引用，建议在了解原理之后使用
+
+### 应用服务
+插件服务更多是为了解决 Plugin 和 Biz 的通信问题，Biz 之间的通信则依赖 SOFABoot 提供的 runtime-sofa-boot-plugin，它提供了 `SofaService/SofaReference`，具体参考[服务通信](./ark-jvm)文档。
