@@ -90,8 +90,7 @@ SOFABoot 的类隔离框架会自动检测应用中是否有引入 Ark Plugin（
 ```xml
 <dependency>
     <groupId>com.alipay.sofa</groupId>
-    <artifactId>rpc-sofa-boot-starter</artifactId>
-    <classifier>ark-plugin</classifier>
+    <artifactId>rpc-sofa-boot-plugin</artifactId>
 </dependency>
 ```
 
