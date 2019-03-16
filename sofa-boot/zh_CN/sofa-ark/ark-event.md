@@ -1,4 +1,4 @@
-SOFAArk 提供了简单的事件总线，Plugin 和 Biz 可以使用事件总线服务 `EventAdminService` 注册事件监听器并发布和引用服务：
+SOFAArk 提供了简单的事件总线，Plugin 和 Biz 可以使用事件总线服务 `EventAdminService` 注册事件监听器并发布和监听事件：
 
 ```java
 public interface EventAdminService {
@@ -69,4 +69,4 @@ public interface EventHandler extends PriorityOrdered {
 调用 `EventAdminService.register` 方法注册监听器，即可接受广播事件。
 
 ### 注意事项
-Plugin 内部只能手动注册，如果 Biz 是 Spring Boot/SOFABoot 应用，所有实现接口 `EventHandler` 的 Bean 都会默认被注册，这也是在 Biz 中推荐的用法，在应用卸载时，也会自动注销这些监听器
+Plugin 内部只能手动注册事件监听器，如果 Biz 是 Spring Boot/SOFABoot 应用，所有实现接口 `EventHandler` 的 Bean 都会默认被注册，这也是在 Biz 中推荐的用法，在应用卸载时，也会自动注销监听器

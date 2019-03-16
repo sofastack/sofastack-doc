@@ -1,3 +1,19 @@
+在 [Ark 服务机制](./ark-service) 中，我们详细介绍了如何引用和发布插件服务，主要是解决 Plugin 和 Biz 的通信问题；为了解决 Biz 之间的通信问题，SOFAArk 引入了 SOFABoot 提供的 `SofaService/SofaReference` 编程界面；下面介绍其使用方法。
+
+### 引入依赖
+引入 runtime-sofa-boot-plugin 依赖，如果应用基于 Spring Boot 1.x 开发，推荐使用 v2.6.1 版本；如果应用基于 Spring Boot 2.x 开发，推荐使用 v3.1.3 版本；
+
+```xml
+<dependency>
+    <groupId>com.alipay.sofa</groupId>
+    <artifactId>runtime-sofa-boot-plugin</artifactId>
+    <version>${sofa.boot.version}</version>
+</dependency>
+```
+
+### 发布和引用 JVM 服务
+SOFAArk 引入了 SOFABoot 提供的 `SofaService/SofaReference` JVM 服务概念([参考文档](../Module-Service))，为了方便文档统一，重复其介绍。
+
 SOFABoot 提供三种方式给开发人员发布和引用 JVM 服务
 
 - XML 方式
@@ -216,3 +232,4 @@ public class ClientBean {
 ```
 
 上面说的是在 XML 的方式中使用 uniqueId。当你用 Annotation 的方式发布 JVM 服务和引用的时候，可以通过设置 @SofaService 和 @SofaReference 的 uniqueId 属性来设置 uniqueId。当你用编程 API 的方式发布或者引用 JVM 服务的时候，可以通过 ServiceParam 和 ReferenceParam 的 setUniqueId 方法来设置 uniqueId。 
+
