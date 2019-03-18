@@ -25,7 +25,7 @@ SOFAArk 的配置目录不是必须存在，如果需要，统一放在工程根
 
 **注意事项：如果应用中包含 SOFAArk 配置，打包时需要注意 baseDir 配置，用于指定工程根目录，具体[参考文档](./ark-jar.md)**
 
-上述 con/ark 目录中可以配置 SOFAArk 容器启动配置以及日志配置，下面介绍配置的使用.
+上述 conf/ark 目录中可以配置 SOFAArk 容器启动配置以及日志配置，下面介绍配置的使用.
 
 conf/ark/bootstrap.properties 是 SOFAArk 容器默认启动配置文件，配置内容包括：日志配置、plugin 激活和钝化配置、biz 激活和钝化配置.
 
