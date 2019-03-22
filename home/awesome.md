@@ -92,6 +92,7 @@
 - [SOFAJarslink](https://github.com/alipay/sofa-jarslink) 是基于SOFAArk的动态模块和合并部署的解决方案。
 - [SOFAActs](https://github.com/alipay/sofa-acts) 是一款白盒测试框架，旨在为企业提供高效、精细化的接口自动化测试。
 - [SOFAJraft](https://github.com/alipay/sofa-jraft) 是生产级的 Java 版本的 raft 协议实现。
+- [SOFARegistry](https://github.com/alipay/sofa-registry) 是一款生产级、高时效、高可用的服务注册中心。
 
 更多已项目直接关注：[github/alipay](https://github.com/alipay?q=sofa)
 
