@@ -13,7 +13,7 @@
 构建 SOFARegistry 客户端实例的关键代码如下：
 
 ```java
-RegistryClientConfig config = DefaultRegistryClientConfigBuilder.start().setRegistryEndpoint("127.0.0.1").setRegistryEndpointPort(9603).build();
+RegistryClientConfig config =  DefaultRegistryClientConfigBuilder.start().setRegistryEndpoint("127.0.0.1").setRegistryEndpointPort(9603).build();
 DefaultRegistryClient registryClient = new DefaultRegistryClient(config);
 registryClient.init();
 ```
@@ -76,8 +76,8 @@ publisher.republish("10.10.1.1:12200?xx=zz");
 
 | 属性名 | 属性类型 | 描述 |
 | --- | --- | --- |
-| dataId | String | 数据ID，发布订阅时需要使用相同值，数据唯一标识由dataId+group+instanceId组成。 |
-| group | String | 数据分组，发布订阅时需要使用相同值，数据唯一标识由 dataId+group+instanceId 组成，默认值 DEFAULT_GROUP。 |
+| dataId | String | 数据ID，发布订阅时需要使用相同值，数据唯一标识由 dataId + group + instanceId 组成。 |
+| group | String | 数据分组，发布订阅时需要使用相同值，数据唯一标识由 dataId + group + instanceId 组成，默认值 DEFAULT_GROUP。 |
 | appName | String | 应用 appName。 |
 
 
@@ -137,10 +137,10 @@ SubscriberRegistration 包含以下四个属性：
 
 | 属性名 | 属性类型 | 描述 |
 | --- | --- | --- |
-| dataId | String | 数据ID，发布订阅时需要使用相同值，数据唯一标识由 dataId+group+instanceId 组成。 |
-| group | String | 数据分组，发布订阅时需要使用相同值，数据唯一标识由 dataId+group+instanceId 组成，默认值 DEFAULT_GROUP。 |
+| dataId | String | 数据ID，发布订阅时需要使用相同值，数据唯一标识由 dataId + group + instanceId 组成。 |
+| group | String | 数据分组，发布订阅时需要使用相同值，数据唯一标识由 dataId + group + instanceId 组成，默认值 DEFAULT_GROUP。 |
 | appName | String | 应用appName |
-| scopeEnum | ScopeEnum | 枚举值，表示 zone、dataCenter、global 三种维度之一。 |
+| scopeEnum | ScopeEnum | 枚举值，表示 Zone、DataCenter、Global 三种维度之一。 |
 | subscriberDataObserver | SubscriberDataObserver | 服务端数据后的回调接口。 |
 
 ## 5. 注销发布及订阅
