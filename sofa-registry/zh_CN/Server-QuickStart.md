@@ -30,15 +30,15 @@ tar -zxvf registry-integration.tgz -C registry-integration
 ### 5. 确认运行状态
 可访问三个角色提供的健康监测 API，或查看日志 logs/registry-startup.log：
 ```bash
-## 查看meta角色的健康检测接口：
+# 查看meta角色的健康检测接口：
 $ curl http://localhost:9615/health/check
 {"success":true,"message":"... raftStatus:Leader"}
 
-## 查看data角色的健康检测接口：
+# 查看data角色的健康检测接口：
 $ curl http://localhost:9622/health/check
 {"success":true,"message":"... status:WORKING"}
 
-## 查看session角色的健康检测接口：
+# 查看session角色的健康检测接口：
 $ curl http://localhost:9603/health/check
 {"success":true,"message":"..."}
 ```

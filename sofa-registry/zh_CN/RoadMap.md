@@ -1,6 +1,7 @@
 # 路线图及任务认领
 ## 发展路线
-![SOFARegistry RoadMap.svg](https://gw.alipayobjects.com/zos/basement_prod/bcfb5589-d1a0-45d6-a2ce-289c476311f5.svg)
+
+![RoadMap.svg](https://gw.alipayobjects.com/zos/basement_prod/bcfb5589-d1a0-45d6-a2ce-289c476311f5.svg)
 
 
 ## 任务列表
