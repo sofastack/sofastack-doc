@@ -1,5 +1,7 @@
 # 客户端使用
+
 ## 1. 创建 Maven 工程
+
 服务端部署完毕后，我们可以新建一个 Maven 工程使用 SOFARegistry 提供的服务。首先新建一个 Maven 工程，然后引入如下依赖：
 
 ```xml
@@ -94,13 +96,16 @@ public interface UserData {
 * getZoneData: 返回以 zone 为 key，每个 zone 的数据为 value 的数据。
 
 ### 3.2 构造订阅者注册表
+
 构造订阅者注册表需要创建 SubscriberRegistration 对象，创建该对象需要指定 dataId 及 SubscriberDataObserver。
 
-
 ### 3.3 订阅数据
-调用 RegistryClient 的 register 方法可以进行数据订阅，该方法包含一个参数，只需传入 SubscriberRegistration 对象即可。<br /><br /><br />如果先运行发布数据的程序，然后再运行订阅数据的程序，那么我们将在控制端看到如下输出：
 
-```java
+调用 RegistryClient 的 register 方法可以进行数据订阅，该方法包含一个参数，只需传入 SubscriberRegistration 对象即可。
+
+如果先运行发布数据的程序，然后再运行订阅数据的程序，那么我们将在控制端看到如下输出：
+
+```plain
 receive data success, dataId: com.alipay.test.demo.service:1.0@DEFAULT, data: DefaultUserData{zoneData={DEFAULT_ZONE=[10.10.1.1:12200?xx=yy]}, localZone='DEFAULT_ZONE'}
 ```
 
