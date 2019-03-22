@@ -81,5 +81,5 @@ curl -X POST "http://<session_ip>:9603/digest/sub/connect/query" -H "Content-Typ
 根据客户端的 ip&port 强制删除其所有 sub&pub 数据（但不会断开连接）：
 
 ```shell
-curl -X POST "http://<session_ip>:9603/api/clients/off" -H "Content-Type: application/json" -d '{"connectIds": ["clientIP:client端口"]}'
+curl -X POST "http://<session_ip>:9603/api/clients/off" -H "Content-Type: application/json" -d '{"connectIds": ["<clientIP>:<client端口>"]}'
 ```
