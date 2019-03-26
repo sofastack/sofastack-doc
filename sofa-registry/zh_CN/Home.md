@@ -15,7 +15,7 @@ SOFARegistry 是蚂蚁金服开源的一个生产级、高时效、高可用的�
 ## 架构
 服务注册中心分为四个角色，客户端（Client）、会话服务器（SessionServer）、数据服务器（DataServer）、元数据服务器（MetaServer），每个角色司职不同能力组合后共同提供对外服务能力，各部分关系和结构如下：
 
-![SOFARegistry.svg](https://gw.alipayobjects.com/zos/basement_prod/cc03dab9-b91a-4d4a-95e9-f68da4f0f6b7.svg)
+![SOFARegistry.svg](https://gw.alipayobjects.com/zos/basement_prod/a9b69b25-836f-4bbe-a32c-ec6148084f93.svg)
 
 ### Client
 提供应用接入服务注册中心的基本 API 能力，应用系统通过依赖客户端 JAR 包，通过编程方式调用服务注册中心的服务订阅和服务发布能力。
