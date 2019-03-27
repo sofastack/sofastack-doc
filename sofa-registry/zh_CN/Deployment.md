@@ -33,7 +33,7 @@ mvn clean package -DskipTests
 集成部署模式，是将 meta/data/session 三个角色打包集成在一个 JVM 里运行，可单机或集群部署。
 
 ##### 2.1.1 单机部署
-集成部署的单机部署模式可以直接参考[快速开始-服务端部署](./Server-QuickStart)部分。
+集成部署的单机部署模式可以直接参考[快速开始-服务端部署](./Server-QuickStart.md)部分。
 
 ##### 2.1.2 集群部署
 * 解压 registry-integration.tgz，并修改配置文件
