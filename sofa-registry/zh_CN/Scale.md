@@ -10,7 +10,7 @@
 
 **第一步. 部署新的 registry-integration 节点**
 
-首先参考[部署](./Deployment)文档，将 `registry-integration.tgz` 在新节点 node4 上部署起来，值得注意的是，node4 需要将 nodes.metaNode 配置项指定为4台机器的地址列表：
+首先参考[部署](./Deployment.md)文档，将 `registry-integration.tgz` 在新节点 node4 上部署起来，值得注意的是，node4 需要将 nodes.metaNode 配置项指定为4台机器的地址列表：
 
 ```bash
 nodes.metaNode=DefaultDataCenter:<node1>,<node2>,<node3>,<node4>
@@ -73,7 +73,7 @@ curl -X POST "http://<node1>:9615/manage/changePeer" -d "ipAddressList=<node1>,<
 
 **第一步. 部署新的 registry-meta 节点**
 
-首先参考[部署](./Deployment)文档，将 `registry-meta.tgz` 在新节点 metaNode4 上部署起来，值得注意的是，metaNode4 需要将 nodes.metaNode 配置项指定为4台机器的地址列表：
+首先参考[部署](./Deployment.md)文档，将 `registry-meta.tgz` 在新节点 metaNode4 上部署起来，值得注意的是，metaNode4 需要将 nodes.metaNode 配置项指定为4台机器的地址列表：
 
 ```bash
 nodes.metaNode=DefaultDataCenter:<metaNode1>,<metaNode2>,<metaNode3>,<metaNode4>
@@ -133,7 +133,7 @@ curl -X POST "http://<metaNode1>:9615/manage/changePeer" -d "ipAddressList=<meta
 
 **第一步. 部署新的 registry-data 节点**
 
-首先参考[部署](./Deployment)文档，将 `registry-data.tgz` 在新节点 newDataNode 上部署起来，只要 newDataNode 将 nodes.metaNode 配置项指定为和其他 registry-data 一样的 metaNode 机器列表即可：
+首先参考[部署](./Deployment.md)文档，将 `registry-data.tgz` 在新节点 newDataNode 上部署起来，只要 newDataNode 将 nodes.metaNode 配置项指定为和其他 registry-data 一样的 metaNode 机器列表即可：
 
 ```bash
 nodes.metaNode=DefaultDataCenter:<metaNode1>,<metaNode2>,<metaNode3>
@@ -149,7 +149,7 @@ nodes.metaNode=DefaultDataCenter:<metaNode1>,<metaNode2>,<metaNode3>
 
 **第一步. 部署新的 registry-session 节点**
 
-首先参考[部署](./Deployment)文档，将 `registry-session.tgz` 在新节点 newSessionNode 上部署起来，只要 newSessionNode 将 nodes.metaNode 配置项指定为和其他 registry-session 一样的 metaNode 机器列表即可：
+首先参考[部署](./Deployment.md)文档，将 `registry-session.tgz` 在新节点 newSessionNode 上部署起来，只要 newSessionNode 将 nodes.metaNode 配置项指定为和其他 registry-session 一样的 metaNode 机器列表即可：
 
 ```bash
 nodes.metaNode=DefaultDataCenter:<metaNode1>,<metaNode2>,<metaNode3>
