@@ -81,4 +81,7 @@
 | os.net.stats.out.errs |  intfc |  --- |
 | os.net.stats.out.fifo.errs |  intfc |  --- |
 | os.net.stats.out.packets |  intfc |  --- |
-
+| os.memory.stats.buffers.bytes | --- |  --- |
+| os.memory.stats.cached.bytes | --- |  --- |
+| os.memory.stats.free.bytes | --- |  --- |
+| os.memory.stats.total.bytes | --- |  --- |
