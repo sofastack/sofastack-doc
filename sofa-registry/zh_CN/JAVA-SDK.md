@@ -88,7 +88,7 @@ publisher.republish("10.10.1.1:12200?xx=zz");
 // 创建 SubscriberDataObserver 
 SubscriberDataObserver subscriberDataObserver = new SubscriberDataObserver() {
     @Override
-    public void handleData(String dataId, UserData data) {
+    public void handleData(String dataId, UserData userData) {
         System.out.println("receive data success, dataId: " + dataId + ", data: " + userData);
     }
 };
