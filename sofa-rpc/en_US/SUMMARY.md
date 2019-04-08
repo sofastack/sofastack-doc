@@ -33,6 +33,7 @@
             * [Local](./Registry-Local)
             * [Consul](./Registry-Consul)
             * [Nacos](./Registry-Nacos)
+            * [SOFARegistry](./Registry-SOFA)
         * [Direct Call](./Peer-To-Peer)
         * [Load Balancing](./Load-Balance)
         * [Custom Filter](./Custom-Filter)
