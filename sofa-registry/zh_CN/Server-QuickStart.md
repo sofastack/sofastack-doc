@@ -22,6 +22,7 @@ cd registry-integration
 您可以从 [release页面](https://github.com/alipay/sofa-registry/releases) 下载最新的 registry-integration-$version.tar.gz 包。
 
 ```bash
+mkdir registry-integration 
 tar -zxvf registry-integration-$version.tar.gz -C registry-integration
 cd registry-integration
 ```
