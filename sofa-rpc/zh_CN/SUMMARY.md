@@ -33,6 +33,7 @@
             * [Local](./Registry-Local)
             * [Consul](./Registry-Consul)
             * [Nacos](./Registry-Nacos)
+            * [SOFARegistry](./Registry-SOFA)
         * [直连调用](./Peer-To-Peer)
         * [负载均衡](./Load-Balance)
         * [自定义过滤器](./Custom-Filter)
