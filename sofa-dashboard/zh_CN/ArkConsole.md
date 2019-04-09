@@ -1,4 +1,4 @@
-# SOFAARK 管控
+## SOFAArk 管控
 
 [SOFAArk](https://www.sofastack.tech/sofa-boot/docs/sofa-ark-readme)  本身提供了多种方式来支持多应用(模块)合并部署 ，包括基于命令行的管控，基于 API 的管控等；SOFAARK 管控是 SOFADashboard 针对 API 的管控的一种实现。通过面向 Zookeeper 进行命令的推送和命令的解析执行。
 
