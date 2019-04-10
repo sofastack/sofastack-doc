@@ -1,4 +1,4 @@
-## SOFAArk 管控
+# SOFAArk 管控
 
 [SOFAArk](https://www.sofastack.tech/sofa-boot/docs/sofa-ark-readme)  本身提供了多种方式来支持多应用(模块)合并部署 ，包括基于命令行的管控，基于 API 的管控等；SOFAARK 管控是 SOFADashboard 针对 API 的管控的一种实现。通过面向 Zookeeper 进行命令的推送和命令的解析执行。
 
@@ -13,35 +13,35 @@ SOFAArk 管控主要包括以下功能：
 
 将 ark-biz 插件注册到 SOFADashboard：
 
-![ark-console.png](./resources/ark-console.png)
+![ark-console.png](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*xD_oSK6yq4AAAAAAAAAAAABjARQnAQ)
 
 填写插件的基本信息：
 
-![image.png](./resources/ark-registry.png)
+![image.png](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*DsGNQau9wKQAAAAAAAAAAABjARQnAQ)
 
 注册成功之后，模块列表如下：
 
-![image.png](./resources/ark-registry-success.png)
+![image.png](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*3PnhQ7fqXAwAAAAAAAAAAABjARQnAQ)
 
 ## 关联应用
 
 点击模块列表操作菜单栏中的关联应用，可以将一个应用与插件进行绑定：
 
-![image.png](./resources/ark-relation-app.png)
+![image.png](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*Xh6yQ7-txaIAAAAAAAAAAABjARQnAQ)
 
 点击插件列表后面的 关联应用案例，将插件与应用进行关联，如下：
 
-![image.png](./resources/ark-relation-success.png)
+![image.png](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*tnc-S7bSXOUAAAAAAAAAAABjARQnAQ)
 
 ## 插件详情
 
 点击插件列表后面的 详情 按钮，可以查看当前插件下所有应用信息和应用实例信息。
 
-![image.png](./resources/ark-plugin-detail-one.png)
+![image.png](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*f357QKsZ0VcAAAAAAAAAAABjARQnAQ)
 
 * 切换版本
 
-![image.png](./resources/ark-plugin-detail-two.png)
+![image.png](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*uPxlSqAN17EAAAAAAAAAAABjARQnAQ)
 
 切到之后 因为当前 插件 2.0.0 并没有被安装到宿主应用，因此此时看到的状态信息是空的。
 
@@ -55,11 +55,11 @@ SOFADashboard 提供三种维度的命令推送
 
 ### 基于 IP 维度
 
-![image.png](./resources/ark-command-push.png)
+![image.png](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*WDLxSqWYvzEAAAAAAAAAAABjARQnAQ)
 
 点击 安装按钮，延迟 1~1.5s 之后 界面将会刷新新的状态：
 
-![image.png](./resources/ark-command-push-result.png)
+![image.png](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*yDJEQJHJTDsAAAAAAAAAAABjARQnAQ)
 
 > 基于应用维度和基于分组维度此处不再赘述。
 
