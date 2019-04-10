@@ -1,4 +1,4 @@
-## SOFADashboard 简介
+# SOFADashboard 简介
 
 SOFADashboard 致力于对 SOFA 框架中组件进行统一管理，包括服务治理、SOFAArk 管控等。SOFADashboard 本身所用技术栈均基于开源社区产品来开发构建，包括：Ant Design Pro、SOFABoot、Spring、MyBatis 等。
 
@@ -6,7 +6,7 @@ SOFADashboard 致力于对 SOFA 框架中组件进行统一管理，包括服务
 
 ## 架构简图
 
-![image.png](./resources/sofadashboard.png)
+![image.png](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*uVAiQKWS4G4AAAAAAAAAAABjARQnAQ)
 
 SOFADashboard 目前服务治理与 SOFAArk 管控都是面向 Zookeeper 来编程实现的。
 
