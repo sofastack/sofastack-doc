@@ -4,8 +4,8 @@ SOFADashboard 支持查看应用的IP、端口、健康检查状态等基本信�
 
 ```xml
 <denpendency>
-  <groupId>com.alipay.sofa</groupId>
-	<artifactId>sofa-dashboard-client</artifactId>
+    <groupId>com.alipay.sofa</groupId>
+    <artifactId>sofa-dashboard-client</artifactId>
 </denpendency>
 ```
 
