@@ -1,8 +1,15 @@
-# 快速开始
+# Quick Start
 
-目前在 1.0 版本版本中，结构上采取的是前后端分离的方式，前端基于 Ant Design Pro 演进而来，后端采用 SOFABoot v3.0.0 框架。
+这个 Quick Start 可以帮您快速在您的电脑上，下载、安装并使用 SOFADashboard。
 
 ## 环境准备
+
+sofa-dashboard-backend 依赖 [Java](https://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/) 环境来运行。请确保是在以下运行环境可以正常使用:
+
+* JDK 1.8+；[下载](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) & [配置](https://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/)。
+* Maven 3.2.5+；[下载](https://maven.apache.org/download.cgi) & [配置](https://maven.apache.org/settings.html)。
+
+sofa-dashboard-frontend 使用了 [Ant Design Pro](https://github.com/ant-design/ant-design-pro) 脚手架，前端环境请参考 [Ant Design](https://github.com/ant-design/ant-design/blob/master/README-zh_CN.md)
 
 ### 数据库初始化
 
