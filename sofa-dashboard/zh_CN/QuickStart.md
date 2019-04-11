@@ -28,8 +28,8 @@ SOFADashboard 中的服务治理、SOFAArk 管控依赖于 Zookeeper，需要�
 ```bash
 > git clone https://github.com/alipay/sofa-dashboard.git
 > cd sofa-dashboard
-> mvn clean package
-> cd sofa-dashboard-web/target/
+> mvn clean package -DskipTests
+> cd sofa-dashboard-backend/sofa-dashboard-web/target/
 > java -jar sofa-dashboard-web-1.0.0-SNAPSHOT.jar
 ```
 
@@ -38,7 +38,6 @@ SOFADashboard 中的服务治理、SOFAArk 管控依赖于 Zookeeper，需要�
 sofa-dashboard-front 是 SOFADashboard 的前端代码工程，基于蚂蚁金服开源的前端框架 [antd](https://ant.design/) 开发。
 
 ```bash
-> git clone https://github.com/alipay/sofa-dashboard-front.git
 > cd sofa-dashboard-front
 > npm i
 > npm start
