@@ -37,11 +37,11 @@ SOFAArk 管控主要包括以下功能：
 
 点击插件列表后面的 详情 按钮，可以查看当前插件下所有应用信息和应用实例信息。
 
-![image.png](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*f357QKsZ0VcAAAAAAAAAAABjARQnAQ)
+![image.png](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*kJ5GTInKWD0AAAAAAAAAAABjARQnAQ)
 
 * 切换版本
 
-![image.png](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*uPxlSqAN17EAAAAAAAAAAABjARQnAQ)
+![image.png](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*a1x5Rr5e1eMAAAAAAAAAAABjARQnAQ)
 
 切到之后 因为当前 插件 2.0.0 并没有被安装到宿主应用，因此此时看到的状态信息是空的。
 
@@ -50,16 +50,15 @@ SOFAArk 管控主要包括以下功能：
 SOFADashboard 提供三种维度的命令推送
 
 * 基于应用维度，当前应用所有的实例都会监听到此命令变更
-* 基于分组维度，每个分组里面包含多个 ip，只有分组中的这些 ip 实例会收到命令变更通知
 * 基于IP 维度，分组维度的单 ip 场景
 
 ### 基于 IP 维度
 
-![image.png](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*WDLxSqWYvzEAAAAAAAAAAABjARQnAQ)
+![image.png](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*TdyoQLZtf2QAAAAAAAAAAABjARQnAQ)
 
 点击 安装按钮，延迟 1~1.5s 之后 界面将会刷新新的状态：
 
 ![image.png](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*yDJEQJHJTDsAAAAAAAAAAABjARQnAQ)
 
-> 基于应用维度和基于分组维度此处不再赘述。
+> 基于应用维度此处不再赘述。
 

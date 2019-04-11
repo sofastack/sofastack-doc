@@ -11,4 +11,4 @@ SOFADashboard 支持查看应用的IP、端口、健康检查状态等基本信�
 
 ## 功能展示
 
-![client-func](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*fEkBTJtcMzsAAAAAAAAAAABjARQnAQ)
+![client-func](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*wyOzQYekfVMAAAAAAAAAAABjARQnAQ)
