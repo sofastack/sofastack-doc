@@ -110,3 +110,35 @@
  </dependency>
 ```
 
+### 发布引用插件服务
+在该 Demo 中，演示了如何使用 `PluginContext` 发布插件服务：
+```java
+public class SamplePluginActivator implements PluginActivator {
+
+    public void start(PluginContext context) throws ArkRuntimeException {
+        System.out.println("starting in sample ark plugin activator");
+        context.publishService(SamplePluginService.class, new SamplePluginServiceImpl());
+    }
+
+    public void stop(PluginContext context) throws ArkRuntimeException {
+        System.out.println("stopping in ark plugin activator");
+    }
+}
+```
+
+同时，在服务实现 `SamplePluginServiceImpl` 中演示了如何引用其他插件或者Ark容器发的服务，这里是引用 Ark 容器发布的事件管理服务 `EventAdminService`:
+
+```java
+public class SamplePluginServiceImpl implements SamplePluginService {
+
+    @ArkInject
+    private EventAdminService eventAdminService;
+
+    public String service() {
+        return "I'm a sample plugin service published by ark-plugin";
+    }
+
+    public void sendEvent(ArkEvent arkEvent) {
+        eventAdminService.sendEvent(arkEvent);
+    }
+}

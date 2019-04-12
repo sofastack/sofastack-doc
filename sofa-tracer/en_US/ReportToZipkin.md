@@ -52,9 +52,9 @@ Finally, add the properties to be used by SOFATracer under the project's `applic
 spring.application.name=SOFATracerReportZipkin
 # logging path
 logging.path=./logs
-# 开启zipkin 上报
+# open zipkin report
 com.alipay.sofa.tracer.zipkin.enabled=true
-# 指定zipkin server 地址
+# specify zipkin server address
 com.alipay.sofa.tracer.zipkin.baseUrl=http://localhost:9411
 ```
 
@@ -83,7 +83,7 @@ You can import the project into IDE and run the `main` method in the project to 
 
 ```
 2018-05-12 13:12:05.868  INFO 76572 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'SpringMvcSofaTracerFilter' to urls: [/*]
-2018-05-12 13:12:06.543  INFO 76572 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zipkin]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.alipay.sofa.tracer.examples.zipkin.controller.SampleRestController.zipkin(java.lang.String)
+2018-05-12 13:12:06.543  INFO 76572 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/helloZipkin]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.alipay.sofa.tracer.examples.zipkin.controller.SampleRestController.helloZipkin(java.lang.String)
 2018-05-12 13:12:07.164  INFO 76572 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
 ```	
 

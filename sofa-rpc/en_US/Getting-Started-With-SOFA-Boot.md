@@ -1,13 +1,14 @@
-# Quick start guide
+# Quick Start
 
-This document introduces how to apply SOFARPC for service publishing and reference in SOFABoot. 
+This document introduces how to use SOFARPC for service publishing and reference in SOFABoot. 
 
 You can get the code sample of this document by clicking [here](https://github.com/alipay/sofa-rpc/tree/master/example/src/test/java/com/alipay/sofa/rpc/quickstart). Note that the code sample requires a local installation of the zookeeper environment. If not, you need to remove the `com.alipay.sofa.rpc.registry.address` configuration in `application.properties` to use the local file as a registry center.
 
 ## Create a project 
+
 1. Prepare environment: SOFABoot requires JDK7 or JDK8 and needs to be compiled with Apache Maven 2.2.5 or above. 
-2. Build SOFABoot project: SOFABoot is built based on Spring Boot. So you can use [Spring Boot's project generation tool](http://start.spring.io/) to generate a standard Spring Boot project. 
-3. Introduce SOFABoot dependency: The generated standard Spring Boot project directly uses Spring parent dependency, which should be changed to the parent dependency provided by SOFABoot. The parent dependency provides and manages a variety of starters provided by SOFABoot. 
+2. Build SOFABoot project: SOFABoot is based on Spring Boot. So you can use [Spring Boot's project generation tool](http://start.spring.io/) to generate a standard Spring Boot project. 
+3. Add SOFABoot dependency: The generated standard Spring Boot project directly uses Spring parent dependency, which should be changed to the parent dependency provided by SOFABoot. The parent dependency provides and manages a variety of starters provided by SOFABoot. 
 
 ```xml 
 <parent> 
@@ -29,7 +30,7 @@ Replace the above with the followings:
 ``` 
 
 4. Configure `application.properties`:
-`application.properties` is the configuration file in SOFABoot project. Here you need to configure an essential configuration item, namely the application name. 
+`application.properties` is the configuration file in SOFABoot project. Here you need to configure the application name. 
 
 ``` 
 spring.application.name=AppName 
@@ -38,8 +39,9 @@ spring.application.name=AppName
 5. Introduce RPC starter:
 
 ```xml 
-<dependency> 
-     <groupId>com.alipay.sofa<
+<dependency>
+     <groupId>com.alipay.sofa</groupId>
+     <artifactId>rpc-sofa-boot-starter</artifactId>
 </dependency> 
 ``` 
 

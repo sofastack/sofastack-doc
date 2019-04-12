@@ -30,7 +30,7 @@ SLF4J 提供了 MDC （Mapped Diagnostic Contexts）功能，可以支持用户�
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-log4j2</artifactId>
-    <--SOFABoot 没有管控 log4j2 版本 -->
+    <!--SOFABoot 没有管控 log4j2 版本 -->
     <version>1.4.2.RELEASE</version>
 </dependency>
 ```

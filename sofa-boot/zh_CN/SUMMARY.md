@@ -14,13 +14,22 @@
 - 类隔离
   - [简介](./sofa-ark/readme)
   - 快速开始
-    - [Ark-Plugin 工程演示](./sofa-ark/ark-plugin-demo)
-    - [Ark 工程演示](./sofa-ark/ark-demo)
+    - [如何打包 Ark Plugin](./sofa-ark/ark-plugin-demo)
+    - [如何打包 Ark 包](./sofa-ark/ark-demo)
   - 用户文档
     - [名词解释](./sofa-ark/terminology)
-    - [Ark 包](./sofa-ark/ark-jar)
+    - [Executable Ark Jar](./sofa-ark/ark-jar)
     - [Ark Plugin](./sofa-ark/ark-plugin)
-    - [Ark Biz](sofa-ark/ark-biz.md)
+    - [Ark Biz](sofa-ark/ark-biz)
+    - [SOFAArk 配置](./sofa-ark/ark-config)
+    - [Ark Biz 生命周期](./sofa-ark/biz-lifecycle)
+    - [Zookeeper 配置](./sofa-ark/zk-config)
+    - [Ark 服务机制](./sofa-ark/ark-service)
+    - [Ark 事件机制](./sofa-ark/ark-event)
+    - [Ark 扩展机制](./sofa-ark/ark-extension)
+    - [Ark 服务通信](./sofa-ark/ark-jvm)
+    - [Telnet 指令](./sofa-ark/ark-telnet)
+    - [Ark 日志](./sofa-ark/ark-log)
     - [SOFABoot 使用](./ClassLoader-Isolation)
   - 开发文档
     - [Ark 容器启动流程](./sofa-ark/startup)
@@ -29,26 +38,6 @@
   - [发布历史](./sofa-ark/release)
   - [发展路线](./sofa-ark/roadmap)
   - [参与贡献](./sofa-ark/contribution)
-- 动态部署
-  - [简介](./sofa-jarslink/jarslink-readme)
-  - 快速开始
-    - [如何创建 SOFABoot 应用](./sofa-jarslink/jarslink-app-demo)
-    - [如何使用 Jarslink 多应用动态部署](./sofa-jarslink/jarslink-deploy-demo)
-    - [如何跨应用通信](./sofa-jarslink/jarslink-invocation-demo)
-    - [如何集成 SOFABoot 健康检查](./sofa-jarslink/jarslink-health-demo)
-  - 用户手册
-    - [应用打包](./sofa-jarslink/jarslink-repackage)
-    - [合并部署](./sofa-jarslink/jarslink-deploy)
-    - [交互指令](./sofa-jarslink/jarslink-instruction)
-    - [生命周期](./sofa-jarslink/jarslink-lifecycle)
-  - 开发手册
-    - [如何编译](./sofa-jarslink/compile)
-    - [架构介绍](./sofa-jarslink/structure)
-    - [基础模型](./sofa-jarslink/model)
-    - [版本发布](./sofa-jarslink/version)
-  - [发布历史](./sofa-jarslink/release)
-  - [发展路线](./sofa-jarslink/roadmap)
-  - [参与贡献](./sofa-jarslink/contribution)
 - 升级文档
   - [SOFABoot 2.5.x 升级注意文档](upgrade_2_5_x)
   - [SOFABoot 3.0 升级注意文档](upgrade_3_x)

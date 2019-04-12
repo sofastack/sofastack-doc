@@ -160,6 +160,18 @@ SampleService proxy = referenceClient.reference(referenceParam);
 > 
 > 通过动态客户端创建的 Reference 对象是一个非常重的对象，请大家在使用的时候不要频繁创建，自行做好缓存，否则可能存在内存溢出的风险。
 
+除了实现 ClientFactoryAware 接口用于获取 ServiceClient 和 ReferenceClient 对象，还可以使用简便的注解 `@SofaClientFactory` 获取编程 API，例如
+
+```java
+public class ClientBean {
+    @SofaClientFactory
+    private ReferenceClient referenceClient;
+    
+    @SofaClientFactory
+    private ServiceClient serviceClient;
+}
+```
+
 ### uniqueId
 
 有些时候，针对一个接口，我们会需要发布两个服务出来，分别对应到不同的实现。继续前面的 sampleService 的例子，我们可能有两个 SampleService 的实现，这两个实现我们都需要发布成 SOFA 的 JVM Service，按照前面的教程，采用 XML 的方式，我们就可能用下面这种方式进行配置：

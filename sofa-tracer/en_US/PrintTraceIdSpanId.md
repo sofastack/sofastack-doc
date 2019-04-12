@@ -30,7 +30,7 @@ For SOFABoot or Spring Boot application, you need to introduce the specific log 
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-log4j2</artifactId>
-    <--SOFABoot does not control log4j2 version -->
+    <!--SOFABoot does not control log4j2 version -->
     <version>1.4.2.RELEASE</version>
 </dependency>
 ```

@@ -7,7 +7,7 @@ SOFAMesh 是基于 Istio 改进和扩展而来的 Service Mesh 大规模落地�
 1. 采用 Golang 编写的 MOSN 取代 Envoy
 2. 合并Mixer到数据平面以解决性能瓶颈
 3. 增强 Pilot 以实现更灵活的服务发现机制
-4. 增加对 SOFA RPC、Dubbo 的支持
+4. 增加对 SOFARPC、Dubbo 的支持
 
 下图展示了SOFAMesh 和 Istio 在架构上的不同：
 
@@ -32,7 +32,7 @@ SOFAMesh 中大幅扩展和增强 Istio 中的 Pilot 模块：
 2. 增加数据同步模块，以实现多个服务注册中心之间的数据交换
 3. 增加 Open Service Registry API，提供标准化的服务注册功能
 
-MOSN 和 Pilot 配合，将可以提供让传统侵入式框架（如 Spring Cloud、Dubbo、SOFA RPC 等）和 Service Mesh 产品可以相互通讯的功能，以便可以平滑的向 Service Mesh 产品演进和过渡。
+MOSN 和 Pilot 配合，将可以提供让传统侵入式框架（如 Spring Cloud、Dubbo、SOFARPC 等）和 Service Mesh 产品可以相互通讯的功能，以便可以平滑的向 Service Mesh 产品演进和过渡。
 
 ## 开源共建
 

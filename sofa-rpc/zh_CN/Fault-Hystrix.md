@@ -1,8 +1,8 @@
 ## 客户端熔断
 
-SOFA RPC 已集成 Hystrix 提供熔断能力，当前提供第一个预览版。关于 Hystrix 的更多介绍可以参考 [Hystrix 官方文档](https://github.com/Netflix/Hystrix)，Hystrix 集成能力主要由 [ScienJus](https://github.com/ScienJus) 提供，感谢贡献。
+SOFARPC 已集成 Hystrix 提供熔断能力，当前提供第一个预览版。关于 Hystrix 的更多介绍可以参考 [Hystrix 官方文档](https://github.com/Netflix/Hystrix)，Hystrix 集成能力主要由 [ScienJus](https://github.com/ScienJus) 提供，感谢贡献。
 
-接下来介绍一下如何体验 Hystrix 带来的熔断能力，以下示例使用 `SOFA RPC 5.5.0` 版本，更多 `Hystrix` 的配置及 `SOFA Boot` 集成使用方式将在后续版本提供，敬请关注。
+接下来介绍一下如何体验 Hystrix 带来的熔断能力，以下示例使用 `SOFARPC 5.5.0` 版本，更多 `Hystrix` 的配置及 `SOFABoot` 集成使用方式将在后续版本提供，敬请关注。
 
 ### 准备工作
 
@@ -51,7 +51,7 @@ SofaHystrixConfig.registerFallbackFactory(consumerConfig, new HelloServiceFallba
 
 ### SetterFactory
 
-`SetterFactory` 提供 `Hystrix` 细粒度配置能力，SOFA RPC 已提供默认的 `DefaultSetterFactory` 来生成每个调用方对应的 `Setter`，如有更定制化的述求，也可以针对每个 `ConsumerConfig` 提供自定义 `SetterFactory`。
+`SetterFactory` 提供 `Hystrix` 细粒度配置能力，SOFARPC 已提供默认的 `DefaultSetterFactory` 来生成每个调用方对应的 `Setter`，如有更定制化的述求，也可以针对每个 `ConsumerConfig` 提供自定义 `SetterFactory`。
 ```java
 SofaHystrixConfig.registerSetterFactory(consumerConfig, new CustomSetterFactory());
 ```
@@ -60,7 +60,7 @@ SofaHystrixConfig.registerSetterFactory(consumerConfig, new CustomSetterFactory(
 
 ### 支持 Hystrix 的版本信息
 
-SOFA RPC: [5.5.0](https://github.com/alipay/sofa-rpc/releases), SOFA Boot: [2.5.3](https://github.com/alipay/sofa-boot/releases/)。
+SOFARPC: [5.5.0](https://github.com/alipay/sofa-rpc/releases), SOFABoot: [2.5.3](https://github.com/alipay/sofa-boot/releases/)。
 
 SOAF RPC 集成验证 Hystrix 版本：`1.5.12`。
 

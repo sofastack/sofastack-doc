@@ -47,7 +47,7 @@ The default port for SOFARPC RESTful service is 8341.
 In addition to accessing RESTful services published by SOFARPC through a browser, you can also reference services through the standard SOFARPC service reference methods, such as Annotation:
 
 ```java
-@SofaReference(binding = @SofaReferenceBinding(bindingType = "bolt"))
+@SofaReference(binding = @SofaReferenceBinding(bindingType = "rest"))
 private SampleService sampleService;
 ```
 
