@@ -1,3 +1,4 @@
+# Sampling
 
 Currently,SOFATracer provides two sampling modes. One is the fixed sampling rate based on BitSet. The other is the sampling provided to the user to customize the implementation sampling.The following example shows how to use it.
 

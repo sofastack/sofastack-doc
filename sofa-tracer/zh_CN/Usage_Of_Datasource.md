@@ -1,25 +1,23 @@
-SOFATracer 2.2.0 基于标准的 JDBC 接口实现，支持对标准的数据库连接池（如 DBCP、Druid、c3p0、tomcat、HikariCP、BoneCP）埋点。下面演示如何接入 SOFATracer 埋点能力。
+# SOFATracer 集成 DataSource
+在本文档将演示如何使用 SOFATracer 对 DataSource 进行埋点，本示例[工程地址](https://github.com/alipay/sofa-tracer/tree/3.x/tracer-samples/tracer-sample-with-h2)。
 
-## 环境准备
-使用 SOFATracer，需要先准备好基础环境，SOFATracer 依赖以下环境：
+> SOFATracer 2.2.0 基于标准的 JDBC 接口实现，支持对标准的数据库连接池（如 DBCP、Druid、c3p0、tomcat、HikariCP、BoneCP）埋点。下面演示如何接入 SOFATracer 埋点能力。
 
-+ JDK7 或 JDK8
-+ 需要采用 Apache Maven 3.2.5 或者以上的版本来编译
+假设你已经基于 SOFABoot 构建了一个简单的 Spring Web 工程，那么可以通过如下步骤进行操作：
 
-## 创建工程
-SOFATracer 在 SOFABoot 和 Spring Boot 框架内均可使用。我们以 Spring Boot 为例演示，使用 [Spring Boot 的工程生成工具](https://start.spring.io/) 来生成。在该演示用例，我们需要添加一个 Web 的依赖同时编写一个简单的 REST 服务，以便最后在浏览器中查看效果。
+## 依赖引入
 
-## 引入 SOFATracer
-在新建的 Spring Boot 工程引入 SOFATracer 依赖:
+### 引入 SOFATracer 依赖
+
 ```xml
 <dependency>
 	<groupId>com.alipay.sofa</groupId>
 	<artifactId>tracer-sofa-boot-starter</artifactId>
-	<version>2.2.0</version>
 </dependency>
 ```
 
-## 引入 h2database 依赖
+### 引入 h2database 依赖
+
 为了方便，我们使用 h2database 内存数据库测试，引入如下依赖：
 ```xml
 <dependency>
@@ -34,7 +32,7 @@ SOFATracer 在 SOFABoot 和 Spring Boot 框架内均可使用。我们以 Spring
 </dependency>
 ```
 
-## 引入所需的连接池依赖
+### 引入所需的连接池依赖
 用户引入所需的连接池依赖包，如 druid, c3p0, tomcat, dbcp, Hikari 等。
 ```xml
 <dependency>
@@ -110,6 +108,7 @@ spring.datasource.driver-class-name=org.h2.Driver
 ```
 
 ## 新建 Rest 服务
+
 为了达到演示效果，我们新建一个 Rest 服务，触发 SQL 语句执行，便于查看 sql 的 tracer 记录。Rest 服务如下创建：
 
 ```java

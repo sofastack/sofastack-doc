@@ -1,6 +1,8 @@
-SOFATracer 集成 sofa-tracer-httpclient-plugin 插件后输出 HttpClient 请求的链路数据，默认为 `JSON` 数据格式。
+# RestTemplate 日志格式
 
-### HttpClient 摘要日志（httpclient-digest.log）
+SOFATracer 集成 RestTemplate 后输出请求的链路数据格式，默认为 `JSON` 数据格式。
+
+### RestTemplate 摘要日志（resttemplate-digest.log）
 
 以 JSON 格式输出的数据，相应 key 的含义解释如下：
 
@@ -13,7 +15,6 @@ key | 表达含义
  request.url | 请求 URL
  method | 请求 HTTP 方法
  result.code | HTTP 调用返回状态码
- req.size.bytes | Request Body 大小
  resp.size.bytes | Response Body 大小
  time.cost.milliseconds | 请求耗时（ms）
  current.thread.name | 线程名
@@ -23,12 +24,10 @@ key | 表达含义
 样例：
 
 ```json
-{"time":"2018-09-27 21:58:43.067","local.app":"HttpClientDemo","traceId":"0a0fe8801538056723034100235072","spanId":"0","request.url":"http://localhost:8080/httpclient","method":"GET","result.code":"200","req.size.bytes":0,"resp.size.bytes":-1,"time.cost.milliseconds":33,"current.thread.name":"I/O dispatcher 1","remote.app":"","baggage":""}
+{"time":"2018-10-24 10:45:28.977","local.app":"RestTemplateDemo","traceId":"0a0fe8b3154034912878910015081","spanId":"0","request.url":"http://sac.alipay.net:8080/rest","method":"GET","result.code":"200","resp.size.bytes":0,"time.cost.milliseconds":188,"current.thread.name":"main","remote.app":"","baggage":""}
 ```
 
-备注：应用名称可以通过 `SofaTracerHttpClientBuilder` 构造 HttpClient 实例时以入参的形式传入。
-
-### HttpClient 统计日志（httpclient-stat.log）
+### RestTemplate 统计日志（resttemplate-stat.log）
 
 `stat.key` 即本段时间内的统计关键字集合，统一关键字集合唯一确定一组统计数据，包含local.app、request.url、和 method 字段.
 
@@ -64,7 +63,7 @@ key | 表达含义
    </tr>
    <tr>
       <td colspan="2">success</td>
-      <td>请求结果：Y 表示成功(1 开头和 2 开头的结果码算是成功的，302表示的重定向算成功，其他算是失败的)；N 表示失败</td>
+      <td>请求结果：Y 表示成功；N 表示失败</td>
    </tr>
    <tr>
       <td colspan="2">load.test</td>
@@ -75,6 +74,6 @@ key | 表达含义
 样例：
 
 ```json
-{"time":"2018-09-27 21:59:42.233","stat.key":{"request.url":"http://localhost:8080/httpclient","local.app":"HttpClientDemo","method":"GET"},"count":2,"total.cost.milliseconds":562,"success":"true","load.test":"F"}
+{"time":"2018-10-24 10:46:28.769","stat.key":{"method":"GET","local.app":"RestTemplateDemo","request.url":"http://sac.alipay.net:8080/rest"},"count":1,"total.cost.milliseconds":5009,"success":"true","load.test":"F"}
 ```
 

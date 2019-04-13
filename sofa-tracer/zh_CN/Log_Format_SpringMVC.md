@@ -1,3 +1,5 @@
+# SpringMVC 日志格式
+
 SOFATracer 集成 SpringMVC 后输出 MVC 请求的链路数据格式，默认为 `JSON` 数据格式。
 
 ### Spring MVC 摘要日志（spring-mvc-digest.log）
@@ -21,7 +23,7 @@ key | 表达含义
 
 样例：
 
-```
+```json
 {"time":"2018-06-03 16:44:05.829","local.app":"SpringMvcJsonOutput","traceId":"c0a80d9e1528015445828101064625","spanId":"0","request.url":"http://localhost:63933/greeting","method":"GET","result.code":"200","req.size.bytes":0,"resp.size.bytes":50,"time.cost.milliseconds":1,"current.thread.name":"http-nio-auto-1-exec-10","baggage":""}
 ```
 
@@ -71,6 +73,6 @@ key | 表达含义
 
 样例：
 
-```
+```json
 {"time":"2018-06-03 16:44:02.473","stat.key":{"request.url":"http://localhost:63933/greeting","local.app":"SpringMvcJsonOutput","method":"GET"},"count":5,"total.cost.milliseconds":149,"success":"Y","load.test":"F"}
 ```

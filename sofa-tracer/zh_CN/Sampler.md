@@ -1,4 +1,4 @@
-
+# 采样
 目前 SOFATracer 提供了两种采样模式，一种是基于 BitSet 实现的基于固定采样率的采样模式；另外一种是提供给用户自定义实现采样的采样模式。下面通过案例来演示如何使用。
 
 本示例基于 tracer-sample-with-springmvc 工程；除 `application.properties` 之外，其他均相同。

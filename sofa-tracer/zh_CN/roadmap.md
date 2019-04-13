@@ -1,11 +1,8 @@
-## 发展路线
+# 发展路线
 
 <center>
-
 ![roadmap](./resources/roadmap.png) 
-
 </center>
-
 
 ## 任务列表
 

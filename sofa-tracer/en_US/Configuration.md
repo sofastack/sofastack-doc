@@ -1,4 +1,4 @@
-## SOFATracer configuration item
+# SOFATracer configuration item
 
 After introducing SOFATracer, you can add related configuration items in Spring Boot configuration file `application.properties` to customize the behaviors of SOFATracer.
 

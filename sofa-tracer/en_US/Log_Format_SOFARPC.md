@@ -1,3 +1,4 @@
+# SOFARPC Log Format
 After SOFARPC (v5.4.0 and above) is integrated in SOFATracer, the link data is output in `JSON` format by default. Each field meaning is as follows:
 
 ## RPC client digest log (rpc-client-digest.log)
@@ -77,8 +78,6 @@ Example:
 ```
 {"time":"2018-05-18 07:02:19.717","stat.key":{"method":"method","local.app":"client","service":"app.service:1.0"},"count":10,"total.cost.milliseconds":17,"success":"Y"}
 ```
-
-
 
 ## RPC server statistical log ( rpc-server-stat.log)
 

@@ -1,70 +1,39 @@
-在本文档中，将创建一个 Spring Boot 的工程，引入 SOFABoot 基础依赖管控，并且引入 SOFATracer ，演示如何快速上手 SOFATracer。
+# SOFATracer 集成 SpringMVC
 
-## 环境准备
+在本文档将演示如何使用 SOFATracer 对 SpringMVC 进行埋点，本示例[工程地址](https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-springmvc)。
 
-要使用 SOFABoot，需要先准备好基础环境，SOFABoot 依赖以下环境：
-- JDK7 或 JDK8 
-- 需要采用 Apache Maven 3.2.5 或者以上的版本来编译
+假设你已经基于 SOFABoot 构建了一个简单的 Spring Web 工程，那么可以通过如下步骤进行操作：
 
-## 创建工程
-
-SOFABoot 是直接构建在 Spring Boot 之上，因此可以使用 [Spring Boot 的工程生成工具](http://start.spring.io/) 来生成，在本文档中，我们需要添加一个 Web 的依赖同时编写一个简单的 REST 服务，以便最后在浏览器中查看效果。
-
-## 引入 SOFABoot 
-
-在创建好一个 Spring Boot 的工程之后，接下来就需要引入 SOFABoot 的依赖，首先，需要将上文中生成的 Spring Boot 工程的 `zip` 包解压后，修改 Maven 项目的配置文件 `pom.xml`，将
-
-```xml
-<parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>${spring.boot.version}</version>
-    <relativePath/> 
-</parent>
-```
-
-替换为：
-
-```xml
-<parent>
-    <groupId>com.alipay.sofa</groupId>
-    <artifactId>sofaboot-dependencies</artifactId>
-    <version>${sofa.boot.version}</version>
-</parent>
-```
-这里的 `${sofa.boot.version}` 指定具体的 SOFABoot 最新版本，参考[发布历史](https://github.com/alipay/sofa-boot/releases)。
-
-然后，添加一个 SOFATracer 依赖：
+## 依赖引入
 
 ```xml
 <dependency>
     <groupId>com.alipay.sofa</groupId>
     <artifactId>tracer-sofa-boot-starter</artifactId>
-    <!-- SOFABoot 版本统一管控 -->
 </dependency>
 ```
 
-最后，在工程的 `application.properties` 文件下添加一个 SOFATracer 要使用的参数，包括`spring.application.name` 用于标示当前应用的名称；`logging.path` 用于指定日志的输出目录。
+## 工程配置
 
-```
+在工程的 `application.properties` 文件下添加 SOFATracer 要使用的参数，包括`spring.application.name` 用于标示当前应用的名称；`logging.path` 用于指定日志的输出目录。
+
+```properties
 # Application Name
 spring.application.name=SOFATracerSpringMVC
 # logging path
 logging.path=./logs
 ```
 
-## 添加一个最简单的 Controller
+## 添加一个提供 RESTful 服务的 Controller
 
-在工程代码中，添加一个最简单的 Controller，例如：
+在工程代码中，添加一个简单的 Controller，例如：
 
 ```java
 @RestController
 public class SampleRestController {
 
     private static final String TEMPLATE = "Hello, %s!";
-
     private final AtomicLong    counter  = new AtomicLong();
-
     /**
      * http://localhost:8080/springmvc
      * @param name name
@@ -83,7 +52,7 @@ public class SampleRestController {
 
 ## 运行
 
-可以将工程导入到 IDE 中运行生成的工程里面中的 `main` 方法（一般上在 XXXApplication 这个类中）启动应用，也可以直接在该工程的根目录下运行 `mvn spring-boot:run`，将会在控制台中看到启动打印的日志：
+启动 SOFABoot 应用，将会在控制台中看到启动打印的日志：
 
 ```
 2018-05-11 11:55:11.932  INFO 66490 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'SpringMvcOpenTracingFilter' to urls: [/*]
@@ -116,11 +85,8 @@ public class SampleRestController {
 
 ```
 
-通过访问 [http://localhost:8080/springmvc](http://localhost:8080/springmvc) SOFATracer 会记录每一次访问的摘要日志，可以打开 `spring-mvc-digest.log` 看到具体的输出内容，而对于每一个输出字段的含义[可以参考这里](https://www.sofastack.tech/sofa-tracer/docs/SpringMVC)。
+通过访问 [http://localhost:8080/springmvc](http://localhost:8080/springmvc) SOFATracer 会记录每一次访问的摘要日志，可以打开 `spring-mvc-digest.log` 看到具体的输出内容，而对于每一个输出字段的含义可以 [参考这里](https://www.sofastack.tech/sofa-tracer/docs/SpringMVC)。
 
 ```json
 {"time":"2018-05-17 22:20:34.279","local.app":"SOFATracerSpringMVC","traceId":"0a0fe9391526566833985100139443","spanId":"0","request.url":"http://localhost:8080/springmvc","method":"GET","result.code":"200","req.size.bytes":-1,"resp.size.bytes":69,"time.cost.milliseconds":284,"current.thread.name":"http-nio-8080-exec-1","baggage":""}
-
 ```
-
-附此示例工程的[源代码地址](https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-springmvc)。

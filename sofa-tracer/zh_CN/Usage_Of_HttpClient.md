@@ -1,74 +1,18 @@
-# 使用 SOFATracer 记录 HttpClient 链路调用数据
+# SOFATracer 集成 HttpClient
 
-本示例演示如何在集成了 SOFATracer 的应用，通过配置 HttpClient 的使用方式将链路数据记录在文件中。
+在本文档将演示如何使用 SOFATracer 对 HttpClient 进行埋点，本示例[工程地址](https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-httpclient)。
 
-## 环境准备
+假设你已经基于 SOFABoot 构建了一个简单的 Spring Web 工程，那么可以通过如下步骤进行操作：
 
-要使用 SOFABoot，需要先准备好基础环境，SOFABoot 依赖以下环境：
-- JDK7 或 JDK8
-- 需要采用 Apache Maven 3.2.5 或者以上的版本来编译
-
-## 引入 SOFATracer
-
-在创建好一个 Spring Boot 的工程之后，接下来就需要引入 SOFABoot 的依赖，首先，需要将上文中生成的 Spring Boot 工程的 `zip` 包解压后，修改 Maven 项目的配置文件 `pom.xml`，将
+## 依赖引入
 
 ```xml
-<parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>${spring.boot.version}</version>
-    <relativePath/>
-</parent>
-```
-
-替换为：
-
-```xml
-<parent>
-    <groupId>com.alipay.sofa</groupId>
-    <artifactId>sofaboot-dependencies</artifactId>
-    <version>${sofa.boot.version}</version>
-</parent>
-```
-这里的 `${sofa.boot.version}` 指定具体的 SOFABoot 最新版本，参考[发布历史](https://github.com/alipay/sofa-boot/releases)。 
-
-然后，在工程中添加 SOFATracer 依赖：
-
-```xml
+<!-- SOFATracer 依赖 -->
 <dependency>
     <groupId>com.alipay.sofa</groupId>
     <artifactId>tracer-sofa-boot-starter</artifactId>
-    <version>2.2.0</version>
 </dependency>
-```
-
-最后，在工程的 `application.properties` 文件下添加一个 SOFATracer 要使用的参数，包括`spring.application.name` 用于标示当前应用的名称；`logging.path` 用于指定日志的输出目录。
-
-```
-# Application Name
-spring.application.name=HttpClientDemo
-# logging path
-logging.path=./logs
-```
-
-## 添加 HttpClient、SOFATracer 依赖和 SOFATracer 的 HttpClient 插件
-
-```xml
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-web</artifactId>
-</dependency>
-<dependency>
-    <groupId>com.alipay.sofa</groupId>
-    <artifactId>tracer-sofa-boot-starter</artifactId>
-    <version>2.2.0</version>
-</dependency>
-<dependency>
-    <groupId>com.alipay.sofa</groupId>
-    <artifactId>sofa-tracer-httpclient-plugin</artifactId>
-    <version>2.2.0</version>
-</dependency>
-<!-- HttpClient Dependency -->
+<!-- HttpClient 依赖 -->
 <dependency>
     <groupId>org.apache.httpcomponents</groupId>
     <artifactId>httpclient</artifactId>
@@ -82,9 +26,20 @@ logging.path=./logs
     <version>4.1.3</version>
 </dependency>
 ```
+## 工程配置
 
+在工程的 `application.properties` 文件下添加 SOFATracer 要使用的参数，包括`spring.application.name` 用于标示当前应用的名称；`logging.path` 用于指定日志的输出目录。
+
+```properties
+# Application Name
+spring.application.name=HttpClientDemo
+# logging path
+logging.path=./logs
+```
 
 ## 添加一个提供 RESTful 服务的 Controller
+
+在工程代码中，添加一个简单的 Controller，例如：
 
 ```java
 @RestController
@@ -106,13 +61,9 @@ public class SampleRestController {
     }
 }
 ```
-
-
 ## 构造 HttpClient 发起一次对上文的 RESTful 服务的调用
 
-构造 HttpClient 的过程不详细展开，具体可以参见本示例中 `HttpClientInstance`(同步) 和 `HttpAsyncClientInstance`（异步）构造方法，仅供参考，其中需要重点强调的是，
-为了能够使得 HttpClient 这个第三方开源组件能够支持  SOFATracer 的链路调用，SOFATracer 提供了 HttpClient 的插件扩展即 sofa-tracer-httpclient-plugin ，为了使得用 SOFATracer 的 HttpCliet 正确的埋点，我们需要使用 HttpClientBuilder 去构造 HttpClient 的实例，
-并需要显示的调用 SofaTracerHttpClientBuilder.clientBuilder(httpClientBuilder) 来构造出一个经过 SOFATracer 埋点的 HttpClientBuilder ，关键代码示例如下
+代码示例如下：
 
 * 构造 HttpClient 同步调用实例：
 
@@ -138,7 +89,7 @@ CloseableHttpAsyncClient asyncHttpclient = httpAsyncClientBuilder.setDefaultRequ
 
 ## 运行
 
-可以将工程导入到 IDE 中运行工程里面中的 `main` 方法（本实例 main 方法在 HttpClientDemoApplication 中）启动应用，在控制台中看到启动打印的日志如下：
+启动 SOFABoot 应用，在控制台中看到启动打印的日志如下：
 
 ```
 2018-09-27 20:31:21.465  INFO 33277 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
@@ -152,7 +103,6 @@ CloseableHttpAsyncClient asyncHttpclient = httpAsyncClientBuilder.setDefaultRequ
 2018-09-27 20:31:22.336  INFO 33277 --- [           main] c.a.s.t.e.h.HttpClientDemoApplication    : Response is {"count":1,"name":"httpclient"}
 2018-09-27 20:31:22.453  INFO 33277 --- [           main] c.a.s.t.e.h.HttpClientDemoApplication    : Async Response is {"count":2,"name":"httpclient"}
 ```
-
 
 ## 查看日志
 
@@ -173,11 +123,7 @@ CloseableHttpAsyncClient asyncHttpclient = httpAsyncClientBuilder.setDefaultRequ
 
 示例中通过构造两个 HttpClient（一个同步一个异步） 发起对同一个 RESTful 服务的调用，调用完成后可以在 httpclient-digest.log 中看到类似如下的日志，而对于每一个输出字段的含义可以看 SOFATracer 的说明文档：
 
-```
+```json
 {"time":"2018-09-27 20:31:22.328","local.app":"HttpClientDemo","traceId":"0a0fe8801538051482054100133277","spanId":"0","request.url":"http://localhost:8080/httpclient","method":"GET","result.code":"200","req.size.bytes":0,"resp.size.bytes":-1,"time.cost.milliseconds":274,"current.thread.name":"main","remote.app":"","baggage":""}
 {"time":"2018-09-27 20:31:22.443","local.app":"HttpClientDemo","traceId":"0a0fe8801538051482410100233277","spanId":"0","request.url":"http://localhost:8080/httpclient","method":"GET","result.code":"200","req.size.bytes":0,"resp.size.bytes":-1,"time.cost.milliseconds":33,"current.thread.name":"I/O dispatcher 1","remote.app":"","baggage":""}
 ```
-
-附此示例工程的[源代码地址](https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-httpclient)。
-
-

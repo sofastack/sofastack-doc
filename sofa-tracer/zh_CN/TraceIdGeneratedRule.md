@@ -1,3 +1,5 @@
+# TraceId 和 SpanId 生成规则
+
 ### TraceId 生成规则
 
 SOFATracer 通过 TraceId 来将一个请求在各个服务器上的调用日志串联起来，TraceId 一般由接收请求经过的第一个服务器产生，产生规则是： 服务器 IP + 产生 ID 时候的时间 + 自增序列 + 当前进程号 ，比如：
@@ -21,7 +23,7 @@ SOFATracer 中的 SpanId 代表本次调用在整个调用链路树中的位置�
 我们假设一次分布式调用中产生的 TraceId 是 `0a1234`（实际不会这么短），那么根据上文 SpanId 的产生过程，有下图：
 <center>
 
-![traceId](./resources/traceid.png) 
+![traceId](https://gw.alipayobjects.com/mdn/rms_432828/afts/img/A*qo08QLrjv-QAAAAAAAAAAABjARQnAQ) 
 
 </center>
 
