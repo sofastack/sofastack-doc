@@ -52,7 +52,7 @@ providerConfig.setFilter(Arrays.asList("customer"));
 // 服务调用者
 consumerConfig.setFilter(Arrays.asList("customer"));
 ```
-方式三：在类上加上 @Extension 注解+ @AutoActive 注解方式+配扩展文件方式。该种方式利用 @AutoActive 注解代替了上述第二中方式的编码注入步骤，能够生效于所有 provider 或 consumer 。其中 providerSide 参数表示是否生效于服务端， consumerSide 参数表示是否生效于服务端。
+方式三：在类上加上 @Extension 注解+ @AutoActive 注解方式+配扩展文件方式。该种方式利用 @AutoActive 注解代替了上述第二中方式的编码注入步骤，能够生效于所有 provider 或 consumer 。其中 providerSide 参数表示是否生效于服务端， consumerSide 参数表示是否生效于客户端。
 ```java
 @Extension("customer")
 @AutoActive(providerSide = true, consumerSide = true)
