@@ -29,6 +29,7 @@
             * [Http](./Http)
                 * [Json序列化](./Http-Json)           
         * [注册中心使用](./Registry-Usage)
+            * [SOFARegistry](./Registry-SOFA)
             * [Zookeeper](./Registry-Zookeeper)
             * [Local](./Registry-Local)
             * [Consul](./Registry-Consul)

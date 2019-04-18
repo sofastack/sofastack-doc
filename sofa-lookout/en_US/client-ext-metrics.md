@@ -81,3 +81,7 @@ The extension modules currently in effect by default are lookout-ext-jvm and loo
 | os.net.stats.out.errs |  intfc |  --- |
 | os.net.stats.out.fifo.errs |  intfc |  --- |
 | os.net.stats.out.packets |  intfc |  --- |
+| os.memory.stats.buffers.bytes | --- | >= 1.5.3 |
+| os.memory.stats.cached.bytes | --- |   >= 1.5.3 |
+| os.memory.stats.free.bytes | --- |   >= 1.5.3 |
+| os.memory.stats.total.bytes | --- |   >= 1.5.3 |

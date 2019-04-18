@@ -29,6 +29,7 @@
             * [Http](./Http)
                 * [Json Serialize](./Http-Json)     
         * [Registry Center](./Registry-Usage)
+            * [SOFARegistry](./Registry-SOFA)
             * [Zookeeper](./Registry-Zookeeper)
             * [Local](./Registry-Local)
             * [Consul](./Registry-Consul)
