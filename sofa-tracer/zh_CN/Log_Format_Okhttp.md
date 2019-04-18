@@ -1,8 +1,8 @@
-# Okhttp 日志格式
+# OkHttp 日志格式
 
-SOFATracer 集成 Okhttp 后输出请求的链路数据格式，默认为 `JSON` 数据格式。
+SOFATracer 集成 OkHttp 后输出请求的链路数据格式，默认为 `JSON` 数据格式。
 
-### Okhttp 摘要日志（okhttp-digest.log）
+### OkHttp 摘要日志（okhttp-digest.log）
 
 以 JSON 格式输出的数据，相应 key 的含义解释如下：
 
@@ -28,7 +28,7 @@ key | 表达含义
 {"time":"2019-04-12 13:38:10.187","local.app":"OkHttpDemo","traceId":"0a0fe85a1555047489980100151193","spanId":"0","request.url":"http://localhost:8081/okhttp?name=sofa","method":"GET","result.code":"200","req.size.bytes":0,"resp.size.bytes":0,"time.cost.milliseconds":207,"current.thread.name":"main","remote.app":"","baggage":""}
 ```
 
-### Okhttp 统计日志（okhttp-stat.log）
+### OkHttp 统计日志（okhttp-stat.log）
 
 `stat.key` 即本段时间内的统计关键字集合，统一关键字集合唯一确定一组统计数据，包含local.app、request.url、和 method 字段.
 

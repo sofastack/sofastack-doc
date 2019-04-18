@@ -1,6 +1,6 @@
 # SOFATracer 集成 OkHttp
 
-在本文档将演示如何使用 SOFATracer 对 OkHttp3 进行埋点，本示例[工程地址](https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-okhttp)。
+在本文档将演示如何使用 SOFATracer 对 OkHttp 进行埋点，本示例[工程地址](https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-okhttp)。
 
 假设你已经基于 SOFABoot 构建了一个简单的 Spring Web 工程，那么可以通过如下步骤进行操作：
 
@@ -25,7 +25,7 @@
 
 ```properties
 # Application Name
-spring.application.name=HttpClientDemo
+spring.application.name=OkHttpClientDemo
 # logging path
 logging.path=./logs
 # port

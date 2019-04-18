@@ -20,7 +20,7 @@ key | Meaning
  remote.port | remote port
  local.host | local host
  client.serialize.time | request serialize time
- client.deserialize.time | resopnse deserialize time
+ client.deserialize.time | response deserialize time
  req.size.bytes | Request Body Size
  resp.size.bytes | Response Body Size
  result.code | result code

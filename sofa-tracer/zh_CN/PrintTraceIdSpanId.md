@@ -53,7 +53,7 @@ private static final Logger logger = LoggerFactory.getLogger(XXX.class);
 
 [以 `Logback` 为例配置的 `pattern` 参数](https://logback.qos.ch/)：
 
-```
+```xml
 <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %5p  [%X{SOFA-TraceId},
 %X{SOFA-SpanId}] 
 ---- %m%n</pattern>
@@ -63,13 +63,13 @@ private static final Logger logger = LoggerFactory.getLogger(XXX.class);
 
 [Log4j2 配置 PatternLayout 样例](https://logging.apache.org/log4j/2.0/manual/layouts.html)：
 
-```
+```xml
 <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p 
 [%X{SOFA-TraceId},%X{SOFA-SpanId}] ---- %m%n " />
 ```
 [Log4j 配置 PatternLayout 样例](https://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/PatternLayout.html)：
 
-```
+```xml
  <layout class="org.apache.log4j.PatternLayout">
      <param name="ConversionPattern" value="%d %-5p %-32t 
      [%X{SOFA-TraceId},%X{SOFA-SpanId}] - %m%n"/>

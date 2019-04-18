@@ -17,13 +17,13 @@ com.alipay.sofa.tracer.samplerName=PercentageBasedSampler
 
 ### Verification
 
-* When the sample rate is set to 100, the degist log is printed each time.
-* When the sample rate is set to 0, the degist log is not printed.
+* When the sample rate is set to 100, the digest log is printed each time.
+* When the sample rate is set to 0, the digest log is not printed.
 * Print by probability when the sampling rate is set between 0 and 100.
 
 The result is verified by requesting 10 times.
 
-1、When the sample rate is set to 100, the degist log is printed each time.
+1、When the sample rate is set to 100, the digest log is printed each time.
 
 Start the project and enter in the browser:http://localhost:8080/springmvc ,And refresh the address 10 times, check the log as follows:
 
@@ -40,10 +40,10 @@ Start the project and enter in the browser:http://localhost:8080/springmvc ,And 
 {"time":"2018-11-09 11:54:54.565","local.app":"SOFATracerSpringMVC","traceId":"0a0fe8ec154173569456310189269","spanId":"0.1","request.url":"http://localhost:8080/springmvc","method":"GET","result.code":"200","req.size.bytes":-1,"resp.size.bytes":0,"time.cost.milliseconds":2,"current.thread.name":"http-nio-8080-exec-8","baggage":""}
 ```
 
-2、When the sample rate is set to 0, the degist log is not printed.
+2、When the sample rate is set to 0, the digest log is not printed.
 
 Start the project and enter in the browser:http://localhost:8080/springmvc ,And refresh the address 10 times, 
-View the ./logs/tracerlog/ directory without the spring-mvc-degist.log log file
+View the ./logs/tracerlog/ directory without the spring-mvc-digest.log log file
 
 3、Print by probability when the sampling rate is set between 0 and 100.
 

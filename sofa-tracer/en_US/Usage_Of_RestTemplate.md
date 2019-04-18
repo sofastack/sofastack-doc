@@ -4,7 +4,7 @@ In this document will demonstrate how to use SOFATracer to track of RestTemplate
 
 Assuming you have built a simple Spring Web project based on SOFABoot, Then you can be operated by the following steps:
 
-## Introduce denpendency 
+## Introduce dependency 
 
 ```xml
 <dependency>

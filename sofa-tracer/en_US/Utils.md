@@ -31,8 +31,8 @@ String spanId = sofaTracerSpanContext.getSpanId();
 Get `Tags`:
 
 ```java
-Map<String, String> tagsStr = sofaTracerSpan.getTagsWithStr();
-Map<String, Boolean> tagsBool = sofaTracerSpan.getTagsWithBool();
+Map<String, String>    tagsStr = sofaTracerSpan.getTagsWithStr();
+Map<String, Boolean>  tagsBool = sofaTracerSpan.getTagsWithBool();
 Map<String, Number> tagsNumber = sofaTracerSpan.getTagsWithNumber();
 ```
 

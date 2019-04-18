@@ -1,4 +1,4 @@
-# DataSource 日志格式
+# Dubbo 日志格式
 
 SOFATracer 集成 Dubbo 后输出请求的链路数据格式，默认为 `JSON` 数据格式。
 

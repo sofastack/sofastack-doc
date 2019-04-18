@@ -41,7 +41,7 @@ com.alipay.sofa.tracer.samplerName=PercentageBasedSampler
 
 2、当采样率设置为0时，不打印
 
-启动工程，浏览器中输入：http://localhost:8080/springmvc ；并且刷新地址10次，查看 ./logs/tracerlog/ 目录，没有 spring-mvc-degist.log 日志文件
+启动工程，浏览器中输入：http://localhost:8080/springmvc ；并且刷新地址10次，查看 ./logs/tracerlog/ 目录，没有 spring-mvc-digest.log 日志文件
 
 3、当采样率设置为0~100之间时，按概率打印
 

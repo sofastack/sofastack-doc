@@ -1,6 +1,6 @@
 # OkHttp Integration
 
-In this document will demonstrate how to use SOFATracer to track of OkHttp3, this example [address] (https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-okhttp).
+In this document will demonstrate how to use SOFATracer to track of OkHttp, this example [address] (https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-okhttp).
 
 Assuming you have built a simple Spring Web project based on SOFABoot, Then you can be operated by the following steps:
 

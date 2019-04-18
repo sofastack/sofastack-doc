@@ -1,7 +1,7 @@
-# Okhttp Log Format
-SOFATracer integrates Okhttp and outputs the requested link log data format. The default is `JSON` data format.
+# OkHttp Log Format
+SOFATracer integrates OkHttp and outputs the requested link log data format. The default is `JSON` data format.
 
-### Okhttp digest log（okhttp-digest.log）
+### OkHttp digest log（okhttp-digest.log）
 
 The data is output in JSON format. Each key meaning is as follows:
 
@@ -27,7 +27,7 @@ Example:
 {"time":"2019-04-12 13:38:10.187","local.app":"OkHttpDemo","traceId":"0a0fe85a1555047489980100151193","spanId":"0","request.url":"http://localhost:8081/okhttp?name=sofa","method":"GET","result.code":"200","req.size.bytes":0,"resp.size.bytes":0,"time.cost.milliseconds":207,"current.thread.name":"main","remote.app":"","baggage":""}
 ```
 
-### Okhttp stat log（okhttp-stat.log）
+### OkHttp stat log（okhttp-stat.log）
 
 `stat.key` is the collection of statistical keywords in this period, which uniquely determines a set of statistical data, including local.app, request.url, and method field.
 
