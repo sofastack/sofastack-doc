@@ -1,6 +1,6 @@
 # 参与贡献
 
-> 可以先去 [RoadMap](https://gw.alipayobjects.com/mdn/sofastack/afts/img/A*MI1HSpF5VTMAAAAAAAAAAABjARQnAQ) 内了解下开发任务及未来规划。
+> 可以先去 [RoadMap](./RoadMap) 内了解下开发任务及未来规划。
 
 ## 准备工作
 
