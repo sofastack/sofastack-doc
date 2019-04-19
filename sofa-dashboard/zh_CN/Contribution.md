@@ -32,7 +32,7 @@ SOFADashboard 所有修改都在分支上进行，修改完后提交 `pull requ
 
 * 下载代码到本地,这一步您可以选择 git/https 方式.
     ```bash
-    git clone https://github.com/您的账号名/sofa-registry.git
+    git clone https://github.com/您的账号名/sofa-dashboard.git
     ```
 * 拉分支准备修改代码
     ```bash
