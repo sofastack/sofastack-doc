@@ -32,11 +32,16 @@ SOFABoot 是直接构建在 Spring Boot 之上，因此可以使用 [Spring Boot
     <version>${sofa.boot.version}</version>
 </parent>
 ```
-这里的 `${sofa.boot.version}` 指定具体的 SOFABoot 版本，参考[发布历史](https://github.com/alipay/sofa-boot/releases)。 然后，添加一个 SOFABoot 健康检查扩展能力的依赖：
+这里的 `${sofa.boot.version}` 指定具体的 SOFABoot 版本，参考[发布历史](https://github.com/alipay/sofa-boot/releases)。 然后，添加 SOFABoot 健康检查扩展能力的依赖及 Web 依赖(方便查看健康检查结果)：
 ```xml
 <dependency>
     <groupId>com.alipay.sofa</groupId>
     <artifactId>healthcheck-sofa-boot-starter</artifactId>
+</dependency>
+
+<dependency>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-web</artifactId>
 </dependency>
 ```
 
@@ -153,6 +158,8 @@ logging.path=./logs
 - service-provider: 演示 XML 方式、Annotation 方式、API 方式发布 JVM 服务；
 - service-consumer: 演示 XML 方式、Annotation 方式、API 方式引用 JVM 服务；
 - sofa-boot-run: 启动包含 SOFABoot 模块的 SOFA Boot 应用。
+
+**建议在学习该 Demo 之前，参考模块[隔离文档](./Modular-Development)**
 
 ### 定义服务 API
 

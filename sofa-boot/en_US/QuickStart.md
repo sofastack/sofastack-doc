@@ -32,11 +32,17 @@ as:
     <version>${sofa.boot.version}</version>
 </parent>
 ```
-Here, `${sofa.boot.version}` denotes the SOFABoot version (please refer to [release note](https://github.com/alipay/sofa-boot/releases)). Then, add a SOFABoot dependency of Health Check extension.
+Here, `${sofa.boot.version}` denotes the SOFABoot version (please refer to [release note](https://github.com/alipay/sofa-boot/releases)). Then, add a SOFABoot dependency of Health Check extension and Spring Boot Web Starter.
+
 ```xml
 <dependency>
     <groupId>com.alipay.sofa</groupId>
     <artifactId>healthcheck-sofa-boot-starter</artifactId>
+</dependency>
+
+<dependency>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-web</artifactId>
 </dependency>
 ```
 
@@ -48,6 +54,8 @@ spring.application.name=SOFABoot Demo
 # logging path
 logging.path=./logs
 ```
+
+**Advice to refer to the [SOFABoot Module document](./Modular-Development) before learn this demo.**
 
 ## Run it
 

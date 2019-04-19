@@ -10,7 +10,7 @@ You can view all the release notes in [Release History](https://github.com/alipa
 |2.4.x|1.4.2.RELEASE|
 |2.5.x|1.5.16.RELEASE|
 |3.0.x|2.0.3.RELEASE|
-|3.1.0(latest)|2.1.0.RELEASE|
+|3.1.0|2.1.0.RELEASE|
 
 That is, the SOFABoot 2.3.x and 2.4.x series are based on Spring Boot 1.4.2.RELEASE; SOFABoot 2.5.x series are based on Spring Boot 1.5.x; SOFABoot 3.x series are based on Spring Boot 2.x. You can view and get the codes of all revisions in [Release History](https://github.com/alipay/sofa-boot/releases). In addition, to facilitate users in the community to learn the latest development version of SOFABoot, we will release the SNAPSHOT version, which is a branch of the current development. To successfully pull the SNAPSHOT package from the central repository, it's necessary to add the following profile configuration to the local maven setting.xml file:
 
