@@ -1,6 +1,6 @@
 - [SOFADashboard 简介](./Home)
 - [Quick Start](./QuickStart)
-- [功能介绍](./UserGuide)
+- 功能介绍
     * [应用面板](./DashboardClient)
     * [服务治理](./Governance)
     * [SOFAArk 管控](./ArkConsole)
