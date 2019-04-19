@@ -83,7 +83,7 @@
 
 已开源项目：
 
-- [SOFABoot](https://github.com/alipay/sofa-boot) 是基于 Spring Boot 的一套研发框架，完全兼容 Spring Boot 的基础上，还提供了启动期监控检查，上下文隔离，模块化开发，类隔离，日志空间隔离等等能力。
+- [SOFABoot](https://github.com/alipay/sofa-boot) 是基于 Spring Boot 的一套研发框架，完全兼容 Spring Boot 的基础上，还提供了启动期监控检查，上下文隔离，模块化开发，类隔离，日志空间隔离等能力。
 - [SOFARPC](https://github.com/alipay/sofa-rpc) 是一个高可扩展性、高性能、生产级的 Java RPC 框架。
 - [SOFAMesh](https://github.com/alipay/sofa-mesh) 是基于 Istio 改进和扩展而来的 Service Mesh 大规模落地实践方案。
 - [SOFAMosn](https://github.com/alipay/sofa-mosn) 是 Golang 开发的 Service Mesh 数据平面代理，旨在提供分布式，模块化，可观察，智能化的代理能力。

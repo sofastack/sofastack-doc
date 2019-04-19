@@ -6,9 +6,21 @@ SOFABoot 从 2.4.0 版本开始支持基于 Spring 上下文隔离的模块化�
 
 SOFABoot 模块化开发属于第二种模块化形式 —— 基于 Spring 上下文隔离的模块化。每个 SOFABoot 模块使用独立的 Spring 上下文，避免不同 SOFABoot 模块间的 BeanId 冲突，有效降低企业级多模块开发时团队间的沟通成本。
 
+关于 SOFABoot 模块化产生的背景，可参考文章《[蚂蚁金服的业务系统模块化 ---- 模块化隔离方案](https://www.sofastack.tech/posts/2018-07-25-01)》
+
 ## 功能简介
 
 ![Modulardevelopment.png](resources/Modulardevelopment.png) 
+
+### 依赖引入
+使用 SOFABoot 模块化开发方案，需要引入如下依赖：
+
+```xml
+<dependency>
+    <groupId>com.alipay.sofa</groupId>
+    <artifactId>isle-sofa-boot-starter</artifactId>
+</dependency>
+```
 
 ### SOFABoot 模块
 
