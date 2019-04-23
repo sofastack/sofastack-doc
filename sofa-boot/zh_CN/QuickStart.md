@@ -103,7 +103,9 @@ logging.path=./logs
 ```
 **注: 在 SOFABoot 3.x 中调整了 endpoint 路径，health/readiness 更改为 actuator/readiness**
 
-`status: "UP"` 表示应用 Readiness Check 健康的。可以通过在浏览器中输入 `http://localhost:8080/health` 来查看应用的运行时健康状态（可能会随着时间发生变化）。
+`status: "UP"` 表示应用 Readiness Check 健康的。可以通过在浏览器中输入 `http://localhost:8080/health` 来查看应用的运行时健康状态（可能会随着时间发生变化）。  
+
+**注: 在 SOFABOOT 3.X 中调整了 endpoint 路径，/health 更改为 /actuator/health**
 
 ## 查看日志
 
