@@ -6,9 +6,20 @@
 
 SOFABoot Modular Development belongs to the second modularization form--modularization based on Spring context isolation. Each SOFABoot module uses an independent Spring context to avoid BeanId conflicts between different SOFABoot modules and effectively reduces the cost of communication between teams during enterprise-level multi-module development.
 
+** More details about SOFABoot module is introduced in the [article](https://www.sofastack.tech/posts/2018-07-25-01)**
+
 ## Feature Description
 
 ![Modulardevelopment.png](resources/Modulardevelopment.png) 
+
+### Import Dependency
++ To use SOFABoot module, you should import the following dependency:
+```xml
+<dependency>
+    <groupId>com.alipay.sofa</groupId>
+    <artifactId>isle-sofa-boot-starter</artifactId>
+</dependency>
+```
 
 ### SOFABoot Module
 

@@ -32,11 +32,16 @@ SOFABoot 是直接构建在 Spring Boot 之上，因此可以使用 [Spring Boot
     <version>${sofa.boot.version}</version>
 </parent>
 ```
-这里的 `${sofa.boot.version}` 指定具体的 SOFABoot 版本，参考[发布历史](https://github.com/alipay/sofa-boot/releases)。 然后，添加一个 SOFABoot 健康检查扩展能力的依赖：
+这里的 `${sofa.boot.version}` 指定具体的 SOFABoot 版本，参考[发布历史](https://github.com/alipay/sofa-boot/releases)。 然后，添加 SOFABoot 健康检查扩展能力的依赖及 Web 依赖(方便查看健康检查结果)：
 ```xml
 <dependency>
     <groupId>com.alipay.sofa</groupId>
     <artifactId>healthcheck-sofa-boot-starter</artifactId>
+</dependency>
+
+<dependency>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-web</artifactId>
 </dependency>
 ```
 
@@ -98,7 +103,9 @@ logging.path=./logs
 ```
 **注: 在 SOFABoot 3.x 中调整了 endpoint 路径，health/readiness 更改为 actuator/readiness**
 
-`status: "UP"` 表示应用 Readiness Check 健康的。可以通过在浏览器中输入 `http://localhost:8080/health` 来查看应用的运行时健康状态（可能会随着时间发生变化）。
+`status: "UP"` 表示应用 Readiness Check 健康的。可以通过在浏览器中输入 `http://localhost:8080/health` 来查看应用的运行时健康状态（可能会随着时间发生变化）。  
+
+**注: 在 SOFABOOT 3.X 中调整了 endpoint 路径，/health 更改为 /actuator/health**
 
 ## 查看日志
 
@@ -153,6 +160,8 @@ logging.path=./logs
 - service-provider: 演示 XML 方式、Annotation 方式、API 方式发布 JVM 服务；
 - service-consumer: 演示 XML 方式、Annotation 方式、API 方式引用 JVM 服务；
 - sofa-boot-run: 启动包含 SOFABoot 模块的 SOFA Boot 应用。
+
+**建议在学习该 Demo 之前，参考模块[隔离文档](./Modular-Development)**
 
 ### 定义服务 API
 
