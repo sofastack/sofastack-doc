@@ -7,7 +7,7 @@ SOFARPC 已支持使用 Nacos 作为服务注册中心。假设你已经根据 N
 com.alipay.sofa.rpc.registry.address=nacos://127.0.0.1:8848
 ```
 
-并添加 nacos 的依赖，其中 version 为用户想使用的 version。
+如果你直接使用了 SOFARPC，而不是 SOFABoot，需要手动添加 nacos 的依赖，其中 version 为用户想使用的 version。
 
 ```xml
 <dependency>

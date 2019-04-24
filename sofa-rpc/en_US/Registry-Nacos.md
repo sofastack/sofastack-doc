@@ -7,7 +7,7 @@ To use Nacos as a service registry in SOFARPC, you only need to add the followin
 com.alipay.sofa.rpc.registry.address=nacos://127.0.0.1:8848
 ```
 
-And add dependency of nacos, notice that version is what you want to use in your project.
+If you use SOFARPC directly, not SOFABoot, you need to add dependency of nacos, notice that version is what you want to use in your project.
 
 ```xml
 <dependency>
