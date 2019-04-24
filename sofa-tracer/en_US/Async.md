@@ -45,7 +45,7 @@ For the above situation, when the SOFATracer is processed for the asynchronous s
 
 #### Thread Pool
 
-For now, whether it's SOFARPC or Dubbo's buried implementation, the situation is the same when using single-thread or thread pools:
+For now, whether it's SOFARPC or Dubbo's trace implementation, the situation is the same when using single-thread or thread pools:
 
 * Synchronous call. A thread in the thread pool is allocated to handle the RPC request. This does not cause the next RPC request to take the tracerContext data of the previous request by mistake
 * Asynchronous calls, since the asynchronous callback is not in the callback to clean up the context, but in advance, there is no dirty data problem.
