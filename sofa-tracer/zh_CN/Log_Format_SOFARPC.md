@@ -1,3 +1,5 @@
+# SOFARPC 日志格式
+
 SOFATracer 集成在 SOFARPC(5.4.0及之后的版本) 后输出链路数据的格式，默认为 `JSON` 数据格式，具体的字段含义解释如下：
 
 ## RPC 客户端 摘要日志（ rpc-client-digest.log）
@@ -28,7 +30,7 @@ SOFATracer 集成在 SOFARPC(5.4.0及之后的版本) 后输出链路数据的�
 
 样例：
 
-```
+```json
 {"timestamp":"2018-05-20 17:03:20.708","tracerId":"1e27326d1526807000498100185597","spanId":"0","span.kind":"client","local.app":"SOFATracerRPC","protocol":"bolt","service":"com.alipay.sofa.tracer.examples.sofarpc.direct.DirectService:1.0","method":"sayDirect","current.thread.name":"main","invoke.type":"sync","router.record":"DIRECT","remote.app":"samples","remote.ip":"127.0.0.1:12200","local.client.ip":"127.0.0.1","result.code":"00","req.serialize.time":"33","resp.deserialize.time":"39","resp.size":"170","req.size":"582","client.conn.time":"0","client.elapse.time":"155","local.client.port":"59774","baggage":""}
 ```
 
@@ -57,7 +59,7 @@ SOFATracer 集成在 SOFARPC(5.4.0及之后的版本) 后输出链路数据的�
 
 样例：
 
-```
+```json
 {"timestamp":"2018-05-20 17:00:53.312","tracerId":"1e27326d1526806853032100185011","spanId":"0","span.kind":"server","service":"com.alipay.sofa.tracer.examples.sofarpc.direct.DirectService:1.0","method":"sayDirect","remote.ip":"127.0.0.1","remote.app":"SOFATracerRPC","protocol":"bolt","local.app":"SOFATracerRPC","current.thread.name":"SOFA-BOLT-BIZ-12200-5-T1","result.code":"00","server.pool.wait.time":"3","biz.impl.time":"0","resp.serialize.time":"4","req.deserialize.time":"38","resp.size":"170","req.size":"582","baggage":""}
 ```
 
@@ -74,7 +76,7 @@ SOFATracer 集成在 SOFARPC(5.4.0及之后的版本) 后输出链路数据的�
 
 样例：
 
-```
+```json
 {"time":"2018-05-18 07:02:19.717","stat.key":{"method":"method","local.app":"client","service":"app.service:1.0"},"count":10,"total.cost.milliseconds":17,"success":"Y"}
 ```
 
@@ -93,6 +95,6 @@ SOFATracer 集成在 SOFARPC(5.4.0及之后的版本) 后输出链路数据的�
 
 样例：
 
-```
+```json
 {"time":"2018-05-18 07:02:19.717","stat.key":{"method":"method","local.app":"client","service":"app.service:1.0"},"count":10,"total.cost.milliseconds":17,"success":"Y"}
 ```

@@ -1,3 +1,5 @@
+# DataSource 日志格式
+
 SOFATracer 对标准的 JDBC 数据源进行埋点，输出 SQL 语句执行链路数据，默认日志输出为 `JSON` 数据格式。
 
 ### DataSource 摘要日志（datasource-client-digest.log）
@@ -73,6 +75,6 @@ key | 表达含义
 
 样例：
 
-```
+```json
 {"time":"2018-09-28 01:12:43.647","stat.key":{"local.app":"SOFATracerDataSource","database.name":"test", "sql":"CREATE TABLE TEST(ID INT PRIMARY KEY%2C NAME VARCHAR(255));"},"count":1,"total.cost.milliseconds":228,"success":"true","load.test":"F"}
 ```

@@ -1,4 +1,6 @@
-## 1. Get Span through SOFATracer context
+# SOFATracer Tools
+
+## Get Span through SOFATracer context
 
 In the process of a distributed link call, the component that integrates SOFATracer generates a Span and caches it in the SOFATracer context. And the context is cached in ThreadLocal. You can get the current SOFATracer context in the following way:
 
@@ -12,7 +14,7 @@ Through the SOFATracer context `SofaTraceContext`, you can add, delete, modify, 
 SofaTracerSpan sofaTracerSpan = sofaTraceContext.getCurrentSpan();
 ```
 
-## 2. Get information through Span
+## Get information through Span
 
 When using the SOFATracer plugin component, such as Spring MVC, the component integrates the capabilities of SOFATracer. So it can get all the information in the Span after getting Span. The specific acquisition method example (it demands that Span is not empty, namely that the corresponding component has integrated SOFATracer) is as follow:
 
@@ -29,8 +31,8 @@ String spanId = sofaTracerSpanContext.getSpanId();
 Get `Tags`:
 
 ```java
-Map<String, String> tagsStr = sofaTracerSpan.getTagsWithStr();
-Map<String, Boolean> tagsBool = sofaTracerSpan.getTagsWithBool();
+Map<String, String>    tagsStr = sofaTracerSpan.getTagsWithStr();
+Map<String, Boolean>  tagsBool = sofaTracerSpan.getTagsWithBool();
 Map<String, Number> tagsNumber = sofaTracerSpan.getTagsWithNumber();
 ```
 
@@ -40,7 +42,7 @@ Get `Logs`:
 List <LogData> logDataList = sofaTracerSpan.getLogs ();
 ```
 
-## 3. Process transparently transmitted data
+## Process transparently transmitted data
 
 Baggage element is a collection of key-value pairs that carries data to be transparently transmitted. In SOFATracer, Baggage data is divided into sysBaggage and bizBaggage; sysBaggage mainly refers to transparently transmitted system data, and bizBaggage mainly refers to transparently transmitted business data.
 
@@ -100,4 +102,3 @@ Iterable<Map.Entry<String, String>> entrySet = sofaTracerSpanContext.baggageItem
 ```
 
 Note: Traversing Baggage data returns a collection of sysBaggage and bizBaggage.
-

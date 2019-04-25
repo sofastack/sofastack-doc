@@ -1,11 +1,8 @@
-## Development roadmap
+# Development roadmap
 
 <center>
-
-![roadmap](./resources/roadmap.png) 
-
+![roadmap](https://gw.alipayobjects.com/mdn/rms_432828/afts/img/A*uprqRLDG2EMAAAAAAAAAAABjARQnAQ) 
 </center>
-
 
 ## Task list
 
@@ -17,7 +14,7 @@ You are welcome to claim the task and [make contributions](https://github.com/al
 | Code | SOFATracer supports HttpClient | Medium |  |  |  | Completed, see [HttpClient access documentation](https://yuque.antfin-inc.com/guolei.sgl/ktyzyg/vrsw5h/Usage_Of_HttpClient) | [issue 17](https://github.com/alipay/sofa-tracer/issues/17) |
 | Code | SOFATracer supports running and configuring data reporting in non-SOFABoot framework | Medium |  |  |  | Completed,see [SOFATracer work in Spring Project](https://github.com/glmapper/tracer-zipkin-plugin-demo) | [issue 32](https://github.com/alipay/sofa-tracer/issues/32) |
 | Code | SOFATracer provides sampling capability | Medium |  |  |  | Completed,see [Use SOFATracer sampling capacity](https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-sampler) | [issue 10](https://github.com/alipay/sofa-tracer/issues/31) |
-| Code | SOFATracer supports Zipkin 2.XX | Medium |  |  |  | Completed,see [Remotely report data to Zipkin using SOFATrace](https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-zipkin)r | [issue 23](https://github.com/alipay/sofa-tracer/issues/23) |
+| Code | SOFATracer supports Zipkin 2.X | Medium |  |  |  | Completed,see [Remotely report data to Zipkin using SOFATrace](https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-zipkin)r | [issue 23](https://github.com/alipay/sofa-tracer/issues/23) |
 | Code | SOFATracer supports Druid | Medium |  |  |  | Completed, see [DataSource access documentation](https://yuque.antfin-inc.com/guolei.sgl/ktyzyg/vrsw5h/Usage_Of_Datasource) |  |
 | Code | SOFATracer supports c3p0 | Medium |  |  |  | Completed, see [DataSource access documentation](https://yuque.antfin-inc.com/guolei.sgl/ktyzyg/vrsw5h/Usage_Of_Datasource) |  |
 | Code | SOFATracer supports Tomcat-JDBC | Medium |  |  |  | Completed, see [DataSource Access Documentation] (./Usage_Of_Datasource) |  |

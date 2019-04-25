@@ -1,38 +1,10 @@
-## Record RestTemplate call data with SOFATracer
+# RestTemplate Integration
 
-This example demonstrates how to request the RestTemplate's request link data in a file with the SOFATracer integrated application via the sofa-tracer-resttemplate-plugin plugin.
+In this document will demonstrate how to use SOFATracer to track of RestTemplate, this example [address] (https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-resttemplate)).
 
-## Prepare environment
+Assuming you have built a simple Spring Web project based on SOFABoot, Then you can be operated by the following steps:
 
-To use SOFABoot, you need to prepare the basic environment first. SOFABoot relies on the following environments:
-- JDK7 or JDK8 
-- Apache Maven 3.2.5+ required for compilation
-
-## Introduce SOFABoot 
-
-After creating a Spring Boot project, you need to introduce the SOFABoot's dependency. First, you need to unzip the generated `zip` package of Spring Boot project and modify the Maven project configuration file `pom.xml`.
-
-```xml
-<parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>${spring.boot.version}</version>
-    <relativePath/> 
-</parent>
-```
-
-Replace the above with the followings:
-
-```xml
-<parent>
-    <groupId>com.alipay.sofa</groupId>
-    <artifactId>sofaboot-dependencies</artifactId>
-    <version>${sofa.boot.version}</version>
-</parent>
-```
-The `${sofa.boot.version}` specifies the latest version of SOFABoot. For more information about SOFABoot versions, refer to [Release notes](https://github.com/alipay/sofa-boot/releases).
-
-Then, add a SOFATracer dependency:
+## Introduce dependency 
 
 ```xml
 <dependency>
@@ -41,8 +13,9 @@ Then, add a SOFATracer dependency:
     <!-- SOFABoot version unified management -->
 </dependency>
 ```
+## Project Configuration
 
-Finally, add the parameters to be used by SOFATracer in the project's `application.properties` file, including `spring.application.name` that indicates the name of the current application and `logging.path` that specifies the log output directory.
+Then, add the parameters to be used by SOFATracer in the project's `application.properties` file, including `spring.application.name` that indicates the name of the current application and `logging.path` that specifies the log output directory.
 
 ```properties
 # Application Name
@@ -51,26 +24,9 @@ spring.application.name=SOFATracerSpringMVC
 logging.path=./logs
 ```
 
-## Add RestTemplate、SOFATracer and SOFATracer's RestTemplate plugin dependencies, 
-
-```xml
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-web</artifactId>
-</dependency>
-<dependency>
-    <groupId>com.alipay.sofa</groupId>
-    <artifactId>tracer-sofa-boot-starter</artifactId>
-</dependency>
-
-<dependency>
-    <groupId>com.alipay.sofa</groupId>
-    <artifactId>sofa-tracer-resttmplate-plugin</artifactId>
-</dependency>
-```
-
-
 ## Add a Controller that provides RESTFul services
+
+In the project, provide a simple Controller, for example:
 
 ```java
 @RestController
@@ -93,7 +49,7 @@ public class SampleController {
 }
 ```
 
-## Constructing a RestTemplate in API mode initiates a call to the RESTFul service above
+## Construct the RestTemplate in API model to initiate a call to the RESTful service above
 
 * Construct a RestTemplate synchronous call instance
 
@@ -122,7 +78,7 @@ RestTemplate             restTemplate;
 
 ## Run the project
 
-You can import the project into IDE and run the `main` method in the generated project (The main method of this example is in HttpClientDemoApplication) to start the application. Or you can run `mvn spring-boot:run` directly in the root directory of the project. You will see the log about startup in the console:
+Start the SOFABoot app and see the log in the console as follows:
 
 ```
 2018-10-24 10:45:28.683  INFO 5081 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
@@ -137,8 +93,6 @@ Successful call：
 2018-10-24 10:45:34.014  INFO 5081 --- [           main] c.a.s.t.e.r.RestTemplateDemoApplication  : Async Response is {"count":2}
 2018-10-24 10:45:34.014  INFO 5081 --- [           main] c.a.s.t.e.r.RestTemplateDemoApplication  : test finish .......
 ```
-
-
 
 ## View log
 
@@ -172,5 +126,3 @@ In the example, a call to the same RESTful service is initiated by constructing 
 {"time":"2018-10-24 10:46:28.769","stat.key":{"method":"GET","local.app":"RestTemplateDemo","request.url":"http://sac.alipay.net:8080/asyncrest"},"count":1,"total.cost.milliseconds":5009,"success":"true","load.test":"F"}
 {"time":"2018-10-24 10:46:28.770","stat.key":{"method":"GET","local.app":"RestTemplateDemo","request.url":"http://sac.alipay.net:8080/rest"},"count":1,"total.cost.milliseconds":188,"success":"true","load.test":"F"}
 ```
-
-Attachment: [Source code](https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-resttemplate) for this sample project.

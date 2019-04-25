@@ -1,11 +1,8 @@
-## 发展路线
+# 发展路线
 
 <center>
-
-![roadmap](./resources/roadmap.png) 
-
+![roadmap](https://gw.alipayobjects.com/mdn/rms_432828/afts/img/A*3E6rQ6fE9RkAAAAAAAAAAABjARQnAQ) 
 </center>
-
 
 ## 任务列表
 

@@ -1,4 +1,4 @@
-## 异步线程处理
+# 异步线程处理
 
 ### 线程中使用 `java.lang.Runnable`
 
@@ -35,4 +35,20 @@ thread.start();
 
 这个实例中，假设 `java.util.concurrent.Callable` 返回结果的对象类型是 `java.lang.Object`，实际使用时可以根据情况替换为期望的类型。
 
+### SOFATracer 对线程池、异步调用场景下的支持
 
+#### 异步场景
+
+> 异步调用，以 rpc 调用为例，每次 rpc 调用请求出去之后不会等待到结果返回之后才去发起下一次处理，这里有个时间差，在前一个 rpc 调用的 callback 回来之前，又一个新的 rpc 请求发起，此时当前线程中的 TracerContext 没有被清理，则 spanId 会自增，tracerId 相同。
+
+对于上面这种情况，SOFATracer 在对于异步情况处理时，不会等到 callback 回来之后，调用 cr 阶段才会清理，而是提前就会清理当前线程的 tracerContext 上下文，从而来保证链路的正确性。
+
+#### 线程池
+
+目前来说，不管是 SOFARPC 还是 Dubbo 的埋点实现，在使用单线程或者线程池时，情况是一样的：
+
+* 同步调用，线程池中分配一个线程用于处理 rpc 请求，在请求结束之前会一直占用线程；此种情况下不会造成下一个 rpc 请求错拿上一个请求的 tracerContext 数据问题
+* 异步调用，由于异步回调并非是在 callback 中来清理上下文，而是提前清理的，所以也不会存在数据串用问题。
+* callback 异步回调，这个本质上就是异步调用，所以处理情况和异步调用相同。
+
+附：[案例工程](https://github.com/glmapper/sofa-tracer-concurrence-parent)

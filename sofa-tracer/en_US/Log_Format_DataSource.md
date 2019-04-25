@@ -1,3 +1,4 @@
+# Datasource Log Format
 SOFATracer tracks the standard JDBC data source and outputs the chain data of SQL statement execution, in the default `JSON` format.
 
 ### DataSource digest log (datasource-client-digest.log)
@@ -73,6 +74,6 @@ Example:
 
 Example:
 
-```
+```json
 {"time":"2018-09-28 01:12:43.647","stat.key":{"local.app":"SOFATracerDataSource","database.name":"test", "sql":"CREATE TABLE TEST(ID INT PRIMARY KEY%2C NAME VARCHAR(255));"},"count":1,"total.cost.milliseconds":228,"success":"true","load.test":"F"}
 ```

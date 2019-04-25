@@ -1,41 +1,15 @@
 # 使用 SOFATracer 远程汇报数据到 Zipkin
 
-本示例演示如何在集成了 SOFATracer 的应用，通过配置 SOFATracer 将链路数据远程汇报到 [Zipkin](https://zipkin.io/)。
+在本文档将演示如何使用 SOFATracer 集成 Zipkin 进行数据上报展示，本示例[工程地址](https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-zipkin)。
 
-下面的示例中将分别演示在 SOFABoot/SpringBoot 工程中 以及 非 SOFABoot/SpringBoot 工程中如何使用。
+假设你已经基于 SOFABoot 构建了一个简单的 Spring Web 工程，那么可以通过如下步骤进行操作：
 
-## 环境准备
+> 下面的示例中将分别演示在 SOFABoot/SpringBoot 工程中 以及 非 SOFABoot/SpringBoot 工程中如何使用。
 
-要使用 SOFABoot，需要先准备好基础环境，SOFABoot 依赖以下环境：
-- JDK7 或 JDK8
-- 需要采用 Apache Maven 3.2.5 或者以上的版本来编译
 
-## 引入 SOFABoot
+## 依赖引入
 
-在创建好一个 Spring Boot 的工程之后，接下来就需要引入 SOFABoot 的依赖，首先，需要将上文中生成的 Spring Boot 工程的 `zip` 包解压后，修改 Maven 项目的配置文件 `pom.xml`，将
-
-```xml
-<parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>${spring.boot.version}</version>
-    <relativePath/>
-</parent>
-```
-
-替换为：
-
-```xml
-<parent>
-    <groupId>com.alipay.sofa</groupId>
-    <artifactId>sofaboot-dependencies</artifactId>
-    <version>${sofa.boot.version}</version>
-</parent>
-```
-
-这里的 ${sofa.boot.version} 指定具体的 SOFABoot 版本，参考[发布历史](https://github.com/alipay/sofa-build/releases)。
-
-## 添加 SOFATracer starter
+### 添加 SOFATracer 依赖
 
 工程中添加 SOFATracer 依赖：
 
@@ -46,21 +20,7 @@
 </dependency>
 ```
 
-## 配置文件
-
-最后，在工程的 `application.properties` 文件下添加一个 SOFATracer 要使用的参数，包括`spring.application.name` 用于标示当前应用的名称；`logging.path` 用于指定日志的输出目录。
-
-```properties
-# Application Name
-spring.application.name=SOFATracerReportZipkin
-# logging path
-logging.path=./logs
-
-com.alipay.sofa.tracer.zipkin.enabled=true
-com.alipay.sofa.tracer.zipkin.baseUrl=http://localhost:9411
-```
-
-## 配置 Zipkin 依赖
+### 配置 Zipkin 依赖
 
 考虑到 Zipkin 的数据上报能力不是 SOFATracer 默认开启的能力，所以期望使用 SOFATracer 做数据上报时，需要添加如下的 Zipkin 数据汇报的依赖：
 
@@ -75,6 +35,19 @@ com.alipay.sofa.tracer.zipkin.baseUrl=http://localhost:9411
      <artifactId>zipkin-reporter</artifactId>
      <version>2.7.13</version>
  </dependency>
+```
+
+## 配置文件
+
+在工程的 `application.properties` 文件下添加一个 SOFATracer 要使用的参数，包括`spring.application.name` 用于标示当前应用的名称；`logging.path` 用于指定日志的输出目录。
+
+```properties
+# Application Name
+spring.application.name=SOFATracerReportZipkin
+# logging path
+logging.path=./logs
+com.alipay.sofa.tracer.zipkin.enabled=true
+com.alipay.sofa.tracer.zipkin.baseUrl=http://localhost:9411
 ```
 
 ## 启动 Zipkin 服务端
@@ -103,7 +76,7 @@ com.alipay.sofa.tracer.zipkin.baseUrl=http://localhost:9411
 
 ## 查看 Zipkin 服务端展示
 
-打开 Zipkin 服务端界面，假设我们部署的 Zipkin 服务端的地址是 `http://zipkin-cloud-3.host.net:9411`，打开 URL 并搜索 `zipkin`(由于我们本地访问的地址是 localhost:8080/helloZipkin)，可以看到展示的链路图。
+打开 Zipkin 服务端界面，假设我们部署的 Zipkin 服务端的地址是 `http://localhost:9411`，打开 URL 并搜索 `helloZipkin`(由于我们本地访问的地址是 localhost:8080/helloZipkin)，可以看到展示的链路图。
 
 ## Spring 工程运行
 

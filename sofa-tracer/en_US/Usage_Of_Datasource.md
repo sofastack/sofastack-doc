@@ -1,13 +1,8 @@
- Based on the standard JDBC interface implementation, SOFATracer 2.2.0 supports event tracking for standard database connection pools (such as DBCP, Druid, c3p0, tomcat, HikariCP, BoneCP). This document demonstrates how to access the SOFATracer event tracking capability.
+# Datasource Integration
 
-## Prepare environment
-To use SOFABoot, you need to prepare the basic environment first. SOFABoot relies on the following environments:
+In this document will demonstrate how to use SOFATracer to track of Datasource, this example(https://github.com/alipay/sofa-tracer/tree/3.x/tracer-samples/tracer-sample-with-h2)。
 
-+ JDK7 or JDK8
-+ Apache Maven 3.2.5+ required for compilation
-
-## Create a project
-SOFATracer is available in both SOFABoot and Spring Boot frameworks. We take Spring Boot as an example and generate a project using [Spring Boot project generation tool](https://start.spring.io/). In this example, we need to add a Web dependency and encode a simple REST service to view the final effect in the browser.
+Assuming you have built a simple Spring Web project based on SOFABoot, Then you can be operated by the following steps:
 
 ## Introduce SOFATracer
 Introduce SOFATracer dependency in the new Spring Boot project:

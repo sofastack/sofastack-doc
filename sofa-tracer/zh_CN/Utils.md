@@ -1,4 +1,6 @@
-## 一、通过 SOFATracer 上下文获取 Span
+# SOFATracer 工具类
+
+## 通过 SOFATracer 上下文获取 Span
 
 在一次分布式链路调用过程中，在集成了 SOFATracer 的组件会产生一个 Span 并会缓存到 SOFATracer 的上下文中，这个上下文是缓存在 ThreadLocal 中的，作为使用者可以通过如下的方式随时获取到当前 SOFATracer 的上下文：
 
@@ -12,7 +14,7 @@ SOFATracer 上下文 `SofaTraceContext` 通过这个实例，可以对其缓存�
 SofaTracerSpan sofaTracerSpan = sofaTraceContext.getCurrentSpan();
 ```
 
-## 二、通过 Span 获取信息
+## 通过 Span 获取信息
 
 在使用相应的组件如 Spring MVC 时，该组件集成了 SOFATracer 的能力后可以在获取到 Span 后获取到 Span 中的所有信息，具体获取方式示例（前提 Span 不为空即相应组件已经集成 SOFATracer）：
 
@@ -29,8 +31,8 @@ String spanId = sofaTracerSpanContext.getSpanId();
 获取 `Tags`:
 
 ```java
-Map<String, String> tagsStr = sofaTracerSpan.getTagsWithStr();
-Map<String, Boolean> tagsBool = sofaTracerSpan.getTagsWithBool();
+Map<String, String>    tagsStr = sofaTracerSpan.getTagsWithStr();
+Map<String, Boolean>  tagsBool = sofaTracerSpan.getTagsWithBool();
 Map<String, Number> tagsNumber = sofaTracerSpan.getTagsWithNumber();
 ```
 
@@ -40,7 +42,7 @@ Map<String, Number> tagsNumber = sofaTracerSpan.getTagsWithNumber();
 List<LogData> logDataList = sofaTracerSpan.getLogs();
 ```
 
-## 三、透传数据处理
+## 透传数据处理
 
 Baggage 元素是一个键值对集合，其携带的是需要透传的数据。SOFATracer 中将 Baggage 数据分为 sysBaggage 和 bizBaggage；sysBaggage 主要是指系统维度的透传数据，bizBaggage 主要是指业务的透传数据。
 

@@ -1,4 +1,4 @@
-## SOFATracer 配置项
+# SOFATracer 配置项
 
 应用在引入 SOFATracer 后，可以在 Spring Boot 的配置文件 `application.properties` 中添加相关配置项来定制 SOFATracer 的相关行为。
 
