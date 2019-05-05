@@ -96,7 +96,9 @@ public class ConsumerClass {
 
    public void do() {
       // 1. $invoke仅支持方法参数类型在当前应用的 ClassLoader 中存在的情况
-      genericService.$invoke("hello", new String[]{ String.class.getName() }, new Object[] {"I'm an arg"});
+
+      genericService.$invoke("hello", new String[]{ String.class.getName() }, new Object[]{"I'm an arg"});
+
       
       // 2. $genericInvoke支持方法参数类型在当前应用的 ClassLoader 中不存在的情况。
       // 2.1 构造参数
