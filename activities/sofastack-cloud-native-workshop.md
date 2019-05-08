@@ -1,10 +1,10 @@
 ---
 author: 宋净超
-updated_at: 2019-02-21T10:20:00.000Z
-created_at: 2019-02-21T10:20:00.000Z
+updated_at: 2019-05-08T10:20:00.000Z
+created_at: 2019-05-08T10:20:00.000Z
 title: "SOFAStack Cloud Native Workshop hosted by Ant Financial"
-tags: ["KubeCon", "workshop"]
-coverImg: "https://gw.alipayobjects.com/mdn/rms_1d5704/afts/img/A*B69FRpIs-1AAAAAAAAAAAABjARQnAQ"
+tags: ["KubeCon", "Workshop","云原生"]
+coverImg: "https://gw.alipayobjects.com/mdn/rms_1d5704/afts/img/A*KH4eT5Ye1wEAAAAAAAAAAABjARQnAQ"
 ---
 
 日期：2019年6月24日，星期一
