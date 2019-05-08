@@ -2,14 +2,14 @@
 author: sofastack
 updated_at: 2019-05-08T10:20:00.000Z
 created_at: 2019-05-08T10:20:00.000Z
-title: "SOFAChannel#5：给研发工程师的代码质量利器 —— 自动化测试框架 SOFAActs"
-tags: ["SOFAChannel", "线上活动", "SOFAActs", "直播"]
-coverImg:"https://gw.alipayobjects.com/mdn/rms_1d5704/afts/img/A*4fM_RpnoZvMAAAAAAAAAAABjARQnAQ"
+title: "SOFAChannel#5：给研发工程师的代码质量利器——自动化测试框架 SOFAActs"
+tags: ["SOFAChannel","线上活动","SOFAActs","直播"]
+coverImg: "https://gw.alipayobjects.com/mdn/rms_1d5704/afts/img/A*4fM_RpnoZvMAAAAAAAAAAABjARQnAQ"
 ---
 
 # 概要
 
- 活动主题：SOFAChannel#5：给研发工程师的代码质量利器 —— 自动化测试框架 SOFAActs
+活动主题：SOFAChannel#5：给研发工程师的代码质量利器 —— 自动化测试框架 SOFAActs
 
 活动时间：5 月 16 日周四晚 7 点
 
