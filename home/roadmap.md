@@ -16,4 +16,4 @@ spring-cloud-sofastack
 
 ## 已开源产品
 
-https://github.com/alipay?q=sofa
+https://github.com/sofastack
