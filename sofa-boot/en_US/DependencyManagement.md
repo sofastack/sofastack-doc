@@ -11,7 +11,7 @@ You must load SOFABoot's management dependencies before using SOFA middleware. I
     <version>${sofa.boot.version}</version>
 </parent>
 ```
-Where `${sofa.boot.version}` represents the SOFABoot version (refer to [release history](https://github.com/alipay/sofa-boot/releases)).
+Where `${sofa.boot.version}` represents the SOFABoot version (refer to [release history](https://github.com/sofastack/sofa-boot/releases)).
 
 
 ## Use Middleware of SOFAStack

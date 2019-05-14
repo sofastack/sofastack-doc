@@ -7,7 +7,7 @@
 
 首先按照文档安装
 
-`https://github.com/alipay/sofa-rpc-node` 
+`https://github.com/sofastack/sofa-rpc-node` 
 
 使用命令.
 ```bash

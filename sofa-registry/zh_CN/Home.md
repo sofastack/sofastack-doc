@@ -7,7 +7,7 @@ SOFARegistry 是蚂蚁金服开源的一个生产级、高时效、高可用的�
 采用分层架构、数据分片存储等方式，突破单机性能与容量瓶颈，接近理论上的“无限水平扩展”。经受过蚂蚁金服生产环境海量节点数与服务数的考验。
 
 ### 高时效性
-借助 [SOFABolt](https://github.com/alipay/sofa-bolt) 通信框架，实现基于TCP长连接的节点判活与推模式的变更推送，服务上下线通知时效性在秒级以内。
+借助 [SOFABolt](https://github.com/sofastack/sofa-bolt) 通信框架，实现基于TCP长连接的节点判活与推模式的变更推送，服务上下线通知时效性在秒级以内。
 
 ### 高可用性
 不同于 Zookeeper、Consul、Etcd 等 CP 架构注册中心产品，SOFARegistry 针对服务发现的业务特点，采用 AP 架构，最大限度地保证网络分区故障下注册中心的可用性。通过集群多副本等方式，应对自身节点故障。
@@ -27,6 +27,6 @@ SOFARegistry 是蚂蚁金服开源的一个生产级、高时效、高可用的�
 数据服务器，负责存储客户端发布数据，数据存储按照数据 ID 进行一致性 hash 分片存储，支持多副本备份，保证数据高可用。DataServer 可无限扩展以支持海量数据量。
 
 ### MetaServer
-元数据服务器，负责维护集群 SessionServer 和 DataServer 的一致列表，在节点变更时及时通知集群内其他节点。MetaServer 通过 [SOFAJRaft](https://github.com/alipay/sofa-jraft) 保证高可用和一致性。
+元数据服务器，负责维护集群 SessionServer 和 DataServer 的一致列表，在节点变更时及时通知集群内其他节点。MetaServer 通过 [SOFAJRaft](https://github.com/sofastack/sofa-jraft) 保证高可用和一致性。
 
 

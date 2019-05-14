@@ -1,6 +1,6 @@
 # 开发贡献代码指南
 
-## 首先参考基本[代码贡献需知](https://github.com/alipay/sofa-lookout/blob/master/CONTRIBUTING.md)
+## 首先参考基本[代码贡献需知](https://github.com/sofastack/sofa-lookout/blob/master/CONTRIBUTING.md)
 
 - 注意测试用例覆盖率；
 - 代码格式；

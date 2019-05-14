@@ -1,7 +1,7 @@
 # 0.2.0 核心能力补充
 ## 路由能力补充
 ### 支持路由时 cluster 带权重
-+ [issue](https://github.com/alipay/sofa-mosn/issues/92)
++ [issue](https://github.com/sofastack/sofa-mosn/issues/92)
 + 功能描述
   * 在当前的路由匹配逻辑中，router match 成功，会选中 router 中对应的 cluster，在这个功能中，一个
   router 允许配置多个带有权重的 cluster，在 router 匹配成功的时候，会根据 cluster 的 weight 随机返回某一个cluster
@@ -41,7 +41,7 @@
 
 ```
 ## LB 能力补充
-+ [issue](https://github.com/alipay/sofa-mosn/issues/91)
++ [issue](https://github.com/sofastack/sofa-mosn/issues/91)
 ### 支持 host 带权重
 + 支持 host 上配置权重，用来做基于 weight 的 LB 算法
 + 配置示例
@@ -108,7 +108,7 @@ current_weight's:
 
 ## XDS 能力补充
 ### CDS 相关
-+ [issue](https://github.com/alipay/sofa-mosn/issues/116)
++ [issue](https://github.com/sofastack/sofa-mosn/issues/116)
 + 提供 cluster 的添加和更新能力
    + 外部接口：`TriggerClusterAddOrUpdate`
    + 内部接口: `AddOrUpdatePrimaryCluster`
@@ -116,7 +116,7 @@ current_weight's:
    + 外部接口: `TriggerClusterDel`
    + 内部接口: `RemovePrimaryCluster`
 ### LDS 相关
-+ [issue](https://github.com/alipay/sofa-mosn/issues/117)
++ [issue](https://github.com/sofastack/sofa-mosn/issues/117)
 + 提供 Listener 的添加和更新能力
   + 外部接口: `AddOrUpdateListener`
   + 内部接口: `AddOrUpdateListener`

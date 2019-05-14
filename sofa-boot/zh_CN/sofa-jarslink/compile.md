@@ -1,7 +1,7 @@
 ## 如何编译
 > 安装 JDK7 及以上，Maven 3.2.5 及以上。
 
-直接下载[代码](https://github.com/alipay/jarslink)，然后执行如下命令：
+直接下载[代码](https://github.com/sofastack/jarslink)，然后执行如下命令：
 
 ```text
 cd sofa-jarslink

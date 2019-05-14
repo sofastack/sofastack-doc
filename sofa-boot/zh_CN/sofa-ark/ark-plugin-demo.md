@@ -1,5 +1,5 @@
 
-> [工程地址](https://github.com/alipay/sofa-ark/tree/master/sofa-ark-samples/sample-ark-plugin)
+> [工程地址](https://github.com/sofastack/sofa-ark/tree/master/sofa-ark-samples/sample-ark-plugin)
 
 ## 简介
 该样例工程演示了如何借助 `maven` 插件将一个普通的 Java 工程打包成标准格式规范的 `Ark Plugin` 

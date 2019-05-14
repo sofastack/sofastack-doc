@@ -1,1 +1,1 @@
-See more: https://github.com/alipay/sofa-hessian/releases
+See more: https://github.com/sofastack/sofa-hessian/releases

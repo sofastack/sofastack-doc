@@ -1,4 +1,4 @@
-﻿> [Project address](https://github.com/alipay/sofa-jarslink/tree/master/sofa-jarslink-samples/biz-jvm-invocation-sample)
+﻿> [Project address](https://github.com/sofastack/sofa-jarslink/tree/master/sofa-jarslink-samples/biz-jvm-invocation-sample)
 
 ## Introduction
 During merged deployment, Biz packages can communicate with each other by releasing and referencing JVM services apart from using the RPC framework. This sample project is intended to demonstrate how two Biz packages communicate by JVM services.

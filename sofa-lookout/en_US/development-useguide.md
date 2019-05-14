@@ -1,6 +1,6 @@
 # Develope guide of code contribution 
 
-## First refer to the basic [Notes for code contribution](https://github.com/alipay/sofa-lookout/blob/master/CONTRIBUTING.md)
+## First refer to the basic [Notes for code contribution](https://github.com/sofastack/sofa-lookout/blob/master/CONTRIBUTING.md)
 
 - Note the test case coverage;
 - Note the code format;

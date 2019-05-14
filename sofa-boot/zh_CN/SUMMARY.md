@@ -41,6 +41,6 @@
 - 升级文档
   - [SOFABoot 2.5.x 升级注意文档](upgrade_2_5_x)
   - [SOFABoot 3.0 升级注意文档](upgrade_3_x)
-- [发布历史](https://github.com/alipay/sofa-boot/releases)
+- [发布历史](https://github.com/sofastack/sofa-boot/releases)
 - [FAQ](./FAQ)
 - [版权说明](./NOTICE)

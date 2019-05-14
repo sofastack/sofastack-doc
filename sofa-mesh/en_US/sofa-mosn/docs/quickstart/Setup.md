@@ -13,7 +13,7 @@ Note: MOSN is developed based on GoLang 1.9.2 and uses dep for dependency manage
 
 ## Get codes
 
-The codes for the MOSN project are hosted in [GitHub] (https://github.com/alipay/sofa-mosn) and can be obtained in the following way:
+The codes for the MOSN project are hosted in [GitHub] (https://github.com/sofastack/sofa-mosn) and can be obtained in the following way:
 
 
 ```bash
@@ -34,11 +34,11 @@ git clone git@github.com:alipay/sofa-mosn.git
 cd sofa-mosn
 ```
 
-The final path of MOSN source codes is `$GOPATH/src/github.com/alipay/sofa-mosn`.
+The final path of MOSN source codes is `$GOPATH/src/github.com/sofastack/sofa-mosn`.
 
 ## Import by using IDE
 
-Use the Golang IDE to import the `$GOPATH/src/github.com/alipay/sofa-mosn` project. Goland is recommended.
+Use the Golang IDE to import the `$GOPATH/src/github.com/sofastack/sofa-mosn` project. Goland is recommended.
 
 ## Compile codes
 

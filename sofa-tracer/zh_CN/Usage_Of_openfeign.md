@@ -1,6 +1,6 @@
 # SOFATracer 集成 OpenFeign
 
-在本文档将演示如何使用 SOFATracer 对 Spring Cloud OpenFeign 进行埋点，本示例[工程地址](https://github.com/alipay/sofa-tracer/tree/3.x/tracer-samples/tracer-sample-with-openfeign)。
+在本文档将演示如何使用 SOFATracer 对 Spring Cloud OpenFeign 进行埋点，本示例[工程地址](https://github.com/sofastack/sofa-tracer/tree/3.x/tracer-samples/tracer-sample-with-openfeign)。
 
 ## 基础环境
 
@@ -38,7 +38,7 @@
     <version>${sofa.boot.version}</version>
 </parent>
 ```
-这里的 ${sofa.boot.version} 指定具体的 SOFABoot 版本，参考[发布历史](https://github.com/alipay/sofa-build/releases)。
+这里的 ${sofa.boot.version} 指定具体的 SOFABoot 版本，参考[发布历史](https://github.com/sofastack/sofa-build/releases)。
 
 ## 新建 tracer-sample-with-openfeign-provider
 

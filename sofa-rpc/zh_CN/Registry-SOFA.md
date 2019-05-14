@@ -9,7 +9,7 @@ com.alipay.sofa.rpc.registry.address=sofa://127.0.0.1:9603
 
 当前支持 SOFARegistry 的版本：
 
-SOFARPC: [5.5.2](https://github.com/alipay/sofa-rpc/releases), SOFABoot: [2.6.3](https://github.com/alipay/sofa-boot/releases/)。
+SOFARPC: [5.5.2](https://github.com/sofastack/sofa-rpc/releases), SOFABoot: [2.6.3](https://github.com/sofastack/sofa-boot/releases/)。
 
 由于本次发布的时间问题，暂时需要用户指定SOFARPC Starter的版本
 
@@ -22,4 +22,4 @@ SOFARPC: [5.5.2](https://github.com/alipay/sofa-rpc/releases), SOFABoot: [2.6.3]
 ```
 
 
-SOFARPC 集成验证 SOFARegistry 服务端版本：[5.2.0](https://github.com/alipay/sofa-registry/releases/tag/5.2.0)。
+SOFARPC 集成验证 SOFARegistry 服务端版本：[5.2.0](https://github.com/sofastack/sofa-registry/releases/tag/5.2.0)。

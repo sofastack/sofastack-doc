@@ -12,7 +12,7 @@
 
 ## 获取代码
 
-MOSN 项目的代码托管在 [github](https://github.com/alipay/sofa-mosn)，获取方式如下：
+MOSN 项目的代码托管在 [github](https://github.com/sofastack/sofa-mosn)，获取方式如下：
 
 ```bash
 go get github.com/alipay/sofa-mosn
@@ -32,11 +32,11 @@ git clone git@github.com:alipay/sofa-mosn.git
 cd sofa-mosn
 ```
 
-最终MOSN的源代码代码路径为 `$GOPATH/src/github.com/alipay/sofa-mosn`
+最终MOSN的源代码代码路径为 `$GOPATH/src/github.com/sofastack/sofa-mosn`
 
 ## 导入IDE
 
-使用您喜爱的Golang IDE导入 `$GOPATH/src/github.com/alipay/sofa-mosn` 项目，推荐Goland。
+使用您喜爱的Golang IDE导入 `$GOPATH/src/github.com/sofastack/sofa-mosn` 项目，推荐Goland。
 
 ## 编译代码
 

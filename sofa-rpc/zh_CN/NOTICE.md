@@ -5,10 +5,10 @@ SOFARPC 使用了一些三方开源组件，他们分别是：
 一些主要依赖：
 - [Netty](https://github.com/netty/netty) under `Apache License 2.0`
 - [SLF4j](https://github.com/qos-ch/slf4j) under the `MIT License`
-- [SOFA Bolt](https://github.com/alipay/sofa-bolt) under `Apache License 2.0`
+- [SOFA Bolt](https://github.com/sofastack/sofa-bolt) under `Apache License 2.0`
 - [Javassist](https://github.com/jboss-javassist/javassist) under `Apache License 2.0`
 - [Resteasy](https://github.com/resteasy/Resteasy) under `Apache License 2.0`
-- [SOFA Hessian](https://github.com/alipay/sofa-hessian) under `Apache License 2.0`
+- [SOFA Hessian](https://github.com/sofastack/sofa-hessian) under `Apache License 2.0`
 
 
 一些扩展依赖：

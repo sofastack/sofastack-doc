@@ -26,7 +26,7 @@
      * [RestTemplate 日志](./Log_Format_RestTemplate)
      * [Dubbo 日志](./Log_Format_Dubbo)
      * [OpenFeign 日志](./Log_Format_OpenFeign)
-- [发布历史](https://github.com/alipay/sofa-tracer/releases)
+- [发布历史](https://github.com/sofastack/sofa-tracer/releases)
 - [RoadMap](./RoadMap)
 
 

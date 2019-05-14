@@ -1,5 +1,5 @@
 # 简介
-Jarslink 2.0 是 [SOFABoot](https://github.com/alipay/sofa-boot) 官方基于 [SOFAArk](https://github.com/alipay/sofa-ark) 开发的功能插件，负责管理多应用在 SOFAArk 容器之上的合并部署，具备如下特性：
+Jarslink 2.0 是 [SOFABoot](https://github.com/sofastack/sofa-boot) 官方基于 [SOFAArk](https://github.com/sofastack/sofa-ark) 开发的功能插件，负责管理多应用在 SOFAArk 容器之上的合并部署，具备如下特性：
 
 + 支持运行时动态安装和卸载应用。
 

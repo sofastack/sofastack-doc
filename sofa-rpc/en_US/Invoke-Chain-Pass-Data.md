@@ -65,7 +65,7 @@ latch.await(); //wait
 
 ## Compare with SOFATracer
 
-[SOFATracer](https://github.com/alipay/sofa-tracer/wiki) is an open-source distributed link tracing system of Ant Finanicial. RPC has been integrated with Tracer and is enabled by default.
+[SOFATracer](https://github.com/sofastack/sofa-tracer/wiki) is an open-source distributed link tracing system of Ant Finanicial. RPC has been integrated with Tracer and is enabled by default.
 
 The differences between data transparent transmission and data transfer by Tracer are as follows:
 

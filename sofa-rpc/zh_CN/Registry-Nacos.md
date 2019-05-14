@@ -19,6 +19,6 @@ com.alipay.sofa.rpc.registry.address=nacos://127.0.0.1:8848
 
 当前支持 Nacos 的版本：
 
-SOFARPC: [5.5.0](https://github.com/alipay/sofa-rpc/releases), SOFABoot: [2.5.3](https://github.com/alipay/sofa-boot/releases/)。
+SOFARPC: [5.5.0](https://github.com/sofastack/sofa-rpc/releases), SOFABoot: [2.5.3](https://github.com/sofastack/sofa-boot/releases/)。
 
 SOFARPC 集成验证 Nacos 服务端版本：[0.6.0](https://github.com/alibaba/nacos/releases/tag/0.6.0)。

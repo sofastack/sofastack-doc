@@ -65,7 +65,7 @@ latch.await(); //等待
 
 ## 和 SOFATracer 的比较
 
-[SOFATracer](https://github.com/alipay/sofa-tracer/wiki) 是蚂蚁开源的一个分布式链路追踪系统,RPC 目前已经和 Tracer 做了集成,默认开启.
+[SOFATracer](https://github.com/sofastack/sofa-tracer/wiki) 是蚂蚁开源的一个分布式链路追踪系统,RPC 目前已经和 Tracer 做了集成,默认开启.
 和 Tracer 进行数据传递不同的是
 
 1. RPC的数据透传更偏向业务使用,而且可以在全链路中进行双向传递,调用方可以传给服务方,服务方也可以传递信息给调用方,SOFATracer 更加偏向于中间件和业务无感知的数据的传递,只能进行单向传递.

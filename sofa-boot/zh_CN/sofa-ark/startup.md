@@ -40,11 +40,11 @@ Pipeline 也是注册在 Ark Service 容器中的一个服务，服务本身是�
 
 ### 初始化环境
 
-设置一些运行时需要的默认参数，比如设置 `log4j.ignoreTCL` 为 `true` 让 log4j/log4j2 初始化是日志不要从 `ThreadContextClassloader` 中寻找配置文件([背景](https://github.com/alipay/sofa-ark/issues/57))
+设置一些运行时需要的默认参数，比如设置 `log4j.ignoreTCL` 为 `true` 让 log4j/log4j2 初始化是日志不要从 `ThreadContextClassloader` 中寻找配置文件([背景](https://github.com/sofastack/sofa-ark/issues/57))
 
 ### 注册容器服务
 
-在 Ark 容器中会发布一些服务供其它的插件来使用，比如 `BizDeployer` 来让 SOFAArk 官方插件 [sofa-jarslink](https://github.com/alipay/sofa-jarslink) 来完成 biz 的动态加载/卸载等
+在 Ark 容器中会发布一些服务供其它的插件来使用，比如 `BizDeployer` 来让 SOFAArk 官方插件 [sofa-jarslink](https://github.com/sofastack/sofa-jarslink) 来完成 biz 的动态加载/卸载等
 
 
 ### 部署 Ark 插件

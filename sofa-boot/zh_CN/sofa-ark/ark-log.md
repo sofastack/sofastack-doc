@@ -1,4 +1,4 @@
-SOFAArk 容器使用了 logback 日志实现，并集成了 [sofa-common-tools](https://github.com/alipay/sofa-common-tools)，日志相关配置可以参考[配置文档](./ark-config), 这里介绍 SOFAArk 三个日志文件：
+SOFAArk 容器使用了 logback 日志实现，并集成了 [sofa-common-tools](https://github.com/sofastack/sofa-common-tools)，日志相关配置可以参考[配置文档](./ark-config), 这里介绍 SOFAArk 三个日志文件：
 
 + sofa-ark/common-default.log
 > sofa-ark 默认日志，打印 SOFAArk 启动日志等，大概内容如下：

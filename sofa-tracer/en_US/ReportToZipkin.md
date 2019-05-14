@@ -32,7 +32,7 @@ Replace the above with the followings:
     <version>${sofa.boot.version}</version>
 </parent>
 ```
-The `${sofa.boot.version}` specifies the latest version of SOFABoot. For more about SOFABoot versions, see [Release notes](https://github.com/alipay/sofa-boot/releases). 
+The `${sofa.boot.version}` specifies the latest version of SOFABoot. For more about SOFABoot versions, see [Release notes](https://github.com/sofastack/sofa-boot/releases). 
 
 ## Add SOFATracer starter
 
@@ -105,7 +105,7 @@ Open the Zipkin server interface, assuming that the address of the Zipkin server
 
 For a typical Spring project, we usually use tomcat/jetty as the servlet container to launch the application. Specific project reference [Use SOFATracer in Spring project](https://github.com/glmapper/tracer-zipkin-plugin-demo)
 
-Attachment: [Source code](https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-zipkin) for remote data reporting to Zipkin. 
+Attachment: [Source code](https://github.com/sofastack/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-zipkin) for remote data reporting to Zipkin. 
 Prerequisite: You need to configure and set up the Zipkin server with reference to [this document](https://zipkin.io/).
 
 

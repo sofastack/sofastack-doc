@@ -9,7 +9,7 @@ com.alipay.sofa.rpc.registry.address=sofa://127.0.0.1:9603
 
 The current version of SOFARegistry is supported:
 
-SOFARPC: [5.5.2](https://github.com/alipay/sofa-rpc/releases), SOFABoot: [2.6.3](https://github.com/alipay/sofa-boot/releases/)。
+SOFARPC: [5.5.2](https://github.com/sofastack/sofa-rpc/releases), SOFABoot: [2.6.3](https://github.com/sofastack/sofa-boot/releases/)。
 
 Because of the time of SOFABoot, users need to specify the version of rpc starter.
 
@@ -21,4 +21,4 @@ Because of the time of SOFABoot, users need to specify the version of rpc starte
 </dependency>
 ```
 
-SOFARPC integration verification SOFARegistry server version:[5.2.0](https://github.com/alipay/sofa-registry/releases/tag/5.2.0)。
+SOFARPC integration verification SOFARegistry server version:[5.2.0](https://github.com/sofastack/sofa-registry/releases/tag/5.2.0)。

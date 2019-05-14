@@ -32,7 +32,7 @@ as:
     <version>${sofa.boot.version}</version>
 </parent>
 ```
-Here, `${sofa.boot.version}` denotes the SOFABoot version (please refer to [release note](https://github.com/alipay/sofa-boot/releases)). Then, add a SOFABoot dependency of Health Check extension and Spring Boot Web Starter.
+Here, `${sofa.boot.version}` denotes the SOFABoot version (please refer to [release note](https://github.com/sofastack/sofa-boot/releases)). Then, add a SOFABoot dependency of Health Check extension and Spring Boot Web Starter.
 
 ```xml
 <dependency>
@@ -74,7 +74,7 @@ We can browse [http://localhost:8080/sofaboot/versions](http://localhost:8080/so
 [
   {
     GroupId: "com.alipay.sofa",
-    Doc-Url: "https://github.com/alipay/sofa-boot",
+    Doc-Url: "https://github.com/sofastack/sofa-boot",
     ArtifactId: "infra-sofa-boot-starter",
     Built-Time: "2018-04-05T20:55:26+0800",
     Commit-Time: "2018-04-05T20:54:26+0800",
@@ -125,7 +125,7 @@ In the above `application.properties` file, the logging directory we have config
 
 If the application fails to start or the Health Check fails, we can find the error cause in the corresponding log file (sometimes we need to pay attention to the `common-error.log` file)
 
-[The source code address] for this sample project is host at (https://github.com/alipay/sofa-boot/tree/master/sofaboot-samples/sofaboot-sample)
+[The source code address] for this sample project is host at (https://github.com/sofastack/sofa-boot/tree/master/sofaboot-samples/sofaboot-sample)
 
 ## Testing
 As we know, SpringBoot provides the `SpringRunner` integrated with JUnit 4 for developers to write integration test cases. In SOFABoot, we can still use the native `SpringRunner`, but we recommend that you use SOFABoot's `SofaBootRunner` and `SofaJUnit4Runner` to write integration tests and unit tests; beyond that, the application requires additional import of the following Starter:
@@ -141,7 +141,7 @@ Note that if you need to use SOFABoot's [class Isolation](./Classloader-Isolatio
 
 ## Modular Development
 
-This section will focus on how we can carry out modular development under the SOFABoot environment, you can find this document's [sample code](https://github.com/alipay/sofa-boot/tree/master/sofaboot-samples/sofaboot-sample-with-isle) under the project. The project is composed of four modules:
+This section will focus on how we can carry out modular development under the SOFABoot environment, you can find this document's [sample code](https://github.com/sofastack/sofa-boot/tree/master/sofaboot-samples/sofaboot-sample-with-isle) under the project. The project is composed of four modules:
 
 ```text
 .

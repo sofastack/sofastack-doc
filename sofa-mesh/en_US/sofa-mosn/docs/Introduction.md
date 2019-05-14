@@ -18,7 +18,7 @@ However, Envoy is developed with C++, which is not in line with the development 
 To put it simply, SOFAMosn is a Service Mesh data plane agent developed by using GoLang. Jointly developed by Ant Financial's System Group Network Team, Ant Financial Middleware Team and UC Team, SOFAMosn is designed to provide distributed, modular, observable, and intelligent agent capabilities. It provides programmable, event-driven, scalable, and high-throughput capabilities through a modular and layered decoupling design.
 
   
-Currently, SOFAMosn supports Istio's API, and interfaces with Pilot through XDS API. In this way, SOFAMosn can obtain the configuration information pushed by the control plane to implement the proxy function. In practice, you can integrate SOFAMosn with Istio to implement Service Mesh components (for example, overall [SOFAMesh](https://github.com/alipay/sofa-mesh) implementation project), or use SOFAMosn alone as a business gateway. SOFAMosn benefits you from the following aspects:
+Currently, SOFAMosn supports Istio's API, and interfaces with Pilot through XDS API. In this way, SOFAMosn can obtain the configuration information pushed by the control plane to implement the proxy function. In practice, you can integrate SOFAMosn with Istio to implement Service Mesh components (for example, overall [SOFAMesh](https://github.com/sofastack/sofa-mesh) implementation project), or use SOFAMosn alone as a business gateway. SOFAMosn benefits you from the following aspects:
 
 - Adopting GoLang as the development language, SOFAMosn has high development efficiency and can seamlessly integrate with k8s and other technologies in the cloud native era, thus accelerating the implementation of microservices.
 - SOFAMosn serves as a proxy to coordinate the calls among the components using Java, C++, GoLang, PHP, Python, and other heterogeneous languages to avoid the repeated development of the components that have multi-language versions, thus improving the business development efficiency. Currently, SOFAMosn has been used as a bridge for cross-language RPC calls in Ant Financial.
@@ -28,7 +28,7 @@ Currently, SOFAMosn supports Istio's API, and interfaces with Pilot through XDS 
 Currently, SOFAMosn has been open sourced on Github. You are welcome to join us and build a boutique GoLang Sidecar together with us. 
 
 Project address:
-[https://github.com/alipay/sofa-mosn](https://github.com/alipay/sofa-mosn).
+[https://github.com/sofastack/sofa-mosn](https://github.com/sofastack/sofa-mosn).
 
 To help you better know SOFAMosn, this article introduces SOFAMosn's features in a comprehensive way, so you can have an overall understanding on SOFAMosn. For more details, pay attention to the subsequent articles. 
 
@@ -242,5 +242,5 @@ SOFAMosn uses TLS encrypted transmission and service authentication to ensure th
 
 ## Get help
 
-+ [Community](https://github.com/alipay/sofa-mosn/issues)
++ [Community](https://github.com/sofastack/sofa-mosn/issues)
  

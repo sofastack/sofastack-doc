@@ -1,7 +1,7 @@
 ## How to compile
 > Install JDK7 and above, and Maven 3.2.5 and above.
 
-Directly download the [code](https://github.com/alipay/jarslink) and then execute the following command:
+Directly download the [code](https://github.com/sofastack/jarslink) and then execute the following command:
 
 ```text
 cd sofa-jarslink

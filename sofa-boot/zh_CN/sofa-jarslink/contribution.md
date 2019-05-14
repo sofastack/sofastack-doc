@@ -11,7 +11,7 @@
 
 ### 提交issue
 
-不论您是修复 Jarslink 的 bug 还是新增 Jarslink 的功能，在您提交代码之前，在 Jarslink 的 [GitHub 地址](https://github.com/alipay/sofa-jarslink)上提交一个 issue，描述您要修复的问题或者要增加的功能。这么做有几个好处:
+不论您是修复 Jarslink 的 bug 还是新增 Jarslink 的功能，在您提交代码之前，在 Jarslink 的 [GitHub 地址](https://github.com/sofastack/sofa-jarslink)上提交一个 issue，描述您要修复的问题或者要增加的功能。这么做有几个好处:
 
 * 不会与其它开发者或是他们对这个项目的计划发生冲突，产生重复工作.
 * Jarslink 的维护人员会对您提的bug或者新增功能进行相关讨论，确定该修改是不是必要，有没有提升的空间或更好的办法。

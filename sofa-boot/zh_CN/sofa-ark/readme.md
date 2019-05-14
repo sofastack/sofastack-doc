@@ -16,7 +16,7 @@ SOFAArk 是一款基于 Java 实现的轻量级类隔离容器，主要提供类
 
 为了彻底解决包冲突的问题，需要借助类隔离机制，使用不同的 `ClassLoader` 加载不同版本的三方依赖，进而隔离包冲突问题； `OSGI` 作为业内最出名的类隔离框架，自然是可以被用于解决上述包冲突问题，但是 `OSGI` 框架太过臃肿，功能繁杂；为了解决包冲突问题，引入 `OSGI` 框架，有牛刀杀鸡之嫌，且反而使工程变得更加复杂，不利于开发；
 
-SOFAArk 采用轻量级的类隔离方案来解决日常经常遇到的包冲突问题，在蚂蚁金服内部服务于整个 [SOFABoot](https://github.com/alipay/sofa-boot) 技术体系，弥补 Spring Boot 没有的类隔离能力。SOFAArk 提出了一种特殊的包结构 -- Ark Plugin，在遇到包冲突时，用户可以使用 Maven 插件将若干冲突包打包成 Plugin，运行时由独立的 PluginClassLoader 加载，从而解决包冲突。
+SOFAArk 采用轻量级的类隔离方案来解决日常经常遇到的包冲突问题，在蚂蚁金服内部服务于整个 [SOFABoot](https://github.com/sofastack/sofa-boot) 技术体系，弥补 Spring Boot 没有的类隔离能力。SOFAArk 提出了一种特殊的包结构 -- Ark Plugin，在遇到包冲突时，用户可以使用 Maven 插件将若干冲突包打包成 Plugin，运行时由独立的 PluginClassLoader 加载，从而解决包冲突。
 
 假设如下场景，如果工程需要引入两个三方包：A 和 B，但是 A 需要依赖版本号为 0.1 的 C 包，而恰好 B 需要依赖版本号为 0.2 的 C 包，且 C 包的这两个版本无法兼容：
 

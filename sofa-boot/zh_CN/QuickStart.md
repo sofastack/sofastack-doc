@@ -32,7 +32,7 @@ SOFABoot 是直接构建在 Spring Boot 之上，因此可以使用 [Spring Boot
     <version>${sofa.boot.version}</version>
 </parent>
 ```
-这里的 `${sofa.boot.version}` 指定具体的 SOFABoot 版本，参考[发布历史](https://github.com/alipay/sofa-boot/releases)。 然后，添加 SOFABoot 健康检查扩展能力的依赖及 Web 依赖(方便查看健康检查结果)：
+这里的 `${sofa.boot.version}` 指定具体的 SOFABoot 版本，参考[发布历史](https://github.com/sofastack/sofa-boot/releases)。 然后，添加 SOFABoot 健康检查扩展能力的依赖及 Web 依赖(方便查看健康检查结果)：
 ```xml
 <dependency>
     <groupId>com.alipay.sofa</groupId>
@@ -71,7 +71,7 @@ logging.path=./logs
 [
   {
     GroupId: "com.alipay.sofa",
-    Doc-Url: "https://github.com/alipay/sofa-boot",
+    Doc-Url: "https://github.com/sofastack/sofa-boot",
     ArtifactId: "infra-sofa-boot-starter",
     Built-Time: "2018-04-05T20:55:26+0800",
     Commit-Time: "2018-04-05T20:54:26+0800",
@@ -124,7 +124,7 @@ logging.path=./logs
 
 如果应用启动失败或者健康检查返回失败，可以通过相应的日志文件找到错误的原因，有些需要关注 `common-error.log` 日志。
 
-附此示例工程的[源代码地址](https://github.com/alipay/sofa-boot/tree/master/sofaboot-samples/sofaboot-sample)。
+附此示例工程的[源代码地址](https://github.com/sofastack/sofa-boot/tree/master/sofaboot-samples/sofaboot-sample)。
 
 ## 测试
 我们知道，SpringBoot 官方提供了和 JUnit4 集成的 `SpringRunner`, 用于集成测试用例的编写； 在 SOFABoot 中，依然可以使用原生的 `SpringRunner`， 但是推荐使用 SOFABoot 自带的 `SofaBootRunner` 以及 `SofaJUnit4Runner` 编写集成测试和单元测试；应用需要额外引入如下 Starter:
@@ -140,7 +140,7 @@ logging.path=./logs
 
 ## 模块化开发
 
-这部分将演示如何在 SOFABoot 环境下进行模块化开发，您可以直接在工程下找到本文档的[示例代码](https://github.com/alipay/sofa-boot/tree/master/sofaboot-samples/sofaboot-sample-with-isle)，项目一共包括四个模块：
+这部分将演示如何在 SOFABoot 环境下进行模块化开发，您可以直接在工程下找到本文档的[示例代码](https://github.com/sofastack/sofa-boot/tree/master/sofaboot-samples/sofaboot-sample-with-isle)，项目一共包括四个模块：
 
 ```text
 .

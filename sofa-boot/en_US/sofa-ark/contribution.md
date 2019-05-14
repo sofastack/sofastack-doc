@@ -11,7 +11,7 @@ Before contributing any code, we need to know how to use the Git tool and the Gi
 
 ### Submitting an issue
 
-Whether you want to fix a bug of SOFAArk or add a new feature of SOFAArk, you have to submit an issue to describe your demand before you submit the code on [GitHub  address](https://github.com/alipay/sofa-ark) in SOFAArk. There are several advantages of doing so:
+Whether you want to fix a bug of SOFAArk or add a new feature of SOFAArk, you have to submit an issue to describe your demand before you submit the code on [GitHub  address](https://github.com/sofastack/sofa-ark) in SOFAArk. There are several advantages of doing so:
 
 * There will not be any conflict with other developers or their plans for this project to result in repetitive work.
 * The maintenance personnel of SOFAArk will discuss about the bug or new function you submitted, to determine if the modification is necessary, or if there is any room for improvement or any better solution.

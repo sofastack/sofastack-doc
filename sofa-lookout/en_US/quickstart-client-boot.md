@@ -58,4 +58,4 @@ After adding the above dependency, you can launch the application locally, visit
 "http_requests_total.instant-MacBook-Pro-4.local": 1,
 ```
 
-The above codes are at [lookout-client-samples-boot](https://github.com/alipay/sofa-lookout/tree/master/client/samples/lookout-client-samples-boot), you can Download them as a reference.
+The above codes are at [lookout-client-samples-boot](https://github.com/sofastack/sofa-lookout/tree/master/client/samples/lookout-client-samples-boot), you can Download them as a reference.

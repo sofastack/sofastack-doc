@@ -2,7 +2,7 @@
 
 本文档将演示了如何在 SOFABoot 环境下应用 SOFARPC 进行服务的发布和引用。 
 
-您可以直接在工程下找到本文档的[示例代码](https://github.com/alipay/sofa-rpc-boot-projects/tree/master/sofa-boot-samples)。注意,示例代码中需要本地安装 zookeeper 环境,如果没有安装.需要将`application.properties`中的`com.alipay.sofa.rpc.registry.address` 配置注释掉.走本地文件注册中心的方式
+您可以直接在工程下找到本文档的[示例代码](https://github.com/sofastack/sofa-rpc-boot-projects/tree/master/sofa-boot-samples)。注意,示例代码中需要本地安装 zookeeper 环境,如果没有安装.需要将`application.properties`中的`com.alipay.sofa.rpc.registry.address` 配置注释掉.走本地文件注册中心的方式
 
 ## 创建工程
 1. 环境准备：SOFABoot 需要 JDK7 或者 JDK8 ，需要采用 Apache Maven 2.2.5 或者以上的版本来编译。

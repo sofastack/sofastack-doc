@@ -26,5 +26,5 @@
      * [RestTemplate Log](./Log_Format_RestTemplate)
      * [Dubbo Log](./Log_Format_Dubbo)
      * [OpenFeign Log](./Log_Format_OpenFeign)
-- [Release Notes](https://github.com/alipay/sofa-tracer/releases)
+- [Release Notes](https://github.com/sofastack/sofa-tracer/releases)
 - [RoadMap](./RoadMap)

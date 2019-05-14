@@ -69,8 +69,8 @@
 * [Development Roadmap](./RoadMap)
 * Contribution
     * [Contribution](./Contributing)
-    * [Submit Issue](https://github.com/alipay/sofa-rpc/issues/new)
-    * [Submit PR](https://github.com/alipay/sofa-rpc/compare)
+    * [Submit Issue](https://github.com/sofastack/sofa-rpc/issues/new)
+    * [Submit PR](https://github.com/sofastack/sofa-rpc/compare)
 * [Copyright](./NOTICE)
 
 ![Join in group by adding friend and sending "SOFA"](./resources/wx_1.png)

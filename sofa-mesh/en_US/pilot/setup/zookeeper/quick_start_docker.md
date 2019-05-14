@@ -11,7 +11,7 @@ SOFAMosn can not only support the standard Istio deployment mode, but also suppo
 
 ## Install Istio
 
-1. Download the latest [release package](https://github.com/alipay/sofa-mosn/releases).
+1. Download the latest [release package](https://github.com/sofastack/sofa-mosn/releases).
 2. Unzip the installation file and go to the decompressed path. The installation path contains:
     - Sample application path `samples/`.
     - The istioctl client executable file which is in the `/bin` path. The istioctl can be used to create routing rules and policies.

@@ -9,7 +9,7 @@ SOFARegistry 支持两种部署模式，分别是集成部署模式及独立部�
 #### 下载源码方式
 
 ```bash
-git clone https://github.com/alipay/sofa-registry.git
+git clone https://github.com/sofastack/sofa-registry.git
 cd sofa-registry
 mvn clean package -DskipTests
 cp server/distribution/integration/target/registry-integration.tgz <somewhere>
@@ -19,7 +19,7 @@ cd registry-integration
 ```
 
 #### 下载安装包方式
-您可以从 [release页面](https://github.com/alipay/sofa-registry/releases) 下载最新的 registry-integration-$version.tar.gz 包。
+您可以从 [release页面](https://github.com/sofastack/sofa-registry/releases) 下载最新的 registry-integration-$version.tar.gz 包。
 
 ```bash
 mkdir registry-integration 

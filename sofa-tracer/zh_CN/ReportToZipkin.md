@@ -1,6 +1,6 @@
 # 使用 SOFATracer 远程汇报数据到 Zipkin
 
-在本文档将演示如何使用 SOFATracer 集成 Zipkin 进行数据上报展示，本示例[工程地址](https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-zipkin)。
+在本文档将演示如何使用 SOFATracer 集成 Zipkin 进行数据上报展示，本示例[工程地址](https://github.com/sofastack/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-zipkin)。
 
 假设你已经基于 SOFABoot 构建了一个简单的 Spring Web 工程，那么可以通过如下步骤进行操作：
 

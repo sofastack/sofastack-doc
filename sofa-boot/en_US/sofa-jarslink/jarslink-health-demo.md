@@ -1,4 +1,4 @@
-> [Project address](https://github.com/alipay/sofa-jarslink/tree/master/sofa-jarslink-samples/biz-health-check-sample)
+> [Project address](https://github.com/sofastack/sofa-jarslink/tree/master/sofa-jarslink-samples/biz-health-check-sample)
 
 ## Introduction
 SOFABoot extends the Health Check of Spring Boot. For detailed information, see [SOFABoot Documentation](../HealthCheck). This sample project is intended to demonstrate how to integrate the Health Check component of SOFABoot during merged deployment. Differences between the Health Check in merged deployment and that of a single SOFABoot application are as follows:

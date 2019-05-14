@@ -1,4 +1,4 @@
-SOFABoot 提供了类隔离框架 SOFAArk, 弥补了 Spring Boot 在类隔离能力上的缺失，用以解决在实际开发中常见的类冲突、包冲突问题，详细请参考 [SOFAArk](https://github.com/alipay/sofa-ark)
+SOFABoot 提供了类隔离框架 SOFAArk, 弥补了 Spring Boot 在类隔离能力上的缺失，用以解决在实际开发中常见的类冲突、包冲突问题，详细请参考 [SOFAArk](https://github.com/sofastack/sofa-ark)
 
 在 SOFABoot 工程中使用类隔离能力，只需两步操作；配置 `sofa-ark-maven-plugin` 打包插件以及引入 `sofa-ark-springboot-starter` 类隔离框架依赖；
 
@@ -85,7 +85,7 @@ SOFABoot 提供了类隔离框架 SOFAArk, 弥补了 Spring Boot 在类隔离能
 
 根据 SpringBoot 依赖即服务的原则，添加该依赖之后，应用启动之前，会优先启动 SOFABoot 类隔离容器；
 
-SOFABoot 的类隔离框架会自动检测应用中是否有引入 Ark Plugin（即需要被隔离的jar包，详情请参考 [SOFAArk](https://github.com/alipay/sofa-ark)）, 并隔离加载；例如为了避免 SOFABoot 官方提供的 SOFARPC 组件和应用产生依赖冲突，SOFABoot提供了 SOFARPC 组件对应的 ark plugin 版，用户如果需要隔离 SOFARPC，只需要添加如下组件：
+SOFABoot 的类隔离框架会自动检测应用中是否有引入 Ark Plugin（即需要被隔离的jar包，详情请参考 [SOFAArk](https://github.com/sofastack/sofa-ark)）, 并隔离加载；例如为了避免 SOFABoot 官方提供的 SOFARPC 组件和应用产生依赖冲突，SOFABoot提供了 SOFARPC 组件对应的 ark plugin 版，用户如果需要隔离 SOFARPC，只需要添加如下组件：
 
 ```xml
 <dependency>
@@ -94,7 +94,7 @@ SOFABoot 的类隔离框架会自动检测应用中是否有引入 Ark Plugin（
 </dependency>
 ```
 
-如此，在运行时，SOFABoot 的类隔离容器会自动隔离 SOFARPC 和其他应用依赖，避免可能存在的包冲突；当然开发者也可以独立开发自身所需 ark plugin 包，详情参考[SOFAArk](https://github.com/alipay/sofa-ark)
+如此，在运行时，SOFABoot 的类隔离容器会自动隔离 SOFARPC 和其他应用依赖，避免可能存在的包冲突；当然开发者也可以独立开发自身所需 ark plugin 包，详情参考[SOFAArk](https://github.com/sofastack/sofa-ark)
 
 
 ## 运行

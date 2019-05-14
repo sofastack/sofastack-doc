@@ -2,7 +2,7 @@
 
 This document introduces how to apply SOFARPC for service publishing and reference. This example will simulate a server locally to listen to a port and publish a service, and the client will reference the service for direct call. 
 
-You can get the code sample of this document by clicking [here](https://github.com/alipay/sofa-rpc/tree/master/example/src/test/java/com/alipay/sofa/rpc/quickstart). 
+You can get the code sample of this document by clicking [here](https://github.com/sofastack/sofa-rpc/tree/master/example/src/test/java/com/alipay/sofa/rpc/quickstart). 
 
 ## Create a project 
 You need to install JDK 6 or above and Maven 3 or above. 
@@ -17,7 +17,7 @@ Create a new Maven project and introduce SOFARPC dependency.
 </dependency> 
 ``` 
 
-Note: The latest version can be found at https://github.com/alipay/sofa-rpc/releases. 
+Note: The latest version can be found at https://github.com/sofastack/sofa-rpc/releases. 
 
 ## Write a server implementation 
 Step 1: Create interface 
@@ -113,6 +113,6 @@ The client outputs:
 
 
 ## More 
-For more examples, please refer to: [example](https://github.com/alipay/sofa-rpc/tree/master/example) 
+For more examples, please refer to: [example](https://github.com/sofastack/sofa-rpc/tree/master/example) 
 
-For SOFABoot example, please refer to: [sofaboot-sample-with-rpc](https ://github.com/alipay/sofa-boot/tree/master/sofaboot-samples/sofaboot-sample-with-rpc)
+For SOFABoot example, please refer to: [sofaboot-sample-with-rpc](https ://github.com/sofastack/sofa-boot/tree/master/sofaboot-samples/sofaboot-sample-with-rpc)

@@ -69,4 +69,4 @@ SOFABoot 3.x 中则引入了统一的健康检查回调接口 ReadinessCheckCall
 在 SOFABoot 2.x 中，版本信息查看的 Endpoint 为 /sofaboot/versions ，而在 SOFABoot 3.0 中，变更为 /actuator/versions
 
 ## 总结
-以上是 SOFABoot 3.x 详细的变更记录，近期有升级或者试用的同学可以通过 [Github](https://github.com/alipay/sofa-boot) 联系，我们会及时的答复与支持。
+以上是 SOFABoot 3.x 详细的变更记录，近期有升级或者试用的同学可以通过 [Github](https://github.com/sofastack/sofa-boot) 联系，我们会及时的答复与支持。

@@ -20,6 +20,6 @@ If you use SOFARPC directly, not SOFABoot, you need to add dependency of nacos, 
 
 The current version of Nacos is supported:
 
-SOFARPC: [5.5.0](https://github.com/alipay/sofa-rpc/releases), SOFABoot: [2.5.3](https://github.com/alipay/sofa-boot/releases/)。
+SOFARPC: [5.5.0](https://github.com/sofastack/sofa-rpc/releases), SOFABoot: [2.5.3](https://github.com/sofastack/sofa-boot/releases/)。
 
 SOFARPC integration verification Nacos server version:[0.6.0](https://github.com/alibaba/nacos/releases/tag/0.6.0)。

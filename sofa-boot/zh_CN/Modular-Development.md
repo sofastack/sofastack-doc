@@ -2,7 +2,7 @@ SOFABoot 从 2.4.0 版本开始支持基于 Spring 上下文隔离的模块化�
 
 - 基于代码组织上的模块化：这是最常见的形式，在开发期，将不同功能的代码放在不同 Java 工程下，在编译期被打进不同 jar 包，在运行期，所有 Java 类都在一个 classpath 下，没做任何隔离；
 - 基于 Spring 上下文隔离的模块化：借用 Spring 下文来做不同功能模块的隔离，在开发期和编译期，代码和配置也会分在不同 Java 工程中，但在运行期，不同的 Spring Bean 相互不可见，IoC 只在同一个上下文内部发生，但是所有的 Java 类还是在一个 ClassLoader 下；
-- 基于 ClassLoader 隔离的模块化：借用 ClassLoader 来做隔离，每个模块都有独立的 ClassLoader，模块与模块之间的 classpath 不同，[SOFAArk](https://github.com/alipay/sofa-ark) 就是这种模块化的实践方式。
+- 基于 ClassLoader 隔离的模块化：借用 ClassLoader 来做隔离，每个模块都有独立的 ClassLoader，模块与模块之间的 classpath 不同，[SOFAArk](https://github.com/sofastack/sofa-ark) 就是这种模块化的实践方式。
 
 SOFABoot 模块化开发属于第二种模块化形式 —— 基于 Spring 上下文隔离的模块化。每个 SOFABoot 模块使用独立的 Spring 上下文，避免不同 SOFABoot 模块间的 BeanId 冲突，有效降低企业级多模块开发时团队间的沟通成本。
 
@@ -38,7 +38,7 @@ SOFABoot 模块的格式定义见: [模块配置](./SOFABoot-Module)。
 上下文隔离后，模块与模块间的 Bean 无法直接注入，模块间需要通过 SOFA 服务进行通信，目前SOFABoot 提供了两种形式的服务发布和引用，用于解决不同级别的模块间调用的问题：
 
 - JVM 服务发布和引用：解决一个 SOFABoot 应用内部各个 SOFABoot 模块之间的调用问题， [JVM服务发布与引用](./Module-Service)
-- RPC 服务发布和引用：解决多个 SOFABoot 应用之间的远程调用问题，[RPC服务发布与引用](https://github.com/alipay/sofa-rpc/wiki/Publish-And-Reference)。
+- RPC 服务发布和引用：解决多个 SOFABoot 应用之间的远程调用问题，[RPC服务发布与引用](https://github.com/sofastack/sofa-rpc/wiki/Publish-And-Reference)。
 
 ### 模块并行化启动
 

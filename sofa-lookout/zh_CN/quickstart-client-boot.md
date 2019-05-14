@@ -58,4 +58,4 @@ public void init() {
 "http_requests_total.instant-MacBook-Pro-4.local": 1,
 ```
 
-以上的 QuickStart 的代码在: [lookout-client-samples-boot](https://github.com/alipay/sofa-lookout/tree/master/client/samples/lookout-client-samples-boot)，大家可以下载作为参考。
+以上的 QuickStart 的代码在: [lookout-client-samples-boot](https://github.com/sofastack/sofa-lookout/tree/master/client/samples/lookout-client-samples-boot)，大家可以下载作为参考。

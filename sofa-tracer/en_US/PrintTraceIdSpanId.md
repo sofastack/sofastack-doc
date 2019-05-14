@@ -82,5 +82,5 @@ Second, to correctly print the `TraceId` and `SpanId` parameters, we also need t
 
 > Note: `[%X{SOFA-TraceId},%X{SOFA-SpanId}]` is the recommended printing format, which can be customized based on your actual scenario requirements.
 
-Attachment: [Source code](https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-slf4j) based on Logback sample project.
+Attachment: [Source code](https://github.com/sofastack/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-slf4j) based on Logback sample project.
 

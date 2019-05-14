@@ -1,5 +1,5 @@
 # Introduction
-Jarslink2.0 is a functional [SOFABoot](https://github.com/alipay/sofa-boot) plugin developed based on [SOFAArk](https://github.com/alipay/sofa-ark). It manages the merged deployment of multiple applications on top of the SOFAArk container, with the following features:
+Jarslink2.0 is a functional [SOFABoot](https://github.com/sofastack/sofa-boot) plugin developed based on [SOFAArk](https://github.com/sofastack/sofa-ark). It manages the merged deployment of multiple applications on top of the SOFAArk container, with the following features:
 
 + It supports runtime dynamic installation and uninstallation of applications.
 

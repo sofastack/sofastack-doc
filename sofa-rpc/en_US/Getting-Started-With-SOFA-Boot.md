@@ -2,7 +2,7 @@
 
 This document introduces how to use SOFARPC for service publishing and reference in SOFABoot. 
 
-You can get the code sample of this document by clicking [here](https://github.com/alipay/sofa-rpc/tree/master/example/src/test/java/com/alipay/sofa/rpc/quickstart). Note that the code sample requires a local installation of the zookeeper environment. If not, you need to remove the `com.alipay.sofa.rpc.registry.address` configuration in `application.properties` to use the local file as a registry center.
+You can get the code sample of this document by clicking [here](https://github.com/sofastack/sofa-rpc/tree/master/example/src/test/java/com/alipay/sofa/rpc/quickstart). Note that the code sample requires a local installation of the zookeeper environment. If not, you need to remove the `com.alipay.sofa.rpc.registry.address` configuration in `application.properties` to use the local file as a registry center.
 
 ## Create a project 
 

@@ -52,7 +52,7 @@ docker run -d -p 9090:9090 -v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml
 
 Then visit http://localhost:9090 through the browser, and you can query the corresponding Metrics through PromQL.
 
-[An example of connecting to Prometheus](https://github.com/alipay/sofa-lookout/tree/master/client/samples/lookout-client-samples-prometheus) is also available in SOFALookout, so you can go and see it as a reference.
+[An example of connecting to Prometheus](https://github.com/sofastack/sofa-lookout/tree/master/client/samples/lookout-client-samples-prometheus) is also available in SOFALookout, so you can go and see it as a reference.
 
 ### 3. Connect to SpringBoot actuator
 
@@ -67,4 +67,4 @@ In addition to Prometheus, SOFALookout can be integrated with the Actuator of Sp
 
 Then, start and visit http://localhost:8080/metrics to see the data of events logged by the SOFALookout API.
 
-SOFALookout also provides [an integrated sample project](https://github.com/alipay/sofa-lookout/tree/master/client/samples/lookout-client-samples-boot).
+SOFALookout also provides [an integrated sample project](https://github.com/sofastack/sofa-lookout/tree/master/client/samples/lookout-client-samples-boot).
