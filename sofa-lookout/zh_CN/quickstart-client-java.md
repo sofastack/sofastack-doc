@@ -38,6 +38,6 @@ Counter counter = registry.counter(id);
 counter.inc();
 ```
 
-客户端的使用，可以详细参考[样例工程](https://github.com/alipay/sofa-lookout/tree/master/client/samples/lookout-client-samples-java)。
+客户端的使用，可以详细参考[样例工程](https://github.com/sofastack/sofa-lookout/tree/master/client/samples/lookout-client-samples-java)。
 
 

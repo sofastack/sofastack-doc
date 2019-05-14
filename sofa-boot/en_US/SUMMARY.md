@@ -51,5 +51,5 @@
 - Document upgrade
   - [SOFABoot 2.5.x upgrade warning document](upgrade_2_5_x)
   - [SOFABoot 3.0 upgrade warning document](upgrade_3_x)
-- [Release note](https://github.com/alipay/sofa-boot/releases)
+- [Release note](https://github.com/sofastack/sofa-boot/releases)
 - [FAQ](./FAQ)

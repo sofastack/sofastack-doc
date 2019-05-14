@@ -69,8 +69,8 @@
 * [发展路线 & 任务认领](./RoadMap) ♨️ 
 * 交流
     * [参与贡献](./Contributing)
-    * [提交Issue](https://github.com/alipay/sofa-rpc/issues/new)
-    * [提交PR](https://github.com/alipay/sofa-rpc/compare)
+    * [提交Issue](https://github.com/sofastack/sofa-rpc/issues/new)
+    * [提交PR](https://github.com/sofastack/sofa-rpc/compare)
 * [版权说明](./NOTICE)
 
 ![加好友回复"SOFA"进群](./resources/wx_1.png)

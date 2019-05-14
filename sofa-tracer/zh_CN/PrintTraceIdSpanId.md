@@ -77,6 +77,6 @@ private static final Logger logger = LoggerFactory.getLogger(XXX.class);
 ```
 > 需要注意的是：`[%X{SOFA-TraceId},%X{SOFA-SpanId}]` 使我们推荐的打印格式，用户可以根据自己的实际需求场景进行定制
 
-[附:基于 Logback 示例工程的源代码地址](https://github.com/alipay/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-slf4j)。
+[附:基于 Logback 示例工程的源代码地址](https://github.com/sofastack/sofa-tracer/tree/master/tracer-samples/tracer-sample-with-slf4j)。
 
 

@@ -19,7 +19,7 @@ After an application started successfully, you can visit [http://localhost:8080/
 [
   {
     GroupId: "com.alipay.sofa",
-    Doc-Url: "https://github.com/alipay/sofa-boot",
+    Doc-Url: "https://github.com/sofastack/sofa-boot",
     ArtifactId: "infra-sofa-boot-starter",
     Build-Time: "2018-04-05T20:55:22+0800",
     Commit-Time: "2018-04-05T20:54:26+0800",

@@ -4,15 +4,15 @@
 
 ## 客户端样例工程
 
-- [lookout-client-samples-java](https://github.com/alipay/sofa-lookout/tree/master/client/samples/lookout-client-samples-java)
+- [lookout-client-samples-java](https://github.com/sofastack/sofa-lookout/tree/master/client/samples/lookout-client-samples-java)
 
  该样例工程展示了，在普通 Java 项目中,如何以代码形式使用和配置客户端。
 
-- [lookout-client-samples-boot](https://github.com/alipay/sofa-lookout/tree/master/client/samples/lookout-client-samples-boot)
+- [lookout-client-samples-boot](https://github.com/sofastack/sofa-lookout/tree/master/client/samples/lookout-client-samples-boot)
 
  该样例工程展示了，在 SpringBoot(或SofaBoot) 项目中,如何使用和配置客户端。
 
-- [lookout-client-samples-prometheus](https://github.com/alipay/sofa-lookout/tree/master/client/samples/lookout-client-samples-prometheus)
+- [lookout-client-samples-prometheus](https://github.com/sofastack/sofa-lookout/tree/master/client/samples/lookout-client-samples-prometheus)
 
  该样例工程展示了，在 SpringBoot(或SofaBoot) 项目中,如何使用和配置客户端使用 prometheus。
 

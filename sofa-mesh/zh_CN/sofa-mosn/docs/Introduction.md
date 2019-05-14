@@ -16,7 +16,7 @@ Envoy 使用 C++ 语言开发，不符合蚂蚁技术栈的发展方向，无法
 
 简单来说，SOFAMosn 是一款采用 GoLang 开发的 Service Mesh 数据平面代理，由蚂蚁金服系统部网络团队、蚂蚁金服中间件团队、UC 大文娱团队共同开发，旨在提供分布式，模块化，可观察，智能化的代理能力；她通过模块化，分层解耦的设计，提供了可编程，事件机制，扩展性，高吞吐量的能力。
   
-当前， SOFAMosn 已支持 Istio 的 API，通过 XDS API 与 Pilot 对接，SOFAMosn 可获取控制面推送的配置信息，来完成代理的功能。在实践中，你可以使用 SOFAMosn 与 Istio 集成来实现 Service Mesh 组件(比如，我们的整体落地实践 [SOFAMesh](https://github.com/alipay/sofa-mesh) 项目)，也可以单独使用 SOFAMosn 作为业务网关，通过使用 SOFAMosn 你将在如下几个方面获得收益：
+当前， SOFAMosn 已支持 Istio 的 API，通过 XDS API 与 Pilot 对接，SOFAMosn 可获取控制面推送的配置信息，来完成代理的功能。在实践中，你可以使用 SOFAMosn 与 Istio 集成来实现 Service Mesh 组件(比如，我们的整体落地实践 [SOFAMesh](https://github.com/sofastack/sofa-mesh) 项目)，也可以单独使用 SOFAMosn 作为业务网关，通过使用 SOFAMosn 你将在如下几个方面获得收益：
 
 1. SOFAMosn 使用 GoLang 作为开发语言，开发效率高，在云原生时代可与 k8s 等技术无缝对接，有利于加速微服务的落地
 2. SOFAMosn 可代理 Java，C++，GoLang，PHP，Python 等异构语言之间组件的互相调用，避免多语言版本组件的重复开发，可提高业务开发效率，目前 SOFAMosn 已经在蚂蚁金服中作为跨语言 RPC 调用的桥梁被使用
@@ -24,7 +24,7 @@ Envoy 使用 C++ 语言开发，不符合蚂蚁技术栈的发展方向，无法
 4. SOFAMosn 提供 TLS、服务鉴权等能力，可满足服务加密与安全的诉求
 
 当前 SOFAMosn 已经在 Github 上开源，我们欢迎所有感兴趣的同学参与进来，与我们一起共建一个精品的 GoLang Sidecar，项目地址为：
-[https://github.com/alipay/sofa-mosn](https://github.com/alipay/sofa-mosn)
+[https://github.com/sofastack/sofa-mosn](https://github.com/sofastack/sofa-mosn)
 
 为了帮助大家更好的理解SOFAMosn，本文作为开篇文章，会整体性的介绍 SOFAMosn 的特性以期给大家一个完整的印象，具体的细节这里不做展开，如果您对细节感兴趣，欢迎关注后序文章。本文介绍的内容将包括 : 
 
@@ -230,4 +230,4 @@ SOFAMosn 中，通过使用 TLS 加密传输和服务鉴权来保证消息的安
 
 ## 获取相关帮助
 
-+ [社区](https://github.com/alipay/sofa-mosn/issues)
++ [社区](https://github.com/sofastack/sofa-mosn/issues)

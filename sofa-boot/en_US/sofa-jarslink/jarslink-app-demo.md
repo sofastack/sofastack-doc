@@ -1,4 +1,4 @@
-> [Project address](https://github.com/alipay/sofa-jarslink/tree/master/sofa-jarslink-samples/spring-boot-transform-sample)
+> [Project address](https://github.com/sofastack/sofa-jarslink/tree/master/sofa-jarslink-samples/spring-boot-transform-sample)
 
 ## Introduction
 Jarslink 2.0 is available for both Spring Boot and SOFABoot; we just need to add the specified dependencies. To be convenient, it is recommended to use Jarslink 2.0 in the form of SOFABoot projects. This sample project is intended to demonstrate how to quickly reform a Spring Boot project into a SOFABoot project.

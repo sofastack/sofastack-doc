@@ -1,7 +1,7 @@
 # 0.2.0 Core capability supplementation
 ## Supplement routing capability
 ### Support configuring weight on clusters upon routing
-+ [Issue](https://github.com/alipay/sofa-mosn/issues/92)
++ [Issue](https://github.com/sofastack/sofa-mosn/issues/92)
 + Function description<br>
 
 	In the current route matching logic, when the router match succeeds, the corresponding cluster in the router is selected. This function allows you to configure multiple clusters with weights for one router. When the router is successfully matched, the system randomly returns a cluster according to the weight of the cluster.
@@ -43,7 +43,7 @@
 
 ```
 ## Supplement LB capability
-+ [issue](https://github.com/alipay/sofa-mosn/issues/91)
++ [issue](https://github.com/sofastack/sofa-mosn/issues/91)
 ### Support configuring weight on host
 + Support configuring weight on host to perform the weight-based LB algorithm.
 
@@ -115,7 +115,7 @@ current_weight's:
 ## Supplement XDS capability
 
 ### CDS 
-+ [Issue](https://github.com/alipay/sofa-mosn/issues/116)
++ [Issue](https://github.com/sofastack/sofa-mosn/issues/116)
 + Provide the capability of adding and updating clusters.
 	+ External interface: `TriggerClusterAddOrUpdate`
 	+ Internal interface: `AddOrUpdatePrimaryCluster`
@@ -124,7 +124,7 @@ current_weight's:
 	+ Internal interface: `RemovePrimaryCluster`
    
 ### LDS 
-+ [Issue](https://github.com/alipay/sofa-mosn/issues/117)
++ [Issue](https://github.com/sofastack/sofa-mosn/issues/117)
 + Provide the capability of adding and updating listeners
 	+  External interface: `AddOrUpdateListener`
 	+ Internal interface: `AddOrUpdateListener`

@@ -1,4 +1,4 @@
-﻿SOFABoot provides a class isolation framework SOFAArk, giving Spring Boot a class isolation ability to resolve class or package conflicts in the development. For detailed information, please refer to:[SOFAArk](https://github.com/alipay/sofa-ark)
+﻿SOFABoot provides a class isolation framework SOFAArk, giving Spring Boot a class isolation ability to resolve class or package conflicts in the development. For detailed information, please refer to:[SOFAArk](https://github.com/sofastack/sofa-ark)
 
 To use this feature in SOFABoot projects, we need only two steps: configure the `sofa-ark-maven-plugin` plugins for packaging and add `sofa-ark-springboot-starter` dependencies of the class isolation framework.
 
@@ -85,7 +85,7 @@ To use SOFABoot class isolation capabilities when running test cases in the deve
 
 In accordance with SpringBoot's dependency-as-a-service principle, after adding those dependencies, the SOFABoot class isolation container will be started before the application runs.
 
-SOFABoot's class isolation framework will automatically check whether Ark plugins (or jars that need to be isolated; for detailed information, please refer to [SOFAArk](https://github.com/alipay/sofa-Ark)) has been loaded into the application, and isolated from loading; for example, to avoid dependency conflicts between the official SOFARPC components provided by SOFABoot and the application, SOFABoot provides an Ark plugin version of SOFARPC. If you want to isolate SOFARPC, you only need to add the following components:
+SOFABoot's class isolation framework will automatically check whether Ark plugins (or jars that need to be isolated; for detailed information, please refer to [SOFAArk](https://github.com/sofastack/sofa-Ark)) has been loaded into the application, and isolated from loading; for example, to avoid dependency conflicts between the official SOFARPC components provided by SOFABoot and the application, SOFABoot provides an Ark plugin version of SOFARPC. If you want to isolate SOFARPC, you only need to add the following components:
 
 ```xml
 <dependency>
@@ -95,7 +95,7 @@ SOFABoot's class isolation framework will automatically check whether Ark plugin
 </dependency>
 ```
 
-By doing so, SOFABoot's class isolation container will automatically isolate SOFARPC and other application dependencies at run time to avoid potential package conflicts. Developers, of course, can also develop their own Ark plugin packages (refer to [SOFAArk](https://github.com/alipay/sofa-Ark) for details).
+By doing so, SOFABoot's class isolation container will automatically isolate SOFARPC and other application dependencies at run time to avoid potential package conflicts. Developers, of course, can also develop their own Ark plugin packages (refer to [SOFAArk](https://github.com/sofastack/sofa-Ark) for details).
 
 
 ## Running

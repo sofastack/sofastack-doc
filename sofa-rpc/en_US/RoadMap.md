@@ -7,16 +7,16 @@
 
 Some of the existing internal features will be available in subsequent iterations.
 
-The features that have been implemented are listed in the following table. You are welcome to claim the tasks and [make contributions](https://github.com/alipay/sofa-rpc/wiki/Contributing).
+The features that have been implemented are listed in the following table. You are welcome to claim the tasks and [make contributions](https://github.com/sofastack/sofa-rpc/wiki/Contributing).
 
 |Task type |Task |Degree of difficulty|Claimant and time|Planned completion time|Progress|Related issues| 
 |:----|:-----------|:-----:|:--------|:--------|:----|:--------:|
 | Documentation | Document translation | Low | | | | |
-| Code | Flexible persistent connection management | Low | | | | [#56](https://github.com/alipay/sofa-rpc/issues/56) |
-| Code | etcd registry center implementation | Medium | [@wynn5a](https://github.com/wynn5a)<br>2018-6 | | | [#153](https://github.com/alipay/sofa -rpc/issues/153) | |
-| Code | eureka registry center implementation | Medium| [@liufeiit](https://github.com/liufeiit)<br>2018-4 | | | [#52](https://github.com/alipay/sofa -rpc/issues/52) |
-| Code | gRPC support | High | | | | [#57](https://github.com/alipay/sofa-rpc/issues/57) |
-| Code | CXF protocol | High | | | | [#58](https://github.com/alipay/sofa-rpc/issues/58) |
+| Code | Flexible persistent connection management | Low | | | | [#56](https://github.com/sofastack/sofa-rpc/issues/56) |
+| Code | etcd registry center implementation | Medium | [@wynn5a](https://github.com/wynn5a)<br>2018-6 | | | [#153](https://github.com/sofastack/sofa -rpc/issues/153) | |
+| Code | eureka registry center implementation | Medium| [@liufeiit](https://github.com/liufeiit)<br>2018-4 | | | [#52](https://github.com/sofastack/sofa -rpc/issues/52) |
+| Code | gRPC support | High | | | | [#57](https://github.com/sofastack/sofa-rpc/issues/57) |
+| Code | CXF protocol | High | | | | [#58](https://github.com/sofastack/sofa-rpc/issues/58) |
 | Code | TLS support | High | | | | |
 
 ## Version iteration Plan

@@ -6,7 +6,7 @@ If you need to call SOFARPC through NodeJs, you can start by following this docu
 
 First install the SOFARPC Node.
 
-`https://github.com/alipay/sofa-rpc-node` 
+`https://github.com/sofastack/sofa-rpc-node` 
 
 Use the following command:
 ```bash

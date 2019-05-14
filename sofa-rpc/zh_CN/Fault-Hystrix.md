@@ -60,7 +60,7 @@ SofaHystrixConfig.registerSetterFactory(consumerConfig, new CustomSetterFactory(
 
 ### 支持 Hystrix 的版本信息
 
-SOFARPC: [5.5.0](https://github.com/alipay/sofa-rpc/releases), SOFABoot: [2.5.3](https://github.com/alipay/sofa-boot/releases/)。
+SOFARPC: [5.5.0](https://github.com/sofastack/sofa-rpc/releases), SOFABoot: [2.5.3](https://github.com/sofastack/sofa-boot/releases/)。
 
 SOAF RPC 集成验证 Hystrix 版本：`1.5.12`。
 

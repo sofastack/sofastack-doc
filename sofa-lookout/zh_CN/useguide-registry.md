@@ -52,7 +52,7 @@ docker run -d -p 9090:9090 -v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml
 
 然后通过浏览器访问: http://localhost:9090，再通过 PromQL 查询即可查询到对应的 Metrics。
 
-SOFALookout 中也提供了一个[对接 Prometheus 的样例](https://github.com/alipay/sofa-lookout/tree/master/client/samples/lookout-client-samples-prometheus)，大家可以前往自行查看。
+SOFALookout 中也提供了一个[对接 Prometheus 的样例](https://github.com/sofastack/sofa-lookout/tree/master/client/samples/lookout-client-samples-prometheus)，大家可以前往自行查看。
 
 ### 3. 对接 SpringBoot actuator
 
@@ -67,4 +67,4 @@ SOFALookout 中也提供了一个[对接 Prometheus 的样例](https://github.co
 
 然后启动后访问 http://localhost:8080/metrics 既可以看到通过 SOFALookout API 埋点的数据。
 
-SOFALookout 也提供了[集成的样例工程](https://github.com/alipay/sofa-lookout/tree/master/client/samples/lookout-client-samples-boot)，大家可以前往自行查看。
+SOFALookout 也提供了[集成的样例工程](https://github.com/sofastack/sofa-lookout/tree/master/client/samples/lookout-client-samples-boot)，大家可以前往自行查看。

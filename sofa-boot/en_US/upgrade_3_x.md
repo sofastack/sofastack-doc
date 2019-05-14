@@ -69,5 +69,5 @@ to control the execution order of extension implementations.
 The Endpoint for viewing version information is /sofaboot/versions in SOFABoot 2. However, it has been changed to /actuator/versions in SOFABoot 3.0.
 
 ## Conclusion
-The above are the detailed change records for SOFABoot 3.x. If you want an upgrade or a trial version, please contact us through [Github](https://github.com/alipay/sofa-boot). We will reply promptly and provide support.
+The above are the detailed change records for SOFABoot 3.x. If you want an upgrade or a trial version, please contact us through [Github](https://github.com/sofastack/sofa-boot). We will reply promptly and provide support.
 

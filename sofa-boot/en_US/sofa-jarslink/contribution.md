@@ -11,7 +11,7 @@ Before contributing any code, we need to know how to use the Git tool and the Gi
 
 ### Submitting an issue
 
-No Matter whether you are fixing a Jarslink bug or adding a Jarslink feature, submit an issue on the Jarslink [GitHub address](https://github.com/alipay/sofa-jarslink) to describe the bug you are going to fix or the feature you intend to add before you submit the code. There are several advantages of doing so:
+No Matter whether you are fixing a Jarslink bug or adding a Jarslink feature, submit an issue on the Jarslink [GitHub address](https://github.com/sofastack/sofa-jarslink) to describe the bug you are going to fix or the feature you intend to add before you submit the code. There are several advantages of doing so:
 
 * There will not be any conflict with other developers or their plans for this project to result in repetitive work.
 * The Jarslink maintenance personnel will discuss the bug or new feature you submitted to determine whether the modification is necessary, or if there is any room for improvement or a better solution.

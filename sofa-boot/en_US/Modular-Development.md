@@ -2,7 +2,7 @@
 
 - Modularization based on code organization: This is the most common form. Codes with different functions are placed under different Java projects at development time and into different jar packages at compile time. At runtime, all Java classes are under the same classpath without any isolation;
 - Modularization based on Spring context isolation: Use the Spring context to perform isolation of different function modules. At development and compile time, the codes and configurations are also placed under different Java projects. At runtime, however, different Spring Beans are invisible from each other, and IoC only occurs within the same context, but all the Java classes are still under the same ClassLoader;
-- Modularization based on ClassLoader isolation: Borrow the ClassLoader to perform isolation. Each module has an independent ClassLoader, and the classpath between modules differs. [SOFAArk](https://github.com/alipay/sofa-ark) is the practice of such modularization.
+- Modularization based on ClassLoader isolation: Borrow the ClassLoader to perform isolation. Each module has an independent ClassLoader, and the classpath between modules differs. [SOFAArk](https://github.com/sofastack/sofa-ark) is the practice of such modularization.
 
 SOFABoot Modular Development belongs to the second modularization form--modularization based on Spring context isolation. Each SOFABoot module uses an independent Spring context to avoid BeanId conflicts between different SOFABoot modules and effectively reduces the cost of communication between teams during enterprise-level multi-module development.
 
@@ -37,7 +37,7 @@ For the format definition of SOFABoot module, see: [Module Configuration](./SOFA
 After isolation of context, the Bean between modules cannot be directly injected, so the SOFA service is required for invocation between the modules. Currently, SOFABoot offers two forms of service publish and reference, to resolve calls between modules of different levels:
 
 - JVM service publish and reference: Resolve invocations between the SOFABoot modules within a SOFABoot application, [JVM Service Publish and Reference] (./Module-Service)
-- RPC service publish and reference: Resolve invocations between multiple SOFABoot applications, [RPC Service Publish and Reference](https://github.com/alipay/sofa-rpc/wiki/Publish-And-Reference).
+- RPC service publish and reference: Resolve invocations between multiple SOFABoot applications, [RPC Service Publish and Reference](https://github.com/sofastack/sofa-rpc/wiki/Publish-And-Reference).
 
 ### Module Parallel Start
 

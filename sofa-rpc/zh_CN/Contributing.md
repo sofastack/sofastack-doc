@@ -1,4 +1,4 @@
-> 可以先去 [发展路线](https://github.com/alipay/sofa-rpc/wiki/RoadMap) 内了解下开发任务及未来规划。
+> 可以先去 [发展路线](https://github.com/sofastack/sofa-rpc/wiki/RoadMap) 内了解下开发任务及未来规划。
 
 ## 准备工作
 

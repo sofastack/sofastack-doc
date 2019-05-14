@@ -24,4 +24,4 @@ Correspondingly, when referencing the service, you also need to change the seria
 </sofa:reference>
 ```
 
-Currently, when you use Annotation for service reference, it is not yet supported to set serialization protocol. But this will be supported in future versions. For details, see ISSUE: <https://github.com/alipay/sofa-boot/issues/278>
+Currently, when you use Annotation for service reference, it is not yet supported to set serialization protocol. But this will be supported in future versions. For details, see ISSUE: <https://github.com/sofastack/sofa-boot/issues/278>

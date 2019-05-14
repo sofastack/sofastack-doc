@@ -26,7 +26,7 @@ SOFADashboard 中的服务治理、SOFAArk 管控依赖于 Zookeeper，需要�
 ## 后端运行
 
 ```bash
-> git clone https://github.com/alipay/sofa-dashboard.git
+> git clone https://github.com/sofastack/sofa-dashboard.git
 > cd sofa-dashboard
 > mvn clean package -DskipTests
 > cd sofa-dashboard-backend/sofa-dashboard-web/target/

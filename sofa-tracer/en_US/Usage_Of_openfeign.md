@@ -1,6 +1,6 @@
 # OpenFeign Integration
 
-In this document will demonstrate how to use SOFATracer to track of OpenFeign, this example [address] (https://github.com/alipay/sofa-tracer/tree/3.x/tracer-samples/tracer-sample-with-openfeign)。
+In this document will demonstrate how to use SOFATracer to track of OpenFeign, this example [address] (https://github.com/sofastack/sofa-tracer/tree/3.x/tracer-samples/tracer-sample-with-openfeign)。
 
 ## Prepare Environment
 
@@ -38,7 +38,7 @@ Replace the above with the followings:
     <version>${sofa.boot.version}</version>
 </parent>
 ```
-The `${sofa.boot.version}` specifies the latest version of SOFABoot. For more information about SOFABoot versions, refer to [Release notes](https://github.com/alipay/sofa-boot/releases).
+The `${sofa.boot.version}` specifies the latest version of SOFABoot. For more information about SOFABoot versions, refer to [Release notes](https://github.com/sofastack/sofa-boot/releases).
 
 ## New tracer-sample-with-openfeign-provider Module
 

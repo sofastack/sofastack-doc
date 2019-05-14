@@ -24,4 +24,4 @@ SOFARPC 可以在使用 Bolt 通信协议的情况下，可以选择不同的序
 </sofa:reference>
 ```
 
-目前，使用注解的方式尚不能支持设置序列化协议，这个将在后续的版本中支持，详见 ISSUE：<https://github.com/alipay/sofa-boot/issues/278>
+目前，使用注解的方式尚不能支持设置序列化协议，这个将在后续的版本中支持，详见 ISSUE：<https://github.com/sofastack/sofa-boot/issues/278>

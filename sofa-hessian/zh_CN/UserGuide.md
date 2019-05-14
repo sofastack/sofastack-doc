@@ -16,7 +16,7 @@
 
 SOFA-Hessian 的序列化和反序列化操作方式和原生 Hessian 是相同的。
 
-下面演示的是一个序列化和反序列化的过程，示例参见：[SerializerExample.java](https://github.com/alipay/alipay-hessian/blob/master/src/test/java/com/alipay/hessian/example/SerializerExample.java)
+下面演示的是一个序列化和反序列化的过程，示例参见：[SerializerExample.java](https://github.com/sofastack/alipay-hessian/blob/master/src/test/java/com/alipay/hessian/example/SerializerExample.java)
 
 
 ```java
@@ -56,7 +56,7 @@ SOFA-Hessian 从 v3.3.0 开始会自动加入一个内置黑名单过滤器，�
 
 当然你也可以自定义类名过滤器。
 
-示例参见：[ClassNameResolverExample.java](https://github.com/alipay/alipay-hessian/blob/master/src/test/java/com/alipay/hessian/example/ClassNameResolverExample.java)
+示例参见：[ClassNameResolverExample.java](https://github.com/sofastack/alipay-hessian/blob/master/src/test/java/com/alipay/hessian/example/ClassNameResolverExample.java)
 
 ```java
 public static void main(String[] args) throws IOException {
@@ -109,7 +109,7 @@ public static void main(String[] args) throws IOException {
 
 而泛化序列化是指客户端不再依赖服务端的Class类定义，而是客户端直接通过泛化类，组装出服务端需要的数据结构。服务端接收到的是正常的Hessian序列化后的数据，不感知客户端是否使用泛化序列化。
 
-示例参见: [TestObj.java](https://github.com/alipay/alipay-hessian/blob/master/src/test/java/com/alipay/hessian/example/TestObj.java)、[GenericExample.java](https://github.com/alipay/alipay-hessian/blob/master/src/test/java/com/alipay/hessian/example/GenericExample.java)
+示例参见: [TestObj.java](https://github.com/sofastack/alipay-hessian/blob/master/src/test/java/com/alipay/hessian/example/TestObj.java)、[GenericExample.java](https://github.com/sofastack/alipay-hessian/blob/master/src/test/java/com/alipay/hessian/example/GenericExample.java)
 
 假如我们定义了一个自定义类:
 
@@ -161,4 +161,4 @@ public static void main(String[] args) throws IOException {
 
 # FAQ
 1. SOFARPC 里引用的 `SOFA-Hessian` 与业务使用的 `Hessian` 类冲突了怎么办？
-> 可以使用 SOFA Boot 类隔离能力，参见 [SOFA Ark](https://github.com/alipay/sofa-ark)
+> 可以使用 SOFA Boot 类隔离能力，参见 [SOFA Ark](https://github.com/sofastack/sofa-ark)

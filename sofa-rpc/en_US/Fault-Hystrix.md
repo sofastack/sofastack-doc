@@ -60,7 +60,7 @@ In the implementation provided by default, `GroupKey` is `InterfaceId`, and `Com
 
 ### Support Hystrix version information
 
-SOFARPC: [5.5.0](https://github.com/alipay/sofa-rpc/releases), SOFABoot: [2.5.3](https://github.com/alipay/sofa-boot/releases/)。
+SOFARPC: [5.5.0](https://github.com/sofastack/sofa-rpc/releases), SOFABoot: [2.5.3](https://github.com/sofastack/sofa-boot/releases/)。
 
 SOAF RPC Integration Verification Hystrix version: `1.5.12`.
 

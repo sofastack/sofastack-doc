@@ -18,7 +18,7 @@
 #### 1.1 下载源码
 
 ```bash
-git clone https://github.com/alipay/sofa-registry.git
+git clone https://github.com/sofastack/sofa-registry.git
 cd sofa-registry
 ```
 

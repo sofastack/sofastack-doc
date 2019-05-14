@@ -1,6 +1,6 @@
 # Datasource Integration
 
-In this document will demonstrate how to use SOFATracer to track of Datasource, this example(https://github.com/alipay/sofa-tracer/tree/3.x/tracer-samples/tracer-sample-with-h2)。
+In this document will demonstrate how to use SOFATracer to track of Datasource, this example(https://github.com/sofastack/sofa-tracer/tree/3.x/tracer-samples/tracer-sample-with-h2)。
 
 Assuming you have built a simple Spring Web project based on SOFABoot, Then you can be operated by the following steps:
 

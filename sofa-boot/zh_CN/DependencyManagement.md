@@ -11,7 +11,7 @@ SOFABoot 是在 Spring Boot 的基础上提供的功能扩展。基于 Spring Bo
     <version>${sofa.boot.version}</version>
 </parent>
 ```
-其中 `${sofa.boot.version}` 为具体的 SOFABoot 版本，参考[发布历史](https://github.com/alipay/sofa-boot/releases)。
+其中 `${sofa.boot.version}` 为具体的 SOFABoot 版本，参考[发布历史](https://github.com/sofastack/sofa-boot/releases)。
 
 ## SOFABoot 依赖管理 -- Gradle
 

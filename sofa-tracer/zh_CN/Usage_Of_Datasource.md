@@ -1,5 +1,5 @@
 # SOFATracer 集成 DataSource
-在本文档将演示如何使用 SOFATracer 对 DataSource 进行埋点，本示例[工程地址](https://github.com/alipay/sofa-tracer/tree/3.x/tracer-samples/tracer-sample-with-h2)。
+在本文档将演示如何使用 SOFATracer 对 DataSource 进行埋点，本示例[工程地址](https://github.com/sofastack/sofa-tracer/tree/3.x/tracer-samples/tracer-sample-with-h2)。
 
 > SOFATracer 2.2.0 基于标准的 JDBC 接口实现，支持对标准的数据库连接池（如 DBCP、Druid、c3p0、tomcat、HikariCP、BoneCP）埋点。下面演示如何接入 SOFATracer 埋点能力。
 

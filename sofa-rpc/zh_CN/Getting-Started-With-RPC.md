@@ -3,7 +3,7 @@
 本文档将演示了如何应用 SOFARPC 进行服务的发布和引用。
 本例将在本地模拟服务端启动监听一个端口并发布一个服务，客户端引用该服务进行直连调用。
 
-您可以直接在工程下找到本文档的[示例代码](https://github.com/alipay/sofa-rpc/tree/master/example/src/test/java/com/alipay/sofa/rpc/quickstart)。
+您可以直接在工程下找到本文档的[示例代码](https://github.com/sofastack/sofa-rpc/tree/master/example/src/test/java/com/alipay/sofa/rpc/quickstart)。
 
 ## 创建工程
 需要安装 JDK 6 及以上 和 Maven 3 以上.
@@ -18,7 +18,7 @@
 </dependency>
 ```
 
-注：最新版本可以从 https://github.com/alipay/sofa-rpc/releases 里找到。
+注：最新版本可以从 https://github.com/sofastack/sofa-rpc/releases 里找到。
 
 
 ## 编写服务端实现
@@ -115,6 +115,6 @@ public class QuickStartClient {
 
 
 ## 更多
-更多示例请参考：[example](https://github.com/alipay/sofa-rpc/tree/master/example)
+更多示例请参考：[example](https://github.com/sofastack/sofa-rpc/tree/master/example)
 
-SOFABoot 示例请参考：[sofaboot-sample-with-rpc](https://github.com/alipay/sofa-boot/tree/master/sofaboot-samples/sofaboot-sample-with-rpc)
+SOFABoot 示例请参考：[sofaboot-sample-with-rpc](https://github.com/sofastack/sofa-boot/tree/master/sofaboot-samples/sofaboot-sample-with-rpc)

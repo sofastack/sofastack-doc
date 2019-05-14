@@ -1,1 +1,1 @@
-更多参见：[https://github.com/alipay/sofa-registry/releases](https://github.com/alipay/sofa-registry/releases)
+更多参见：[https://github.com/sofastack/sofa-registry/releases](https://github.com/sofastack/sofa-registry/releases)
