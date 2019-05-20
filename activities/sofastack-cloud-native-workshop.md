@@ -7,11 +7,11 @@ tags: ["KubeCon", "Workshop","云原生"]
 coverImg: "https://gw.alipayobjects.com/mdn/rms_1d5704/afts/img/A*KH4eT5Ye1wEAAAAAAAAAAABjARQnAQ"
 ---
 
-日期：2019年6月24日，星期一
-时间：9:00 – 16:00
-地点：上海世博中心
-注册费：免费
-注册地址：https://www.lfasiallc.com/events/kubecon-cloudnativecon-china-2019/co-located-events/#sofastack-cloud-native-workshop
+- 日期：2019年6月24日，星期一
+- 时间：9:00 – 16:00
+- 地点：上海世博中心
+- 注册费：免费
+- 注册地址：https://www.lfasiallc.com/events/kubecon-cloudnativecon-china-2019/co-located-events/#sofastack-cloud-native-workshop
 
 SOFAStack（Scalable Open Financial Architecture Stack）是蚂蚁金服自主研发并开源的金融级分布式架构，包含了构建金融级云原生架构所需的各个组件，是在金融场景里锤炼出来的最佳实践。SOFAStack 官方网站：https://www.sofastack.tech/
 
@@ -57,11 +57,11 @@ Service Mesh 将服务间通信能力下沉到基础设施，让应用解耦并�
 
 ### SOFAStack Cloud Native Workshop hosted by Ant Financial
 
-Date: Monday, 24 June, 2019
-Time: 9:00 – 16:00
-Location: Shanghai Expo Centre
-Registration Fees: Complimentary
-Register here: https://www.lfasiallc.com/events/kubecon-cloudnativecon-china-2019/co-located-events/#sofastack-cloud-native-workshop
+- Date: Monday, 24 June, 2019
+- Time: 9:00 – 16:00
+- Location: Shanghai Expo Centre
+- Registration Fees: Complimentary
+- Register here: https://www.lfasiallc.com/events/kubecon-cloudnativecon-china-2019/co-located-events/#sofastack-cloud-native-workshop
 
 SOFAStack (Scalable Open Financial Architecture Stack) is a financial-grade distributed architecture independently developed and open sourced by Ant Financial. It contains the components required to build a financial-grade cloud native architecture. It is a best practice tempered in financial scenarios. SOFAStack official website: https://www.sofastack.tech/
 
@@ -92,7 +92,7 @@ As one of the pioneering technologies of cloud technology, Serverless architectu
 
 **12:00 - 1:00 Lunch time**
 
-**1:30 - 2:20 Quickly build microservices with SOFAStack by Guolei Song & Jie Cao **
+**1:30 - 2:20 Quickly build microservices with SOFAStack by Guolei Song & Jie Cao**
 
 Building a microservices application based on the SOFAStack. Through this workshop, you can learn how to report application monitoring data, service link data, and publish and subscribe services in the SOFAStack.
 
@@ -100,6 +100,6 @@ Building a microservices application based on the SOFAStack. Through this worksh
 
 In this workshop, you can implement the combined deployment and dynamic module push capabilities provided by SOFAArk based on the ARK control capabilities of SOFADashboard.
 
-**3:20 - 4:00 Seata distributed transaction practice by Sen Zhang **
+**3:20 - 4:00 Seata distributed transaction practice by Sen Zhang**
 
 Under the microservice architecture, the distributed transaction problem is an industry problem. Through this workshop, you can understand the background of distributed transaction problems under distributed architecture, as well as common distributed transaction solutions and experience on how to use the open source distributed transaction framework - Seata's AT mode, TCC mode to solve the ultimate  consistency of the business data.
