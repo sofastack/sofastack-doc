@@ -1,25 +1,19 @@
 ---
 author: sofastack
-updated_at: 2019-05-21T10:20:00.000Z
+updated_at: 2019-05-21T11:20:00.000Z
 created_at: 2019-05-21T10:20:00.000Z
 title: "SOFA Meetup#2 上海站-使用 SOFAStack 快速构建微服务"
 tags: ["SOFAMeetup","线下活动","开源","微服务"]
 coverImg: "https://gw.alipayobjects.com/mdn/rms_1d5704/afts/img/A*yJ5ZTrqmIecAAAAAAAAAAABjARQnAQ"
 ---
 
-# 概要
+- 活动主题：SOFA Meetup#2 上海站-使用 SOFAStack 快速构建微服务
+- 活动时间：5 月 26 日周日下午 13 点
+- 活动地点：上海市徐汇区田林路200号A7栋一楼
+- 活动形式：线下活动
+- 报名方式：<https://tech.antfin.com/community/activities/576>
 
-活动主题：SOFA Meetup#2 上海站-使用 SOFAStack 快速构建微服务
-
-活动时间：5 月 26 日周日下午 13 点
-
-活动地点：上海市徐汇区田林路200号A7栋一楼
-
-活动形式：线下活动
-
-报名方式：<https://tech.antfin.com/community/activities/576>
-
-# 介绍
+## 介绍
 
 ## 蚂蚁金服 SOFAStack
 
@@ -45,7 +39,7 @@ SOFAStack（Scalable Open Financial Architecture Stack）是蚂蚁金服自主�
 
 <https://tech.antfin.com/community/activities/576>
 
-# 议程
+## 议程
 
 | 时间 | 环节 | 讲师 |
 | --- | --- | --- |
