@@ -1,7 +1,7 @@
 ---
 author: sofastack
-updated_at: 2019-05-08T10:20:00.000Z
-created_at: 2019-05-08T10:20:00.000Z
+updated_at: 2019-05-21T10:20:00.000Z
+created_at: 2019-05-21T10:20:00.000Z
 title: "SOFA Meetup#2 上海站-使用 SOFAStack 快速构建微服务"
 tags: ["SOFAMeetup","线下活动","开源","微服务"]
 coverImg: "https://gw.alipayobjects.com/mdn/rms_1d5704/afts/img/A*yJ5ZTrqmIecAAAAAAAAAAABjARQnAQ"
@@ -21,13 +21,13 @@ coverImg: "https://gw.alipayobjects.com/mdn/rms_1d5704/afts/img/A*yJ5ZTrqmIecAAA
 
 # 介绍
 
-# | 蚂蚁金服 SOFAStack
+## 蚂蚁金服 SOFAStack
 
 SOFAStack（Scalable Open Financial Architecture Stack）是蚂蚁金服自主研发的金融级分布式架构，包含了构建金融级云原生架构所需的各个组件，历经蚂蚁金服超过十年的业务历练。SOFAStack 于 2018 年 4 月宣布开源，并逐步开源 SOFABoot、SOFARPC、SOFALookout、SOFATracer、SOFAMosn、SOFAMesh 等组件。
 
 欢迎 Star 我：[https://github.com/sofastack](https://github.com/sofastack)
 
-# |  SOFA Meetup#2 上海站-使用 SOFAStack 快速构建微服务
+### SOFA Meetup#2 上海站-使用 SOFAStack 快速构建微服务
 
 适合自身企业的技术架构才是最佳的方案，SOFAStack 提供了一套的金融级解决方案，提供多种场景下需要的多种组件。
 
@@ -37,11 +37,11 @@ SOFAStack（Scalable Open Financial Architecture Stack）是蚂蚁金服自主�
 
 建议：参会者带上电脑，现场有 Demo 实操环节~
 
-## | 加入 SOFA 钉钉互动群 
+##  加入 SOFA 钉钉互动群 
 
 欢迎加入直播互动钉钉群：23195297（搜索群号加入即可）
 
-## | 点击即可报名
+##  点击即可报名
 
 <https://tech.antfin.com/community/activities/576>
 
