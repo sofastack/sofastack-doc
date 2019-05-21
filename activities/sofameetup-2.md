@@ -3,8 +3,9 @@ author: sofastack
 updated_at: 2019-05-21T11:20:00.000Z
 created_at: 2019-05-21T10:20:00.000Z
 title: "SOFA Meetup#2 上海站——使用 SOFAStack 快速构建微服务"
-tags: ["SOFAMeetup","线下活动","开源","微服务"]
 coverImg: "https://gw.alipayobjects.com/mdn/rms_1d5704/afts/img/A*yJ5ZTrqmIecAAAAAAAAAAABjARQnAQ"
+tags: ["SOFAMeetup","线下活动","开源","微服务"]
+
 ---
 
 # 概要
@@ -15,7 +16,7 @@ coverImg: "https://gw.alipayobjects.com/mdn/rms_1d5704/afts/img/A*yJ5ZTrqmIecAAA
 - 活动形式：线下活动
 - 报名方式：<https://tech.antfin.com/community/activities/576>
 
-## 介绍
+# 活动介绍
 
 ## 蚂蚁金服 SOFAStack
 
@@ -23,7 +24,7 @@ SOFAStack（Scalable Open Financial Architecture Stack）是蚂蚁金服自主�
 
 欢迎 Star 我：[https://github.com/sofastack](https://github.com/sofastack)
 
-### SOFA Meetup#2 上海站-使用 SOFAStack 快速构建微服务
+## SOFA Meetup#2 上海站-使用 SOFAStack 快速构建微服务
 
 适合自身企业的技术架构才是最佳的方案，SOFAStack 提供了一套的金融级解决方案，提供多种场景下需要的多种组件。
 
@@ -31,7 +32,7 @@ SOFAStack（Scalable Open Financial Architecture Stack）是蚂蚁金服自主�
 
 分布式事务 Seata 详解、与 Spring Cloud 生态的融合案例、使用 SOFAStack 快速构建微服务 Demo 实操、更有最新开源的《让 AI 像 SQL 一样简单 — SQLFlow Demo 》首秀，期待与你不见不散~
 
-建议：参会者带上电脑，现场有 Demo 实操环节~
+建议：参会者可带上电脑，现场有 Demo 实操环节~
 
 ##  加入 SOFA 钉钉互动群 
 
