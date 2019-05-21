@@ -2,10 +2,12 @@
 author: sofastack
 updated_at: 2019-05-21T11:20:00.000Z
 created_at: 2019-05-21T10:20:00.000Z
-title: "SOFA Meetup#2 上海站-使用 SOFAStack 快速构建微服务"
+title: "SOFA Meetup#2 上海站——使用 SOFAStack 快速构建微服务"
 tags: ["SOFAMeetup","线下活动","开源","微服务"]
 coverImg: "https://gw.alipayobjects.com/mdn/rms_1d5704/afts/img/A*yJ5ZTrqmIecAAAAAAAAAAABjARQnAQ"
 ---
+
+# 概要
 
 - 活动主题：SOFA Meetup#2 上海站-使用 SOFAStack 快速构建微服务
 - 活动时间：5 月 26 日周日下午 13 点
