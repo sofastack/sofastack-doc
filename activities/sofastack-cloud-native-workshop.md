@@ -1,6 +1,6 @@
 ---
 author: 宋净超
-updated_at: 2019-05-20T20:20:00.000Z
+updated_at: 2019-05-27T15:24:00.000Z
 created_at: 2019-05-18T10:20:00.000Z
 title: "SOFAStack Cloud Native Workshop hosted by Ant Financial"
 tags: ["KubeCon", "Workshop","云原生"]
@@ -49,7 +49,7 @@ Service Mesh 将服务间通信能力下沉到基础设施，让应用解耦并�
 
 在本 workshop 中，您可以基于 SOFADashboard 的 ARK 管控能力来实现 SOFAArk 提供的合并部署和动态模块推送的功能。
 
-**3:20 - 4:00 Seata 分布式事务实践 by 绍辉**
+**3:20 - 4:00 Seata 分布式事务实践 by 屹远**
 
 微服务架构下，分布式事务问题是一个业界难题。通过本workshop，您可以了解到分布式架构下，分布式事务问题产生的背景，以及常见的分布式事务解决方案；并亲身体验到如何使用开源分布式事务框架Seata的AT模式、TCC模式解决业务数据的最终一致性问题。
 
@@ -100,6 +100,6 @@ Building a microservices application based on the SOFAStack. Through this worksh
 
 In this workshop, you can implement the combined deployment and dynamic module push capabilities provided by SOFAArk based on the ARK control capabilities of SOFADashboard.
 
-**3:20 - 4:00 Seata distributed transaction practice by Sen Zhang**
+**3:20 - 4:00 Seata distributed transaction practice by Long Chen**
 
 Under the microservice architecture, the distributed transaction problem is an industry problem. Through this workshop, you can understand the background of distributed transaction problems under distributed architecture, as well as common distributed transaction solutions and experience on how to use the open source distributed transaction framework - Seata's AT mode, TCC mode to solve the ultimate  consistency of the business data.
