@@ -2,10 +2,12 @@
 author: 宋净超
 updated_at: 2019-05-30T11:24:00.000Z
 created_at: 2019-05-30T10:20:00.000Z
-title: "SOFAStack Cloud Native Workshop hosted by Ant Financial"
+title: "KubeCon 上海同场活动 SOFAStack Cloud Native Workshop"
 tags: ["KubeCon", "Workshop","云原生"]
 coverImg: "https://gw.alipayobjects.com/mdn/rms_1d5704/afts/img/A*KH4eT5Ye1wEAAAAAAAAAAABjARQnAQ"
 ---
+
+### 蚂蚁金服 SOFAStack 云原生工作坊（KubeCon China 2019 同场活动）
 
 - 日期：2019年6月24日，星期一
 - 时间：9:00 – 16:30
@@ -57,7 +59,7 @@ Service Mesh 将服务间通信能力下沉到基础设施，让应用解耦并�
 
 ---
 
-### SOFAStack Cloud Native Workshop hosted by Ant Financial
+### SOFAStack Cloud Native Workshop hosted by Ant Financial (KubeCon China 2019 Co-Located Event)
 
 - Date: Monday, 24 June, 2019
 - Time: 9:00 – 16:30
@@ -82,7 +84,7 @@ For questions regarding this event, please reach out to [jingchao.sjc@antfin.com
 
 ### Event details
 
-**9:00 - 9:20 Opening speech SOFAStack Cloud Native **
+**9:00 - 9:20 Opening speech SOFAStack Cloud Native**
 
 **9:20 - 10:10 Quickly build microservices with SOFAStack by Jie Cao**
 
