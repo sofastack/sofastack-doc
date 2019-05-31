@@ -26,7 +26,7 @@ jvm.memory.heap.used{app=~|"foo|foo2",instance_id="xxx"}
 示例
 
 ```java
-jvm.memory.heap.used{app!~|"foo|foo1",instance_id="xxx"}
+jvm.memory.heap.used{app!~|"foo|foo2",instance_id="xxx"}
 ```
 
 
