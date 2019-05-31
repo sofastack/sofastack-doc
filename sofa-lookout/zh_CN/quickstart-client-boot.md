@@ -17,7 +17,7 @@
 </dependency>
 ```
 
-如果 Spring Boot 项目需指定[版本](http://mvnrepository.com/artifact/com.alipay.sofa.lookout/lookout-sofa-boot-starter)
+如果 Spring Boot 项目需指定[版本](http://mvnrepository.com/artifact/com.alipay.sofa.lookout/lookout-sofa-boot-starter)。
 
 
 ## 新建一个 Metrics 指标
@@ -35,7 +35,7 @@ public void init() {
 }
 ```
 
-上面的代码中直接通过 `@Autowired` 注入了一个 Registry 的字段，通过这个 Registry 的字段，我们就可以创建对应的 Counter，然后通过修改这个 Counter 的数据来生成 SOFALookout 的 Metrics 的指标
+上面的代码中直接通过 `@Autowired` 注入了一个 Registry 的字段，通过这个 Registry 的字段，我们就可以创建对应的 Counter，然后通过修改这个 Counter 的数据来生成 SOFALookout 的 Metrics 的指标。
 
 ## 添加配置项
 
