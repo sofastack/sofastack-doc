@@ -8,6 +8,8 @@
   * [客户端-样例工程](./useguide-samples)
   * [服务器端-常见数据采集协议支持](./useguide-other-metrics-protocol-support)
   * [服务器端-PromQL语法特性增强](./useguide-promql-feature-enhancement)
+  * [服务器端-Grafana使用](./useguide-grafana)
+  * [服务器端-ES存储相关](./useguide-es)
 - [客户端-相关配置](./client-configuration)
 - 客户端-已有度量指标
   * [内置扩展 Metrics](./client-ext-metrics)
