@@ -9,10 +9,10 @@
 示例
 
 
-将app为 lookout-gateway 或 lookout-server的应用时序数据查询出来
+将app为 foo 或 foo2的应用时序数据查询出来
 
 ```java
-jvm.memory.heap.used{app=~|"lookout-gateway|lookout-server",instance_id="000001"}
+jvm.memory.heap.used{app=~|"foo|foo2",instance_id="xxx"}
 ```
 
 ### 2. Tag选择器的"not in"筛选
@@ -26,7 +26,7 @@ jvm.memory.heap.used{app=~|"lookout-gateway|lookout-server",instance_id="000001"
 示例
 
 ```java
-jvm.memory.heap.used{app!~|"lookout-gateway|lookout-server",instance_id="000001"}
+jvm.memory.heap.used{app!~|"foo|foo1",instance_id="xxx"}
 ```
 
 
