@@ -4,9 +4,7 @@
 
 注意如果使用 **非lookout sdk ，自己一定注意控制客户端metrics数量！ [**[Don't over use labels(tags)](https://prometheus.io/docs/practices/instrumentation/#do-not-overuse-labels)**]**
 
-<a name="2lgmdk"></a>
-## [](#2lgmdk) 1.Promethues Push协议写入支持
-必须携带 **X-Lookout-Token** 的HTTP 认证头信息；或者支持官方客户端的** BASIC AUTH** 的方式（该方式可详细咨询）！
+## 1.Promethues Push协议写入支持
 
 - Lookout-gateway这里扮演的是一个 prometheus-pushgateway 角色：
 
@@ -18,7 +16,7 @@ echo "some_metric{k1="v1"} 3.14" | curl --data-binary \
 
 - 区别在于："[http://localhost:7200/prom/](http://localhost:7200/prom/)"，端口为`7200`，加了级主路径为`/prom`.
 
-- 【必选】URL路径变量 {app}  {job} 和{step}，必须要指定哦， 【原因参考: FAQ NO.4】 。step 单位秒，表示您定时上报的时间间隔（假如10s 上报一次数据，那么 step=10）
+- 【必选】URL路径变量 {app}  {job} 和{step}，必须要指定哦。step 单位秒，表示您定时上报的时间间隔（假如10s 上报一次数据，那么 step=10）
 
 - 【可选】如果和lookout gateway间有网络代理，建议URL 里也附带上客户端真实 ip （如 "/ip/{ip}"）。
 
@@ -27,8 +25,7 @@ echo "some_metric{k1="v1"} 3.14" | curl --data-binary \
 - 更多细节可以参考：[prometheus-pushgateway](https://github.com/prometheus/pushgateway)  ，你可以选择官方[对应编程语言的SDKs](https://prometheus.io/docs/instrumenting/clientlibs/)
 
 
-<a name="elv4at"></a>
-## [](#elv4at)2. Lookout 自有协议写入支持
+## 2. Lookout 自有协议写入支持
 
 默认的收集服务和数据协议标准(即Lookout自有的协议支持标准)
 
@@ -72,9 +69,7 @@ curl -H "Content-type:text/plain"  -X POST -d 'xx' \
 
 
 
-<a name="rdh1vi"></a>
-## [](#rdh1vi) 3.OPEN TSDB 协议写入支持
-必须携带 **X-Lookout-Token** 的HTTP 认证头信息(以及 app，step 的header ，“ip” 也建议加入投入)；
+## 3.OPEN TSDB 协议写入支持
 
 - 请求demo
 
@@ -104,11 +99,9 @@ curl -X POST \
 - 更多细节可以参考 OpenTSDB的 /api/put 接口 [http://opentsdb.net/docs/build/html/api_http/put.html](http://opentsdb.net/docs/build/html/api_http/put.html)
 
 
-<a name="v1y8oo"></a>
-## [](#v1y8oo) 4.Metricbeat 写入协议支持
+## 4.Metricbeat 写入协议支持
 
-<a name="gs2pam"></a>
-### [](#gs2pam)（1）.metricbeat的配置
+### （1）.metricbeat的配置
 
 配置文件 metricbeat.yml
 
@@ -118,8 +111,7 @@ output.elasticsearch:
   path: /beat
 ```
 host 是 lookout-gateway 的地址,端口是`7200`. 另外加了级主路径`/beat`;
-<a name="iy7bkq"></a>
-### [](#iy7bkq)(2).为了符合metrics2.0标准，gateway会对数据进行转换
+### (2).为了符合metrics2.0标准，gateway会对数据进行转换
 
 这块后续去时序库查询，你需要关注：
 
