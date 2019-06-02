@@ -31,7 +31,7 @@ SOFABoot 提供三种方式给开发人员发布和引用 JVM 服务
 ```xml
 <sofa:reference interface="com.alipay.sofa.runtime.test.service.SampleService" id="sampleServiceRef">
 	<sofa:binding.jvm/>
-</sofa:service>
+</sofa:reference>
 ```
 
 上面的配置中的 interface 是服务的接口，需要和发布服务时配置的 interface 一致。id 属性的含义同 Spring BeanId。上面的配置会生成一个 id 为 sampleServiceRef 的 Spring Bean，你可以将 sampleServiceRef 这个 Bean 注入到当前 SOFABoot 模块 Spring 上下文的任意地方。
