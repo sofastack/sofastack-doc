@@ -7,6 +7,8 @@
 ```
 docker run -d --name es -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:5.6
 ```
+版本: V5,V6
+
 - 2)检查 ES 是否健康
 
 ```
