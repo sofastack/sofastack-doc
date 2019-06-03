@@ -1,6 +1,7 @@
 # SOFALookout 的 ES 存储使用
 
 ## 自动化
+推荐版本: ES 5
 ### 自动初始化库
 
 Lookout 服务器端启动时，会自动检查（默认开启，可关闭）所连接的ES机器(或集群)，检查 Metrics 数据存储的 Index和 Mapping 是否已经建立，
