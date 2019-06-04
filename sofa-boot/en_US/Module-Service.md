@@ -33,7 +33,7 @@ We can also reference a JVM service by using the Spring extension tag provided b
 ```xml
 <sofa:reference interface="com.alipay.sofa.runtime.test.service.SampleService" id="sampleServiceRef">
 	<sofa:binding.jvm/>
-</sofa:service>
+</sofa:reference>
 ```
 
 In the preceding configuration, the interface parameter indicates the service interface, which must be consistent with that configured during the service publish. The meaning of the ID attribute is the same as Spring BeanId. A Spring Bean with the ID sampleServiceRef will be generated from the above configuration. We can inject it anywhere in the Spring context of the current SOFABoot module.
