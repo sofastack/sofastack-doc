@@ -1,11 +1,13 @@
 ---
 author: 宋净超
 updated_at: 2019-05-30T11:24:00.000Z
-created_at: 2019-05-30T10:20:00.000Z
+created_at: 2019-06-04T10:20:00.000Z
 title: "KubeCon 上海同场活动 SOFAStack Cloud Native Workshop"
 tags: ["KubeCon", "Workshop","云原生"]
 coverImg: "https://gw.alipayobjects.com/mdn/rms_1d5704/afts/img/A*KH4eT5Ye1wEAAAAAAAAAAABjARQnAQ"
 ---
+
+![SOFAStack Cloud Native Workshop KubeCon China 同场活动](https://gw.alipayobjects.com/mdn/site_comm/afts/img/A*Mar4S4RuQn4AAAAAAAAAAABjARQnAQ)
 
 ### 蚂蚁金服 SOFAStack 云原生工作坊（KubeCon China 2019 同场活动）
 
@@ -14,6 +16,7 @@ coverImg: "https://gw.alipayobjects.com/mdn/rms_1d5704/afts/img/A*KH4eT5Ye1wEAAA
 - 地点：上海世博中心
 - 注册费：免费
 - 注册地址：https://www.lfasiallc.com/events/kubecon-cloudnativecon-china-2019/co-located-events/#sofastack-cloud-native-workshop
+- 备注：本次活动为动手实践，请携带个人电脑。本沙龙沟通语言为中文。
 
 SOFAStack（Scalable Open Financial Architecture Stack）是蚂蚁金服自主研发并开源的金融级分布式架构，包含了构建金融级云原生架构所需的各个组件，是在金融场景里锤炼出来的最佳实践。SOFAStack 官方网站：https://www.sofastack.tech/
 
@@ -25,7 +28,7 @@ SOFAStack（Scalable Open Financial Architecture Stack）是蚂蚁金服自主�
 - 云上的 Service Mesh 基本使用场景体验
 - 基于 Serverless 轻松构建云上应用
 
-如何注册：此活动须提前注册。请将 SOFAStack Cloud Native Workshop 添加到您 KubeCon + CloudNativeCon + Open Source Summit 的[注册表](https://www.lfasiallc.com/events/kubecon-cloudnativecon-china-2019/register/)里。
+如何注册：此活动须提前注册。请将 SOFAStack Cloud Native Workshop 添加到您 KubeCon + CloudNativeCon + Open Source Summit 的[注册表](https://www.lfasiallc.com/events/kubecon-cloudnativecon-china-2019/register/)里。您可以使用 `KCCN19COMATF` 折扣码获取 KubeCon 半价门票！
 
 如果对此活动有任何疑问，请发送邮件至 [jingchao.sjc@antfin.com](mailto:jingchao.sjc@antfin.com)。
 
@@ -66,6 +69,7 @@ Service Mesh 将服务间通信能力下沉到基础设施，让应用解耦并�
 - Location: Shanghai Expo Centre
 - Registration Fees: Complimentary
 - Register here: https://www.lfasiallc.com/events/kubecon-cloudnativecon-china-2019/co-located-events/#sofastack-cloud-native-workshop
+- Note: This event is hands-on, please bring your personal computer. The language of communication in this workshop is Chinese.
 
 SOFAStack (Scalable Open Financial Architecture Stack) is a financial-grade distributed architecture independently developed and open sourced by Ant Financial. It contains the components required to build a financial-grade cloud native architecture. It is a best practice tempered in financial scenarios. SOFAStack official website: https://www.sofastack.tech/
 
@@ -78,7 +82,7 @@ Attendees can get:
 - Get started on Serverless apps
 - Easily build applications on the cloud based on Serverless
 
-How to Register: Pre-registration is required. To [register](https://www.lfasiallc.com/events/kubecon-cloudnativecon-china-2019/register/) for SOFAStack Cloud Native Workshop, add it on during your KubeCon + CloudNativeCon + Open Source Summit registration.
+How to Register: Pre-registration is required. To [register](https://www.lfasiallc.com/events/kubecon-cloudnativecon-china-2019/register/) for SOFAStack Cloud Native Workshop, add it on during your KubeCon + CloudNativeCon + Open Source Summit registration. You can get KubeCon half price tickets with `KCCN19COMATF` coupon code!
 
 For questions regarding this event, please reach out to [jingchao.sjc@antfin.com](mailto:jingchao.sjc@antfin.com).
 
