@@ -5,7 +5,7 @@
 - 使用手册
   * [客户端-API 使用](./useguide-api)
   * [客户端-Registry 使用](./useguide-registry)
-  * [客户端-样例工程](./useguide-samples)
+  * [样例工程](./useguide-samples)
   * [服务器端-常见数据采集协议支持](./useguide-other-metrics-protocol-support)
   * [服务器端-PromQL语法特性增强](./useguide-promql-feature-enhancement)
   * [服务器端-Grafana使用](./useguide-grafana)
