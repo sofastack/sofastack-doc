@@ -51,10 +51,12 @@ metrics-server.spring.data.jest.uri=http://localhost:9200
 
 ## 3.如何获得 all-in-one-bootstrap 编译后的 fat-jar
 
-- 方式1：编译
+- 方式1：本地编译
 ```
 ./boot/all-in-one-bootstrap/build.sh
 ```
+> 打包结果在`boot/all-in-one-bootstrap/target/allinone-executable.jar`
+
 - 方式2: 发布报告中附件获取
 - 临时方式（针对 1.6.0）
 暂时提供一个[v1.6.0的snapshot包](https://github.com/sofastack/sofa-lookout/releases/download/untagged-89780b021d86343b79f2/lookout-all-1.6.0.snapshot.jar)
