@@ -16,7 +16,7 @@
 
  该样例工程展示了，在 SpringBoot(或SofaBoot) 项目中,如何使用和配置客户端使用 prometheus。
 
-- [lookout-client-samples-prometheus](https://github.com/sofastack/sofa-lookout/tree/master/samples/metrics/client/lookout-samples-prom-push)
+- [lookout-samples-prom-push](https://github.com/sofastack/sofa-lookout/tree/master/samples/metrics/client/lookout-samples-prom-push)
 
  该样例工程展示了，在 Java 项目中,使用 prometheus 客户端并以push方式（PushGateway）上报数据。
 
