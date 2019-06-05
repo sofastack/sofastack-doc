@@ -16,7 +16,7 @@ http://localhost:9200/_cat/health?v
 ```
 - 3)启动 Lookout 服务
 
-执行 all-in-one-bootstrap 编译后的 fat-jar 包（文章后面说明如何获得）：
+执行 all-in-one-bootstrap 编译后的 fat-jar 包，[如何获得，见文末](#3如何获得-all-in-one-bootstrap-编译后的-fat-jar)：
 
 ```
 java -Dcom.alipay.sofa.ark.master.biz=lookoutall -jar lookout-all-in-one-bootstrap-1.6.0-executable-ark.jar
@@ -49,10 +49,14 @@ gateway.metrics.exporter.es.port=9200
 metrics-server.spring.data.jest.uri=http://localhost:9200
 ```
 
-## 3.如何获得  all-in-one-bootstrap 编译后的 fat-jar
+## 3.如何获得 all-in-one-bootstrap 编译后的 fat-jar
 
 - 方式1：编译
 ```
 ./boot/all-in-one-bootstrap/build.sh
 ```
 - 方式2: 发布报告中附件获取
+- 临时方式（针对 1.6.0）
+暂时提供一个[v1.6.0的snapshot包](https://github.com/sofastack/sofa-lookout/releases/download/untagged-89780b021d86343b79f2/lookout-all-1.6.0.snapshot.jar)
+,下载后（保证ES服务已经单独启动）运行
+> java -Dcom.alipay.sofa.ark.master.biz=lookoutall -jar lookout-all-1.6.0.snapshot.jar
