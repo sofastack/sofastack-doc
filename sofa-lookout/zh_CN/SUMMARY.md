@@ -15,6 +15,6 @@
   * [内置扩展 Metrics](./client-ext-metrics)
   * [SOFARPC Metrics](./SOFARPC-Metrics)
 - 更多
-  * FAQ
+  * [FAQ](./faq)
   * [开发手册](./development-useguide)
   * [发展规划](./plan)
