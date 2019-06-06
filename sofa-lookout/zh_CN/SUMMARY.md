@@ -10,6 +10,7 @@
   * [服务器端-PromQL语法特性增强](./useguide-promql-feature-enhancement)
   * [服务器端-Grafana使用](./useguide-grafana)
   * [服务器端-ES存储相关](./useguide-es)
+  * [服务器端-Metrics存储扩展](./useguide-storage-ext)
 - [客户端-相关配置](./client-configuration)
 - 客户端-已有度量指标
   * [内置扩展 Metrics](./client-ext-metrics)
