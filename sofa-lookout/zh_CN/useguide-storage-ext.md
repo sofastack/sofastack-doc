@@ -36,7 +36,7 @@
 - 在 "com.alipay.sofa.lookout.server.starter.ServerAutoConfiguration" 中 @import 上述存储spring配置类；
 
 ## 3.最后贡献建议
-
+- 提issue说明需求，并可以介绍下方案；
 - 保证测试覆盖；
 - fork 代码，编译通过后，提交 PR；
   
