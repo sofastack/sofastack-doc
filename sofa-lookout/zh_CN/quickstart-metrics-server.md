@@ -16,7 +16,7 @@ http://localhost:9200/_cat/health?v
 ```
 - 3)启动 Lookout 服务
 
-执行 all-in-one-bootstrap 编译后的 fat-jar 包，[如何获得，见文末](#3如何获得-all-in-one-bootstrap-编译后的-fat-jar)：
+执行 all-in-one-bootstrap 编译后的 fat-jar 包，[如何获得，见文末备注部分](#3如何获得-all-in-one-bootstrap-编译后的-fat-jar)：
 
 ```
 java -Dcom.alipay.sofa.ark.master.biz=lookoutall -jar lookout-all-in-one-bootstrap-1.6.0-executable-ark.jar
@@ -30,6 +30,8 @@ java -Dcom.alipay.sofa.ark.master.biz=lookoutall -jar lookout-all-in-one-bootstr
 jvm.memory.heap.used{app="gateway"}
 ```
 ![可视化例子](https://gw.alipayobjects.com/mdn/rms_e6b00c/afts/img/A*KMStRaUXIkIAAAAAAAAAAABkARQnAQ)
+
+最后，也可以[使用 grafana](./useguide-grafana)
 
 ## 2.使用远程 ES 服务
 
@@ -49,7 +51,9 @@ gateway.metrics.exporter.es.port=9200
 metrics-server.spring.data.jest.uri=http://localhost:9200
 ```
 
-## 3.如何获得 all-in-one-bootstrap 编译后的 fat-jar
+## 备注
+
+如何获得 all-in-one-bootstrap 编译后的 fat-jar
 
 - 方式1：本地编译
 ```
@@ -58,7 +62,8 @@ metrics-server.spring.data.jest.uri=http://localhost:9200
 > 打包结果在`boot/all-in-one-bootstrap/target/allinone-executable.jar`
 
 - 方式2: 发布报告中附件获取
-- 临时方式（针对 1.6.0）
+
+临时方式（针对 1.6.0）
 暂时提供一个[v1.6.0的snapshot包](https://github.com/sofastack/sofa-lookout/releases/download/untagged-89780b021d86343b79f2/lookout-all-1.6.0.snapshot.jar)
 ,下载后（保证ES服务已经单独启动）运行
 > java -Dcom.alipay.sofa.ark.master.biz=lookoutall -jar lookout-all-1.6.0.snapshot.jar
