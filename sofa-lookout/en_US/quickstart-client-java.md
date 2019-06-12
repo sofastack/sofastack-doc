@@ -39,4 +39,4 @@ Counter counter = registry.counter(id);
 counter.inc();
 ```
 
-For the use of the client, see [Project sample](https://github.com/sofastack/sofa-lookout/tree/master/client/samples/lookout-client-samples-java).
+For the use of the client, see [Project sample](https://github.com/sofastack/sofa-lookout/tree/master/samples/metrics/client/lookout-client-samples-java).
