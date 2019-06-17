@@ -12,7 +12,7 @@ coverImg: "https://gw.alipayobjects.com/mdn/rms_1d5704/afts/img/A*KH4eT5Ye1wEAAA
 ### 蚂蚁金服 SOFAStack 云原生工作坊（KubeCon China 2019 同场活动）
 
 - 日期：2019年6月24日，星期一
-- 时间：9:00 – 16:30
+- 时间：9:00 – 16:00
 - 地点：上海世博中心
 - 注册费：免费
 - 注册地址：https://www.lfasiallc.com/events/kubecon-cloudnativecon-china-2019/co-located-events/#sofastack-cloud-native-workshop
@@ -52,11 +52,11 @@ SOFAStack（Scalable Open Financial Architecture Stack）是蚂蚁金服自主�
 
 **13:00 - 13:30 蚂蚁金服的云原生探索与实践 by 首仁**
 
-**13:30 - 15:00 基于 Serverless 轻松构建云上应用 by 隐秀**
+**13:30 - 14:40 基于 Serverless 轻松构建云上应用 by 隐秀**
 
 作为云原生技术前进方向之一，Serverless 架构让您进一步提高资源利用率，更专注于业务研发。通过我们的 workshop，您可以体验到快速创建 Serveless 应用、根据业务请求秒级 0-1-N 自动伸缩、通过日志查看器快速排错、按时间触发应用等产品新功能。
 
-**15:00 - 16:30 使用 CloudMesh 轻松实践 Service Mesh by 敖小剑**
+**14:50 - 16:00 使用 CloudMesh 轻松实践 Service Mesh by 敖小剑**
 
 Service Mesh 将服务间通信能力下沉到基础设施，让应用解耦并轻量化。但 Service Mesh 本身的复杂度依然存在，CloudMesh 通过将 Service Mesh 托管在云上，使得您可以轻松的实践 Service Mesh 技术。通过我们的 workshop，您可以快速部署应用到 CloudMesh ，对服务进行访问，通过监控查看流量，体验服务治理、Sidecar管理和对服务的新版本进行灰度发布等实用功能。
 
@@ -65,7 +65,7 @@ Service Mesh 将服务间通信能力下沉到基础设施，让应用解耦并�
 ### SOFAStack Cloud Native Workshop hosted by Ant Financial (KubeCon China 2019 Co-Located Event)
 
 - Date: Monday, 24 June, 2019
-- Time: 9:00 – 16:30
+- Time: 9:00 – 16:00
 - Location: Shanghai Expo Centre
 - Registration Fees: Complimentary
 - Register here: https://www.lfasiallc.com/events/kubecon-cloudnativecon-china-2019/co-located-events/#sofastack-cloud-native-workshop
@@ -106,10 +106,10 @@ Under the microservice architecture, the distributed transaction problem is an i
 
 **13:00 - 13:30 Cloud Native exlporation and practice in Ant Fnancial by Renjie Yu**
 
-**13:30 - 15:00 Easily build applications on the cloud based on Serverless by Yitao Dong**
+**13:30 - 14:40 Easily build applications on the cloud based on Serverless by Yitao Dong**
 
 As one of the pioneering technologies of cloud technology, Serverless architecture allows you to further improve resource utilization and focus on business development. Through our workshop, you can experience new product features such as quickly creating Serveless apps, auto-scaling based on business request seconds 0-1-N, quick troubleshooting via log viewer, time-based app launch.
 
-**15:00 - 16:30 Easily practice Service Mesh with CloudMesh by Xiaojian Ao**
+**14:50 - 16:00 Easily practice Service Mesh with CloudMesh by Xiaojian Ao**
 
 Service Mesh sinks the inter-service communication capabilities to the infrastructure, decoupling and lightweighting applications. But the complexity of Service Mesh itself still exists, and CloudMesh can easily implement Service Mesh technology by hosting Service Mesh on the cloud. With our workshop, you can quickly deploy applications to CloudMesh, access services, monitor traffic, and experience utility management, Sidecar management, and grayscale publishing of new versions of services.
