@@ -64,7 +64,7 @@ metrics-server.spring.data.jest.uri=http://localhost:9200
 - 方式2: 发布报告中附件获取
 
 临时方式（针对 1.6.0）
-暂时提供一个[v1.6.0的snapshot包](https://github.com/sofastack/sofa-lookout/releases/download/untagged-89780b021d86343b79f2/lookout-all-1.6.0.snapshot.jar)
+暂时提供一个[v1.6.0的snapshot包](https://github.com/sofastack/sofa-lookout/releases/download/v1.6.0/lookout-all-1.6.0.snapshot.jar)
 ,下载后（保证ES服务已经单独启动）运行
 > java -Dcom.alipay.sofa.ark.master.biz=lookoutall -jar lookout-all-1.6.0.snapshot.jar
 
